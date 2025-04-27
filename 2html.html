@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2. Basic Structure of HTML</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body, html {
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+    }
+    .background-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  object-fit: contain; /* Cover ko contain me badal diya */
+  background-color: black; /* Agar side me empty area aaye to black dikhe */
+  opacity: 0.7;
+}
+    .section {
+      background-color: rgba(255, 255, 255, 0.3);
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 1000px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+    h2, h3 {
+      color: #333;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+    textarea {
+      width: 100%;
+      height: 200px;
+      font-family: monospace;
+      font-size: 16px;
+      padding: 10px;
+      border: 2px solid aqua;
+      border-radius: 8px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      background: rgba(255,248,240,0.4);
+    }
+    button {
+      background-color: #28a745;
+      color: white;
+      border: aqua;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      background: rgba(255,248,240,0.1) ;
+      border: 2px solid red;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Background Video -->
+<video autoplay loop muted class="background-video">
+  <source src="Topicvid.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<div class="section">
+  <h2>2. Basic Structure of HTML</h2>
+
+  <h3>I. HTML Document Structure</h3>
+  <p><strong>Explanation:</strong> Jab hum koi HTML file banate hain, to ek fix structure follow karte hain. Ye structure browser ko batata hai ki kaunsa part kaise dikhana hai. Jaise ek ghar ka naksha hota hai, waise hi ek HTML document ka naksha hota hai.</p>
+
+  <textarea id="code1">
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My First Website</title>
+</head>
+<body>
+  <h1>Hello World!</h1>
+  <p>This is my first web page.</p>
+</body>
+</html>
+  </textarea>
+  <button onclick="runCode('code1', 'output1')">Run Code</button>
+  <iframe id="output1"></iframe>
+
+
+  <h3>II. DOCTYPE Declaration</h3>
+  <p><strong>Explanation:</strong> <code>&lt;!DOCTYPE html&gt;</code> batata hai ki document HTML5 ka hai. Agar hum ye nahi likhenge, to browser purane tareeke se page render karega ya kuch features kaam nahi karenge. Ye ek line sabse upar honi chahiye.</p>
+
+  <textarea id="code2">
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>DOCTYPE Declaration Example</h2>
+</body>
+</html>
+  </textarea>
+  <button onclick="runCode('code2', 'output2')">Run Code</button>
+  <iframe id="output2"></iframe>
+
+
+  <h3>III. Head and Body Tags</h3>
+  <p><strong>Explanation:</strong> 
+  <ul>
+    <li><strong>Head:</strong> Is part me title, meta information (SEO, responsive design), CSS links, aur JavaScript ke links diye jaate hain. Jo cheeze user ko directly nahi dikhti wo sab yaha hoti hain.</li>
+    <li><strong>Body:</strong> Ye user ka visible part hota hai, jaise headings, paragraphs, images, videos wagairah.</li>
+  </ul>
+  </p>
+
+  <textarea id="code3">
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Head and Body Example</title>
+</head>
+<body>
+  <h1>This is Body</h1>
+  <p>Visible content for users.</p>
+</body>
+</html>
+  </textarea>
+  <button onclick="runCode('code3', 'output3')">Run Code</button>
+  <iframe id="output3"></iframe>
+
+
+  <h3>IV. Comments</h3>
+  <p><strong>Explanation:</strong> Comments ka use hum code me notes ya explanations likhne ke liye karte hain. Jo browser ignore kar deta hai. Ye dusre developers ko samjhne me madad karta hai.</p>
+
+  <textarea id="code4">
+<!DOCTYPE html>
+<html>
+<body>
+  <!-- This is a comment -->
+  <h1>Comments Example</h1>
+</body>
+</html>
+  </textarea>
+  <button onclick="runCode('code4', 'output4')">Run Code</button>
+  <iframe id="output4"></iframe>
+
+</div>
+
+<script>
+function runCode(textareaId, iframeId) {
+  var code = document.getElementById(textareaId).value;
+  var iframe = document.getElementById(iframeId);
+  iframe.contentDocument.open();
+  iframe.contentDocument.write(code);
+  iframe.contentDocument.close();
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Learning Roadmap</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto+Mono&display=swap" rel="stylesheet">
+
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Loading Spinner */
+    #loader {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #d2b48c;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .spinner {
+      border: 6px solid #ddd;
+      border-top: 6px solid #8b4513;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {transform: rotate(0deg);}
+      100% {transform: rotate(360deg);}
+    }
+
+    /* Body */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(rgba(210,180,140,0.4), rgba(210,180,140,0.3)), url('Ai.png') no-repeat center center fixed;
+      background-size: cover;
+      color: #4b2e05;
+      min-height: 100vh;
+      scroll-behavior: smooth;
+      padding-top: 70px;
+    }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(128,38,19,0.3);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+
+    nav h1 {
+      font-size: 1.8rem;
+      color: #fff8f0;
+      font-weight: 600;
+      font-family: 'Roboto Mono', monospace;
+    }
+
+    /* Main Heading */
+    .main-title {
+      text-align: center;
+      font-size: 3rem;
+      margin: 20px 0;
+      font-weight: 600;
+      animation: fadeSlide 1s ease forwards;
+    }
+
+    @keyframes fadeSlide {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Sections */
+    .roadmap-section {
+      background: rgba(255,248,240,0.7);
+      padding: 25px;
+      margin: 30px auto;
+      border-radius: 20px;
+      max-width: 1000px;
+      backdrop-filter: blur(6px);
+      transition: all 0.4s ease;
+      border: 2px solid transparent;
+    }
+
+    .roadmap-section:hover {
+      transform: translateY(-5px);
+      border: 2px solid #8b4513;
+      box-shadow: 0 0 20px #8b4513;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      color: #8b4513;
+      font-family: 'Roboto Mono', monospace;
+    }
+
+    ul {
+      list-style-type: decimal;
+      padding-left: 20px;
+      line-height: 1.8;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      color: #5c4033;
+      font-size: 0.9rem;
+      background: rgba(139,23,98,0.4);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .main-title {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+      .roadmap-section {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body onload="hideLoader()">
+
+  <!-- Loader -->
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav>
+    <h1>HTML Learning</h1>
+  </nav>
+
+  <!-- Main Heading -->
+  <h1 class="main-title"></h1>
+
+  <!-- Sections (Roadmap) -->
+  <a href="Introhtml.html" style="text-decoration: none; color: inherit;">
+  <div id="Introhtml" class="roadmap-section" data-aos="fade-up">
+    <h2>1. HTML Introduction</h2>
+    <ul>
+      <li>HTML kya hai?</li>
+      <li>HTML ka Itihaas aur Evolution</li>
+      <li>HTML vs HTML5</li>
+      <li>Website mein HTML ka use</li>
+    </ul>
+  </div>
+</a>
+<a href="2html.html" style="text-decoration: none; color: inherit;">
+  <div id="BasicStructure" class="roadmap-section" data-aos="fade-up">
+    <h2>2. Basic Structure of HTML</h2>
+    <ul>
+      <li>HTML Document Structure</li>
+      <li>DOCTYPE Declaration</li>
+      <li>Head aur Body Tags</li>
+      <li>Comments ka use</li>
+    </ul>
+  </div>
+</a>
+
+<a href="3html.html" style="text-decoration: none; color: inherit;">
+  <div class="roadmap-section" data-aos="fade-up">
+    <h2>3. HTML Tags Overview</h2>
+    <ul>
+      <li>Tags kya hote hain?</li>
+      <li>Types of Tags</li>
+      <li>Self-closing Tags</li>
+      <li>Nesting aur Case Sensitivity</li>
+    </ul>
+  </div>
+  </a>
+
+  <div class="roadmap-section" data-aos="fade-up">
+    <h2>4. Text Formatting Tags</h2>
+    <ul>
+      <li>Headings (h1-h6)</li>
+      <li>Paragraphs (p)</li>
+      <li>Line Break (br) aur Horizontal Line (hr)</li>
+      <li>Bold, Italic, Underline</li>
+      <li>Superscript, Subscript</li>
+    </ul>
+  </div>
+
+  <div class="roadmap-section" data-aos="fade-up">
+    <h2>5. HTML Lists</h2>
+    <ul>
+      <li>Unordered List (ul)</li>
+      <li>Ordered List (ol)</li>
+      <li>Description List (dl)</li>
+    </ul>
+  </div>
+
+  <div class="roadmap-section" data-aos="fade-up">
+    <h2>6. HTML Links</h2>
+    <ul>
+      <li>Anchor Tag (a)</li>
+      <li>Internal & External Links</li>
+      <li>Attributes: href, target</li>
+    </ul>
+  </div>
+
+  <div class="roadmap-section" data-aos="fade-up">
+    <h2>7. HTML Images</h2>
+    <ul>
+      <li>Adding Images</li>
+      <li>Attributes: src, alt</li>
+      <li>Image Linking</li>
+    </ul>
+  </div>
+
+  <div class="roadmap-section" data-aos="fade-up">
+    <h2>8. HTML Tables</h2>
+    <ul>
+      <li>Basic Table Structure</li>
+      <li>Table Borders, Padding</li>
+      <li>Merging Cells</li>
+    </ul>
+  </div>
+
+  <div class="roadmap-section" data-aos="fade-up">
+    <h2>9. HTML Forms</h2>
+    <ul>
+      <li>Form Structure</li>
+      <li>Input Fields Types</li>
+      <li>Validation Basics</li>
+    </ul>
+  </div>
+
+  <div class="roadmap-section" data-aos="fade-up">
+    <h2>10. Multimedia in HTML</h2>
+    <ul>
+      <li>Audio and Video Tags</li>
+      <li>Attributes: controls, autoplay, loop</li>
+      <li>Embedding YouTube Videos</li>
+    </ul>
+  </div>
+
+  <div class="roadmap-section" data-aos="fade-up">
+    <h2>11. Semantic Elements</h2>
+    <ul>
+      <li>Importance of Semantics</li>
+      <li>Common Semantic Tags</li>
+    </ul>
+  </div>
+
+  <div class="roadmap-section" data-aos="fade-up">
+    <h2>12. HTML APIs Introduction</h2>
+    <ul>
+      <li>Geolocation</li>
+      <li>Drag and Drop</li>
+      <li>Web Storage</li>
+    </ul>
+  </div>
+
+  <div class="roadmap-section" data-aos="fade-up">
+    <h2>13. HTML Graphics</h2>
+    <ul>
+      <li>Canvas Basics</li>
+      <li>SVG Introduction</li>
+    </ul>
+  </div>
+
+  <div class="roadmap-section" data-aos="fade-up">
+    <h2>14. HTML Entities</h2>
+    <ul>
+      <li>Special Characters</li>
+      <li>Common Entities</li>
+    </ul>
+  </div>
+
+  <div class="roadmap-section" data-aos="fade-up">
+    <h2>15. File Paths in HTML</h2>
+    <ul>
+      <li>Absolute vs Relative Path</li>
+      <li>Best Practices</li>
+    </ul>
+  </div>
+
+  <div class="roadmap-section" data-aos="fade-up">
+    <h2>16. Best Practices in HTML</h2>
+    <ul>
+      <li>Clean Coding</li>
+      <li>Accessibility</li>
+      <li>SEO Friendly HTML</li>
+    </ul>
+  </div>
+
+  <div class="roadmap-section" data-aos="fade-up">
+    <h2>17. Final Project</h2>
+    <ul>
+      <li>Building a Complete Website</li>
+      <li>Responsive Design</li>
+      <li>HTML Validation</li>
+    </ul>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    Copyright © 2025 | All Rights Reserved
+  </footer>
+
+  <!-- AOS Animation Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+
+    function hideLoader() {
+      document.getElementById('loader').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
