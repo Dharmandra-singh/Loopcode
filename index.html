@@ -564,12 +564,12 @@
       .nav-links {
         position: fixed;
         top: 0;
-        right: -100%; /* Start off-screen */
-        width: 75%; /* Slightly wider */
+        right: 100%; /* Start off-screen */
+        width: 50%; /* Slightly wider */
         max-width: 320px;
-        height: 100vh;
+        height: 60vh;
         /* Dark Glassmorphism for menu */
-        background: rgba(28, 28, 28, 0.9);
+        background: rgba(255, 248, 240, 0.6);
         backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
         box-shadow: -3px 0 15px rgba(0, 0, 0, 0.3); /* Darker shadow */
@@ -577,7 +577,7 @@
         align-items: center;
         padding-top: 90px;
         gap: 35px;
-        transition: right 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* More bouncy transition */
+        transition: Scroll 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* More bouncy transition */
         z-index: 1001;
         border-left: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
       }
@@ -588,7 +588,7 @@
 
       .nav-links li a {
         color: #e0e0e0; /* Light text */
-        font-size: 1.2rem; /* Larger tap target */
+        font-size: 0.8rem; /* Larger tap target */
       }
       .nav-links li a:hover {
          color: #00aeff; /* Highlight color */
@@ -677,266 +677,4 @@
   <div class="nav-brand">
     <img src="Logo.png" alt="Logo">  <div class="logo-epic">
     <span>L</span><span>o</span><span>O</span><span>P</span>
-      <span>C</span><span>o</span><span>d</span><span>e</span>
-  </div>
-  </div>
-  <ul class="nav-links" id="nav-links">
-    <li><a href="#about" class="nav-link-item">About</a></li>
-    <li><a href="#courses" class="nav-link-item">Courses</a></li>
-    <li><a href="#faq" class="nav-link-item">FAQ</a></li>
-    <li><a href="#contact" class="nav-link-item">Contact</a></li>
-    <li><a href="#test-code" class="nav-link-item">Test Code</a></li>
-  </ul>
-  <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-    <i class="fas fa-bars"></i>
-  </button>
-</nav>
-
-<header>
-  <h1 id="typing"></h1>
-  <p>Master web development with interactive, beginner-friendly lessons in a sleek dark theme.</p>
-  <a href="#courses" class="btn-primary">Get Started Now</a>
-</header>
-
-<section id="about">
-  <h2 class="section-title animate-on-scroll animate-fade-in-up">Why Learn With Us?</h2>
-  <p class="section-desc animate-on-scroll animate-fade-in-up" style="transition-delay: 0.1s;">Our courses are crafted by industry experts, ensuring you get the practical knowledge needed to excel in modern web development.</p>
-</section>
-
-<section id="courses">
-  <h2 class="section-title animate-on-scroll animate-fade-in-up">Our Courses</h2>
-  <p class="section-desc animate-on-scroll animate-fade-in-up" style="transition-delay: 0.1s;">Explore our range of courses designed to take you from beginner to pro, step by step.</p>
-  <div class="cards">
-    <div class="card animate-on-scroll animate-scale-in">
-      <div class="card-inner">
-        <div class="card-front">
-          <i class="fab fa-html5" style="color: #E44D26;"></i>
-          <h3>HTML</h3>
-          <p>Learn the fundamental structure of all web pages.</p>
-        </div>
-        <div class="card-back">
-          <p><a href="Roadmap.html">Start with tags, forms, SEO basics and build complete pages. Click for Roadmap!</a></p>
-        </div>
-      </div>
-    </div>
-    <div class="card animate-on-scroll animate-scale-in" style="transition-delay: 0.15s;">
-      <div class="card-inner">
-        <div class="card-front">
-           <i class="fab fa-css3-alt" style="color: #1572B6;"></i>
-          <h3>CSS</h3>
-          <p>Style your sites to be beautiful and responsive.</p>
-        </div>
-        <div class="card-back">
-          <p>Master Flexbox, Grid, Media Queries, Animations, and modern UI design principles.</p>
-        </div>
-      </div>
-    </div>
-    <div class="card animate-on-scroll animate-scale-in" style="transition-delay: 0.3s;">
-      <div class="card-inner">
-        <div class="card-front">
-          <i class="fab fa-js-square" style="color: #F7DF1E;"></i>
-          <h3>JavaScript</h3>
-          <p>Add interactivity and dynamic content to your websites.</p>
-        </div>
-        <div class="card-back">
-          <p>Learn DOM manipulation, Events, API interactions (fetch), and ES6+ modern syntax.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="test-code">
-  <h2 class="section-title animate-on-scroll animate-fade-in-up">Test Your Code Instantly!</h2>
-  <p class="section-desc animate-on-scroll animate-fade-in-up" style="transition-delay: 0.1s;">Need to quickly try out some HTML, CSS, or JavaScript? Use our integrated code editor.</p>
-  <a href="CodeEditor.html" class="btn-primary animate-on-scroll animate-fade-in-up" target="_blank" style="transition-delay: 0.2s;">Open LoOPCode Editor</a>
-</section>
-
-<section id="faq">
-  <h2 class="section-title animate-on-scroll animate-fade-in-up">Frequently Asked Questions</h2>
-  <div class="faq">
-    <div class="faq-item animate-on-scroll animate-fade-in-up">
-      <div class="faq-question">Is there any prerequisite to join?</div>
-      <div class="faq-answer">
-        <p>No prior coding experience is needed! Our courses start from the very basics, making them perfect for beginners.</p>
-      </div>
-    </div>
-    <div class="faq-item animate-on-scroll animate-fade-in-up" style="transition-delay: 0.1s;">
-      <div class="faq-question">Will I get a certificate?</div>
-      <div class="faq-answer">
-        <p>Yes! Upon successful completion of a course track, you will receive a verifiable certificate to showcase your skills.</p>
-      </div>
-    </div>
-    <div class="faq-item animate-on-scroll animate-fade-in-up" style="transition-delay: 0.2s;">
-      <div class="faq-question">Can I access content after the course ends?</div>
-      <div class="faq-answer">
-        <p>Absolutely! You get lifetime access to all course materials, including any future updates, once you enroll.</p>
-      </div>
-    </div>
-     <div class="faq-item animate-on-scroll animate-fade-in-up" style="transition-delay: 0.3s;">
-      <div class="faq-question">How long does it take to complete a course?</div>
-      <div class="faq-answer">
-        <p>Completion time varies based on your pace. Each course is broken down into modules, allowing you to learn flexibly around your schedule.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="contact">
-  <h2 class="section-title animate-on-scroll animate-fade-in-up">Stay Updated & Get In Touch</h2>
-  <p class="section-desc animate-on-scroll animate-fade-in-up" style="transition-delay: 0.1s;">Subscribe for web dev tips, course updates, and free resources. Feel free to reach out!</p>
-  <div class="newsletter animate-on-scroll animate-fade-in-up" style="transition-delay: 0.2s;">
-    <input type="email" id="email" placeholder="Enter your email address">
-    <button onclick="subscribe()">Subscribe</button>
-  </div>
-</section>
-
-<footer>
-  <p>&copy; 2025 LoOPCode. All rights reserved.</p>
-  <p>Created by: Dharmandra Singh</p>
-  <p><a href="Term.html">Terms & Conditions</a></p>
-  <div class="social-icons">
-    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://x.com/Dharman43360629?t=_NS7PC1Wueq_Sz8H2_Owyw&s=09" aria-label="Twitter" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
-    <a href="https://www.instagram.com/dsh_pubg?igsh=MWI2czY5ZTk0eG5wMw==" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-  </div>
-</footer>
-
-<script>
-  // Typing Animation (Existing - slightly adjusted for dark theme visibility)
-  const typingElement = document.getElementById('typing');
-  if(typingElement) {
-    const text = "Learn HTML, CSS & JavaScript";
-    let idx = 0;
-    typingElement.style.visibility = 'hidden'; // Hide initially until JS runs
-    function type() {
-        if (typingElement) {
-            if (idx === 0) typingElement.style.visibility = 'visible'; // Make visible when typing starts
-            typingElement.textContent = text.slice(0, idx++);
-            if (idx <= text.length) {
-                setTimeout(type, 110); // Slightly slower typing
-            }
-        }
-    }
-    // Add a small delay before starting typing for smoother page load feel
-    setTimeout(type, 300);
-  }
-
-  // FAQ Toggle (Improved - closes others)
-  const faqItems = document.querySelectorAll('.faq-item');
-  faqItems.forEach(item => {
-    const question = item.querySelector('.faq-question');
-    question.addEventListener('click', () => {
-      const currentlyActive = document.querySelector('.faq-item.active');
-      // If we click an already active item, just close it
-      if (currentlyActive && currentlyActive === item) {
-           item.classList.remove('active');
-      } else {
-          // If there is an active item and it's not the one we clicked, close it
-          if (currentlyActive) {
-              currentlyActive.classList.remove('active');
-          }
-          // Open the clicked item
-          item.classList.add('active');
-      }
-    });
-  });
-
-  // Newsletter Subscribe (Existing - no change needed for dark mode)
-  function subscribe() {
-    const emailInput = document.getElementById('email');
-    const email = emailInput.value;
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (email.trim() === '' || !emailPattern.test(email)) {
-      alert('Please enter a valid email address!');
-    } else {
-      // You might want to replace alert with a less intrusive notification
-      alert(`Thank you for subscribing with ${email}!`);
-      emailInput.value = '';
-    }
-  }
-
-  // Mobile Navigation Toggle (Existing - works with new styles)
-  const menuToggle = document.getElementById('menu-toggle');
-  const navLinks = document.getElementById('nav-links');
-  const navLinkItems = document.querySelectorAll('.nav-link-item');
-  const bodyElement = document.body;
-
-  if (menuToggle && navLinks) {
-    menuToggle.addEventListener('click', () => {
-      const isActive = navLinks.classList.toggle('active');
-      bodyElement.classList.toggle('menu-open', isActive);
-      bodyElement.classList.toggle('nav-active', isActive);
-      menuToggle.setAttribute('aria-expanded', isActive);
-
-      const icon = menuToggle.querySelector('i');
-      if (isActive) {
-          icon.classList.remove('fa-bars');
-          icon.classList.add('fa-times');
-      } else {
-          icon.classList.remove('fa-times');
-          icon.classList.add('fa-bars');
-      }
-    });
-
-    navLinkItems.forEach(link => {
-        link.addEventListener('click', () => {
-            if (navLinks.classList.contains('active')) {
-                navLinks.classList.remove('active');
-                bodyElement.classList.remove('menu-open');
-                bodyElement.classList.remove('nav-active');
-                 menuToggle.setAttribute('aria-expanded', 'false');
-                 const icon = menuToggle.querySelector('i');
-                 icon.classList.remove('fa-times');
-                 icon.classList.add('fa-bars');
-            }
-        });
-    });
-
-     bodyElement.addEventListener('click', function(event) {
-         if (navLinks.classList.contains('active') && !navLinks.contains(event.target) && !menuToggle.contains(event.target)) {
-             navLinks.classList.remove('active');
-             bodyElement.classList.remove('menu-open');
-             bodyElement.classList.remove('nav-active');
-              menuToggle.setAttribute('aria-expanded', 'false');
-             const icon = menuToggle.querySelector('i');
-             icon.classList.remove('fa-times');
-             icon.classList.add('fa-bars');
-         }
-     });
-
-  } else {
-      console.error("Menu toggle button or navigation links element not found!");
-  }
-
-  // --- Intersection Observer for Scroll Animations ---
-  const animatedElements = document.querySelectorAll('.animate-on-scroll');
-
-  const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-          // When element comes into view (is intersecting)
-          if (entry.isIntersecting) {
-              entry.target.classList.add('visible');
-              // Optional: Stop observing the element after it has become visible once
-              // observer.unobserve(entry.target);
-          }
-          // Optional: If you want the animation to reverse when scrolling up
-          // else {
-          //     entry.target.classList.remove('visible');
-          // }
-      });
-  }, {
-      rootMargin: '0px', // No margin
-      threshold: 0.1 // Trigger when 10% of the element is visible
-  });
-
-  // Observe each animated element
-  animatedElements.forEach(el => {
-      observer.observe(el);
-  });
-
-</script>
-
-</body>
-</html>
+    <
