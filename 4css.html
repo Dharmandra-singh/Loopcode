@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>4. CSS Units</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #1cc9be;
+      padding: 20px;
+      color: #222;
+    }
+    .section {
+      background: rgba(255, 255, 255, 0.3);
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    h2, h3 {
+      color: #113;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 17px;
+      margin-bottom: 15px;
+      line-height: 1.8;
+    }
+    textarea, iframe {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      border: 2px solid white;
+    }
+    textarea {
+  width: 100%;
+  max-width: 100%;
+  height: 180px;
+  font-family: monospace;
+  font-size: 16px;
+  padding: 12px;
+  border: 2px solid white;
+  border-radius: 10px;
+  background: rgba(255,248,240,0.4);
+  resize: vertical;
+  box-sizing: border-box;
+  overflow: auto;
+}
+    iframe {
+      height: 180px;
+      background: rgba(255,248,240,0.3);
+    }
+    button {
+      padding: 10px 20px;
+      border: none;
+      background: #28a745;
+      color: white;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="section">
+  <h2>4. CSS Units</h2>
+  <p><strong>Explanation:</strong> Jab bhi hum kisi element ko size, margin, padding, ya font-size dete hain CSS mein, to humein UNIT lagani padti hai. Jaise 10px, 50%, 2em, 100vw, etc. Unit batata hai ki value ka scale kya hoga.</p>
+</div>
+
+<div class="section">
+  <h3>I. Absolute Units</h3>
+  <p><strong>Definition:</strong> Ye fixed hote hain, screen ya parent size se nahi badalte. Har jagah same dikhte hain.</p>
+  <ul>
+    <li><strong>px (pixels):</strong> Sabse commonly used unit. Ek pixel = screen ka ek point.</li>
+    <li><strong>cm (centimeter), mm (millimeter), in (inch):</strong> Real world units — print media mein use hote hain.</li>
+  </ul>
+  <p><strong>Use:</strong> Jab hume exact control chahiye layout par, jaise border, box size, buttons, etc.</p>
+
+  <textarea id="code1">
+<!DOCTYPE html>
+<html>
+<body>
+  <div style="width: 200px; height: 100px; background: #ffdd57;">
+    200px wide box
+  </div>
+</body>
+</html>
+  </textarea>
+  <button onclick="runCode('code1', 'output1')">Run Code</button>
+  <iframe id="output1"></iframe>
+</div>
+
+<div class="section">
+  <h3>II. Relative Units</h3>
+  <p><strong>Definition:</strong> Ye apne parent element ya default font size ke basis par kaam karte hain.</p>
+  <ul>
+    <li><strong>% (percentage):</strong> Parent element ke size ka percentage.</li>
+    <li><strong>em:</strong> Current element ke font-size ke base par (1em = current font size).</li>
+    <li><strong>rem (root em):</strong> Root element (HTML tag) ke font-size ke base par.</li>
+  </ul>
+  <p><strong>Use:</strong> Responsive design ke liye best — screen ke size ke hisaab se adjust hota hai.</p>
+
+  <textarea id="code2">
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .parent {
+      width: 100%;
+      background: #fff;
+    }
+    .child {
+      width: 50%;
+      background: #2196f3;
+      font-size: 2em; /* 2x current size */
+    }
+  </style>
+</head>
+<body>
+  <div class="parent">
+    <div class="child">50% Width + 2em Font</div>
+  </div>
+</body>
+</html>
+  </textarea>
+  <button onclick="runCode('code2', 'output2')">Run Code</button>
+  <iframe id="output2"></iframe>
+</div>
+
+<div class="section">
+  <h3>III. Viewport Units</h3>
+  <p><strong>Definition:</strong> Ye screen ke viewport (visible area) ke hisaab se size dete hain. Super useful in responsive layout.</p>
+  <ul>
+    <li><strong>vw (viewport width):</strong> 1vw = 1% of browser width</li>
+    <li><strong>vh (viewport height):</strong> 1vh = 1% of browser height</li>
+    <li><strong>vmin, vmax:</strong> Minimum ya maximum of vw and vh</li>
+  </ul>
+  <p><strong>Use:</strong> Full screen layouts, banners, headers banane ke liye perfect.</p>
+
+  <textarea id="code3">
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .box {
+      width: 100vw;
+      height: 30vh;
+      background: #673ab7;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">30% of screen height</div>
+</body>
+</html>
+  </textarea>
+  <button onclick="runCode('code3', 'output3')">Run Code</button>
+  <iframe id="output3"></iframe>
+</div>
+
+<script>
+function runCode(textareaId, iframeId) {
+  var code = document.getElementById(textareaId).value;
+  var iframe = document.getElementById(iframeId);
+  iframe.contentDocument.open();
+  iframe.contentDocument.write(code);
+  iframe.contentDocument.close();
+}
+</script>
+
+</body>
+</html>
