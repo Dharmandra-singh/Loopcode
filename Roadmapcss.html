@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Learning Roadmap</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto+Mono&display=swap" rel="stylesheet">
+
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Loading Spinner */
+    #loader {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #d2b48c;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .spinner {
+      border: 6px solid #ddd;
+      border-top: 6px solid #8b4513;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {transform: rotate(0deg);}
+      100% {transform: rotate(360deg);}
+    }
+
+    /* Body */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(rgba(210,180,140,0.4), rgba(210,180,140,0.3)), url('Ai.png') no-repeat center center fixed;
+      background-size: cover;
+      color: #4b2e05;
+      min-height: 100vh;
+      scroll-behavior: smooth;
+      padding-top: 70px;
+    }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(128,238,19,0.5);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+
+    nav h1 {
+      font-size: 1.8rem;
+      color: black;
+      font-weight: 600;
+      font-family: 'Roboto Mono', monospace;
+    }
+
+    /* Main Heading */
+    .main-title {
+      text-align: center;
+      font-size: 3rem;
+      margin: 20px 0;
+      font-weight: 600;
+      animation: fadeSlide 1s ease forwards;
+    }
+
+    @keyframes fadeSlide {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Sections */
+    .roadmap-section {
+      background: rgba(255,248,240,0.7);
+      padding: 25px;
+      margin: 30px auto;
+      border-radius: 20px;
+      max-width: 1000px;
+      backdrop-filter: blur(6px);
+      transition: all 0.4s ease;
+      border: 2px solid transparent;
+    }
+
+    .roadmap-section:hover {
+      transform: translateY(-5px);
+      border: 2px solid #8b4513;
+      box-shadow: 0 0 20px #8b4513;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      color: black;
+      font-family: 'Roboto Mono', monospace;
+    }
+
+    ul {
+      list-style-type: decimal;
+      padding-left: 20px;
+      line-height: 1.8;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      color: #5c4033;
+      font-size: 0.9rem;
+      background: rgba(139,23,98,0.4);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .main-title {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+      .roadmap-section {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body onload="hideLoader()">
+
+  <!-- Loader -->
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav>
+    <h1>CSS Learning</h1>
+  </nav>
+
+
+  <!-- Sections (Roadmap) -->
+  <a href="1css.html" style="text-decoration: none; color: inherit;">
+    <div id="Introcss" class="roadmap-section" data-aos="fade-up">
+      <h2>1. Introduction to CSS</h2>
+      <ul>
+        <li>What is CSS?</li>
+        <li>History and Evolution</li>
+        <li>How CSS is used in web development</li>
+        <li>CSS Syntax Overview</li>
+      </ul>
+    </div>
+  </a>
+
+  <a href="2css.html" style="text-decoration: none; color: inherit;">
+    <div id="BasicStructure" class="roadmap-section" data-aos="fade-up">
+      <h2>2. CSS Selectors</h2>
+      <ul>
+        <li>Element Selector</li>
+        <li>Class Selector</li>
+        <li>ID Selector</li>
+        <li>Universal Selector</li>
+        <li>Group Selector</li>
+        <li>Attribute Selector</li>
+        <li>Pseudo-classes & Pseudo-elements</li>
+      </ul>
+    </div>
+  </a>
+
+  <a href="3css.html" style="text-decoration: none; color: inherit;">
+    <div class="roadmap-section" data-aos="fade-up-right">
+      <h2>3. CSS Box Model</h2>
+      <ul>
+        <li>Content, Padding, Border, Margin</li>
+        <li>Box Sizing</li>
+        <li>Overflow Property</li>
+      </ul>
+    </div>
+  </a>
+
+  <a href="4css.html" style="text-decoration: none; color: inherit;">
+    <div class="roadmap-section" data-aos="fade-up-right">
+      <h2>4. Positioning and Display</h2>
+      <ul>
+        <li>Static, Relative, Absolute, Fixed, Sticky Positioning</li>
+        <li>Display: block, inline, inline-block</li>
+        <li>Visibility and Z-Index</li>
+      </ul>
+    </div>
+  </a>
+
+  <a href="5css.html" style="text-decoration: none; color: inherit;">
+    <div class="roadmap-section" data-aos="fade-up-right">
+      <h2>5. Flexbox</h2>
+      <ul>
+        <li>Flex Container and Flex Items</li>
+        <li>Justify Content, Align Items, Align Self</li>
+        <li>Flex Direction, Wrap, Grow, Shrink</li>
+        <li>Flexbox Layout Examples</li>
+      </ul>
+    </div>
+  </a>
+
+  <a href="6css.html" style="text-decoration: none; color: inherit;">
+    <div class="roadmap-section" data-aos="fade-up-right">
+      <h2>6. CSS Grid</h2>
+      <ul>
+        <li>Grid Container and Grid Items</li>
+        <li>Grid Template Columns, Rows</li>
+        <li>Grid Gap, Grid Template Areas</li>
+        <li>Aligning Items in Grid</li>
+      </ul>
+    </div>
+  </a>
+
+  <a href="7css.html" style="text-decoration: none; color: inherit;">
+    <div class="roadmap-section" data-aos="fade-up-right">
+      <h2>7. CSS Animations & Transitions</h2>
+      <ul>
+        <li>Keyframes</li>
+        <li>Transition Properties</li>
+        <li>Transform Property</li>
+        <li>Animating Properties</li>
+      </ul>
+    </div>
+  </a>
+
+  <a href="8css.html" style="text-decoration: none; color: inherit;">
+    <div class="roadmap-section" data-aos="fade-up-right">
+      <h2>8. CSS Variables (Custom Properties)</h2>
+      <ul>
+        <li>Defining and Using Variables</li>
+        <li>Global vs Local Variables</li>
+        <li>Dynamic Theming with JavaScript</li>
+      </ul>
+    </div>
+  </a>
+
+  <a href="9css.html" style="text-decoration: none; color: inherit;">
+    <div class="roadmap-section" data-aos="fade-up-right">
+      <h2>9. Responsive Web Design</h2>
+      <ul>
+        <li>Media Queries</li>
+        <li>Mobile-first Design</li>
+        <li>Flexible Layouts with Percentages</li>
+        <li>Fluid Typography</li>
+      </ul>
+    </div>
+  </a>
+
+  <a href="10css.html" style="text-decoration: none; color: inherit;">
+    <div class="roadmap-section" data-aos="fade-up-right">
+      <h2>10. CSS Frameworks</h2>
+      <ul>
+        <li>Bootstrap</li>
+        <li>Tailwind CSS</li>
+        <li>Foundation</li>
+      </ul>
+    </div>
+  </a>
+
+  <a href="11css.html" style="text-decoration: none; color: inherit;">
+    <div class="roadmap-section" data-aos="fade-up-right">
+      <h2>11. CSS in JavaScript</h2>
+      <ul>
+        <li>Styled Components</li>
+        <li>Emotion</li>
+      </ul>
+    </div>
+  </a>
+
+  <a href="12css.html" style="text-decoration: none; color: inherit;">
+    <div class="roadmap-section" data-aos="fade-up-right">
+      <h2>12. Advanced CSS Techniques</h2>
+      <ul>
+        <li>CSS Houdini</li>
+        <li>Subgrid</li>
+        <li>Container Queries</li>
+        <li>Advanced Grid Layouts</li>
+      </ul>
+    </div>
+  </a>
+
+  <a href="13css.html" style="text-decoration: none; color: inherit;">
+    <div class="roadmap-section" data-aos="fade-up-right">
+      <h2>13. Accessibility and Performance</h2>
+      <ul>
+        <li>Creating Accessible Designs</li>
+        <li>SEO Best Practices for CSS</li>
+        <li>Optimizing CSS for Performance</li>
+      </ul>
+    </div>
+  </a>
+
+  <a href="14css.html" style="text-decoration: none; color: inherit;">
+    <div class="roadmap-section" data-aos="fade-up-right">
+      <h2>14. Final Project</h2>
+      <ul>
+        <li>Building a Complete Website</li>
+        <li>Responsive Design Implementation</li>
+        <li>Testing and Debugging CSS</li>
+      </ul>
+    </div>
+  </a>
+
+  <!-- Footer -->
+  <footer>
+    Copyright © 2025 | All Rights Reserved
+  </footer>
+
+  <!-- AOS Animation Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+
+    function hideLoader() {
+      document.getElementById('loader').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
