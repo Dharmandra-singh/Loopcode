@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>3. CSS Box Model</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body, html {
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+      background-color: #1cc9be;
+    }
+    .section {
+      background-color: rgba(255, 255, 255, 0.3);
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 1000px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+    h2, h3 {
+      color: #333;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+    textarea {
+      width: 100%;
+      height: 150px;
+      font-family: monospace;
+      font-size: 16px;
+      padding: 10px;
+      border: 2px solid white;
+      border-radius: 8px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      background: rgba(255,248,240,0.4);
+    }
+    button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+    iframe {
+      width: 100%;
+      height: 150px;
+      background: rgba(255,248,240,0.4);
+      border: 2px solid white;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="section">
+  <h2>3. CSS Box Model</h2>
+
+  <h3>1. Box Model Overview</h3>
+  <p><strong>Explanation:</strong> CSS Box Model ek element ke 4 main parts dikhata hai:
+    <ul>
+      <li><strong>Content:</strong> Actual text ya image</li>
+      <li><strong>Padding:</strong> Content ke around space</li>
+      <li><strong>Border:</strong> Padding ke baahar line</li>
+      <li><strong>Margin:</strong> Border ke baahar ki space</li>
+    </ul>
+  </p>
+
+  <textarea id="box1">
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .box {
+      background-color: lightblue;
+      padding: 20px;
+      border: 5px solid blue;
+      margin: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">Box Model Example</div>
+</body>
+</html>
+  </textarea>
+  <button onclick="runCode('box1', 'outbox1')">Run Code</button>
+  <iframe id="outbox1"></iframe>
+
+  <h3>2. Box Sizing</h3>
+  <p><strong>Explanation:</strong> By default, width sirf content ke liye hoti hai. Agar aap <code>box-sizing: border-box</code> lagao, to padding + border bhi width me include ho jaata hai.</p>
+
+  <textarea id="box2">
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .box1, .box2 {
+      width: 300px;
+      padding: 20px;
+      border: 5px solid black;
+      margin: 10px;
+    }
+    .box1 {
+      box-sizing: content-box;
+      background-color: lightcoral;
+    }
+    .box2 {
+      box-sizing: border-box;
+      background-color: lightgreen;
+    }
+  </style>
+</head>
+<body>
+  <div class="box1">Content-box (default)</div>
+  <div class="box2">Border-box</div>
+</body>
+</html>
+  </textarea>
+  <button onclick="runCode('box2', 'outbox2')">Run Code</button>
+  <iframe id="outbox2"></iframe>
+
+  <h3>3. Overflow Property</h3>
+  <p><strong>Explanation:</strong> Jab content box ke andar fit nahi hota, tab <code>overflow</code> property usse control karti hai. Values ho sakti hain: <code>visible</code>, <code>hidden</code>, <code>scroll</code>, <code>auto</code>.</p>
+
+  <textarea id="box3">
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .container {
+      width: 200px;
+      height: 100px;
+      border: 2px solid black;
+      overflow: scroll;
+      background-color: #fef4c4;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    This is a long content that will overflow from the box. Scroll to see full content inside the box.
+  </div>
+</body>
+</html>
+  </textarea>
+  <button onclick="runCode('box3', 'outbox3')">Run Code</button>
+  <iframe id="outbox3"></iframe>
+</div>
+
+<script>
+function runCode(textareaId, iframeId) {
+  const code = document.getElementById(textareaId).value;
+  const iframe = document.getElementById(iframeId);
+  iframe.contentDocument.open();
+  iframe.contentDocument.write(code);
+  iframe.contentDocument.close();
+}
+</script>
+
+</body>
+</html>
