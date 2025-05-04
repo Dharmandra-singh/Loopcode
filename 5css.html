@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>5. Colors in CSS</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #1cc9be;
+      padding: 20px 0;
+    }
+    .section {
+      background: rgba(255, 255, 255, 0.3);
+      margin: 20px auto;
+      padding: 25px;
+      border-radius: 14px;
+      width: 90%;
+      max-width: 1000px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+    h2, h3 {
+      color: #004080;
+      margin-bottom: 16px;
+    }
+    p {
+      font-size: 18px;
+      margin-bottom: 16px;
+      line-height: 1.7;
+    }
+    textarea {
+      width: 100%;
+      max-width: 100%;
+      height: 170px;
+      padding: 12px;
+      font-family: monospace;
+      font-size: 16px;
+      background: rgba(255, 248, 240, 0.5);
+      border: 2px solid white;
+      border-radius: 10px;
+      resize: vertical;
+      margin-bottom: 15px;
+    }
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 15px;
+      font-weight: 500;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-bottom: 25px;
+      transition: all 0.3s ease-in-out;
+      position: relative;
+      overflow: hidden;
+    }
+    button:hover {
+      box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+      transform: translateY(-2px);
+    }
+    iframe {
+      width: 100%;
+      height: 170px;
+      border-radius: 10px;
+      border: 2px solid white;
+      background: rgba(255, 248, 240, 0.5);
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="section">
+  <h2>5. Colors in CSS</h2>
+
+  <h3>I. Color Names</h3>
+  <p><strong>Explanation:</strong> CSS me 140+ predefined color names hote hain jaise: <code>red</code>, <code>blue</code>, <code>green</code>, <code>gold</code>, <code>crimson</code>, etc. Inhe directly use kiya ja sakta hai.</p>
+  <textarea id="code1">
+<!DOCTYPE html>
+<html>
+<body>
+  <h2 style="color: red;">This is red</h2>
+  <p style="color: green;">This is green text</p>
+</body>
+</html>
+  </textarea>
+  <button onclick="runCode('code1', 'output1')">Run Code</button>
+  <iframe id="output1"></iframe>
+
+  <h3>II. HEX Colors</h3>
+  <p><strong>Explanation:</strong> HEX color ek 6-character code hota hai. Jaise: <code>#ff0000</code> (red), <code>#00ff00</code> (green), <code>#0000ff</code> (blue). Har 2 characters Red, Green, Blue ko define karte hain.</p>
+  <textarea id="code2">
+<!DOCTYPE html>
+<html>
+<body>
+  <div style="background-color: #ff6600; padding: 20px; color: white;">
+    HEX Color: Orange (#ff6600)
+  </div>
+</body>
+</html>
+  </textarea>
+  <button onclick="runCode('code2', 'output2')">Run Code</button>
+  <iframe id="output2"></iframe>
+
+  <h3>III. RGB & RGBA</h3>
+  <p><strong>Explanation:</strong><br>
+    RGB ka matlab hai Red, Green, Blue. Format: <code>rgb(255, 0, 0)</code><br>
+    RGBA me <code>A</code> hota hai alpha (opacity): <code>rgba(255, 0, 0, 0.5)</code>
+  </p>
+  <textarea id="code3">
+<!DOCTYPE html>
+<html>
+<body>
+  <div style="background-color: rgb(0, 0, 255); color: white; padding: 15px;">
+    This is RGB Blue
+  </div>
+  <div style="background-color: rgba(255, 0, 0, 0.5); color: black; padding: 15px; margin-top: 10px;">
+    This is RGBA Red with Transparency
+  </div>
+</body>
+</html>
+  </textarea>
+  <button onclick="runCode('code3', 'output3')">Run Code</button>
+  <iframe id="output3"></iframe>
+
+  <h3>IV. HSL & HSLA</h3>
+  <p><strong>Explanation:</strong><br>
+    HSL = Hue, Saturation, Lightness. Format: <code>hsl(120, 100%, 50%)</code> (green)<br>
+    HSLA me alpha (opacity) add hota hai: <code>hsla(240, 100%, 50%, 0.6)</code> (semi-transparent blue)
+  </p>
+  <textarea id="code4">
+<!DOCTYPE html>
+<html>
+<body>
+  <div style="background-color: hsl(120, 100%, 30%); color: white; padding: 15px;">
+    HSL Green (darker)
+  </div>
+  <div style="background-color: hsla(240, 100%, 50%, 0.5); color: white; padding: 15px; margin-top: 10px;">
+    HSLA Blue Transparent
+  </div>
+</body>
+</html>
+  </textarea>
+  <button onclick="runCode('code4', 'output4')">Run Code</button>
+  <iframe id="output4"></iframe>
+
+  <h3>V. Opacity & Transparent</h3>
+  <p><strong>Explanation:</strong><br>
+    <code>opacity</code> se pura element transparent ho jata hai. Range: 0 (invisible) to 1 (fully visible)<br>
+    <code>transparent</code> ek keyword hai jiska matlab full transparent color.
+  </p>
+  <textarea id="code5">
+<!DOCTYPE html>
+<html>
+<body>
+  <div style="background-color: red; opacity: 0.5; padding: 20px;">
+    Opacity 0.5 (Half Transparent Box)
+  </div>
+  <div style="background-color: transparent; border: 2px solid black; padding: 20px; margin-top: 10px;">
+    Transparent Background with Border
+  </div>
+</body>
+</html>
+  </textarea>
+  <button onclick="runCode('code5', 'output5')">Run Code</button>
+  <iframe id="output5"></iframe>
+
+</div>
+
+<script>
+function runCode(textareaId, iframeId) {
+  const code = document.getElementById(textareaId).value;
+  const iframe = document.getElementById(iframeId);
+  iframe.contentDocument.open();
+  iframe.contentDocument.write(code);
+  iframe.contentDocument.close();
+}
+</script>
+
+</body>
+</html>
