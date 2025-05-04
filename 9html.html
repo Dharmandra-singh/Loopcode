@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>9. HTML Forms - Full Guide</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #1cc9be;
+      padding: 30px;
+    }
+    .container {
+      background: rgba(255,255,255,0.3);
+      padding: 25px;
+      border-radius: 15px;
+      max-width: 1000px;
+      margin: auto;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    h2, h3 {
+      color: #180;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 17px;
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+    ul {
+      margin: 10px 0 20px 20px;
+    }
+    textarea, iframe {
+      width: 100%;
+      height: 200px;
+      font-size: 16px;
+      padding: 10px;
+      margin: 10px 0 20px;
+      border-radius: 10px;
+      border: 2px solid white;
+      background: rgba(255,248,240,0.4);
+      font-family: monospace;
+    }
+    iframe {
+      margin-top: 10px;
+    }
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 15px;
+      font-weight: 500;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-bottom: 25px;
+      transition: all 0.3s ease-in-out;
+      position: relative;
+      overflow: hidden;
+    }
+    button:hover {
+      box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>9. HTML Forms - Full Guide</h2>
+
+    <!-- Form Structure -->
+    <h3>I. Form Structure</h3>
+    <p><strong>&lt;form&gt;</strong> tag HTML mein ek form banane ke liye use hoti hai. Form ke andar <code>input</code>, <code>label</code>, <code>button</code> jaise elements hote hain jo user se data collect karte hain.</p>
+    <ul>
+      <li><strong>action:</strong> Ye batata hai ki form data kis page ya URL par bhejna hai.</li>
+      <li><strong>method:</strong> Ye define karta hai data bhejne ka method - GET ya POST.</li>
+      <li><strong>label:</strong> User ko input ka naam dikhata hai, aur accessibility ke liye important hota hai.</li>
+    </ul>
+
+    <textarea id="code1">
+<form action="/submit" method="post">
+  <label for="username">Your Name:</label>
+  <input type="text" id="username" name="username"><br><br>
+
+  <label for="email">Your Email:</label>
+  <input type="email" id="email" name="email"><br><br>
+
+  <input type="submit" value="Send">
+</form>
+    </textarea>
+    <button onclick="runCode('code1', 'output1')">Run Code</button>
+    <iframe id="output1"></iframe>
+
+    <!-- Input Types -->
+    <h3>II. Input Field Types</h3>
+    <p>Input tag ke <strong>type</strong> attribute se hum batate hain kis tarah ka data input hoga:</p>
+    <ul>
+      <li><strong>text:</strong> Normal text</li>
+      <li><strong>email:</strong> Email input with validation</li>
+      <li><strong>password:</strong> Hidden input (for passwords)</li>
+      <li><strong>radio:</strong> Ek hi option select karne ke liye</li>
+      <li><strong>checkbox:</strong> Multiple options select karne ke liye</li>
+      <li><strong>date:</strong> Date picker</li>
+      <li><strong>file:</strong> File upload karne ke liye</li>
+    </ul>
+
+    <textarea id="code2">
+<form>
+  Name: <input type="text" name="name"><br><br>
+  Email: <input type="email" name="email"><br><br>
+  Password: <input type="password" name="pwd"><br><br>
+
+  Gender:
+  <input type="radio" name="gender" value="male"> Male
+  <input type="radio" name="gender" value="female"> Female<br><br>
+
+  Skills:
+  <input type="checkbox" name="skill" value="html"> HTML
+  <input type="checkbox" name="skill" value="css"> CSS<br><br>
+
+  DOB: <input type="date" name="dob"><br><br>
+  Upload Resume: <input type="file" name="resume"><br><br>
+
+  <input type="submit" value="Register">
+</form>
+    </textarea>
+    <button onclick="runCode('code2', 'output2')">Run Code</button>
+    <iframe id="output2"></iframe>
+
+    <!-- Validation -->
+    <h3>III. Validation Basics</h3>
+    <p>Form mein validation ke liye HTML attributes ka use hota hai jaise:</p>
+    <ul>
+      <li><strong>required:</strong> Field empty nahi chhoda ja sakta.</li>
+      <li><strong>min, max:</strong> Numbers ke liye limit set karta hai.</li>
+      <li><strong>pattern:</strong> Regular Expression ke through matching.</li>
+    </ul>
+
+    <textarea id="code3">
+<form>
+  Email: <input type="email" name="email" required><br><br>
+  Age: <input type="number" name="age" min="18" max="60" required><br><br>
+  Password: <input type="password" name="pwd" pattern=".{6,}" title="Minimum 6 characters required"><br><br>
+  <input type="submit" value="Validate">
+</form>
+    </textarea>
+    <button onclick="runCode('code3', 'output3')">Run Code</button>
+    <iframe id="output3"></iframe>
+
+  </div>
+
+  <script>
+    function runCode(textareaId, iframeId) {
+      const code = document.getElementById(textareaId).value;
+      const iframe = document.getElementById(iframeId);
+      const doc = iframe.contentDocument || iframe.contentWindow.document;
+      doc.open();
+      doc.write(code);
+      doc.close();
+    }
+  </script>
+</body>
+</html>
