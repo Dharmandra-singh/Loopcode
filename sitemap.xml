@@ -39,4 +39,11 @@
     <priority>0.50</priority>
   </url>
 
+
+ <url>
+    <loc>https://loopcodein.netlify.app/4html</loc>
+    <lastmod>2025-05-04</lastmod>
+    <priority>0.50</priority>
+  </url>
+
 </urlset>
