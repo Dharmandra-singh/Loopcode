@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>2. CSS Selectors</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body, html {
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+      background-color: #1cc9be;
+    }
+    .section {
+      background-color: rgba(255, 255, 255, 0.3);
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 1000px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+    h2, h3 {
+      color: #333;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+    textarea {
+      width: 100%;
+      height: 150px;
+      font-family: monospace;
+      font-size: 16px;
+      padding: 10px;
+      border: 2px solid white;
+      border-radius: 8px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      background: rgba(255,248,240,0.4);
+    }
+    button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+    iframe {
+      width: 100%;
+      height: 150px;
+      background: rgba(255,248,240,0.4);
+      border: 2px solid white;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="section">
+  <h2>2. CSS Selectors</h2>
+
+  <h3>1. Element Selector (Tag Selector)</h3>
+  <p><strong>Explanation:</strong> Ye specific tag (jaise <code>h1</code>, <code>p</code>) ko target karta hai aur unke upar style lagata hai.</p>
+  <textarea id="sel1">
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    h1 {
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <h1>This is a heading</h1>
+</body>
+</html>
+  </textarea>
+  <button onclick="runCode('sel1', 'out1')">Run Code</button>
+  <iframe id="out1"></iframe>
+
+  <h3>2. Class Selector (.)</h3>
+  <p><strong>Explanation:</strong> Kisi bhi element me class attribute ke through styling lagayi ja sakti hai. Class ke liye <code>.</code> use hota hai.</p>
+  <textarea id="sel2">
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .highlight {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <p class="highlight">This is highlighted text.</p>
+</body>
+</html>
+  </textarea>
+  <button onclick="runCode('sel2', 'out2')">Run Code</button>
+  <iframe id="out2"></iframe>
+
+  <h3>3. ID Selector (#)</h3>
+  <p><strong>Explanation:</strong> ID selector kisi specific element ko style karta hai jiska unique ID hota hai. Use karte hain <code>#</code>.</p>
+  <textarea id="sel3">
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #unique {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <p id="unique">This is a unique paragraph.</p>
+</body>
+</html>
+  </textarea>
+  <button onclick="runCode('sel3', 'out3')">Run Code</button>
+  <iframe id="out3"></iframe>
+
+  <h3>4. Universal Selector (*)</h3>
+  <p><strong>Explanation:</strong> Sabhi elements ko ek sath target karne ke liye <code>*</code> use hota hai.</p>
+  <textarea id="sel4">
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    * {
+      font-family: Arial;
+      color: darkgreen;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hello</h1>
+  <p>Every element is styled</p>
+</body>
+</html>
+  </textarea>
+  <button onclick="runCode('sel4', 'out4')">Run Code</button>
+  <iframe id="out4"></iframe>
+
+  <h3>5. Group Selector</h3>
+  <p><strong>Explanation:</strong> Ek sath multiple selectors ko group me style karne ke liye comma use karte hain.</p>
+  <textarea id="sel5">
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    h1, p {
+      text-align: center;
+      color: teal;
+    }
+  </style>
+</head>
+<body>
+  <h1>This is Heading</h1>
+  <p>This is Paragraph</p>
+</body>
+</html>
+  </textarea>
+  <button onclick="runCode('sel5', 'out5')">Run Code</button>
+  <iframe id="out5"></iframe>
+
+  <h3>6. Attribute Selector</h3>
+  <p><strong>Explanation:</strong> Jo elements kisi specific attribute (jaise type, href) ko hold karte hain unhe target karta hai.</p>
+  <textarea id="sel6">
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    input[type="text"] {
+      background-color: lightyellow;
+    }
+  </style>
+</head>
+<body>
+  <input type="text" value="Text Field">
+  <input type="submit" value="Submit">
+</body>
+</html>
+  </textarea>
+  <button onclick="runCode('sel6', 'out6')">Run Code</button>
+  <iframe id="out6"></iframe>
+
+  <h3>7. Pseudo-classes & Pseudo-elements</h3>
+  <p><strong>Explanation:</strong> Ye special states ya parts of elements ko style karne ke liye hote hain. Jaise hover, first-line etc.</p>
+  <textarea id="sel7">
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    a:hover {
+      color: red;
+    }
+    p::first-line {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <a href="#">Hover me</a>
+  <p>This paragraph will show bold first line only.</p>
+</body>
+</html>
+  </textarea>
+  <button onclick="runCode('sel7', 'out7')">Run Code</button>
+  <iframe id="out7"></iframe>
+</div>
+
+<script>
+function runCode(textareaId, iframeId) {
+  const code = document.getElementById(textareaId).value;
+  const iframe = document.getElementById(iframeId);
+  iframe.contentDocument.open();
+  iframe.contentDocument.write(code);
+  iframe.contentDocument.close();
+}
+</script>
+
+</body>
+</html>
