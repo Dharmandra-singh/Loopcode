@@ -7,30 +7,7 @@
     <priority>1.00</priority>
   </url>
 
-  <url>
-    <loc>https://loopcodein.netlify.app/#about</loc>
-    <lastmod>2025-05-04</lastmod>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://loopcodein.netlify.app/#courses</loc>
-    <lastmod>2025-05-04</lastmod>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://loopcodein.netlify.app/#faq</loc>
-    <lastmod>2025-05-04</lastmod>
-    <priority>0.64</priority>
-  </url>
-
-  <url>
-    <loc>https://loopcodein.netlify.app/#contact</loc>
-    <lastmod>2025-05-04</lastmod>
-    <priority>0.64</priority>
-  </url>
-
+ 
   <url>
     <loc>https://loopcodein.netlify.app/term</loc>
     <lastmod>2025-05-04</lastmod>
