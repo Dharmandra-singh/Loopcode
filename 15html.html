@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>15. File Paths in HTML</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #1cc9be;
+      padding: 30px;
+    }
+    .container {
+      background: rgba(255,255,255,0.3);
+      padding: 25px;
+      border-radius: 15px;
+      max-width: 1000px;
+      margin: auto;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    h2, h3 {
+      color: #180;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 17px;
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+    ul {
+      margin: 10px 0 20px 20px;
+    }
+    textarea, iframe {
+      width: 100%;
+      height: 150px;
+      font-size: 16px;
+      padding: 10px;
+      margin: 10px 0 20px;
+      border-radius: 10px;
+      border: 2px solid white;
+      background: rgba(255,248,240,0.4);
+      font-family: monospace;
+    }
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 15px;
+      font-weight: 500;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-bottom: 25px;
+      transition: all 0.3s ease-in-out;
+    }
+    button:hover {
+      box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>15. File Paths in HTML</h2>
+
+    <!-- Absolute vs Relative -->
+    <h3>I. Absolute vs Relative Path</h3>
+    <p><strong>File paths</strong> HTML mein batate hain ki koi file (image, CSS, JS) kis location par hai. Do prakar ke paths hote hain:</p>
+
+    <ul>
+      <li><strong>Absolute Path:</strong> Full URL ya complete location (e.g. <code>https://example.com/images/photo.jpg</code>)</li>
+      <li><strong>Relative Path:</strong> Current file ke comparison mein path (e.g. <code>images/photo.jpg</code>)</li>
+    </ul>
+
+    <textarea id="code1">
+<!-- Absolute Path -->
+<img src="https://www.w3schools.com/images/picture.jpg" alt="Absolute Path" width="200">
+
+<!-- Relative Path -->
+<img src="images/pic.png" alt="Relative Path" width="200">
+    </textarea>
+    <button onclick="runCode('code1', 'output1')">Run Code</button>
+    <iframe id="output1"></iframe>
+
+    <!-- Best Practices -->
+    <h3>II. Best Practices</h3>
+    <ul>
+      <li>Website ke andar mostly relative paths use karo</li>
+      <li>Folder structure clear aur consistent rakho</li>
+      <li>Case sensitivity ka dhyan rakho (especially on Linux servers)</li>
+      <li>Broken path se bachne ke liye file names sahi check karo</li>
+      <li>Always test relative paths locally before deployment</li>
+    </ul>
+
+  </div>
+
+  <script>
+    function runCode(textareaId, iframeId) {
+      const code = document.getElementById(textareaId).value;
+      const iframe = document.getElementById(iframeId);
+      const doc = iframe.contentDocument || iframe.contentWindow.document;
+      doc.open();
+      doc.write(code);
+      doc.close();
+    }
+  </script>
+</body>
+</html>
