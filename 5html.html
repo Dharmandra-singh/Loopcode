@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>5. HTML Lists Explained</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #1cc9be;
+      padding: 20px;
+    }
+    .section {
+      background: rgba(255, 255, 255, 0.3);
+      padding: 20px;
+      border-radius: 15px;
+      max-width: 1000px;
+      margin: auto;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+    h2, h3 {
+      color: #349;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 18px;
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+    textarea, iframe {
+      width: 100%;
+      height: 160px;
+      font-size: 16px;
+      padding: 10px;
+      margin: 10px 0 20px;
+      border-radius: 10px;
+      border: 2px solid white;
+      background: rgba(255,248,240,0.4);
+      font-family: monospace;
+    }
+    iframe {
+      margin-top: 10px;
+    }
+    button {
+      background: #007bff;
+      color: #fff;
+      border: none;
+      padding: 8px 20px;
+      font-size: 15px;
+      font-weight: 500;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-bottom: 20px;
+      transition: all 0.3s ease-in-out;
+      position: relative;
+      overflow: hidden;
+    }
+    button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(120deg, #00bcd4, #2196f3);
+      transition: all 0.4s ease;
+      z-index: -1;
+    }
+    button:hover::before {
+      left: 0;
+    }
+    button:hover {
+      color: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transform: translateY(-1px);
+    }
+    button:active {
+      transform: scale(0.95);
+      box-shadow: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="section">
+    <h2>5. HTML Lists</h2>
+
+    <h3>I. Unordered List (ul)</h3>
+    <p><strong>Explanation:</strong> Jab hume list items bina kisi numbering ke dikhani ho, tab <code>&lt;ul&gt;</code> (unordered list) ka use hota hai. Har item ke aage bullet point lagta hai.</p>
+    <p><strong>Example:</strong> Fruits list bina kisi order ke:</p>
+
+    <textarea id="code1">
+<h3>Fruits List</h3>
+<ul>
+  <li>Apple</li>
+  <li>Banana</li>
+  <li>Mango</li>
+</ul>
+    </textarea>
+    <button onclick="runCode('code1', 'output1')">Run Code</button>
+    <iframe id="output1"></iframe>
+
+    <h3>II. Ordered List (ol)</h3>
+    <p><strong>Explanation:</strong> Jab items ke order ka importance ho, jaise ranking ya steps, tab <code>&lt;ol&gt;</code> (ordered list) ka use hota hai. Isme numbering ya alphabets hote hain.</p>
+    <p><strong>Example:</strong> Top 3 Programming Languages:</p>
+
+    <textarea id="code2">
+<h3>Top 3 Programming Languages</h3>
+<ol>
+  <li>Python</li>
+  <li>JavaScript</li>
+  <li>Java</li>
+</ol>
+    </textarea>
+    <button onclick="runCode('code2', 'output2')">Run Code</button>
+    <iframe id="output2"></iframe>
+
+    <h3>III. Description List (dl)</h3>
+    <p><strong>Explanation:</strong> Jab kisi word ya item ka meaning likhna ho, tab <code>&lt;dl&gt;</code> (description list) ka use hota hai. Iske andar:</p>
+    <ul>
+      <li><code>&lt;dt&gt;</code> - Term (jo define karna hai)</li>
+      <li><code>&lt;dd&gt;</code> - Uska explanation</li>
+    </ul>
+
+    <textarea id="code3">
+<h3>HTML Tags Explanation</h3>
+<dl>
+  <dt>&lt;h1&gt;</dt>
+  <dd>Heading tag</dd>
+  <dt>&lt;p&gt;</dt>
+  <dd>Paragraph tag</dd>
+  <dt>&lt;a&gt;</dt>
+  <dd>Anchor (link) tag</dd>
+</dl>
+    </textarea>
+    <button onclick="runCode('code3', 'output3')">Run Code</button>
+    <iframe id="output3"></iframe>
+  </div>
+
+  <script>
+    function runCode(textareaId, iframeId) {
+      const code = document.getElementById(textareaId).value;
+      const iframe = document.getElementById(iframeId);
+      const doc = iframe.contentDocument || iframe.contentWindow.document;
+      doc.open();
+      doc.write(code);
+      doc.close();
+    }
+  </script>
+</body>
+</html>
