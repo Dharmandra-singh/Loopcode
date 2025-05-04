@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>10. Multimedia in HTML</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #1cc9be;
+      padding: 30px;
+    }
+    .container {
+      background: rgba(255,255,255,0.3);
+      padding: 25px;
+      border-radius: 15px;
+      max-width: 1000px;
+      margin: auto;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    h2, h3 {
+      color: #180;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 17px;
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+    ul {
+      margin: 10px 0 20px 20px;
+    }
+    textarea, iframe {
+      width: 100%;
+      height: 200px;
+      font-size: 16px;
+      padding: 10px;
+      margin: 10px 0 20px;
+      border-radius: 10px;
+      border: 2px solid white;
+      background: rgba(255,248,240,0.4);
+      font-family: monospace;
+    }
+    iframe.video {
+      height: 300px;
+    }
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 15px;
+      font-weight: 500;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-bottom: 25px;
+      transition: all 0.3s ease-in-out;
+      position: relative;
+      overflow: hidden;
+    }
+    button:hover {
+      box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>10. Multimedia in HTML</h2>
+
+    <!-- AUDIO TAG -->
+    <h3>I. Audio Tag</h3>
+    <p><strong>&lt;audio&gt;</strong> tag se hum web page par sound file play kar sakte hain. Common formats: MP3, OGG, WAV.</p>
+    <ul>
+      <li><strong>controls:</strong> Player dikhata hai</li>
+      <li><strong>autoplay:</strong> Page load hote hi play shuru hota hai</li>
+      <li><strong>loop:</strong> Audio repeat hota hai</li>
+    </ul>
+
+    <textarea id="code1">
+<audio controls autoplay loop>
+  <source src="sample.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+    </textarea>
+    <button onclick="runCode('code1', 'output1')">Run Code</button>
+    <iframe id="output1"></iframe>
+
+    <!-- VIDEO TAG -->
+    <h3>II. Video Tag</h3>
+    <p><strong>&lt;video&gt;</strong> tag video play karne ke liye hoti hai. Common formats: MP4, WebM, OGG.</p>
+    <ul>
+      <li><strong>controls:</strong> Video player UI show karta hai</li>
+      <li><strong>autoplay:</strong> Automatically video play karta hai</li>
+      <li><strong>loop:</strong> Video repeat hota hai</li>
+    </ul>
+
+    <textarea id="code2">
+<video width="320" height="240" controls autoplay loop>
+  <source src="sample.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+    </textarea>
+    <button onclick="runCode('code2', 'output2')">Run Code</button>
+    <iframe id="output2"></iframe>
+
+    <!-- EMBED YOUTUBE -->
+    <h3>III. Embedding YouTube Video</h3>
+    <p>YouTube video embed karne ke liye <strong>&lt;iframe&gt;</strong> use hota hai.</p>
+
+    <textarea id="code3">
+<iframe class="video" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen>
+</iframe>
+    </textarea>
+    <button onclick="runCode('code3', 'output3')">Run Code</button>
+    <iframe id="output3" class="video"></iframe>
+  </div>
+
+  <script>
+    function runCode(textareaId, iframeId) {
+      const code = document.getElementById(textareaId).value;
+      const iframe = document.getElementById(iframeId);
+      const doc = iframe.contentDocument || iframe.contentWindow.document;
+      doc.open();
+      doc.write(code);
+      doc.close();
+    }
+  </script>
+</body>
+</html>
