@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>14. HTML Entities</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #1cc9be;
+      padding: 30px;
+    }
+    .container {
+      background: rgba(255,255,255,0.3);
+      padding: 25px;
+      border-radius: 15px;
+      max-width: 1000px;
+      margin: auto;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    h2, h3 {
+      color: #180;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 17px;
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+    ul {
+      margin: 10px 0 20px 20px;
+    }
+    textarea, iframe {
+      width: 100%;
+      height: 150px;
+      font-size: 16px;
+      padding: 10px;
+      margin: 10px 0 20px;
+      border-radius: 10px;
+      border: 2px solid white;
+      background: rgba(255,248,240,0.4);
+      font-family: monospace;
+    }
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 15px;
+      font-weight: 500;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-bottom: 25px;
+      transition: all 0.3s ease-in-out;
+    }
+    button:hover {
+      box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>14. HTML Entities</h2>
+
+    <!-- Special Characters -->
+    <h3>I. Special Characters</h3>
+    <p>HTML mein kuch characters jaise <code>&lt;</code>, <code>&gt;</code>, <code>&amp;</code> ko directly likhne se HTML confuse ho sakta hai. Isliye hum <strong>HTML Entities</strong> ka use karte hain.</p>
+    <p>Entity ka syntax hota hai: <code>&amp;entity_name;</code> ya <code>&amp;#entity_number;</code></p>
+
+    <ul>
+      <li><code>&amp;lt;</code> = &lt;</li>
+      <li><code>&amp;gt;</code> = &gt;</li>
+      <li><code>&amp;amp;</code> = &amp;</li>
+      <li><code>&amp;quot;</code> = "</li>
+      <li><code>&amp;copy;</code> = ©</li>
+      <li><code>&amp;nbsp;</code> = non-breaking space</li>
+    </ul>
+
+    <textarea id="code1">
+<p>&lt;p&gt;This is a paragraph.&lt;/p&gt;</p>
+<p>5 &gt; 3 and 3 &lt; 5</p>
+<p>Use &amp;amp; to write an &amp; sign</p>
+<p>&copy; 2025 Dharmandra. All rights reserved.</p>
+<p>1&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;3 (with non-breaking spaces)</p>
+    </textarea>
+    <button onclick="runCode('code1', 'output1')">Run Code</button>
+    <iframe id="output1"></iframe>
+
+  </div>
+
+  <script>
+    function runCode(textareaId, iframeId) {
+      const code = document.getElementById(textareaId).value;
+      const iframe = document.getElementById(iframeId);
+      const doc = iframe.contentDocument || iframe.contentWindow.document;
+      doc.open();
+      doc.write(code);
+      doc.close();
+    }
+  </script>
+</body>
+</html>
