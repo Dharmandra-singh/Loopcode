@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>12. CSS Transitions</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: #f0f0f0;
+      padding: 20px;
+    }
+    .section {
+      background: #1e1e1e;
+      padding: 25px;
+      margin-bottom: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 255, 255, 0.2);
+    }
+    h2 {
+      color: #00f7ff;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 17px;
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+    textarea {
+      width: 100%;
+      height: 160px;
+      font-family: monospace;
+      font-size: 15px;
+      background: #222;
+      color: #fff;
+      padding: 10px;
+      border: 2px solid #00f7ff;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 6px 16px;
+      font-size: 14px;
+      color: white;
+      background-color: #00b894;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    button:hover {
+      background-color: #00cec9;
+      transform: scale(1.05);
+    }
+    iframe {
+      width: 100%;
+      height: 180px;
+      background: #fff;
+      border: 2px solid #00f7ff;
+      border-radius: 10px;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="section">
+    <h2>12. CSS Transitions</h2>
+    <p><strong>Explanation:</strong> CSS Transitions allow smooth changes between property values. Jab koi element hover ya interact hota hai, tab bina jhatke ke animation jaisa effect milta hai. Ye UX ko enhance karta hai.</p>
+
+    <h3>I. Transition Properties</h3>
+    <p><strong>transition-property:</strong> Kaun se CSS property ko transition dena hai (like <code>background-color</code>, <code>width</code>, <code>transform</code> etc.)</p>
+
+    <textarea id="code1">
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: coral;
+  transition-property: background-color;
+}
+.box:hover {
+  background-color: crimson;
+}
+</style>
+</head>
+<body>
+<div class="box"></div>
+</body>
+</html>
+    </textarea>
+    <button onclick="runCode('code1', 'output1')">Run Code</button>
+    <iframe id="output1"></iframe>
+
+    <h3>II. Transition Duration</h3>
+    <p><strong>transition-duration:</strong> Animation kitni der tak chalegi (e.g. 1s, 0.5s). Default 0s hota hai, jisse koi effect nahi dikhta.</p>
+
+    <textarea id="code2">
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.box {
+  width: 100px;
+  height: 100px;
+  background: teal;
+  transition: background 1s;
+}
+.box:hover {
+  background: gold;
+}
+</style>
+</head>
+<body>
+<div class="box"></div>
+</body>
+</html>
+    </textarea>
+    <button onclick="runCode('code2', 'output2')">Run Code</button>
+    <iframe id="output2"></iframe>
+
+    <h3>III. Transition Timing Function</h3>
+    <p><strong>transition-timing-function:</strong> Speed pattern decide karta hai (linear, ease, ease-in, ease-out, ease-in-out).</p>
+
+    <textarea id="code3">
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.box {
+  width: 100px;
+  height: 100px;
+  background: #6c5ce7;
+  transition: all 0.6s ease-in-out;
+}
+.box:hover {
+  width: 150px;
+  height: 150px;
+}
+</style>
+</head>
+<body>
+<div class="box"></div>
+</body>
+</html>
+    </textarea>
+    <button onclick="runCode('code3', 'output3')">Run Code</button>
+    <iframe id="output3"></iframe>
+
+    <h3>IV. Transition Delay</h3>
+    <p><strong>transition-delay:</strong> Animation start hone se pehle kitni der rukna hai (e.g. 0.5s)</p>
+
+    <textarea id="code4">
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.box {
+  width: 100px;
+  height: 100px;
+  background: #fd79a8;
+  transition: transform 0.5s ease 0.5s;
+}
+.box:hover {
+  transform: rotate(45deg);
+}
+</style>
+</head>
+<body>
+<div class="box"></div>
+</body>
+</html>
+    </textarea>
+    <button onclick="runCode('code4', 'output4')">Run Code</button>
+    <iframe id="output4"></iframe>
+
+    <h3>V. Creative Hover Example (All in One)</h3>
+    <p><strong>Creative Transition:</strong> Ek box jo hover par rotate, scale aur color change kare smooth transition ke sath.</p>
+
+    <textarea id="code5">
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.box {
+  width: 100px;
+  height: 100px;
+  background: #0984e3;
+  transition: all 0.6s ease-in-out;
+  border-radius: 12px;
+}
+.box:hover {
+  background: #00cec9;
+  transform: scale(1.2) rotate(15deg);
+}
+</style>
+</head>
+<body>
+<div class="box"></div>
+</body>
+</html>
+    </textarea>
+    <button onclick="runCode('code5', 'output5')">Run Code</button>
+    <iframe id="output5"></iframe>
+
+  </div>
+
+  <script>
+    function runCode(textareaId, iframeId) {
+      var code = document.getElementById(textareaId).value;
+      var iframe = document.getElementById(iframeId);
+      iframe.contentDocument.open();
+      iframe.contentDocument.write(code);
+      iframe.contentDocument.close();
+    }
+  </script>
+
+</body>
+</html>
