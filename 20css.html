@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>20. CSS Preprocessors - SASS & SCSS</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #1cc9be;
+      color: #222;
+    }
+    .section {
+      background: rgba(255, 255, 255, 0.3);
+      padding: 20px;
+      margin: 25px auto;
+      border-radius: 12px;
+      max-width: 1000px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    h2, h3 { color: #333; margin-bottom: 15px; }
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+    code {
+      background: #eee;
+      padding: 2px 5px;
+      border-radius: 5px;
+    }
+    pre {
+      background: #fefefe;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 12px;
+      font-size: 16px;
+      margin-bottom: 20px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="section">
+    <h2>20. CSS Preprocessors - SASS & SCSS</h2>
+
+    <h3>I. What is SASS?</h3>
+    <p><strong>Explanation:</strong> SASS (Syntactically Awesome Stylesheets) ek CSS preprocessor hai jo CSS ko zyada powerful aur maintainable banata hai. Isme variables, nesting, functions, aur reusability jaise features hote hain. Final output hamesha normal CSS me convert hota hai using a compiler.</p>
+
+    <h3>II. Variables & Mixins</h3>
+    <p><strong>Explanation:</strong> SASS me <code>$</code> ka use karke variables banaye jaate hain. <code>@mixin</code> reusable code block hota hai jise <code>@include</code> karke use kar sakte ho.</p>
+    <pre><code>$primary-color: #3498db;
+
+@mixin rounded {
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.button {
+  background: $primary-color;
+  color: white;
+  @include rounded;
+}</code></pre>
+
+    <h3>III. Nesting in SASS</h3>
+    <p><strong>Explanation:</strong> SASS me selectors ko nesting ke through clearly structure kiya ja sakta hai, jaise HTML hierarchy hoti hai.</p>
+    <pre><code>nav {
+  ul {
+    list-style: none;
+    li {
+      display: inline-block;
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+}</code></pre>
+
+    <h3>IV. SCSS vs SASS</h3>
+    <p><strong>Explanation:</strong> Dono hi same features dete hain, par syntax alag hoti hai:</p>
+    <ul style="margin-left: 20px; line-height: 1.6;">
+      <li><strong>SCSS:</strong> CSS jaisa syntax (curly braces aur semicolons)</li>
+      <li><strong>SASS:</strong> Indentation-based syntax (no braces, no semicolons)</li>
+    </ul>
+
+    <h4>Example (SCSS):</h4>
+    <pre><code>$color: red;
+
+.box {
+  color: $color;
+}</code></pre>
+
+    <h4>Example (SASS):</h4>
+    <pre><code>$color: red
+
+.box
+  color: $color</code></pre>
+
+    <p><strong>Note:</strong> In examples ko browser me directly run nahi kiya ja sakta, kyunki SASS/SCSS ko pehle compile karke CSS me convert karna padta hai. Use <a href="https://sassmeister.com" target="_blank">SassMeister</a> ya <a href="https://www.sass-lang.com" target="_blank">official SASS site</a>.</p>
+  </div>
+</body>
+</html>
