@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>24. CSS Best Practices</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #1cc9be;
+      padding: 20px;
+    }
+    .section {
+      background: rgba(255, 255, 255, 0.3);
+      padding: 20px;
+      border-radius: 15px;
+      max-width: 1000px;
+      margin: auto;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+    h2, h3 { color: #349; margin-bottom: 15px; }
+    p {
+      font-size: 18px;
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+    textarea, iframe {
+      width: 100%;
+      height: 160px;
+      font-size: 16px;
+      padding: 10px;
+      margin: 10px 0 20px;
+      border-radius: 10px;
+      border: 2px solid white;
+      background: rgba(255,248,240,0.4);
+      font-family: monospace;
+    }
+    button {
+      background: #007bff;
+      color: #fff;
+      border: none;
+      padding: 8px 20px;
+      font-size: 15px;
+      font-weight: 500;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-bottom: 20px;
+      transition: all 0.3s ease-in-out;
+      position: relative;
+      overflow: hidden;
+    }
+    button::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%; height: 100%;
+      background: linear-gradient(120deg, #00bcd4, #2196f3);
+      transition: all 0.4s ease;
+      z-index: -1;
+    }
+    button:hover::before { left: 0; }
+    button:hover {
+      color: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transform: translateY(-1px);
+    }
+    button:active {
+      transform: scale(0.95);
+      box-shadow: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="section">
+    <h2>24. CSS Best Practices</h2>
+
+    <h3>I. Organizing CSS Code</h3>
+    <p><strong>Explanation:</strong> CSS ko section-wise (layout, typography, buttons, etc.) divide karna readability aur maintainability ke liye acha hota hai.</p>
+    <textarea id="code1">
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+/* Typography */
+h1 {
+  font-size: 32px;
+}
+/* Buttons */
+.btn {
+  background: blue;
+  color: white;
+}
+    </textarea>
+    <button onclick="runCode('code1', 'output1')">Run Code</button>
+    <iframe id="output1"></iframe>
+
+    <h3>II. Writing Maintainable CSS</h3>
+    <p><strong>Explanation:</strong> Reusable classes banana aur comments lagana future updates ke liye helpful hota hai. Har component ka styling alag hona chahiye.</p>
+    <textarea id="code2">
+/* Reusable Button */
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.btn-primary {
+  background-color: green;
+  color: white;
+}
+    </textarea>
+    <button onclick="runCode('code2', 'output2')">Run Code</button>
+    <iframe id="output2"></iframe>
+
+    <h3>III. Use of BEM (Block Element Modifier)</h3>
+    <p><strong>Explanation:</strong> BEM ek naming convention hai jisse CSS classes ko logically aur consistently manage kiya jata hai. Jaise: <code>.card__title--large</code></p>
+    <textarea id="code3">
+<div class="card">
+  <h2 class="card__title card__title--large">Product</h2>
+</div>
+
+<style>
+.card { border: 1px solid #333; padding: 10px; }
+.card__title { font-weight: bold; }
+.card__title--large { font-size: 24px; }
+</style>
+    </textarea>
+    <button onclick="runCode('code3', 'output3')">Run Code</button>
+    <iframe id="output3"></iframe>
+
+    <h3>IV. Code Minification</h3>
+    <p><strong>Explanation:</strong> Production ke liye CSS ko minify karna (white space & comments hata kar) page speed improve karta hai. Ye manually ya tools se ho sakta hai jaise <code>cssnano</code>, <code>PostCSS</code>, etc.</p>
+    <textarea id="code4">
+/* Before Minification */
+body {
+  background-color: white;
+  color: black;
+}
+/* After Minification */
+body{background-color:white;color:black}
+    </textarea>
+    <button onclick="runCode('code4', 'output4')">Run Code</button>
+    <iframe id="output4"></iframe>
+  </div>
+
+  <script>
+    function runCode(textareaId, iframeId) {
+      const code = document.getElementById(textareaId).value;
+      const iframe = document.getElementById(iframeId);
+      const doc = iframe.contentDocument || iframe.contentWindow.document;
+      doc.open();
+      doc.write(code);
+      doc.close();
+    }
+  </script>
+</body>
+</html>
