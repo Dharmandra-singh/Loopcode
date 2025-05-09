@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Python Chapter 1 - Introduction</title>
+  <style>
+    :root {
+      --primary: #38b2ac;
+      --accent: #f6ad55;
+      --bg-dark: #1a202c;
+      --bg-light: #2d3748;
+      --text-light: #e2e8f0;
+      --text-muted: #a0aec0;
+      --code-bg: #2c5282;
+      --output-bg: rgba(72,187,120,0.1);
+      --radius: 16px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-light);
+      line-height: 1.8;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: var(--bg-light);
+      padding: 50px 20px;
+      text-align: center;
+      border-bottom: 3px solid var(--primary);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: var(--primary);
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      margin-top: 10px;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .section {
+      background: #2b3345;
+      margin-bottom: 35px;
+      padding: 25px;
+      border-radius: var(--radius);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 5px;
+      width: 100%;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      border-top-left-radius: var(--radius);
+      border-top-right-radius: var(--radius);
+    }
+
+    .section:hover {
+      transform: translateY(-5px);
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      color: var(--accent);
+      margin-top: 25px;
+      font-size: 1.3rem;
+    }
+
+    p, li {
+      font-size: 1.05rem;
+      margin: 10px 0;
+      color: var(--text-light);
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    strong {
+      color: var(--accent);
+    }
+
+    a {
+      color: #81e6d9;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .code-area, .output-area {
+      background: var(--code-bg);
+      padding: 14px 18px;
+      border-radius: 10px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.95rem;
+      overflow-x: auto;
+      margin: 15px 0;
+      white-space: pre-wrap;
+      line-height: 1.6;
+      border-left: 5px solid var(--primary);
+    }
+
+    .output-area {
+      background: var(--output-bg);
+      color: #c6f6d5;
+      border-left: 5px solid #48bb78;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .section {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Chapter 1: Introduction to Python</h1>
+  <p>Python basics samjho Hinglish mein - Easy and engaging way!</p>
+</header>
+
+<div class="container">
+
+  <div class="section">
+    <h2>Python kya hai?</h2>
+    <p>
+      Python ek <strong>high-level</strong>, <strong>interpreted</strong>, aur <strong>general-purpose</strong> language hai.<br/>
+      <strong>High-level:</strong> Matlab easy to understand syntax.<br/>
+      <strong>Interpreted:</strong> Line by line execute hota hai.<br/>
+      <strong>General-purpose:</strong> Har field mein kaam aata hai - Web Dev, AI, Data Science, etc.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Python ke Features</h2>
+    <ul>
+      <li><strong>Simple Syntax:</strong> Readable and beginner-friendly.</li>
+      <li><strong>Free & Open Source:</strong> No license needed.</li>
+      <li><strong>Cross-platform:</strong> Windows, macOS, Linux sab pe chalta hai.</li>
+      <li><strong>Large Library:</strong> Built-in tools and 3rd-party packages ka ocean.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Python Installation</h2>
+    <p>
+      <strong>Step 1:</strong> Go to <a href="https://www.python.org/downloads/" target="_blank">python.org</a><br/>
+      <strong>Step 2:</strong> Download as per your OS.<br/>
+      <strong>Step 3:</strong> Install karte waqt “Add Python to PATH” tick zaroor karein.<br/>
+      <strong>Step 4:</strong> Verify install: <code>python --version</code> ya <code>python3 --version</code>
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Python Code Kaise Run Karein?</h2>
+
+    <h3>1. Terminal/Command Line</h3>
+    <p>Direct terminal mein likho:</p>
+    <div class="code-area">python</div>
+    <p>Fir likho:</p>
+    <div class="code-area">print("Hello World")</div>
+    <div class="output-area">Hello World</div>
+
+    <h3>2. Using IDEs</h3>
+    <p>
+      <strong>VS Code:</strong> Lightweight aur customizable.<br/>
+      <strong>PyCharm:</strong> Best for advanced Python devs.<br/>
+      <strong>Jupyter Notebook:</strong> Ideal for data visualization.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Python Example Code</h2>
+
+    <p>Simple print statement:</p>
+    <div class="code-area">print("Python is awesome!")</div>
+    <div class="output-area">Python is awesome!</div>
+
+    <p>Variable ke saath example:</p>
+    <div class="code-area">
+a = 5<br/>
+b = 3<br/>
+print("Sum is:", a + b)
+    </div>
+    <div class="output-area">Sum is: 8</div>
+  </div>
+
+</div>
+</body>
+</html>
