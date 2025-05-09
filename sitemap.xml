@@ -18,6 +18,12 @@
     <priority>0.50</priority>
   </url>
 
+<url>
+    <loc>https://loopcodein.netlify.app/Logo.png</loc>
+    <lastmod>2025-05-04</lastmod>
+    <priority>0.50</priority>
+  </url>
+
   <url>
     <loc>https://loopcodein.netlify.app/Roadmap</loc>
     <lastmod>2025-05-04</lastmod>
