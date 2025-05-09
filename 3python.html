@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 3: Arithmetic Operators - Python</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #eef2f7;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+
+    h1, h2 {
+      color: #2b6cb0;
+      text-align: center;
+    }
+
+    .section {
+      background: white;
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .code-block, .output-block, .wrong-block {
+      font-family: monospace;
+      background: #f4f4f4;
+      padding: 10px;
+      border-radius: 6px;
+      margin-top: 10px;
+      white-space: pre-wrap;
+    }
+
+    .output-block {
+      background: #e6ffe6;
+      border-left: 4px solid #38a169;
+    }
+
+    .wrong-block {
+      background: #ffe6e6;
+      border-left: 4px solid #e53e3e;
+    }
+
+    .rule {
+      background: #fefcbf;
+      padding: 8px;
+      margin-top: 10px;
+      border-left: 4px solid #d69e2e;
+      border-radius: 5px;
+    }
+
+    /* Flexbox Layout */
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .section {
+      flex: 1 1 45%;
+      margin: 10px;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .content {
+        flex-direction: column;
+        align-items: center;
+      }
+      .section {
+        flex: 1 1 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1, h2 {
+        font-size: 1.5rem;
+      }
+      .section {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<h1>Chapter 3: Python Operators</h1>
+<h2>Part 1: Arithmetic Operators</h2>
+
+<div class="content">
+  <div class="section">
+    <h2>1. + (Addition Operator)</h2>
+    <p><strong>Kya karta hai:</strong> Do numbers ya strings ko jodta hai.</p>
+
+    <div class="rule"><strong>Rule:</strong> dono values same type ki honi chahiye (int + int, str + str)</div>
+
+    <div class="code-block">
+# Example 1: Adding two numbers
+a = 10
+b = 5
+print(a + b)
+    </div>
+    <div class="output-block">
+15
+    </div>
+
+    <div class="code-block">
+# Example 2: Adding strings (concatenation)
+name = "Hello "
+surname = "World"
+print(name + surname)
+    </div>
+    <div class="output-block">
+Hello World
+    </div>
+
+    <div class="wrong-block">
+# Wrong Example: Mixing types
+a = 5
+b = "hello"
+print(a + b)  # ❌ Error: unsupported operand type(s)
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>2. - (Subtraction Operator)</h2>
+    <p><strong>Kya karta hai:</strong> Ek value ko doosri se ghatata hai (number only).</p>
+
+    <div class="rule"><strong>Rule:</strong> strings ya non-numeric types par subtraction allowed nahi hai.</div>
+
+    <div class="code-block">
+a = 20
+b = 7
+print(a - b)
+    </div>
+    <div class="output-block">
+13
+    </div>
+
+    <div class="wrong-block">
+print("hello" - "h")  # ❌ Error: unsupported operand types
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="section">
+    <h2>3. * (Multiplication Operator)</h2>
+    <p><strong>Kya karta hai:</strong> Do numbers ko multiply karta hai ya string ko repeat karta hai.</p>
+
+    <div class="code-block">
+# Multiplying numbers
+print(4 * 3)
+    </div>
+    <div class="output-block">
+12
+    </div>
+
+    <div class="code-block">
+# String repetition
+print("Hi " * 3)
+    </div>
+    <div class="output-block">
+Hi Hi Hi 
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>4. / (Division Operator)</h2>
+    <p><strong>Kya karta hai:</strong> Do numbers ko divide karta hai (result always float).</p>
+
+    <div class="code-block">
+print(10 / 2)
+    </div>
+    <div class="output-block">
+5.0
+    </div>
+
+    <div class="wrong-block">
+print(10 / 0)  # ❌ Error: ZeroDivisionError
+    </div>
+
+    <div class="rule"><strong>Rule:</strong> 0 se kabhi divide mat karo – program crash karega.</div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="section">
+    <h2>5. % (Modulus Operator)</h2>
+    <p><strong>Kya karta hai:</strong> Remainder return karta hai (sheshfal).</p>
+
+    <div class="code-block">
+print(10 % 3)
+    </div>
+    <div class="output-block">
+1
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>6. ** (Exponentiation)</h2>
+    <p><strong>Kya karta hai:</strong> Power calculate karta hai (x ki power y).</p>
+
+    <div class="code-block">
+print(2 ** 3)  # 2 × 2 × 2
+    </div>
+    <div class="output-block">
+8
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="section">
+    <h2>7. // (Floor Division)</h2>
+    <p><strong>Kya karta hai:</strong> Divide karta hai aur result ka sirf integer part return karta hai (floor value).</p>
+
+    <div class="code-block">
+print(10 // 3)
+    </div>
+    <div class="output-block">
+3
+    </div>
+
+    <div class="rule"><strong>Note:</strong> Useful jab decimal ignore karna ho.</div>
+  </div>
+</div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 3: Assignment Operators - Python</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #eef2f7;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+
+    h1, h2 {
+      color: #2b6cb0;
+      text-align: center;
+    }
+
+    .section {
+      background: white;
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .code-block, .output-block, .wrong-block {
+      font-family: monospace;
+      background: #f4f4f4;
+      padding: 10px;
+      border-radius: 6px;
+      margin-top: 10px;
+      white-space: pre-wrap;
+    }
+
+    .output-block {
+      background: #e6ffe6;
+      border-left: 4px solid #38a169;
+    }
+
+    .wrong-block {
+      background: #ffe6e6;
+      border-left: 4px solid #e53e3e;
+    }
+
+    .rule {
+      background: #fefcbf;
+      padding: 8px;
+      margin-top: 10px;
+      border-left: 4px solid #d69e2e;
+      border-radius: 5px;
+    }
+
+    /* Flexbox Layout */
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .section {
+      flex: 1 1 45%;
+      margin: 10px;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .content {
+        flex-direction: column;
+        align-items: center;
+      }
+      .section {
+        flex: 1 1 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1, h2 {
+        font-size: 1.5rem;
+      }
+      .section {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+<h2>Part 2: Assignment Operators</h2>
+
+<div class="content">
+  <div class="section">
+    <h2>1. = (Simple Assignment)</h2>
+    <p><strong>Kya karta hai:</strong> Variable ko value assign karta hai.</p>
+
+    <div class="rule"><strong>Rule:</strong> Variable ko ek value dena.</div>
+
+    <div class="code-block">
+a = 5  # Assigning value 5 to variable 'a'
+print(a)
+    </div>
+    <div class="output-block">
+5
+    </div>
+
+    <div class="wrong-block">
+# Wrong Example:
+5 = a  # ❌ Error: SyntaxError (left side must be a variable)
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>2. += (Add and Assign)</h2>
+    <p><strong>Kya karta hai:</strong> Existing value me given number add karke, usi variable ko assign karta hai.</p>
+
+    <div class="code-block">
+a = 10
+a += 5  # a = a + 5
+print(a)
+    </div>
+    <div class="output-block">
+15
+    </div>
+
+    <div class="wrong-block">
+# Wrong Example:
+a = 5
+a += "hello"  # ❌ Error: unsupported operand type(s)
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>3. -= (Subtract and Assign)</h2>
+    <p><strong>Kya karta hai:</strong> Existing value me given number subtract karke, usi variable ko assign karta hai.</p>
+
+    <div class="code-block">
+a = 10
+a -= 3  # a = a - 3
+print(a)
+    </div>
+    <div class="output-block">
+7
+    </div>
+
+    <div class="wrong-block">
+# Wrong Example:
+a = 5
+a -= "world"  # ❌ Error: unsupported operand type(s)
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="section">
+    <h2>4. *= (Multiply and Assign)</h2>
+    <p><strong>Kya karta hai:</strong> Existing value ko given number se multiply karke, usi variable ko assign karta hai.</p>
+
+    <div class="code-block">
+a = 4
+a *= 3  # a = a * 3
+print(a)
+    </div>
+    <div class="output-block">
+12
+    </div>
+
+    <div class="wrong-block">
+# Wrong Example:
+a = "hello"
+a *= 3  # okay, string ko repeat karega
+print(a)
+    </div>
+    <div class="output-block">
+hellohellohello
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>5. /= (Divide and Assign)</h2>
+    <p><strong>Kya karta hai:</strong> Existing value ko given number se divide karke, usi variable ko assign karta hai.</p>
+
+    <div class="code-block">
+a = 12
+a /= 3  # a = a / 3
+print(a)
+    </div>
+    <div class="output-block">
+4.0
+    </div>
+
+    <div class="wrong-block">
+# Wrong Example:
+a = 0
+a /= 0  # ❌ Error: ZeroDivisionError
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="section">
+    <h2>6. %= (Modulus and Assign)</h2>
+    <p><strong>Kya karta hai:</strong> Existing value ka modulus leke, usi variable ko assign karta hai.</p>
+
+    <div class="code-block">
+a = 15
+a %= 4  # a = a % 4
+print(a)
+    </div>
+    <div class="output-block">
+3
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>7. **= (Exponentiation and Assign)</h2>
+    <p><strong>Kya karta hai:</strong> Existing value ko given number ke power se raise karke, usi variable ko assign karta hai.</p>
+
+    <div class="code-block">
+a = 2
+a **= 3  # a = a ** 3
+print(a)
+    </div>
+    <div class="output-block">
+8
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="section">
+    <h2>8. //= (Floor Division and Assign)</h2>
+    <p><strong>Kya karta hai:</strong> Existing value ko floor division karke, usi variable ko assign karta hai.</p>
+
+    <div class="code-block">
+a = 10
+a //= 3  # a = a // 3
+print(a)
+    </div>
+    <div class="output-block">
+3
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 3: Comparison Operators - Python</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #eef2f7;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+
+    h1, h2 {
+      color: #2b6cb0;
+      text-align: center;
+    }
+
+    .section {
+      background: white;
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .code-block, .output-block, .wrong-block {
+      font-family: monospace;
+      background: #f4f4f4;
+      padding: 10px;
+      border-radius: 6px;
+      margin-top: 10px;
+      white-space: pre-wrap;
+    }
+
+    .output-block {
+      background: #e6ffe6;
+      border-left: 4px solid #38a169;
+    }
+
+    .wrong-block {
+      background: #ffe6e6;
+      border-left: 4px solid #e53e3e;
+    }
+
+    .rule {
+      background: #fefcbf;
+      padding: 8px;
+      margin-top: 10px;
+      border-left: 4px solid #d69e2e;
+      border-radius: 5px;
+    }
+
+    /* Flexbox Layout */
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .section {
+      flex: 1 1 45%;
+      margin: 10px;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .content {
+        flex-direction: column;
+        align-items: center;
+      }
+      .section {
+        flex: 1 1 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1, h2 {
+        font-size: 1.5rem;
+      }
+      .section {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+<h2>Part 3: Comparison Operators</h2>
+
+<div class="content">
+  <div class="section">
+    <h2>1. == (Equal to)</h2>
+    <p><strong>Kya karta hai:</strong> Check karta hai ki dono values barabar hain ya nahi.</p>
+
+    <div class="rule"><strong>Rule:</strong> dono values same honi chahiye, tabhi return True hoga.</div>
+
+    <div class="code-block">
+a = 5
+b = 5
+print(a == b)  # True
+    </div>
+    <div class="output-block">
+True
+    </div>
+
+    <div class="wrong-block">
+a = 5
+b = 10
+print(a == b)  # False
+    </div>
+    <div class="output-block">
+False
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>2. != (Not Equal to)</h2>
+    <p><strong>Kya karta hai:</strong> Check karta hai ki dono values barabar nahi hain.</p>
+
+    <div class="code-block">
+a = 5
+b = 10
+print(a != b)  # True
+    </div>
+    <div class="output-block">
+True
+    </div>
+
+    <div class="wrong-block">
+a = 5
+b = 5
+print(a != b)  # False
+    </div>
+    <div class="output-block">
+False
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="section">
+    <h2>3. > (Greater than)</h2>
+    <p><strong>Kya karta hai:</strong> Check karta hai ki left value greater hai ya nahi.</p>
+
+    <div class="code-block">
+a = 10
+b = 5
+print(a > b)  # True
+    </div>
+    <div class="output-block">
+True
+    </div>
+
+    <div class="wrong-block">
+a = 5
+b = 10
+print(a > b)  # False
+    </div>
+    <div class="output-block">
+False
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>4. < (Less than)</h2>
+    <p><strong>Kya karta hai:</strong> Check karta hai ki left value less hai ya nahi.</p>
+
+    <div class="code-block">
+a = 3
+b = 5
+print(a < b)  # True
+    </div>
+    <div class="output-block">
+True
+    </div>
+
+    <div class="wrong-block">
+a = 10
+b = 5
+print(a < b)  # False
+    </div>
+    <div class="output-block">
+False
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="section">
+    <h2>5. >= (Greater than or Equal to)</h2>
+    <p><strong>Kya karta hai:</strong> Check karta hai ki left value greater ya equal hai ya nahi.</p>
+
+    <div class="code-block">
+a = 5
+b = 5
+print(a >= b)  # True
+    </div>
+    <div class="output-block">
+True
+    </div>
+
+    <div class="wrong-block">
+a = 3
+b = 5
+print(a >= b)  # False
+    </div>
+    <div class="output-block">
+False
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>6. <= (Less than or Equal to)</h2>
+    <p><strong>Kya karta hai:</strong> Check karta hai ki left value less ya equal hai ya nahi.</p>
+
+    <div class="code-block">
+a = 5
+b = 10
+print(a <= b)  # True
+    </div>
+    <div class="output-block">
+True
+    </div>
+
+    <div class="wrong-block">
+a = 10
+b = 5
+print(a <= b)  # False
+    </div>
+    <div class="output-block">
+False
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 3: Logical Operators - Python</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #eef2f7;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+
+    h1, h2 {
+      color: #2b6cb0;
+      text-align: center;
+    }
+
+    .section {
+      background: white;
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .code-block, .output-block, .wrong-block {
+      font-family: monospace;
+      background: #f4f4f4;
+      padding: 10px;
+      border-radius: 6px;
+      margin-top: 10px;
+      white-space: pre-wrap;
+    }
+
+    .output-block {
+      background: #e6ffe6;
+      border-left: 4px solid #38a169;
+    }
+
+    .wrong-block {
+      background: #ffe6e6;
+      border-left: 4px solid #e53e3e;
+    }
+
+    .rule {
+      background: #fefcbf;
+      padding: 8px;
+      margin-top: 10px;
+      border-left: 4px solid #d69e2e;
+      border-radius: 5px;
+    }
+
+    /* Flexbox Layout */
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .section {
+      flex: 1 1 45%;
+      margin: 10px;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .content {
+        flex-direction: column;
+        align-items: center;
+      }
+      .section {
+        flex: 1 1 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1, h2 {
+        font-size: 1.5rem;
+      }
+      .section {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<h2>Part 4: Logical Operators</h2>
+
+<div class="content">
+  <div class="section">
+    <h2>1. and</h2>
+    <p><strong>Kya karta hai:</strong> Dono conditions True hone par hi result True hota hai.</p>
+
+    <div class="rule"><strong>Rule:</strong> Dono conditions ko True hona zaroori hai.</div>
+
+    <div class="code-block">
+a = 5
+b = 10
+print(a > 3 and b < 15)  # True
+    </div>
+    <div class="output-block">
+True
+    </div>
+
+    <div class="wrong-block">
+a = 5
+b = 10
+print(a > 6 and b < 15)  # False
+    </div>
+    <div class="output-block">
+False
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>2. or</h2>
+    <p><strong>Kya karta hai:</strong> Agar kisi ek condition ka result True ho to result True hota hai.</p>
+
+    <div class="rule"><strong>Rule:</strong> Agar ek condition True ho, to result True hoga.</div>
+
+    <div class="code-block">
+a = 5
+b = 10
+print(a > 6 or b < 15)  # True
+    </div>
+    <div class="output-block">
+True
+    </div>
+
+    <div class="wrong-block">
+a = 5
+b = 10
+print(a > 6 or b > 15)  # False
+    </div>
+    <div class="output-block">
+False
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="section">
+    <h2>3. not</h2>
+    <p><strong>Kya karta hai:</strong> Condition ko invert karta hai. Agar condition True hai to False return karega, aur agar False hai to True.</p>
+
+    <div class="rule"><strong>Rule:</strong> Condition ko reverse ya negate karta hai.</div>
+
+    <div class="code-block">
+a = 5
+print(not a > 10)  # True
+    </div>
+    <div class="output-block">
+True
+    </div>
+
+    <div class="wrong-block">
+a = 5
+print(not a > 3)  # False
+    </div>
+    <div class="output-block">
+False
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 3: Bitwise Operators - Python</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #eef2f7;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+
+    h1, h2 {
+      color: #2b6cb0;
+      text-align: center;
+    }
+
+    .section {
+      background: white;
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .code-block, .output-block, .wrong-block {
+      font-family: monospace;
+      background: #f4f4f4;
+      padding: 10px;
+      border-radius: 6px;
+      margin-top: 10px;
+      white-space: pre-wrap;
+      border-left: 4px solid #38a169;
+    }
+
+    .code-block {
+      background-color: #282c34;
+      color: #abb2bf;
+      border-left: 4px solid #61dafb;
+      font-size: 1rem;
+    }
+
+    .output-block {
+      background: #e6ffe6;
+      border-left: 4px solid #38a169;
+    }
+
+    .wrong-block {
+      background: #ffe6e6;
+      border-left: 4px solid #e53e3e;
+    }
+
+    .rule {
+      background: #fefcbf;
+      padding: 8px;
+      margin-top: 10px;
+      border-left: 4px solid #d69e2e;
+      border-radius: 5px;
+    }
+
+    /* Flexbox Layout */
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .section {
+      flex: 1 1 45%;
+      margin: 10px;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .content {
+        flex-direction: column;
+        align-items: center;
+      }
+      .section {
+        flex: 1 1 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1, h2 {
+        font-size: 1.5rem;
+      }
+      .section {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<h2>Part 5: Bitwise Operators</h2>
+
+<div class="content">
+  <div class="section">
+    <h2>1. & (Bitwise AND)</h2>
+    <p><strong>Kya karta hai:</strong> Dono numbers ke corresponding bits ko AND karta hai. Agar dono bits 1 hain, tab result 1 hoga.</p>
+
+    <div class="rule"><strong>Rule:</strong> Bits ko AND kiya jata hai. Agar dono bits 1 hain, result 1 hota hai.</div>
+
+    <div class="code-block">
+# Bitwise AND example
+a = 5  # 0101 in binary
+b = 3  # 0011 in binary
+result = a & b
+print(result)  # 1 (0001 in binary)
+    </div>
+    <div class="output-block">
+1
+    </div>
+
+    <div class="wrong-block">
+# Bitwise AND example
+a = 5
+b = 7
+result = a & b
+print(result)  # 5 (0101 in binary)
+    </div>
+    <div class="output-block">
+5
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>2. | (Bitwise OR)</h2>
+    <p><strong>Kya karta hai:</strong> Dono numbers ke corresponding bits ko OR karta hai. Agar koi bhi bit 1 ho, result 1 hoga.</p>
+
+    <div class="rule"><strong>Rule:</strong> Bits ko OR kiya jata hai. Agar koi bhi bit 1 ho, result 1 hota hai.</div>
+
+    <div class="code-block">
+# Bitwise OR example
+a = 5  # 0101 in binary
+b = 3  # 0011 in binary
+result = a | b
+print(result)  # 7 (0111 in binary)
+    </div>
+    <div class="output-block">
+7
+    </div>
+
+    <div class="wrong-block">
+# Bitwise OR example
+a = 4
+b = 7
+result = a | b
+print(result)  # 7 (0111 in binary)
+    </div>
+    <div class="output-block">
+7
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="section">
+    <h2>3. ^ (Bitwise XOR)</h2>
+    <p><strong>Kya karta hai:</strong> Dono numbers ke corresponding bits ko XOR karta hai. Agar dono bits alag hain, tab result 1 hota hai.</p>
+
+    <div class="rule"><strong>Rule:</strong> Agar dono bits alag hain, result 1 hota hai.</div>
+
+    <div class="code-block">
+# Bitwise XOR example
+a = 5  # 0101 in binary
+b = 3  # 0011 in binary
+result = a ^ b
+print(result)  # 6 (0110 in binary)
+    </div>
+    <div class="output-block">
+6
+    </div>
+
+    <div class="wrong-block">
+# Bitwise XOR example
+a = 4
+b = 7
+result = a ^ b
+print(result)  # 3 (0011 in binary)
+    </div>
+    <div class="output-block">
+3
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>4. ~ (Bitwise NOT)</h2>
+    <p><strong>Kya karta hai:</strong> Ek number ke bits ko invert karta hai. Matlab 1 ko 0 banata hai aur 0 ko 1.</p>
+
+    <div class="rule"><strong>Rule:</strong> Number ke bits ko invert karta hai.</div>
+
+    <div class="code-block">
+# Bitwise NOT example
+a = 5  # 0101 in binary
+result = ~a
+print(result)  # -6 (1111...1010 in binary)
+    </div>
+    <div class="output-block">
+-6
+    </div>
+
+    <div class="wrong-block">
+# Bitwise NOT example
+a = 3
+result = ~a
+print(result)  # -4 (1111...1100 in binary)
+    </div>
+    <div class="output-block">
+-4
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 3: Membership Operators - Python</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #eef2f7;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+
+    h1, h2 {
+      color: #2b6cb0;
+      text-align: center;
+    }
+
+    .section {
+      background: white;
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .code-block, .output-block, .wrong-block {
+      font-family: monospace;
+      background: #f4f4f4;
+      padding: 10px;
+      border-radius: 6px;
+      margin-top: 10px;
+      white-space: pre-wrap;
+      border-left: 4px solid #38a169;
+    }
+
+    .code-block {
+      background-color: #282c34;
+      color: #abb2bf;
+      border-left: 4px solid #61dafb;
+      font-size: 1rem;
+    }
+
+    .output-block {
+      background: #e6ffe6;
+      border-left: 4px solid #38a169;
+    }
+
+    .wrong-block {
+      background: #ffe6e6;
+      border-left: 4px solid #e53e3e;
+    }
+
+    .rule {
+      background: #fefcbf;
+      padding: 8px;
+      margin-top: 10px;
+      border-left: 4px solid #d69e2e;
+      border-radius: 5px;
+    }
+
+    /* Flexbox Layout */
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .section {
+      flex: 1 1 45%;
+      margin: 10px;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .content {
+        flex-direction: column;
+        align-items: center;
+      }
+      .section {
+        flex: 1 1 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1, h2 {
+        font-size: 1.5rem;
+      }
+      .section {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<h2>Part 6: Membership Operators</h2>
+
+<div class="content">
+  <div class="section">
+    <h2>1. in</h2>
+    <p><strong>Kya karta hai:</strong> Yeh check karta hai ki ek element kisi sequence (list, string, tuple) mein hai ya nahi.</p>
+
+    <div class="rule"><strong>Rule:</strong> Sequence ke andar element ka hona zaroori hai.</div>
+
+    <div class="code-block">
+# Membership 'in' operator example
+a = [1, 2, 3, 4]
+result = 3 in a
+print(result)  # True
+    </div>
+    <div class="output-block">
+True
+    </div>
+
+    <div class="wrong-block">
+# Membership 'in' operator example
+a = [1, 2, 3, 4]
+result = 5 in a
+print(result)  # False
+    </div>
+    <div class="output-block">
+False
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>2. not in</h2>
+    <p><strong>Kya karta hai:</strong> Yeh check karta hai ki ek element kisi sequence mein nahi hai.</p>
+
+    <div class="rule"><strong>Rule:</strong> Agar element sequence mein nahi hai, to result True hoga.</div>
+
+    <div class="code-block">
+# Membership 'not in' operator example
+a = [1, 2, 3, 4]
+result = 5 not in a
+print(result)  # True
+    </div>
+    <div class="output-block">
+True
+    </div>
+
+    <div class="wrong-block">
+# Membership 'not in' operator example
+a = [1, 2, 3, 4]
+result = 3 not in a
+print(result)  # False
+    </div>
+    <div class="output-block">
+False
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 3: Identity Operators - Python</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #eef2f7;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+
+    h1, h2 {
+      color: #2b6cb0;
+      text-align: center;
+    }
+
+    .section {
+      background: white;
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .code-block, .output-block, .wrong-block {
+      font-family: monospace;
+      background: #f4f4f4;
+      padding: 10px;
+      border-radius: 6px;
+      margin-top: 10px;
+      white-space: pre-wrap;
+      border-left: 4px solid #38a169;
+    }
+
+    .code-block {
+      background-color: #282c34;
+      color: #abb2bf;
+      border-left: 4px solid #61dafb;
+      font-size: 1rem;
+    }
+
+    .output-block {
+      background: #e6ffe6;
+      border-left: 4px solid #38a169;
+    }
+
+    .wrong-block {
+      background: #ffe6e6;
+      border-left: 4px solid #e53e3e;
+    }
+
+    .rule {
+      background: #fefcbf;
+      padding: 8px;
+      margin-top: 10px;
+      border-left: 4px solid #d69e2e;
+      border-radius: 5px;
+    }
+
+    /* Flexbox Layout */
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .section {
+      flex: 1 1 45%;
+      margin: 10px;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .content {
+        flex-direction: column;
+        align-items: center;
+      }
+      .section {
+        flex: 1 1 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1, h2 {
+        font-size: 1.5rem;
+      }
+      .section {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<h2>Part 7: Identity Operators</h2>
+
+<div class="content">
+  <div class="section">
+    <h2>1. is</h2>
+    <p><strong>Kya karta hai:</strong> Yeh check karta hai ki do variables ek hi object ko refer kar rahe hain ya nahi.</p>
+
+    <div class="rule"><strong>Rule:</strong> Agar dono variables ek hi memory address (object) ko point kar rahe hain, to result True hota hai.</div>
+
+    <div class="code-block">
+# Identity 'is' operator example
+a = [1, 2, 3]
+b = a
+result = a is b
+print(result)  # True
+    </div>
+    <div class="output-block">
+True
+    </div>
+
+    <div class="wrong-block">
+# Identity 'is' operator example
+a = [1, 2, 3]
+b = [1, 2, 3]
+result = a is b
+print(result)  # False
+    </div>
+    <div class="output-block">
+False
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>2. is not</h2>
+    <p><strong>Kya karta hai:</strong> Yeh check karta hai ki do variables ek hi object ko refer nahi kar rahe hain.</p>
+
+    <div class="rule"><strong>Rule:</strong> Agar dono variables alag memory address (objects) ko point kar rahe hain, to result True hota hai.</div>
+
+    <div class="code-block">
+# Identity 'is not' operator example
+a = [1, 2, 3]
+b = [1, 2, 3]
+result = a is not b
+print(result)  # True
+    </div>
+    <div class="output-block">
+True
+    </div>
+
+    <div class="wrong-block">
+# Identity 'is not' operator example
+a = [1, 2, 3]
+b = a
+result = a is not b
+print(result)  # False
+    </div>
+    <div class="output-block">
+False
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
