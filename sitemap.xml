@@ -1,47 +1,279 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
+
   <url>
     <loc>https://loopcodein.netlify.app/</loc>
     <lastmod>2025-05-04</lastmod>
     <priority>1.00</priority>
   </url>
 
- 
   <url>
     <loc>https://loopcodein.netlify.app/term</loc>
     <lastmod>2025-05-04</lastmod>
     <priority>0.50</priority>
   </url>
 
- <url>
+  <url>
     <loc>https://loopcodein.netlify.app/roadmap</loc>
     <lastmod>2025-05-04</lastmod>
     <priority>0.50</priority>
   </url>
 
- <url>
+<url>
+    <loc>https://loopcodein.netlify.app/roadmapcss</loc>
+    <lastmod>2025-05-04</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+
     <loc>https://loopcodein.netlify.app/introhtml</loc>
     <lastmod>2025-05-04</lastmod>
     <priority>0.50</priority>
   </url>
 
- <url>
+  <url>
     <loc>https://loopcodein.netlify.app/2html</loc>
     <lastmod>2025-05-04</lastmod>
     <priority>0.50</priority>
   </url>
 
-
- <url>
+  <url>
     <loc>https://loopcodein.netlify.app/3html</loc>
     <lastmod>2025-05-04</lastmod>
     <priority>0.50</priority>
   </url>
 
-
- <url>
+  <url>
     <loc>https://loopcodein.netlify.app/4html</loc>
+    <lastmod>2025-05-04</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://loopcodein.netlify.app/5html</loc>
+    <lastmod>2025-05-04</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://loopcodein.netlify.app/6html</loc>
+    <lastmod>2025-05-04</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://loopcodein.netlify.app/7html</loc>
+    <lastmod>2025-05-04</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://loopcodein.netlify.app/8html</loc>
+    <lastmod>2025-05-04</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://loopcodein.netlify.app/9html</loc>
+    <lastmod>2025-05-04</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://loopcodein.netlify.app/10html</loc>
+    <lastmod>2025-05-04</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://loopcodein.netlify.app/11html</loc>
+    <lastmod>2025-05-04</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://loopcodein.netlify.app/12html</loc>
+    <lastmod>2025-05-04</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://loopcodein.netlify.app/13html</loc>
+    <lastmod>2025-05-04</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://loopcodein.netlify.app/14html</loc>
+    <lastmod>2025-05-04</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://loopcodein.netlify.app/15html</loc>
+    <lastmod>2025-05-04</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://loopcodein.netlify.app/16html</loc>
+    <lastmod>2025-05-04</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://loopcodein.netlify.app/17html</loc>
+    <lastmod>2025-05-04</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://loopcodein.netlify.app/1css</loc>
+    <lastmod>2025-05-04</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://loopcodein.netlify.app/2css</loc>
+    <lastmod>2025-05-04</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://loopcodein.netlify.app/3css</loc>
+    <lastmod>2025-05-04</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://loopcodein.netlify.app/4css</loc>
+    <lastmod>2025-05-04</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://loopcodein.netlify.app/5css</loc>
+    <lastmod>2025-05-04</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://loopcodein.netlify.app/6css</loc>
+    <lastmod>2025-05-04</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://loopcodein.netlify.app/7css</loc>
+    <lastmod>2025-05-04</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://loopcodein.netlify.app/8css</loc>
+    <lastmod>2025-05-04</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://loopcodein.netlify.app/9css</loc>
+    <lastmod>2025-05-04</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://loopcodein.netlify.app/10css</loc>
+    <lastmod>2025-05-04</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://loopcodein.netlify.app/11css</loc>
+    <lastmod>2025-05-04</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://loopcodein.netlify.app/12css</loc>
+    <lastmod>2025-05-04</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://loopcodein.netlify.app/13css</loc>
+    <lastmod>2025-05-04</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://loopcodein.netlify.app/14css</loc>
+    <lastmod>2025-05-04</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://loopcodein.netlify.app/15css</loc>
+    <lastmod>2025-05-04</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://loopcodein.netlify.app/16css</loc>
+    <lastmod>2025-05-04</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://loopcodein.netlify.app/17css</loc>
+    <lastmod>2025-05-04</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://loopcodein.netlify.app/18css</loc>
+    <lastmod>2025-05-04</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://loopcodein.netlify.app/19css</loc>
+    <lastmod>2025-05-04</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://loopcodein.netlify.app/20css</loc>
+    <lastmod>2025-05-04</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://loopcodein.netlify.app/21css</loc>
+    <lastmod>2025-05-04</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://loopcodein.netlify.app/22css</loc>
+    <lastmod>2025-05-04</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://loopcodein.netlify.app/23css</loc>
+    <lastmod>2025-05-04</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://loopcodein.netlify.app/24css</loc>
+    <lastmod>2025-05-04</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://loopcodein.netlify.app/25css</loc>
     <lastmod>2025-05-04</lastmod>
     <priority>0.50</priority>
   </url>
