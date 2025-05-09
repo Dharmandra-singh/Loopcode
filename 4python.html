@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 4: Control Flow - Python</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #eef2f7;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+
+    h1, h2 {
+      color: #2b6cb0;
+      text-align: center;
+    }
+
+    .section {
+      background: white;
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .code-block, .output-block, .wrong-block {
+      font-family: monospace;
+      background: #f4f4f4;
+      padding: 10px;
+      border-radius: 6px;
+      margin-top: 10px;
+      white-space: pre-wrap;
+      border-left: 4px solid #38a169;
+    }
+
+    .code-block {
+      background-color: #282c34;
+      color: #abb2bf;
+      border-left: 4px solid #61dafb;
+      font-size: 1rem;
+    }
+
+    .output-block {
+      background: #e6ffe6;
+      border-left: 4px solid #38a169;
+    }
+
+    .wrong-block {
+      background: #ffe6e6;
+      border-left: 4px solid #e53e3e;
+    }
+
+    .rule {
+      background: #fefcbf;
+      padding: 8px;
+      margin-top: 10px;
+      border-left: 4px solid #d69e2e;
+      border-radius: 5px;
+    }
+
+    /* Flexbox Layout */
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .section {
+      flex: 1 1 45%;
+      margin: 10px;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .content {
+        flex-direction: column;
+        align-items: center;
+      }
+      .section {
+        flex: 1 1 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1, h2 {
+        font-size: 1.5rem;
+      }
+      .section {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<h1>Chapter 4: Python Control Flow</h1>
+<h2>if, else, elif Statements & Nested Conditions</h2>
+
+<div class="content">
+  <div class="section">
+    <h2>1. if Statement</h2>
+    <p><strong>Kya karta hai:</strong> Yeh condition ko check karta hai aur agar condition true hoti hai, to block of code execute hota hai.</p>
+
+    <div class="rule"><strong>Rule:</strong> Condition ko sahi likhna zaroori hai, agar galat likha to statement execute nahi hoga.</div>
+
+    <div class="code-block">
+# if statement example
+age = 20
+if age >= 18:
+    print("You are an adult.")
+    </div>
+    <div class="output-block">
+You are an adult.
+    </div>
+
+    <div class="wrong-block">
+# if statement example with wrong condition
+age = 15
+if age >= 18:
+    print("You are an adult.")
+else:
+    print("You are not an adult.")
+    </div>
+    <div class="output-block">
+You are not an adult.
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>2. else Statement</h2>
+    <p><strong>Kya karta hai:</strong> Yeh default block hota hai jo else ke baad likha jata hai, jab condition false hoti hai.</p>
+
+    <div class="rule"><strong>Rule:</strong> Else statement ko tabhi use karo jab condition fail ho jaaye.</div>
+
+    <div class="code-block">
+# else statement example
+age = 15
+if age >= 18:
+    print("You are an adult.")
+else:
+    print("You are not an adult.")
+    </div>
+    <div class="output-block">
+You are not an adult.
+    </div>
+
+  </div>
+
+  <div class="section">
+    <h2>3. elif Statement</h2>
+    <p><strong>Kya karta hai:</strong> Yeh else aur if ka combination hota hai. Jab ek se zyada conditions check karni hoti hain to elif ka use hota hai.</p>
+
+    <div class="rule"><strong>Rule:</strong> elif ko tab use karo jab ek hi time pe multiple conditions check karni ho.</div>
+
+    <div class="code-block">
+# elif statement example
+age = 25
+if age < 18:
+    print("You are a child.")
+elif age < 30:
+    print("You are a young adult.")
+else:
+    print("You are an adult.")
+    </div>
+    <div class="output-block">
+You are a young adult.
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>4. Nested Conditions</h2>
+    <p><strong>Kya karta hai:</strong> Jab ek condition ke andar doosri condition likhi jaati hai, to usse nested condition kehte hain.</p>
+
+    <div class="rule"><strong>Rule:</strong> Nested conditions ko tab use karo jab complex decision making ho.</div>
+
+    <div class="code-block">
+# Nested if statement example
+age = 25
+if age >= 18:
+    if age < 30:
+        print("You are a young adult.")
+    else:
+        print("You are an adult.")
+else:
+    print("You are not an adult.")
+    </div>
+    <div class="output-block">
+You are a young adult.
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
