@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Python Learning Roadmap</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #0d1117;
+      color: #c9d1d9;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      text-align: center;
+      color: #58a6ff;
+      margin-top: 30px;
+      font-size: 3rem;
+      letter-spacing: 1px;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .section {
+      background: #1f2937;
+      margin: 20px auto;
+      padding: 25px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 900px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      transform: translateY(30px);
+      opacity: 0;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+      border-left: 5px solid transparent;
+      background-size: 200%;
+      padding-left: 20px;
+    }
+
+    .section:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      border-left: 5px solid #58a6ff;
+    }
+
+    .section h2 {
+      color: #fff;
+      font-size: 1.6rem;
+      font-weight: 600;
+      position: relative;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      letter-spacing: 0.5px;
+      border-bottom: 3px solid #30363d;
+    }
+
+    .section h2::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 4px;
+      width: 100%;
+      background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet, red);
+      background-size: 400% 100%;
+      animation: glowLine 4s ease-in-out infinite;
+      border-radius: 10px;
+    }
+
+    @keyframes glowLine {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 50% 50%;
+      }
+      100% {
+        background-position: 100% 50%;
+      }
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    ul li {
+      margin: 8px 0;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        padding: 15px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .section h2 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Python Learning Roadmap (Chapter-wise)</h1>
+
+  <!-- Sections -->
+  <div id="container">
+    <a href="1python.html"><div class="section"><h2>Chapter 1: Introduction to Python</h2><ul><li>Python kya hai, features kya hain, aur kaise install karein.</li><li>Python run karne ke tareeke: CLI, IDEs (VS Code, PyCharm, Jupyter).</li></ul></div></a>
+    <a href="2python.html"><div class="section"><h2>Chapter 2: Variables and Data Types</h2><ul><li>Variables banana, input lena, print karna.</li><li>Data Types: int, float, string, bool, complex, type casting.</li></ul></div></a>
+    <a href="3python.html"><div class="section"><h2>Chapter 3: Operators</h2><ul><li>Arithmetic, Assignment, Comparison, Logical, Bitwise, Membership, Identity Operators.</li></ul></div></a>
+    <a href="4python.html"><div class="section"><h2>Chapter 4: Control Flow</h2><ul><li>if, else, elif statements, nested conditions.</li></ul></div></a>
+    <a href="5python.html"><div class="section"><h2>Chapter 5: Loops</h2><ul><li>for, while loops, break, continue, nested loops.</li></ul></div></a>
+    <a href="6python.html"><div class="section"><h2>Chapter 6: Functions</h2><ul><li>Function define karna, arguments, return values, recursion.</li><li>Lambda functions.</li></ul></div></a>
+    <a href="7python.html"><div class="section"><h2>Chapter 7: Data Structures</h2><ul><li>Lists, Tuples, Sets, Dictionaries - creation, access, modification.</li></ul></div></a>
+    <a href="8python.html"><div class="section"><h2>Chapter 8: Strings in Python</h2><ul><li>String methods, slicing, formatting, manipulation.</li></ul></div></a>
+    <a href="9python.html"><div class="section"><h2>Chapter 9: Object-Oriented Programming</h2><ul><li>Classes & Objects, __init__, instance/class variables.</li><li>Inheritance, Polymorphism, Encapsulation, Abstraction.</li><li>Operator Overloading, super(), Method Overriding.</li></ul></div></a>
+    <a href="10python.html"><div class="section"><h2>Chapter 10: Modules and Packages</h2><ul><li>Python modules (math, random, os, etc.)</li><li>Custom module banana, import karna, packages banana.</li></ul></div></a>
+    <a href="11python.html"><div class="section"><h2>Chapter 11: File Handling</h2><ul><li>open(), read, write, append modes.</li><li>Working with text, JSON, and CSV files.</li></ul></div></a>
+    <a href="12python.html"><div class="section"><h2>Chapter 12: Exception Handling</h2><ul><li>try, except, else, finally blocks.</li><li>Custom exceptions banana.</li></ul></div></a>
+    <a href="13python.html"><div class="section"><h2>Chapter 13: Python Libraries</h2><ul><li>NumPy, Pandas, Matplotlib overview.</li></ul></div></a>
+    <a href="14python.html"><div class="section"><h2>Chapter 14: Web Development with Python</h2><ul><li>Flask: basic app, routing, templates.</li><li>Django: overview and comparison.</li></ul></div></a>
+    <a href="15python.html"><div class="section"><h2>Chapter 15: Data Science with Python</h2><ul><li>Data cleaning & preprocessing.</li><li>Visualization (Seaborn, Matplotlib).</li><li>Basic machine learning with Scikit-learn.</li></ul></div></a>
+    <a href="16python.html"><div class="section"><h2>Chapter 16: Automation & Scripting</h2><ul><li>Task automation: File handling, Email automation, Selenium basics.</li></ul></div></a>
+    <a href="17python.html"><div class="section"><h2>Chapter 17: APIs and Web Scraping</h2><ul><li>Working with APIs (requests, json).</li><li>Web scraping with BeautifulSoup.</li></ul></div></a>
+    <a href="18python.html"><div class="section"><h2>Chapter 18: Databases with Python</h2><ul><li>sqlite3, MySQL connection, CRUD operations.</li></ul></div></a>
+    <a href="19python.html"><div class="section"><h2>Chapter 19: Environment Management</h2><ul><li>pip, requirements.txt, virtual environments.</li></ul></div></a>
+    <a href="20python.html"><div class="section"><h2>Chapter 20: Real Projects & Career Path</h2><ul><li>Projects: Web apps, Chatbots, Data dashboards.</li><li>Open Source contributions, Hackathons, Cloud deployment, Blockchain basics.</li></ul></div></a>
+  </div>
+
+  <script>
+    // Animate sections on scroll
+    const sections = document.querySelectorAll('.section');
+
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.9;
+      sections.forEach(section => {
+        const boxTop = section.getBoundingClientRect().top;
+        if (boxTop < triggerBottom) {
+          section.classList.add('show');
+        }
+      });
+    };
+
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+  </script>
+</body>
+</html>
