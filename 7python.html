@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 7: Python Data Structures - Lists</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9fafb;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #2d3748;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+    .section {
+      background: white;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    h2, h3 {
+      color: #2b6cb0;
+    }
+    p, li {
+      line-height: 1.6;
+    }
+    .code-block, .output-block {
+      background: #f4f4f4;
+      font-family: monospace;
+      padding: 10px;
+      border-left: 4px solid #4299e1;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+    .output-block {
+      background: #e6ffe6;
+      border-left: 4px solid #38a169;
+    }
+    .wrong {
+      background: #ffe6e6;
+      border-left: 4px solid #e53e3e;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Chapter 7: Python Data Structures </h1>
+  <p>Python Lists,tuples,sets,dictionary: Banane se leke modify karne tak - with full understanding, rules, aur mistakes!</p>
+</header>
+
+<div class="section">
+  <h2>Python List - Basic Samajh</h2>
+  <p>List ek ordered collection hoti hai jisme hum multiple items store kar sakte hain. Items kisi bhi type ke ho sakte hain - int, str, float, etc.</p>
+
+  <h3>Banane ka Tarika:</h3>
+  <div class="code-block">
+    my_list = [10, 20, 30, "hello", 5.5]
+  </div>
+
+  <h3>Access Karna:</h3>
+  <div class="code-block">
+    print(my_list[0])  # 10<br>
+    print(my_list[3])  # hello
+  </div>
+
+  <div class="output-block">
+    10<br>
+    hello
+  </div>
+</div>
+
+<div class="section">
+  <h2>2. append() Method</h2>
+  <p><b>Meaning:</b> <code>append()</code> ka matlab list ke end me ek naya element add karna.</p>
+
+  <h3>Syntax:</h3>
+  <div class="code-block">
+    list_name.append(element)
+  </div>
+
+  <h3>Correct Example:</h3>
+  <div class="code-block">
+    fruits = ["apple", "banana"]<br>
+    fruits.append("mango")<br>
+    print(fruits)
+  </div>
+
+  <div class="output-block">
+    ['apple', 'banana', 'mango']
+  </div>
+
+  <h3>Galat Example:</h3>
+  <div class="code-block wrong">
+    fruits = ["apple"]<br>
+    fruits.append("banana", "mango")  # ❌ append sirf ek item le sakta hai
+  </div>
+</div>
+
+<div class="section">
+  <h2>3. insert() Method</h2>
+  <p><b>Meaning:</b> Kisi specific position par item insert karna.</p>
+
+  <h3>Syntax:</h3>
+  <div class="code-block">
+    list_name.insert(index, element)
+  </div>
+
+  <div class="code-block">
+    fruits = ["apple", "mango"]<br>
+    fruits.insert(1, "banana")<br>
+    print(fruits)
+  </div>
+
+  <div class="output-block">
+    ['apple', 'banana', 'mango']
+  </div>
+</div>
+
+<div class="section">
+  <h2>4. remove() Method</h2>
+  <p><b>Meaning:</b> List me se koi specific item (value) ko hataana.</p>
+
+  <h3>Syntax:</h3>
+  <div class="code-block">
+    list_name.remove(value)
+  </div>
+
+  <div class="code-block">
+    fruits = ["apple", "banana", "mango"]<br>
+    fruits.remove("banana")<br>
+    print(fruits)
+  </div>
+
+  <div class="output-block">
+    ['apple', 'mango']
+  </div>
+
+  <h3>Common Mistake:</h3>
+  <div class="code-block wrong">
+    fruits.remove("orange")  # ❌ ValueError: orange list me hai hi nahi
+  </div>
+</div>
+
+<div class="section">
+  <h2>5. pop() Method</h2>
+  <p><b>Meaning:</b> List se item nikaalo aur return bhi karo. Default last item ko pop karta hai.</p>
+
+  <h3>Syntax:</h3>
+  <div class="code-block">
+    item = list_name.pop()  # last item<br>
+    item = list_name.pop(index)  # specific index
+  </div>
+
+  <div class="code-block">
+    nums = [10, 20, 30]<br>
+    x = nums.pop()<br>
+    print(x)<br>
+    print(nums)
+  </div>
+
+  <div class="output-block">
+    30<br>
+    [10, 20]
+  </div>
+</div>
+
+<div class="section">
+  <h2>6. sort() Method</h2>
+  <p><b>Meaning:</b> List ko ascending (ya descending) order me arrange karna.</p>
+
+  <h3>Syntax:</h3>
+  <div class="code-block">
+    list_name.sort()  # ascending<br>
+    list_name.sort(reverse=True)  # descending
+  </div>
+
+  <div class="code-block">
+    nums = [5, 2, 9, 1]<br>
+    nums.sort()<br>
+    print(nums)
+  </div>
+
+  <div class="output-block">
+    [1, 2, 5, 9]
+  </div>
+
+  <h3>Descending:</h3>
+  <div class="code-block">
+    nums.sort(reverse=True)<br>
+    print(nums)
+  </div>
+
+  <div class="output-block">
+    [9, 5, 2, 1]
+  </div>
+</div>
+
+<div class="section">
+  <h2>7. Summary Table of List Methods</h2>
+  <ul>
+    <li><code>append(x)</code> – List ke end me x add karta hai</li>
+    <li><code>insert(i, x)</code> – Position i pe x insert karta hai</li>
+    <li><code>remove(x)</code> – First occurrence of x ko hataata hai</li>
+    <li><code>pop([i])</code> – i-th element ko remove karta hai aur return karta hai</li>
+    <li><code>sort()</code> – List ko sort karta hai (ascending by default)</li>
+  </ul>
+</div>
+<div class="section">
+  <h2>Python Tuples - Samajh Aur Use</h2>
+  <p><strong>Tuple</strong> bhi ek ordered collection hota hai jaise list, lekin <strong>immutable</strong> hota hai. Iska matlab: banane ke baad usme koi change (add, remove, update) nahi kar sakte.</p>
+
+  <h3>Tuple Banane ka Tarika:</h3>
+  <div class="code-block">
+    my_tuple = (10, 20, 30)<br>
+    empty_tuple = ()<br>
+    one_item_tuple = (5,)  # Note: comma zaroori hai
+  </div>
+
+  <h3>Access Karna (Indexing):</h3>
+  <div class="code-block">
+    print(my_tuple[0])<br>
+    print(my_tuple[2])
+  </div>
+
+  <div class="output-block">
+    10<br>
+    30
+  </div>
+
+  <h3>Tuple Immutability Example:</h3>
+  <div class="code-block wrong">
+    my_tuple[1] = 50  # ❌ TypeError: 'tuple' object does not support item assignment
+  </div>
+
+  <h3>Tuple ke Saath Looping:</h3>
+  <div class="code-block">
+    for item in my_tuple:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;print(item)
+  </div>
+
+  <div class="output-block">
+    10<br>
+    20<br>
+    30
+  </div>
+
+  <h3>Why Use Tuples?</h3>
+  <ul>
+    <li>Data ko fixed rakhna ho (jaise coordinates, config settings)</li>
+    <li>Faster than list (thoda performance better hota hai)</li>
+    <li>Can be used as dictionary keys (lists nahi ho sakte)</li>
+  </ul>
+
+  <h3>Common Mistake:</h3>
+  <div class="code-block wrong">
+    one_item = (5)  # ❌ This is int, not tuple<br>
+    print(type(one_item))  # Output: &lt;class 'int'&gt;
+  </div>
+
+  <h3>Correct Way:</h3>
+  <div class="code-block">
+    one_item = (5,)<br>
+    print(type(one_item))  # Output: &lt;class 'tuple'&gt;
+  </div>
+</div>
+<div class="section">
+  <h2>Python Sets - Unordered Unique Collection</h2>
+  <p><strong>Set</strong> ek aisi collection hoti hai jisme <strong>unique elements</strong> hote hain. Iska order fixed nahi hota (unordered), aur indexing allowed nahi hai.</p>
+
+  <h3>Set Banane ka Tarika:</h3>
+  <div class="code-block">
+    my_set = {1, 2, 3, 4}<br>
+    mixed_set = {"apple", 100, True}<br>
+    empty_set = set()  # ❌ {} likhne se empty dict banta hai
+  </div>
+
+  <h3>Set Me Duplicate Nahi Hota:</h3>
+  <div class="code-block">
+    dup = {1, 2, 2, 3}<br>
+    print(dup)  # Output: {1, 2, 3}
+  </div>
+
+  <div class="output-block">
+    {1, 2, 3}
+  </div>
+
+  <h3>Common Mistake (Indexing Try Karna):</h3>
+  <div class="code-block wrong">
+    my_set = {10, 20, 30}<br>
+    print(my_set[0])  # ❌ Error: 'set' object is not subscriptable
+  </div>
+
+  <h3>Set me Values Add Karna - <code>add()</code>:</h3>
+  <div class="code-block">
+    s = {1, 2}<br>
+    s.add(3)<br>
+    print(s)
+  </div>
+
+  <div class="output-block">
+    {1, 2, 3}
+  </div>
+
+  <h3>Remove vs Discard:</h3>
+  <div class="code-block">
+    s = {1, 2, 3}<br>
+    s.remove(2)   # 2 hat gaya<br>
+    s.discard(5)  # 5 nahi tha, lekin error nahi aaya
+  </div>
+
+  <h3>Wrong Use of <code>remove()</code>:</h3>
+  <div class="code-block wrong">
+    s = {1, 2, 3}<br>
+    s.remove(5)  # ❌ KeyError: 5 not found
+  </div>
+
+  <h3>Set Operations:</h3>
+
+  <ul>
+    <li><code>union()</code> - Do sets ka combined result</li>
+    <li><code>intersection()</code> - Common elements</li>
+    <li><code>difference()</code> - Jo ek set me hai dusre me nahi</li>
+  </ul>
+
+  <div class="code-block">
+    a = {1, 2, 3}<br>
+    b = {3, 4, 5}<br><br>
+    print(a.union(b))         # {1, 2, 3, 4, 5}<br>
+    print(a.intersection(b))  # {3}<br>
+    print(a.difference(b))    # {1, 2}
+  </div>
+
+  <div class="output-block">
+    {1, 2, 3, 4, 5}<br>
+    {3}<br>
+    {1, 2}
+  </div>
+
+  <h3>Looping through Set:</h3>
+  <div class="code-block">
+    for item in {"apple", "banana", "mango"}:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;print(item)
+  </div>
+
+  <h3>Important Notes:</h3>
+  <ul>
+    <li>Sets unordered hote hain — same order me print nahi hota</li>
+    <li>Indexing, slicing allowed nahi hai</li>
+    <li>Only immutable (unchangeable) elements allowed — list inside set ❌</li>
+  </ul>
+</div>
+<div class="section">
+  <h2>Python Dictionaries - Key-Value Ka Magic</h2>
+  <p><strong>Dictionary</strong> ek aisa data structure hai jo <strong>key-value pairs</strong> me data store karta hai. Har key unique hoti hai, aur uske saath ek value jodi hoti hai.</p>
+
+  <h3>Dictionary Banane ka Tarika:</h3>
+  <div class="code-block">
+    student = {<br>
+    &nbsp;&nbsp;"name": "Ravi",<br>
+    &nbsp;&nbsp;"age": 21,<br>
+    &nbsp;&nbsp;"grade": "A"<br>
+    }<br>
+    print(student["name"])  # Output: Ravi
+  </div>
+
+  <div class="output-block">
+    Ravi
+  </div>
+
+  <h3>Empty Dictionary:</h3>
+  <div class="code-block">
+    empty = {}<br>
+    print(type(empty))  # Output: &lt;class 'dict'&gt;
+  </div>
+
+  <h3>Key-Value Access & Update:</h3>
+  <div class="code-block">
+    student["age"] = 22  # value update<br>
+    student["city"] = "Delhi"  # new key-value add<br>
+    print(student)
+  </div>
+
+  <div class="output-block">
+    {'name': 'Ravi', 'age': 22, 'grade': 'A', 'city': 'Delhi'}
+  </div>
+
+  <h3>Access Karne ke Rules:</h3>
+  <ul>
+    <li>Key case-sensitive hoti hai ("Name" ≠ "name")</li>
+    <li>Agar key exist nahi karti aur access kiya to ❌ <code>KeyError</code> aata hai</li>
+  </ul>
+
+  <h3>❌ Wrong Access:</h3>
+  <div class="code-block wrong">
+    student = {"name": "Amit"}<br>
+    print(student["age"])  # ❌ Error: 'age' key nahi hai
+  </div>
+
+  <h3>✅ Safe Access with <code>get()</code>:</h3>
+  <div class="code-block">
+    print(student.get("age", "Not Found"))<br>
+    print(student.get("name", "Not Found"))
+  </div>
+
+  <div class="output-block">
+    Not Found<br>
+    Amit
+  </div>
+
+  <h3>Important Methods:</h3>
+  <ul>
+    <li><code>get()</code> – safely value access karta hai</li>
+    <li><code>keys()</code> – sabhi keys ka list deta hai</li>
+    <li><code>values()</code> – sabhi values deta hai</li>
+    <li><code>items()</code> – sabhi key-value pairs as tuples deta hai</li>
+    <li><code>update()</code> – ek dict me doosri dict ke items add/overwrite karta hai</li>
+    <li><code>pop()</code> – kisi key ko hata kar uski value return karta hai</li>
+  </ul>
+
+  <h3>Examples:</h3>
+  <div class="code-block">
+    person = {"name": "Asha", "age": 30}<br>
+    print(person.keys())<br>
+    print(person.values())<br>
+    print(person.items())<br>
+    person.update({"city": "Mumbai"})<br>
+    print(person)<br>
+    person.pop("age")<br>
+    print(person)
+  </div>
+
+  <div class="output-block">
+    dict_keys(['name', 'age'])<br>
+    dict_values(['Asha', 30])<br>
+    dict_items([('name', 'Asha'), ('age', 30)])<br>
+    {'name': 'Asha', 'age': 30, 'city': 'Mumbai'}<br>
+    {'name': 'Asha', 'city': 'Mumbai'}
+  </div>
+
+  <h3>Looping Over Dictionary:</h3>
+  <div class="code-block">
+    for key, value in person.items():<br>
+    &nbsp;&nbsp;print(key, "=>", value)
+  </div>
+
+  <div class="output-block">
+    name => Asha<br>
+    city => Mumbai
+  </div>
+
+  <h3>Note:</h3>
+  <ul>
+    <li>Keys unique hoti hain, values duplicate ho sakti hain</li>
+    <li>Keys immutable types hi ho sakti hain (string, number, tuple)</li>
+    <li>Nested dictionaries bhi possible hain</li>
+  </ul>
+
+  <h3>Nested Dictionary:</h3>
+  <div class="code-block">
+    student = {<br>
+    &nbsp;&nbsp;"name": "Ravi",<br>
+    &nbsp;&nbsp;"marks": {"math": 90, "science": 95}<br>
+    }<br>
+    print(student["marks"]["science"])  # Output: 95
+  </div>
+</div>
+
+</body>
+</html>
