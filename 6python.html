@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Python Chapter 6 - Functions</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9fafb;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #2d3748;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+    .section {
+      background: white;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #2b6cb0;
+    }
+    p, li {
+      line-height: 1.6;
+    }
+    .code-block, .output-block {
+      background: #f4f4f4;
+      font-family: monospace;
+      padding: 10px;
+      border-left: 4px solid #4299e1;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+    .output-block {
+      background: #e6ffe6;
+      border-left: 4px solid #38a169;
+    }
+    .wrong {
+      background: #ffe6e6;
+      border-left: 4px solid #e53e3e;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Chapter 6: Functions in Python</h1>
+  <p>Function banana, use karna, arguments dena, return lena – sab kuch simple Hinglish me!</p>
+</header>
+
+<div class="section" id="6python">
+  <h2>Chapter 6: Functions in Python</h2>
+  <p>Function ka matlab hota hai — ek reusable block of code jo baar-baar call kiya ja sakta hai. Isme hum arguments de sakte hain, return value le sakte hain, aur code ko modular aur readable bana sakte hain.</p>
+
+  <h3>Function Define Karna:</h3>
+  <div class="code-block">
+    def greet():<br>
+    &nbsp;&nbsp;print("Hello!")
+  </div>
+  <div class="output-block">Hello!</div>
+
+  <h3>Function Call Karna:</h3>
+  <div class="code-block">
+    greet()
+  </div>
+
+  <h3>Function with Parameters:</h3>
+  <div class="code-block">
+    def greet(name):<br>
+    &nbsp;&nbsp;print("Hello", name)<br><br>
+    greet("Ravi")
+  </div>
+  <div class="output-block">Hello Ravi</div>
+
+  <h3>Return Value:</h3>
+  <div class="code-block">
+    def add(a, b):<br>
+    &nbsp;&nbsp;return a + b<br><br>
+    result = add(2, 3)<br>
+    print(result)
+  </div>
+  <div class="output-block">5</div>
+
+  <h3>General Mistakes:</h3>
+  <div class="code-block wrong">
+    def add(a, b):<br>
+    &nbsp;&nbsp;a + b   # ❌ Return nahi diya<br><br>
+    print(add(2, 3))  # ❌ Output: None
+  </div>
+</div>
+
+<!-- Recursion Section -->
+<div class="section">
+  <h2>Recursion in Python</h2>
+  <p>Recursion matlab ek function khud ko call karta hai jab tak ek condition satisfy na ho jaaye. Isko step-by-step solve kiya jaata hai.</p>
+
+  <h3>Structure of Recursive Function:</h3>
+  <div class="code-block">
+    def function_name():<br>
+    &nbsp;&nbsp;if base_condition:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;return result<br>
+    &nbsp;&nbsp;else:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;return function_name()
+  </div>
+
+  <h3>Example: Countdown</h3>
+  <div class="code-block">
+    def countdown(n):<br>
+    &nbsp;&nbsp;if n == 0:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;print("Liftoff!")<br>
+    &nbsp;&nbsp;else:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;print(n)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;countdown(n - 1)<br><br>
+    countdown(5)
+  </div>
+  <div class="output-block">5<br>4<br>3<br>2<br>1<br>Liftoff!</div>
+
+  <h3>Rules of Recursion:</h3>
+  <ul>
+    <li>Base case zaroori hota hai – ye stopping point hai.</li>
+    <li>Har recursive call input ko chhota banata hai.</li>
+    <li>Python me ~1000 depth tak hi jaa sakte ho.</li>
+  </ul>
+
+  <h3>Common Mistake:</h3>
+  <div class="code-block wrong">
+    def bad(n):<br>
+    &nbsp;&nbsp;return bad(n-1)  # ❌ No base case<br><br>
+    bad(5)  # ❌ RecursionError: maximum depth exceeded
+  </div>
+
+  <h3>Example: Factorial</h3>
+  <div class="code-block">
+    def factorial(n):<br>
+    &nbsp;&nbsp;if n == 1:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;return 1<br>
+    &nbsp;&nbsp;else:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;return n * factorial(n-1)<br><br>
+    print(factorial(5))
+  </div>
+  <div class="output-block">120</div>
+
+  <h3>Advanced Example: Fibonacci</h3>
+  <div class="code-block">
+    def fib(n):<br>
+    &nbsp;&nbsp;if n <= 1:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;return n<br>
+    &nbsp;&nbsp;return fib(n-1) + fib(n-2)<br><br>
+    print(fib(6))
+  </div>
+  <div class="output-block">8</div>
+</div>
+
+<!-- Lambda Section -->
+<div class="section">
+  <h2>Lambda Functions</h2>
+  <p>Lambda function ek short anonymous function hoti hai, jisme sirf ek expression hota hai. Mostly quick calculations, filter/map me use hoti hai.</p>
+
+  <h3>Syntax:</h3>
+  <div class="code-block">
+    lambda arguments: expression
+  </div>
+
+  <h3>Simple Example:</h3>
+  <div class="code-block">
+    double = lambda x: x * 2<br>
+    print(double(4))
+  </div>
+  <div class="output-block">8</div>
+
+  <h3>With map():</h3>
+  <div class="code-block">
+    nums = [1, 2, 3, 4]<br>
+    squares = list(map(lambda x: x*x, nums))<br>
+    print(squares)
+  </div>
+  <div class="output-block">[1, 4, 9, 16]</div>
+
+  <h3>With filter():</h3>
+  <div class="code-block">
+    nums = [1, 2, 3, 4, 5]<br>
+    even = list(filter(lambda x: x % 2 == 0, nums))<br>
+    print(even)
+  </div>
+  <div class="output-block">[2, 4]</div>
+
+  <h3>With sorted():</h3>
+  <div class="code-block">
+    students = [('A', 50), ('B', 70), ('C', 40)]<br>
+    students.sort(key=lambda x: x[1])<br>
+    print(students)
+  </div>
+  <div class="output-block">[('C', 40), ('A', 50), ('B', 70)]</div>
+
+  <h3>Common Mistake:</h3>
+  <div class="code-block wrong">
+    lambda x, y: x + y  # ❌ Not used or assigned<br><br>
+    # ✔️ Correct:<br>
+    add = lambda x, y: x + y<br>
+    print(add(3, 4))
+  </div>
+
+  <h3>Lambda inside Function:</h3>
+  <div class="code-block">
+    def multiplier(n):<br>
+    &nbsp;&nbsp;return lambda x: x * n<br><br>
+    times3 = multiplier(3)<br>
+    print(times3(5))
+  </div>
+  <div class="output-block">15</div>
+
+  <h3>Lambda vs def:</h3>
+  <ul>
+    <li><b>Lambda:</b> One-line, quick use, anonymous</li>
+    <li><b>def:</b> Multi-line, named, complex logic ke liye</li>
+  </ul>
+</div>
+
+<br>
+<br>
+
+
+</body>
+</html>
