@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 8: Strings in Python</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #2d3748;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+    .section {
+      background: white;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    }
+    h2 {
+      color: #2b6cb0;
+    }
+    .code-block, .output-block {
+      background: #f4f4f4;
+      font-family: monospace;
+      padding: 10px;
+      border-left: 4px solid #3182ce;
+      margin: 10px 0;
+      border-radius: 6px;
+    }
+    .output-block {
+      background: #e6ffe6;
+      border-left: 4px solid #38a169;
+    }
+    .wrong {
+      background: #ffe6e6;
+      border-left: 4px solid #e53e3e;
+    }
+    p, li {
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Chapter 8: Strings in Python</h1>
+  <p>String ka matlab hota hai characters ka sequence. Ab sikhenge string methods, slicing, formatting aur manipulation.</p>
+</header>
+
+<div class="section">
+  <h2>1. String Creation</h2>
+  <p>Single ya double quotes se string banate hain.</p>
+  <div class="code-block">
+    name = "Ravi"<br>
+    message = 'Hello World'
+  </div>
+</div>
+
+<div class="section">
+  <h2>2. String Indexing & Slicing</h2>
+  <p>String ke characters ko access karne ke liye index ka use hota hai. Index 0 se start hota hai.</p>
+  <div class="code-block">
+    text = "Python"<br>
+    print(text[0])   # Output: P<br>
+    print(text[-1])  # Output: n<br>
+    print(text[1:4]) # Output: yth
+  </div>
+  <div class="output-block">
+    P<br>n<br>yth
+  </div>
+</div>
+
+<div class="section">
+  <h2>3. String Methods</h2>
+  <ul>
+    <li><code>lower()</code>: Sab lowercase mein convert karta hai</li>
+    <li><code>upper()</code>: Sab uppercase mein convert karta hai</li>
+    <li><code>strip()</code>: Extra spaces hatata hai</li>
+    <li><code>replace()</code>: Word ko replace karta hai</li>
+    <li><code>split()</code>: String ko list mein todta hai</li>
+  </ul>
+  <div class="code-block">
+    txt = " Hello Python "<br>
+    print(txt.lower())<br>
+    print(txt.strip())<br>
+    print(txt.replace("Python", "World"))<br>
+    print(txt.split())
+  </div>
+  <div class="output-block">
+    " hello python "<br>
+    "Hello Python"<br>
+    " Hello World "<br>
+    ['Hello', 'Python']
+  </div>
+</div>
+
+<div class="section">
+  <h2>4. String Concatenation</h2>
+  <p>Do ya zyada strings ko jodna concatenate kehlata hai.</p>
+  <div class="code-block">
+    a = "Hello"<br>
+    b = "World"<br>
+    print(a + " " + b)
+  </div>
+  <div class="output-block">
+    Hello World
+  </div>
+</div>
+
+<div class="section">
+  <h2>5. String Formatting</h2>
+  <p>Python 3 mein modern formatting f-strings ke through hoti hai.</p>
+  <div class="code-block">
+    name = "Ravi"<br>
+    age = 21<br>
+    print(f"My name is {name} and I am {age} years old.")
+  </div>
+  <div class="output-block">
+    My name is Ravi and I am 21 years old.
+  </div>
+</div>
+
+<div class="section">
+  <h2>6. Common String Mistakes</h2>
+  <div class="code-block wrong">
+    text = "Hello<br>
+    print(text)  # ❌ String not closed
+  </div>
+  <div class="code-block">
+    text = "Hello"<br>
+    print(text)  # ✅
+  </div>
+</div>
+
+<div class="section">
+  <h2>7. Check String</h2>
+  <p>Use <code>in</code> to check if substring exists:</p>
+  <div class="code-block">
+    msg = "Welcome to Python"<br>
+    print("Python" in msg)   # True<br>
+    print("Java" not in msg) # True
+  </div>
+</div>
+
+<div class="section">
+  <h2>8. Multiline Strings</h2>
+  <p>Use triple quotes for multi-line:</p>
+  <div class="code-block">
+    para = """<br>
+    This is line 1.<br>
+    This is line 2.<br>
+    """<br>
+    print(para)
+  </div>
+  <div class="output-block">
+    This is line 1.<br>
+    This is line 2.
+  </div>
+</div>
+
+<div class="section">
+  <h2>9. Looping Through a String</h2>
+  <p>Har character ko access karne ke liye for loop ka use hota hai.</p>
+  <div class="code-block">
+    for char in "Python":<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;print(char)
+  </div>
+  <div class="output-block">
+    P<br>y<br>t<br>h<br>o<br>n
+  </div>
+</div>
+
+</body>
+</html>
