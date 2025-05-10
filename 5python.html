@@ -1,235 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chapter 5: Loops - Python</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Python Chapter 5 - Loops</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #eef2f7;
+      background: #f9fafb;
       margin: 0;
-      padding: 20px;
-      color: #333;
+      padding: 0;
     }
-
-    h1, h2 {
-      color: #2b6cb0;
+    header {
+      background: #2d3748;
+      color: white;
       text-align: center;
+      padding: 20px 0;
     }
-
     .section {
       background: white;
-      margin: 20px 0;
+      margin: 20px;
       padding: 20px;
       border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
-
-    .code-block, .output-block, .wrong-block {
-      font-family: monospace;
+    h2 {
+      color: #2b6cb0;
+    }
+    p, li {
+      line-height: 1.6;
+    }
+    .code-block, .output-block {
       background: #f4f4f4;
+      font-family: monospace;
       padding: 10px;
-      border-radius: 6px;
+      border-left: 4px solid #4299e1;
       margin-top: 10px;
-      white-space: pre-wrap;
-      border-left: 4px solid #38a169;
+      border-radius: 5px;
     }
-
-    .code-block {
-      background-color: #282c34;
-      color: #abb2bf;
-      border-left: 4px solid #61dafb;
-      font-size: 1rem;
-    }
-
     .output-block {
       background: #e6ffe6;
       border-left: 4px solid #38a169;
     }
-
-    .wrong-block {
+    .wrong {
       background: #ffe6e6;
       border-left: 4px solid #e53e3e;
     }
-
-    .rule {
-      background: #fefcbf;
-      padding: 8px;
-      margin-top: 10px;
-      border-left: 4px solid #d69e2e;
-      border-radius: 5px;
-    }
-
-    /* Flexbox Layout */
-    .content {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-
-    .section {
-      flex: 1 1 45%;
-      margin: 10px;
-    }
-
-    /* Responsive Styles */
-    @media (max-width: 768px) {
-      .content {
-        flex-direction: column;
-        align-items: center;
-      }
-      .section {
-        flex: 1 1 100%;
-      }
-    }
-
-    @media (max-width: 480px) {
-      h1, h2 {
-        font-size: 1.5rem;
-      }
-      .section {
-        padding: 15px;
-      }
+    ul {
+      padding-left: 20px;
     }
   </style>
 </head>
 <body>
 
-<h1>Chapter 5: Python Loops</h1>
-<h2>for, while Loops & Break, Continue, Nested Loops</h2>
+<header>
+  <h1>Chapter 5: Loops in Python</h1>
+  <p>Loops ka use repeat karne ke liye hota hai – sab kuch samjho bariki se with rules, mistakes aur examples.</p>
+</header>
 
-<div class="content">
-  <div class="section">
-    <h2>1. for Loop</h2>
-    <p><strong>Kya karta hai:</strong> Yeh loop ek range ya iterable (list, tuple, string, etc.) ke elements par iterate karta hai.</p>
-
-    <div class="rule"><strong>Rule:</strong> for loop ka use tab karo jab aapko ek range ya collection ke elements ko process karna ho.</div>
-
-    <div class="code-block">
-# for loop example
-for i in range(1, 6):
-    print(i)
-    </div>
-    <div class="output-block">
-1
-2
-3
-4
-5
-    </div>
-
-    <div class="wrong-block">
-# for loop with wrong range
-for i in range(1, 6, 2):
-    print(i)
-    </div>
-    <div class="output-block">
-1
-3
-5
-    </div>
+<div class="section">
+  <h2>1. for Loop</h2>
+  <p><b>Meaning:</b> Kisi sequence ke har element ke liye ek kaam baar-baar karna.</p>
+  <p><b>Syntax:</b></p>
+  <div class="code-block">
+    for variable in sequence:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;# do something
   </div>
 
-  <div class="section">
-    <h2>2. while Loop</h2>
-    <p><strong>Kya karta hai:</strong> Yeh loop ek condition ko check karta hai aur jab tak wo condition true hoti hai, tab tak loop run hota hai.</p>
-
-    <div class="rule"><strong>Rule:</strong> while loop ko use karo jab aapko kisi condition ke true hone tak repeat karna ho.</div>
-
-    <div class="code-block">
-# while loop example
-i = 1
-while i <= 5:
-    print(i)
-    i += 1
-    </div>
-    <div class="output-block">
-1
-2
-3
-4
-5
-    </div>
-
-    <div class="wrong-block">
-# while loop with wrong condition
-i = 6
-while i <= 5:
-    print(i)
-    i += 1
-    </div>
-    <div class="output-block">
-(no output, loop never runs)
-    </div>
+  <h3>Example:</h3>
+  <div class="code-block">
+    fruits = ["apple", "banana", "mango"]<br>
+    for fruit in fruits:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;print(fruit)
   </div>
-
-  <div class="section">
-    <h2>3. break Statement</h2>
-    <p><strong>Kya karta hai:</strong> Yeh loop ko forcefully break karne ke liye use hota hai, even if the loop condition is still true.</p>
-
-    <div class="rule"><strong>Rule:</strong> Break statement tab use karo jab aapko loop ko kisi specific condition par rokna ho.</div>
-
-    <div class="code-block">
-# break statement example
-for i in range(1, 6):
-    if i == 3:
-        break
-    print(i)
-    </div>
-    <div class="output-block">
-1
-2
-    </div>
-
+  <div class="output-block">
+    apple<br>
+    banana<br>
+    mango
   </div>
+</div>
 
-  <div class="section">
-    <h2>4. continue Statement</h2>
-    <p><strong>Kya karta hai:</strong> Yeh statement loop ke current iteration ko skip karne ke liye use hota hai, aur next iteration par jump kar jata hai.</p>
-
-    <div class="rule"><strong>Rule:</strong> Continue statement tab use karo jab aap kisi iteration ko skip karna chahte ho.</div>
-
-    <div class="code-block">
-# continue statement example
-for i in range(1, 6):
-    if i == 3:
-        continue
-    print(i)
-    </div>
-    <div class="output-block">
-1
-2
-4
-5
-    </div>
-
+<div class="section">
+  <h2>2. range() with for Loop</h2>
+  <p><b>range()</b> number series banata hai. Last value exclusive hoti hai.</p>
+  <div class="code-block">
+    for i in range(1, 6):<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;print(i)
   </div>
+  <div class="output-block">
+    1<br>2<br>3<br>4<br>5
+  </div>
+</div>
 
-  <div class="section">
-    <h2>5. Nested Loops</h2>
-    <p><strong>Kya karta hai:</strong> Jab ek loop ke andar doosra loop hota hai, to usse nested loop kehte hain. Yeh complex iterations ke liye use hota hai.</p>
+<div class="section">
+  <h2>3. Common Mistakes in for Loop</h2>
+  <div class="code-block wrong">
+    for i in 5:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;print(i)  # ❌ 5 is not iterable
+  </div>
+  <div class="code-block">
+    for i in range(5):<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;print(i)  # ✅ Correct
+  </div>
+</div>
 
-    <div class="rule"><strong>Rule:</strong> Nested loops ko tab use karo jab ek loop ke andar multiple iterations perform karni ho.</div>
+<div class="section">
+  <h2>4. while Loop</h2>
+  <p><b>Meaning:</b> Jab tak condition true hai, tab tak loop chalega.</p>
+  <div class="code-block">
+    count = 1<br>
+    while count <= 5:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;print(count)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;count += 1
+  </div>
+  <div class="output-block">
+    1<br>2<br>3<br>4<br>5
+  </div>
+</div>
 
-    <div class="code-block">
-# Nested loop example
-for i in range(1, 4):
-    for j in range(1, 4):
-        print(f"i={i}, j={j}")
-    </div>
-    <div class="output-block">
-i=1, j=1
-i=1, j=2
-i=1, j=3
-i=2, j=1
-i=2, j=2
-i=2, j=3
-i=3, j=1
-i=3, j=2
-i=3, j=3
-    </div>
+<div class="section">
+  <h2>5. Infinite Loop Mistake</h2>
+  <div class="code-block wrong">
+    while True:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;print("Infinite loop")  # ❌ No stop condition
+  </div>
+</div>
 
+<div class="section">
+  <h2>6. break Statement</h2>
+  <p><b>Meaning:</b> Loop ko turant band kar deta hai.</p>
+  <div class="code-block">
+    for i in range(1, 6):<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;if i == 3:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;print(i)
+  </div>
+  <div class="output-block">
+    1<br>2
+  </div>
+</div>
+
+<div class="section">
+  <h2>7. continue Statement</h2>
+  <p><b>Meaning:</b> Current iteration skip karta hai, agla chalu kar deta hai.</p>
+  <div class="code-block">
+    for i in range(1, 6):<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;if i == 3:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;print(i)
+  </div>
+  <div class="output-block">
+    1<br>2<br>4<br>5
+  </div>
+</div>
+
+<div class="section">
+  <h2>8. else with Loops</h2>
+  <p><b>Meaning:</b> Agar loop break nahi hota to <code>else</code> part run hota hai.</p>
+  <div class="code-block">
+    for i in range(3):<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;print(i)<br>
+    else:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;print("Loop done")
+  </div>
+  <div class="output-block">
+    0<br>1<br>2<br>Loop done
+  </div>
+</div>
+
+<div class="section">
+  <h2>9. else skipped when break used</h2>
+  <div class="code-block">
+    for i in range(3):<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;if i == 1:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;print(i)<br>
+    else:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;print("Loop done")
+  </div>
+  <div class="output-block">
+    0
+  </div>
+</div>
+
+<div class="section">
+  <h2>10. Nested Loops</h2>
+  <p><b>Meaning:</b> Ek loop ke andar doosra loop (jaise table banate ho).</p>
+  <div class="code-block">
+    for i in range(1, 4):<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;for j in range(1, 3):<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(f"{i} x {j} = {i*j}")
+  </div>
+  <div class="output-block">
+    1 x 1 = 1<br>1 x 2 = 2<br>2 x 1 = 2<br>2 x 2 = 4<br>3 x 1 = 3<br>3 x 2 = 6
   </div>
 </div>
 
