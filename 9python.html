@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 9: OOP in Python</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #111827;
+      color: #f1f5f9;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #1f2937;
+      text-align: center;
+      padding: 30px 20px;
+      border-bottom: 2px solid #374151;
+    }
+    h1, h2, h3 {
+      color: #60a5fa;
+    }
+    .section {
+      padding: 20px;
+      border-bottom: 1px solid #374151;
+    }
+    .code-block {
+      background: #1e293b;
+      border-left: 4px solid #3b82f6;
+      padding: 10px;
+      margin: 10px 0;
+      font-family: monospace;
+      border-radius: 5px;
+    }
+    .output-block {
+      background: #064e3b;
+      border-left: 4px solid #10b981;
+      padding: 10px;
+      margin: 10px 0;
+      font-family: monospace;
+      border-radius: 5px;
+    }
+    p, li {
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Chapter 9: Object-Oriented Programming in Python</h1>
+  <p>Class, Object, __init__, Inheritance, Polymorphism, Encapsulation, Abstraction, super(), Method Overriding & Operator Overloading – Sab kuch step-by-step in Hinglish!</p>
+</header>
+
+<div class="section">
+  <h2>1. Class & Object</h2>
+  <p><b>Class:</b> Ek blueprint ya template hoti hai. Jaise Car ka design.</p>
+  <p><b>Object:</b> Real cheez jo class ke base par banai jaati hai. Jaise "BMW" aur "Audi" car objects ho sakti hain.</p>
+
+  <div class="code-block">
+class Car:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;def __init__(self, brand):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.brand = brand<br><br>
+car1 = Car("BMW")<br>
+print(car1.brand)
+  </div>
+
+  <div class="output-block">
+BMW
+  </div>
+</div>
+
+<div class="section">
+  <h2>2. __init__ Method</h2>
+  <p>Yeh ek special constructor method hota hai jo object banate waqt automatically call hota hai. Initialization ke liye use hota hai.</p>
+
+  <div class="code-block">
+class Student:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;def __init__(self, name, age):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.name = name<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.age = age<br><br>
+s1 = Student("Ravi", 20)<br>
+print(s1.name, s1.age)
+  </div>
+
+  <div class="output-block">Ravi 20</div>
+</div>
+
+<div class="section">
+  <h2>3. Instance vs Class Variables</h2>
+  <ul>
+    <li><b>Instance Variable:</b> Har object ke liye alag value.</li>
+    <li><b>Class Variable:</b> Sab objects ke liye common hoti hai.</li>
+  </ul>
+
+  <div class="code-block">
+class Dog:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;species = "Canine"   # Class Variable<br>
+&nbsp;&nbsp;&nbsp;&nbsp;def __init__(self, name):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.name = name   # Instance Variable<br><br>
+d1 = Dog("Bruno")<br>
+print(d1.name, d1.species)
+  </div>
+
+  <div class="output-block">Bruno Canine</div>
+</div>
+
+<div class="section">
+  <h2>4. Inheritance</h2>
+  <p>Ek class doosri class ke properties aur methods le sakti hai.</p>
+
+  <div class="code-block">
+class Animal:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;def speak(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("Animal speaking")<br><br>
+class Dog(Animal):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;def bark(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("Dog barking")<br><br>
+d = Dog()<br>
+d.speak()<br>
+d.bark()
+  </div>
+
+  <div class="output-block">
+Animal speaking<br>
+Dog barking
+  </div>
+</div>
+
+<div class="section">
+  <h2>5. Polymorphism</h2>
+  <p>Same method name, lekin different behavior.</p>
+
+  <div class="code-block">
+class Bird:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;def fly(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("Bird flying")<br><br>
+class Airplane:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;def fly(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("Airplane flying")<br><br>
+def flight_test(thing):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;thing.fly()<br><br>
+flight_test(Bird())<br>
+flight_test(Airplane())
+  </div>
+
+  <div class="output-block">
+Bird flying<br>
+Airplane flying
+  </div>
+</div>
+
+<div class="section">
+  <h2>6. Encapsulation</h2>
+  <p>Data ko protect karna by restricting access using <code>_</code> (protected) or <code>__</code> (private).</p>
+
+  <div class="code-block">
+class Account:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;def __init__(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.__balance = 0<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;def deposit(self, amount):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.__balance += amount<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;def get_balance(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return self.__balance<br><br>
+acc = Account()<br>
+acc.deposit(500)<br>
+print(acc.get_balance())
+  </div>
+
+  <div class="output-block">500</div>
+</div>
+
+<div class="section">
+  <h2>7. Abstraction</h2>
+  <p>Important details ko dikhana aur complex logic ko hide karna.</p>
+
+  <div class="code-block">
+from abc import ABC, abstractmethod<br><br>
+class Vehicle(ABC):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;@abstractmethod<br>
+&nbsp;&nbsp;&nbsp;&nbsp;def start(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pass<br><br>
+class Bike(Vehicle):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;def start(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("Bike started")<br><br>
+b = Bike()<br>
+b.start()
+  </div>
+
+  <div class="output-block">Bike started</div>
+</div>
+
+<div class="section">
+  <h2>8. super() and Method Overriding</h2>
+  <p>Child class parent method ko override kar sakti hai. <code>super()</code> se parent ka method bhi call kar sakte hain.</p>
+
+  <div class="code-block">
+class Parent:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;def show(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("Parent show")<br><br>
+class Child(Parent):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;def show(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super().show()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("Child show")<br><br>
+c = Child()<br>
+c.show()
+  </div>
+
+  <div class="output-block">
+Parent show<br>
+Child show
+  </div>
+</div>
+
+<div class="section">
+  <h2>9. Operator Overloading</h2>
+  <p>Operators (+, *, etc.) ko custom objects ke liye define karna.</p>
+
+  <div class="code-block">
+class Book:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;def __init__(self, pages):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.pages = pages<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;def __add__(self, other):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return self.pages + other.pages<br><br>
+b1 = Book(100)<br>
+b2 = Book(150)<br>
+print(b1 + b2)
+  </div>
+
+  <div class="output-block">250</div>
+</div>
+
+</body>
+</html>
