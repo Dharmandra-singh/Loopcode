@@ -1,1 +1,198 @@
-j
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D0ENCWPZL9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D0ENCWPZL9');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>16. CSS Shapes - Clip-path</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #1cc9be;
+      color: #222;
+    }
+    .section {
+      background: rgba(255, 255, 255, 0.3);
+      padding: 20px;
+      margin: 25px auto;
+      border-radius: 12px;
+      max-width: 1000px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    h2, h3 {
+      color: #333;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+    textarea {
+      width: 100%;
+      height: 170px;
+      font-family: 'Courier New', monospace;
+      font-size: 16px;
+      padding: 14px;
+      background-color: rgba(255, 255, 255, 0.95);
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      margin: 12px 0;
+      color: #222;
+      transition: all 0.3s ease;
+      resize: vertical;
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    }
+    textarea:focus {
+      outline: none;
+      border-color: #00c6ff;
+      box-shadow: 0 0 8px rgba(0, 198, 255, 0.5);
+    }
+    button {
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      color: white;
+      padding: 8px 18px;
+      font-size: 15px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+    }
+    iframe {
+      width: 100%;
+      height: 160px;
+      border: 2px solid white;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="section">
+    <h2>16. CSS Shapes using Clip-path</h2>
+
+    <h3>I. Clip-path Circle</h3>
+    <p><strong>Explanation:</strong> <code>clip-path</code> se aap element ko circular ya kisi specific shape me dikh sakte ho. Yahan hum <code>circle()</code> ka use kar rahe hain.</p>
+
+    <textarea id="code1">
+<style>
+  .circle {
+    width: 200px;
+    height: 200px;
+    background: orange;
+    clip-path: circle(50%);
+  }
+</style>
+
+<div class="circle"></div>
+    </textarea>
+    <button onclick="runCode('code1', 'output1')">Run Code</button>
+    <iframe id="output1"></iframe>
+
+    <h3>II. Ellipse Shape</h3>
+    <p><strong>Explanation:</strong> <code>ellipse()</code> shape se oval ya ellipse create kar sakte hain using clip-path.</p>
+
+    <textarea id="code2">
+<style>
+  .ellipse {
+    width: 250px;
+    height: 150px;
+    background: #28a745;
+    clip-path: ellipse(60% 40% at 50% 50%);
+  }
+</style>
+
+<div class="ellipse"></div>
+    </textarea>
+    <button onclick="runCode('code2', 'output2')">Run Code</button>
+    <iframe id="output2"></iframe>
+
+    <h3>III. Polygon Shape</h3>
+    <p><strong>Explanation:</strong> Polygon coordinates dekar custom triangle, star, ya any polygon shape banayi ja sakti hai.</p>
+
+    <textarea id="code3">
+<style>
+  .polygon {
+    width: 220px;
+    height: 200px;
+    background: #007bff;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  }
+</style>
+
+<div class="polygon"></div>
+    </textarea>
+    <button onclick="runCode('code3', 'output3')">Run Code</button>
+    <iframe id="output3"></iframe>
+
+    <h3>IV. Complex Shapes (Multiple Layers)</h3>
+    <p><strong>Explanation:</strong> Complex designs create karne ke liye aap multiple layered divs aur <code>clip-path</code> use kar sakte ho.</p>
+
+    <textarea id="code4">
+<style>
+  .layer1, .layer2 {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+  }
+
+  .layer1 {
+    background: #ff6347;
+    clip-path: circle(50%);
+  }
+
+  .layer2 {
+    background: #6a5acd;
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    top: 0;
+    left: 0;
+    mix-blend-mode: multiply;
+  }
+
+  .wrapper {
+    position: relative;
+    width: 200px;
+    height: 200px;
+  }
+</style>
+
+<div class="wrapper">
+  <div class="layer1"></div>
+  <div class="layer2"></div>
+</div>
+    </textarea>
+    <button onclick="runCode('code4', 'output4')">Run Code</button>
+    <iframe id="output4"></iframe>
+  </div>
+
+  <script>
+    function runCode(textareaId, iframeId) {
+      const code = document.getElementById(textareaId).value;
+      const iframe = document.getElementById(iframeId);
+      const doc = iframe.contentDocument || iframe.contentWindow.document;
+      doc.open();
+      doc.write(code);
+      doc.close();
+    }
+  </script>
+</body>
+</html>
