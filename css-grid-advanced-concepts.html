@@ -1,1 +1,224 @@
-h
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D0ENCWPZL9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D0ENCWPZL9');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>18. CSS Grid: Advanced Concepts</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #1cc9be;
+      color: #222;
+    }
+    .section {
+      background: rgba(255, 255, 255, 0.3);
+      padding: 20px;
+      margin: 25px auto;
+      border-radius: 12px;
+      max-width: 1000px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    h2, h3 {
+      color: #333;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+    textarea {
+      width: 100%;
+      height: 170px;
+      font-family: 'Courier New', monospace;
+      font-size: 16px;
+      padding: 14px;
+      background-color: rgba(255, 255, 255, 0.95);
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      margin: 12px 0;
+      color: #222;
+      transition: all 0.3s ease;
+      resize: vertical;
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    }
+    textarea:focus {
+      outline: none;
+      border-color: #00c6ff;
+      box-shadow: 0 0 8px rgba(0, 198, 255, 0.5);
+    }
+    button {
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      color: white;
+      padding: 8px 18px;
+      font-size: 15px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+    }
+    iframe {
+      width: 100%;
+      height: 160px;
+      border: 2px solid white;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="section">
+    <h2>18. CSS Grid: Advanced Concepts</h2>
+
+    <h3>I. Grid-template-areas</h3>
+    <p><strong>Explanation:</strong> Grid areas ko naam dene ke liye <code>grid-template-areas</code> use hota hai. Ye layout ko samajhne me easy banata hai.</p>
+
+    <textarea id="code1">
+<style>
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "sidebar content"
+      "footer footer";
+    grid-template-columns: 150px 1fr;
+    gap: 10px;
+    background: #fff3e0;
+    padding: 10px;
+  }
+  .header { grid-area: header; background: #ffa726; padding: 10px; }
+  .sidebar { grid-area: sidebar; background: #ffcc80; padding: 10px; }
+  .content { grid-area: content; background: #ffe0b2; padding: 10px; }
+  .footer { grid-area: footer; background: #ffb74d; padding: 10px; }
+</style>
+
+<div class="grid-container">
+  <div class="header">Header</div>
+  <div class="sidebar">Sidebar</div>
+  <div class="content">Main Content</div>
+  <div class="footer">Footer</div>
+</div>
+    </textarea>
+    <button onclick="runCode('code1', 'output1')">Run Code</button>
+    <iframe id="output1"></iframe>
+
+    <h3>II. Aligning Grid Items</h3>
+    <p><strong>Explanation:</strong> Grid items ko center ya kisi bhi direction me align karne ke liye <code>align-items</code> aur <code>justify-items</code> use hote hain.</p>
+
+    <textarea id="code2">
+<style>
+  .grid {
+    display: grid;
+    place-items: center;
+    height: 200px;
+    background: #e1bee7;
+  }
+  .item {
+    width: 100px;
+    height: 100px;
+    background: #8e24aa;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+</style>
+
+<div class="grid">
+  <div class="item">Center</div>
+</div>
+    </textarea>
+    <button onclick="runCode('code2', 'output2')">Run Code</button>
+    <iframe id="output2"></iframe>
+
+    <h3>III. Auto-Placement</h3>
+    <p><strong>Explanation:</strong> Jab aap grid me items place karte ho bina kisi row/column specify kiye, to Grid auto-placement ka use karta hai.</p>
+
+    <textarea id="code3">
+<style>
+  .auto-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: #f3e5f5;
+    gap: 10px;
+  }
+  .box {
+    background: #ab47bc;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+</style>
+
+<div class="auto-grid">
+  <div class="box">1</div>
+  <div class="box">2</div>
+  <div class="box">3</div>
+  <div class="box">4</div>
+  <div class="box">5</div>
+</div>
+    </textarea>
+    <button onclick="runCode('code3', 'output3')">Run Code</button>
+    <iframe id="output3"></iframe>
+
+    <h3>IV. Grid Gaps</h3>
+    <p><strong>Explanation:</strong> Rows aur columns ke beech spacing ke liye <code>gap</code> property ka use hota hai.</p>
+
+    <textarea id="code4">
+<style>
+  .gap-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    background: #fce4ec;
+  }
+  .item {
+    background: #ec407a;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+</style>
+
+<div class="gap-grid">
+  <div class="item">A</div>
+  <div class="item">B</div>
+  <div class="item">C</div>
+</div>
+    </textarea>
+    <button onclick="runCode('code4', 'output4')">Run Code</button>
+    <iframe id="output4"></iframe>
+  </div>
+
+  <script>
+    function runCode(textareaId, iframeId) {
+      const code = document.getElementById(textareaId).value;
+      const iframe = document.getElementById(iframeId);
+      const doc = iframe.contentDocument || iframe.contentWindow.document;
+      doc.open();
+      doc.write(code);
+      doc.close();
+    }
+  </script>
+</body>
+</html>
