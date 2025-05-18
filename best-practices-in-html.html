@@ -1,1 +1,157 @@
-j
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D0ENCWPZL9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D0ENCWPZL9');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>16. Best Practices in HTML</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #1cc9be;
+      padding: 30px;
+    }
+    .container {
+      background: rgba(255,255,255,0.3);
+      padding: 25px;
+      border-radius: 15px;
+      max-width: 1000px;
+      margin: auto;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    h2, h3 {
+      color: #180;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 17px;
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
+    ul {
+      margin: 10px 0 20px 20px;
+    }
+    textarea, iframe {
+      width: 100%;
+      height: 200px;
+      font-size: 16px;
+      padding: 10px;
+      margin: 10px 0 20px;
+      border-radius: 10px;
+      border: 2px solid white;
+      background: rgba(255,248,240,0.4);
+      font-family: monospace;
+    }
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 15px;
+      font-weight: 500;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-bottom: 25px;
+      transition: all 0.3s ease-in-out;
+    }
+    button:hover {
+      box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>16. Best Practices in HTML</h2>
+
+    <!-- Clean Coding -->
+    <h3>I. Clean Coding</h3>
+    <p>HTML likhte waqt clean aur readable code likhna zaroori hai:</p>
+    <ul>
+      <li>Proper indentation aur spacing ka use karo</li>
+      <li>Comments se code samajhne mein aasani hoti hai</li>
+      <li>Meaningful aur lowercase element & attribute names</li>
+    </ul>
+
+    <textarea id="code1">
+<!-- Bad HTML -->
+<div><h1>Title</h1><p>Content</p></div>
+
+<!-- Good HTML -->
+<div>
+  <h1>Title</h1>
+  <p>Content</p>
+</div>
+    </textarea>
+    <button onclick="runCode('code1', 'output1')">Run Code</button>
+    <iframe id="output1"></iframe>
+
+    <!-- Accessibility -->
+    <h3>II. Accessibility</h3>
+    <p>Web pages ko sabhi users ke liye accessible banana chahiye, including screen reader users:</p>
+    <ul>
+      <li><strong>alt</strong> attribute images ke liye</li>
+      <li><strong>label</strong> with <code>for</code> for form inputs</li>
+      <li>Use semantic tags like <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code></li>
+    </ul>
+
+    <textarea id="code2">
+<img src="photo.jpg" alt="A smiling person">
+
+<form>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email">
+</form>
+    </textarea>
+    <button onclick="runCode('code2', 'output2')">Run Code</button>
+    <iframe id="output2"></iframe>
+
+    <!-- SEO Friendly HTML -->
+    <h3>III. SEO Friendly HTML</h3>
+    <p>SEO (Search Engine Optimization) ke liye HTML ka sahi use important hai:</p>
+    <ul>
+      <li><strong>&lt;title&gt;</strong> and <strong>&lt;meta&gt;</strong> tags zaroori hain</li>
+      <li>Use heading hierarchy correctly (H1 to H6)</li>
+      <li>Use <code>alt</code> attributes and descriptive link texts</li>
+    </ul>
+
+    <textarea id="code3">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Best Travel Tips</title>
+  <meta name="description" content="Explore the best travel tips for safe and affordable journeys.">
+</head>
+<body>
+  <h1>Top 5 Travel Tips</h1>
+  <p>Always carry a power bank and ID.</p>
+  <a href="details.html">Read more travel advice</a>
+</body>
+</html>
+    </textarea>
+    <button onclick="runCode('code3', 'output3')">Run Code</button>
+    <iframe id="output3"></iframe>
+
+  </div>
+
+  <script>
+    function runCode(textareaId, iframeId) {
+      const code = document.getElementById(textareaId).value;
+      const iframe = document.getElementById(iframeId);
+      const doc = iframe.contentDocument || iframe.contentWindow.document;
+      doc.open();
+      doc.write(code);
+      doc.close();
+    }
+  </script>
+</body>
+</html>
