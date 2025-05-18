@@ -1,1 +1,94 @@
-u
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D0ENCWPZL9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D0ENCWPZL9');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>21. PostCSS</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #1cc9be;
+      color: #222;
+    }
+    .section {
+      background: rgba(255, 255, 255, 0.3);
+      padding: 20px;
+      margin: 25px auto;
+      border-radius: 12px;
+      max-width: 1000px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    h2, h3 { color: #333; margin-bottom: 15px; }
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+    code {
+      background: #eee;
+      padding: 2px 5px;
+      border-radius: 5px;
+    }
+    pre {
+      background: #fefefe;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 12px;
+      font-size: 16px;
+      margin-bottom: 20px;
+      overflow-x: auto;
+    }
+    a {
+      color: #0033cc;
+    }
+  </style>
+</head>
+<body>
+  <div class="section">
+    <h2>21. PostCSS</h2>
+
+    <h3>I. What is PostCSS?</h3>
+    <p><strong>Explanation:</strong> PostCSS ek tool hai jo CSS ko JavaScript ke plugins ke through process karta hai. Ye ek preprocessor nahi hai, balki ek transformer hai jo raw CSS ko enhance karta hai optimization aur future CSS features ke support ke liye.</p>
+
+    <h3>II. Plugins for Optimization</h3>
+    <p><strong>Explanation:</strong> PostCSS ka main power uske plugins me hota hai. Ye plugins aapke CSS ko analyze, modify, aur optimize karte hain automatically. Kuch popular plugins niche diye gaye hain.</p>
+
+    <h3>III. Autoprefixer</h3>
+    <p><strong>Explanation:</strong> Ye plugin aapke CSS me automatically vendor prefixes (like <code>-webkit-</code>, <code>-moz-</code>) add karta hai taaki different browsers me compatibility bani rahe.</p>
+    <pre><code>/* Input CSS */
+.box {
+  display: flex;
+}
+
+/* Output CSS with Autoprefixer */
+.box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}</code></pre>
+
+    <h3>IV. CSS Minification</h3>
+    <p><strong>Explanation:</strong> PostCSS plugins ka use karke aap apne final CSS ko minify bhi kar sakte ho (spaces, comments hata kar), taaki file size kam ho aur loading fast ho.</p>
+    <pre><code>/* Original CSS */
+.box {
+  padding: 10px;
+  margin: 10px;
+}
+
+/* Minified CSS */
+.box{padding:10px;margin:10px}</code></pre>
+
+    <p><strong>Tools:</strong> PostCSS ko use karne ke liye Node.js aur bundlers (Webpack, Vite, etc.) ka use hota hai. Aap <a href="https://postcss.org/" target="_blank">postcss.org</a> se official docs check kar sakte ho.</p>
+  </div>
+</body>
+</html>
