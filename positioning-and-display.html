@@ -1,1 +1,213 @@
-h
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D0ENCWPZL9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D0ENCWPZL9');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>8. Positioning & Display in CSS</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #1cc9be;
+      padding: 20px;
+    }
+    .section {
+      background: rgba(255, 255, 255, 0.3);
+      padding: 20px;
+      border-radius: 15px;
+      max-width: 1000px;
+      margin: auto;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+    h2, h3 {
+      color: #349;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 18px;
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+    textarea, iframe {
+      width: 100%;
+      height: 160px;
+      font-size: 16px;
+      padding: 10px;
+      margin: 10px 0 20px;
+      border-radius: 10px;
+      border: 2px solid white;
+      background: rgba(255,248,240,0.4);
+      font-family: monospace;
+    }
+    iframe {
+      margin-top: 10px;
+    }
+    button {
+      background: #007bff;
+      color: #fff;
+      border: none;
+      padding: 8px 20px;
+      font-size: 15px;
+      font-weight: 500;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-bottom: 20px;
+      transition: all 0.3s ease-in-out;
+      position: relative;
+      overflow: hidden;
+    }
+    button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(120deg, #00bcd4, #2196f3);
+      transition: all 0.4s ease;
+      z-index: -1;
+    }
+    button:hover::before {
+      left: 0;
+    }
+    button:hover {
+      color: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transform: translateY(-1px);
+    }
+    button:active {
+      transform: scale(0.95);
+      box-shadow: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="section">
+    <h2>8. Positioning & Display in CSS</h2>
+
+    <h3>1. position: static</h3>
+    <p><strong>Explanation:</strong> Ye CSS ka default position hota hai. Koi special positioning nahi hoti. Element page me normal flow me appear hota hai.</p>
+    <textarea id="code1">
+<div style="position: static; background: lightcoral; padding: 20px;">
+  Ye static position hai (default).
+</div>
+    </textarea>
+    <button onclick="runCode('code1', 'output1')">Run Code</button>
+    <iframe id="output1"></iframe>
+
+    <h3>2. position: relative</h3>
+    <p>Element apni original jagah se shift ho sakta hai using <code>top</code>, <code>left</code>, <code>right</code>, <code>bottom</code>. Lekin uski original space remain karti hai.</p>
+    <textarea id="code2">
+<div style="position: relative; top: 20px; left: 20px; background: orange; padding: 20px;">
+  Relative position se element shift ho gaya.
+</div>
+    </textarea>
+    <button onclick="runCode('code2', 'output2')">Run Code</button>
+    <iframe id="output2"></iframe>
+
+    <h3>3. position: absolute</h3>
+    <p>Ye element apne closest <code>relative</code> ancestor ke respect me position leta hai. Agar na mile to <code>body</code> ke respect me hota hai.</p>
+    <textarea id="code3">
+<div style="position: relative; height: 150px; background: lightgray;">
+  <div style="position: absolute; top: 10px; right: 10px; background: steelblue; color: white; padding: 10px;">
+    Absolute Box
+  </div>
+</div>
+    </textarea>
+    <button onclick="runCode('code3', 'output3')">Run Code</button>
+    <iframe id="output3"></iframe>
+
+    <h3>4. position: fixed</h3>
+    <p>Ye element viewport me fix rahta hai. Page scroll hone ke baad bhi wahi dikhta hai.</p>
+    <textarea id="code4">
+<div style="position: fixed; bottom: 10px; right: 10px; background: purple; color: white; padding: 10px;">
+  Fixed Position Box
+</div>
+<p style="height: 400px;">Scroll karke dekho...</p>
+    </textarea>
+    <button onclick="runCode('code4', 'output4')">Run Code</button>
+    <iframe id="output4"></iframe>
+
+    <h3>5. position: sticky</h3>
+    <p>Scroll karte waqt ye element chipak jata hai kisi position par. Useful for headers.</p>
+    <textarea id="code5">
+<div style="position: sticky; top: 0; background: gold; padding: 10px;">
+  Sticky Header
+</div>
+<p style="height: 400px;">Scroll down to test sticky behavior.</p>
+    </textarea>
+    <button onclick="runCode('code5', 'output5')">Run Code</button>
+    <iframe id="output5"></iframe>
+
+    <h3>6. z-index</h3>
+    <p><code>z-index</code> use hota hai layers define karne ke liye — kaunsa element upar ya niche dikhna chahiye.</p>
+    <textarea id="code6">
+<div style="position: relative; z-index: 1; background: red; color: white; padding: 20px; margin-top: 30px;">
+  Z-index: 1
+</div>
+<div style="position: relative; z-index: 2; background: green; color: white; padding: 20px; margin-top: -40px;">
+  Z-index: 2 (Upar)
+</div>
+    </textarea>
+    <button onclick="runCode('code6', 'output6')">Run Code</button>
+    <iframe id="output6"></iframe>
+
+    <h3>7. Display: block, inline, inline-block, none</h3>
+    <p><code>display</code> property se element ka layout behavior define hota hai.</p>
+    <textarea id="code7">
+<div style="display: block; background: #cce; padding: 10px;">Block Element</div>
+<span style="display: inline; background: #ecc;">Inline</span>
+<div style="display: inline-block; background: #cec; padding: 10px;">Inline-Block</div>
+    </textarea>
+    <button onclick="runCode('code7', 'output7')">Run Code</button>
+    <iframe id="output7"></iframe>
+
+    <h3>8. display: flex</h3>
+    <p><code>flex</code> layout horizontal ya vertical direction me elements ko align karta hai easily.</p>
+    <textarea id="code8">
+<div style="display: flex; gap: 10px;">
+  <div style="background: salmon; padding: 20px;">Item 1</div>
+  <div style="background: skyblue; padding: 20px;">Item 2</div>
+</div>
+    </textarea>
+    <button onclick="runCode('code8', 'output8')">Run Code</button>
+    <iframe id="output8"></iframe>
+
+    <h3>9. display: grid</h3>
+    <p><code>grid</code> layout rows & columns me items ko arrange karta hai. Ye complex layout banane me best hai.</p>
+    <textarea id="code9">
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+  <div style="background: lightgreen; padding: 20px;">Grid 1</div>
+  <div style="background: lightcoral; padding: 20px;">Grid 2</div>
+</div>
+    </textarea>
+    <button onclick="runCode('code9', 'output9')">Run Code</button>
+    <iframe id="output9"></iframe>
+
+  </div>
+
+  <script>
+    function runCode(textareaId, iframeId) {
+      const code = document.getElementById(textareaId).value;
+      const iframe = document.getElementById(iframeId);
+      const doc = iframe.contentDocument || iframe.contentWindow.document;
+      doc.open();
+      doc.write(code);
+      doc.close();
+    }
+  </script>
+</body>
+</html>
