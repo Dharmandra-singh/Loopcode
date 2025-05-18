@@ -1,1 +1,118 @@
-j
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D0ENCWPZL9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D0ENCWPZL9');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>13. HTML Graphics</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #1cc9be;
+      padding: 30px;
+    }
+    .container {
+      background: rgba(255,255,255,0.3);
+      padding: 25px;
+      border-radius: 15px;
+      max-width: 1000px;
+      margin: auto;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    h2, h3 {
+      color: #180;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 17px;
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+    ul {
+      margin: 10px 0 20px 20px;
+    }
+    textarea, iframe {
+      width: 100%;
+      height: 200px;
+      font-size: 16px;
+      padding: 10px;
+      margin: 10px 0 20px;
+      border-radius: 10px;
+      border: 2px solid white;
+      background: rgba(255,248,240,0.4);
+      font-family: monospace;
+    }
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 15px;
+      font-weight: 500;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-bottom: 25px;
+      transition: all 0.3s ease-in-out;
+    }
+    button:hover {
+      box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>13. HTML Graphics</h2>
+
+    <!-- Canvas Basics -->
+    <h3>I. Canvas Basics</h3>
+    <p><strong>&lt;canvas&gt;</strong> tag se hum 2D graphics draw kar sakte hain JavaScript ke through. Yeh tag khud koi content nahi dikhata jab tak JavaScript use draw na kare.</p>
+
+    <textarea id="code1">
+<canvas id="myCanvas" width="300" height="200" style="border:1px solid #000;"></canvas>
+
+<script>
+  const canvas = document.getElementById("myCanvas");
+  const ctx = canvas.getContext("2d");
+  ctx.fillStyle = "#f90";
+  ctx.fillRect(50, 50, 200, 100);
+</script>
+    </textarea>
+    <button onclick="runCode('code1', 'output1')">Run Code</button>
+    <iframe id="output1"></iframe>
+
+    <!-- SVG Introduction -->
+    <h3>II. SVG Introduction</h3>
+    <p><strong>SVG (Scalable Vector Graphics)</strong> ek XML-based markup hota hai jo vector graphics ko web page par define karta hai. Yeh resolution-independent hota hai.</p>
+
+    <textarea id="code2">
+<svg width="300" height="150">
+  <rect x="50" y="20" width="200" height="100" fill="skyblue" stroke="black" stroke-width="2"/>
+  <text x="100" y="80" font-size="20" fill="black">Hello SVG</text>
+</svg>
+    </textarea>
+    <button onclick="runCode('code2', 'output2')">Run Code</button>
+    <iframe id="output2"></iframe>
+  </div>
+
+  <script>
+    function runCode(textareaId, iframeId) {
+      const code = document.getElementById(textareaId).value;
+      const iframe = document.getElementById(iframeId);
+      const doc = iframe.contentDocument || iframe.contentWindow.document;
+      doc.open();
+      doc.write(code);
+      doc.close();
+    }
+  </script>
+</body>
+</html>
