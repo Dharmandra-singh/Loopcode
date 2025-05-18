@@ -1,1 +1,163 @@
-j
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D0ENCWPZL9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D0ENCWPZL9');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>17. Final Project - Complete Website</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #1cc9be;
+      padding: 30px;
+    }
+    .container {
+      background: rgba(255,255,255,0.3);
+      padding: 25px;
+      border-radius: 15px;
+      max-width: 1000px;
+      margin: auto;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    h2, h3 {
+      color: #180;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 17px;
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
+    ul {
+      margin: 10px 0 20px 20px;
+    }
+    textarea, iframe {
+      width: 100%;
+      height: 250px;
+      font-size: 16px;
+      padding: 10px;
+      margin: 10px 0 20px;
+      border-radius: 10px;
+      border: 2px solid white;
+      background: rgba(255,248,240,0.4);
+      font-family: monospace;
+    }
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 15px;
+      font-weight: 500;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-bottom: 25px;
+      transition: all 0.3s ease-in-out;
+    }
+    button:hover {
+      box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>17. Final Project - Building a Complete Website</h2>
+
+    <!-- Overview -->
+    <h3>I. Project Overview</h3>
+    <p>Ab tak aapne HTML ke sabhi major topics sikh liye hain. Is final project mein hum ek simple, responsive website banayenge jisme real-world elements honge:</p>
+    <ul>
+      <li>Navigation</li>
+      <li>About Section</li>
+      <li>Contact Form</li>
+      <li>Responsive Layout using CSS</li>
+      <li>HTML Validation Best Practices</li>
+    </ul>
+
+    <!-- Sample Project Code -->
+    <h3>II. Project Code Sample</h3>
+    <p>Ye code ek sample website layout show karta hai:</p>
+
+    <textarea id="code1">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Portfolio</title>
+  <style>
+    body { font-family: Arial; margin: 0; }
+    header, footer { background: #007bff; color: white; padding: 15px; text-align: center; }
+    nav a { color: white; margin: 0 15px; text-decoration: none; }
+    .container { padding: 20px; }
+    @media (max-width: 600px) {
+      nav a { display: block; margin: 10px 0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Portfolio</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+  <div class="container">
+    <h2>About Me</h2>
+    <p>I am learning HTML and building awesome websites!</p>
+
+    <h2>Contact</h2>
+    <form>
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+      <input type="submit" value="Send Message">
+    </form>
+  </div>
+  <footer>
+    &copy; 2025 MyPortfolio.com
+  </footer>
+</body>
+</html>
+    </textarea>
+    <button onclick="runCode('code1', 'output1')">Run Project</button>
+    <iframe id="output1"></iframe>
+
+    <!-- Validation Section -->
+    <h3>III. HTML Validation Tips</h3>
+    <p>Website banane ke baad HTML validation karna zaroori hai taaki code errors-free ho aur browsers usse sahi samjhein:</p>
+    <ul>
+      <li>Use the W3C Validator: <a href="https://validator.w3.org/" target="_blank">validator.w3.org</a></li>
+      <li>Always include <code>doctype</code>, <code>lang</code>, and <code>meta</code> tags</li>
+      <li>Close all tags properly</li>
+      <li>Use semantic HTML</li>
+    </ul>
+
+    <p><strong>Note:</strong> Final project ko improve karne ke liye CSS aur JavaScript bhi add kiya ja sakta hai.</p>
+  </div>
+
+  <script>
+    function runCode(textareaId, iframeId) {
+      const code = document.getElementById(textareaId).value;
+      const iframe = document.getElementById(iframeId);
+      const doc = iframe.contentDocument || iframe.contentWindow.document;
+      doc.open();
+      doc.write(code);
+      doc.close();
+    }
+  </script>
+</body>
+</html>
