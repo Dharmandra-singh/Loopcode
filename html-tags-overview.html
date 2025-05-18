@@ -1,1 +1,589 @@
-hh
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D0ENCWPZL9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D0ENCWPZL9');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3. HTML Tags Overview</title>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9360644363281735"
+     crossorigin="anonymous"></script>
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body, html {height: 100%; font-family: 'Poppins', sans-serif; overflow-x: hidden; background-color: #1cc9be ;}
+    .section {
+      background-color: rgba(255, 255, 255, 0.3);
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 1000px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+    h2, h3 {
+      color: #333;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+    textarea {
+      width: 100%;
+      height: 190px;
+      font-family: monospace;
+      font-size: 16px;
+      padding: 10px;
+      border: 2px solid white;
+      border-radius: 8px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      background: rgba(255,248,240,0.4);
+    }
+    button {
+      background-color: #28a745;
+      color: white;
+      border: aqua;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+    iframe {
+      width: 100%;
+      height: 150px;
+      background: rgba(255,248,240,0.4) ;
+      border: 2px solid white;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="section">
+  <h2>3. HTML Tags Overview</h2>
+
+  <h3>I. Introduction (Tags kya hote hain?)</h3>
+  <p><strong>Explanation:</strong> 
+    HTML tags wo special keywords hote hain jo web page ka structure aur formatting define karte hain. Har tag angle brackets < > ke andar likha jata hai. Example ke liye <code>&lt;p&gt;</code> ek paragraph start karta hai.
+    <br><br>
+    Tags ke bina browser ko ye samajhna mushkil hota hai ki text, image, ya button ko kaise dikhana hai.
+  </p>
+
+  <textarea id="code1">
+<!DOCTYPE html>
+<html>
+<body>
+  <p>This is a paragraph written using &lt;p&gt; tag.</p>
+</body>
+</html>
+  </textarea>
+  <button onclick="runCode('code1', 'output1')">Run Code</button>
+  <iframe id="output1"></iframe>
+
+  <h3>II. Types of Tags (Paired, Self-closing)</h3>
+  <p><strong>Explanation:</strong>
+    Tags mainly do tarah ke hote hain:
+    <ul>
+      <li><strong>Paired Tags:</strong> Ye opening aur closing dono hote hain. Jaise <code>&lt;b&gt;Bold Text&lt;/b&gt;</code>.</li>
+      <li><strong>Self-closing Tags:</strong> Inhe close karne ki jarurat nahi hoti. Ye khudme complete hote hain. Jaise <code>&lt;br&gt;</code> line break ke liye.
+      </li>
+    </ul>
+  </p>
+
+  <textarea id="code2">
+<!DOCTYPE html>
+<html>
+<body>
+  <p>This is a paragraph.</p>
+  <br>
+  <p>This is another paragraph after a line break.</p>
+</body>
+</html>
+  </textarea>
+  <button onclick="runCode('code2', 'output2')">Run Code</button>
+  <iframe id="output2"></iframe>
+
+  <h3>III. Nesting Rules aur Case Sensitivity</h3>
+  <p><strong>Explanation:</strong>
+    <ul>
+      <li><strong>Nesting:</strong> Jab ek tag ke andar doosra tag lagaya jata hai to is process ko nesting kehte hain. Nesting me hamesha jo tag baad me open hua hai, usko pehle close karte hain (LIFO - Last In First Out).</li>
+      <li><strong>Case Sensitivity:</strong> HTML tags case-insensitive hote hain, yaani <code>&lt;HTML&gt;</code> ya <code>&lt;html&gt;</code> dono chalega. Lekin best practice hai ki hamesha lowercase ka use karein.</li>
+    </ul>
+  </p>
+
+  <textarea id="code3">
+<!DOCTYPE html>
+<html>
+<body>
+  <p><b>This is a bold text inside paragraph.</b></p>
+</body>
+</html>
+  </textarea>
+  <button onclick="runCode('code3', 'output3')">Run Code</button>
+  <iframe id="output3"></iframe>
+
+</div>
+
+<script>
+function runCode(textareaId, iframeId) {
+  var code = document.getElementById(textareaId).value;
+  var iframe = document.getElementById(iframeId);
+  iframe.contentDocument.open();
+  iframe.contentDocument.write(code);
+  iframe.contentDocument.close();
+}
+</script>
+
+</body>
+</html>
+<div class="section">
+  <h3>IV. Basic Formatting Tags</h3>
+
+  <p><strong>Explanation:</strong> 
+    Formatting tags ka use text ko style karne ke liye hota hai, jaise bold, italic, underline wagairah.
+    Ye tags content ko visually alag banate hain bina CSS ke.
+  </p>
+
+  <h4><b>&lt;b&gt; - Bold Text</b></h4>
+  <p><strong>Explanation:</strong> 
+    <code>&lt;b&gt;</code> tag se text bold dikhai deta hai, jisse important content highlight hota hai.
+  </p>
+
+  <textarea id="code4">
+<!DOCTYPE html>
+<html>
+<body>
+  <b>This text is bold.</b>
+</body>
+</html>
+  </textarea>
+  <button onclick="runCode('code4', 'output4')">Run Code</button>
+  <iframe id="output4"></iframe>
+
+
+  <h4><b>&lt;i&gt; - Italic Text</b></h4>
+  <p><strong>Explanation:</strong> 
+    <code>&lt;i&gt;</code> tag ka use text ko italic (slanted) style dene ke liye hota hai, jaise kisi dialogue ya special word ke liye.
+  </p>
+
+  <textarea id="code5">
+<!DOCTYPE html>
+<html>
+<body>
+  <i>This text is italic.</i>
+</body>
+</html>
+  </textarea>
+  <button onclick="runCode('code5', 'output5')">Run Code</button>
+  <iframe id="output5"></iframe>
+
+
+  <h4><b>&lt;u&gt; - Underlined Text</b></h4>
+  <p><strong>Explanation:</strong> 
+    <code>&lt;u&gt;</code> tag se text ke neeche ek underline aata hai. Important ya clickable content dikhane ke liye use hota hai.
+  </p>
+
+  <textarea id="code6">
+<!DOCTYPE html>
+<html>
+<body>
+  <u>This text is underlined.</u>
+</body>
+</html>
+  </textarea>
+  <button onclick="runCode('code6', 'output6')">Run Code</button>
+  <iframe id="output6"></iframe>
+
+
+  <h4><b>&lt;mark&gt; - Highlighted Text</b></h4>
+  <p><strong>Explanation:</strong> 
+    <code>&lt;mark&gt;</code> tag text ko yellow highlight karta hai jaise hum important notes me karte hain.
+  </p>
+
+  <textarea id="code7">
+<!DOCTYPE html>
+<html>
+<body>
+  <p>Here is a <mark>highlighted</mark> word!</p>
+</body>
+</html>
+  </textarea>
+  <button onclick="runCode('code7', 'output7')">Run Code</button>
+  <iframe id="output7"></iframe>
+
+
+  <h4><b>&lt;small&gt; - Smaller Text</b></h4>
+  <p><strong>Explanation:</strong> 
+    <code>&lt;small&gt;</code> tag se text ka size thoda chhota ho jata hai, jaise copyright notice ke liye.
+  </p>
+
+  <textarea id="code8">
+<!DOCTYPE html>
+<html>
+<body>
+  <p>This is normal text. <small>This is smaller text.</small></p>
+</body>
+</html>
+  </textarea>
+  <button onclick="runCode('code8', 'output8')">Run Code</button>
+  <iframe id="output8"></iframe>
+
+
+  <h4><b>&lt;del&gt; - Deleted Text</b></h4>
+  <p><strong>Explanation:</strong> 
+    <code>&lt;del&gt;</code> tag dikhata hai ki koi text delete kiya gaya hai, usually ek line text ke upar aa jati hai (strikethrough).
+  </p>
+
+  <textarea id="code9">
+<!DOCTYPE html>
+<html>
+<body>
+  <p>This is <del>deleted</del> text.</p>
+</body>
+</html>
+  </textarea>
+  <button onclick="runCode('code9', 'output9')">Run Code</button>
+  <iframe id="output9"></iframe>
+
+
+  <h4><b>&lt;ins&gt; - Inserted Text</b></h4>
+  <p><strong>Explanation:</strong> 
+    <code>&lt;ins&gt;</code> tag batata hai ki koi text insert ya add kiya gaya hai. Browser generally us text ko underline karta hai.
+  </p>
+
+  <textarea id="code10">
+<!DOCTYPE html>
+<html>
+<body>
+  <p>This is <ins>inserted</ins> text.</p>
+</body>
+</html>
+  </textarea>
+  <button onclick="runCode('code10', 'output10')">Run Code</button>
+  <iframe id="output10"></iframe>
+
+
+  <h4><b>&lt;sub&gt; - Subscript Text</b></h4>
+  <p><strong>Explanation:</strong> 
+    <code>&lt;sub&gt;</code> tag se text chhota ho jata hai aur niche shift ho jata hai. Mostly chemical formulas me use hota hai (H<sub>2</sub>O).
+  </p>
+
+  <textarea id="code11">
+<!DOCTYPE html>
+<html>
+<body>
+  <p>Water formula: H<sub>2</sub>O</p>
+</body>
+</html>
+  </textarea>
+  <button onclick="runCode('code11', 'output11')">Run Code</button>
+  <iframe id="output11"></iframe>
+
+
+  <h4><b>&lt;sup&gt; - Superscript Text</b></h4>
+  <p><strong>Explanation:</strong> 
+    <code>&lt;sup&gt;</code> tag se text chhota aur upar shift hota hai. Jaise mathematical power (a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>).
+  </p>
+
+  <textarea id="code12">
+<!DOCTYPE html>
+<html>
+<body>
+  <p>Equation: a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup></p>
+</body>
+</html>
+  </textarea>
+  <button onclick="runCode('code12', 'output12')">Run Code</button>
+  <iframe id="output12"></iframe>
+
+</div>
+<div class="section">
+  <h3>V. Text Level Tags</h3>
+
+  <p><strong>Explanation:</strong> 
+    Text level tags ka use hum normal paragraphs, breaks, horizontal lines aur pre-formatted text ke liye karte hain.
+    Ye basic structure banane me madad karte hain.
+  </p>
+
+  <h4><b>&lt;p&gt; - Paragraph</b></h4>
+  <p><strong>Explanation:</strong> 
+    <code>&lt;p&gt;</code> tag ka use ek paragraph banane ke liye hota hai. Browser automatically thoda space add karta hai paragraph ke aage aur baad me.
+  </p>
+
+  <textarea id="code13">
+<!DOCTYPE html>
+<html>
+<body>
+  <p>This is the first paragraph.</p>
+  <p>This is the second paragraph.</p>
+</body>
+</html>
+  </textarea>
+  <button onclick="runCode('code13', 'output13')">Run Code</button>
+  <iframe id="output13"></iframe>
+
+
+  <h4><b>&lt;br&gt; - Line Break</b></h4>
+  <p><strong>Explanation:</strong> 
+    <code>&lt;br&gt;</code> tag se text me new line insert hoti hai bina naye paragraph banaye. Ye self-closing tag hota hai.
+  </p>
+
+  <textarea id="code14">
+<!DOCTYPE html>
+<html>
+<body>
+  <p>Line 1<br>Line 2<br>Line 3</p>
+</body>
+</html>
+  </textarea>
+  <button onclick="runCode('code14', 'output14')">Run Code</button>
+  <iframe id="output14"></iframe>
+
+
+  <h4><b>&lt;hr&gt; - Horizontal Rule</b></h4>
+  <p><strong>Explanation:</strong> 
+    <code>&lt;hr&gt;</code> tag ek horizontal line draw karta hai jo content ke sections ko visually alag karta hai.
+    Ye bhi self-closing tag hai.
+  </p>
+
+  <textarea id="code15">
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>Section 1</h2>
+  <p>Content of section 1.</p>
+  <hr>
+  <h2>Section 2</h2>
+  <p>Content of section 2.</p>
+</body>
+</html>
+  </textarea>
+  <button onclick="runCode('code15', 'output15')">Run Code</button>
+  <iframe id="output15"></iframe>
+
+
+  <h4><b>&lt;pre&gt; - Preformatted Text</b></h4>
+  <p><strong>Explanation:</strong> 
+    <code>&lt;pre&gt;</code> tag ke andar jo text hota hai wo exactly waise hi display hota hai jaise likha gaya ho, including spaces aur line breaks.
+    Programming code dikhane ke liye useful hai.
+  </p>
+
+  <textarea id="code16">
+<!DOCTYPE html>
+<html>
+<body>
+  <pre>
+This is preformatted text.
+    It preserves
+        all spaces and
+  line breaks exactly.
+  </pre>
+</body>
+</html>
+  </textarea>
+  <button onclick="runCode('code16', 'output16')">Run Code</button>
+  <iframe id="output16"></iframe>
+
+</div>
+<div class="section">
+  <h3>VI. Heading Tags</h3>
+
+  <p><strong>Explanation:</strong> 
+    Heading tags ka use hum headings aur subheadings banane ke liye karte hain.  
+    HTML me total 6 heading tags hote hain: <code>&lt;h1&gt;</code> se leke <code>&lt;h6&gt;</code> tak.
+    <br><br>
+    <b>Note:</b>  
+    <ul>
+      <li><code>&lt;h1&gt;</code> sabse bada aur important heading hota hai.</li>
+      <li><code>&lt;h6&gt;</code> sabse chhota heading hota hai.</li>
+      <li>SEO ke liye <code>&lt;h1&gt;</code> ka use bahut important hota hai.</li>
+    </ul>
+  </p>
+
+  <textarea id="code17">
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>This is Heading 1</h1>
+  <h2>This is Heading 2</h2>
+  <h3>This is Heading 3</h3>
+  <h4>This is Heading 4</h4>
+  <h5>This is Heading 5</h5>
+  <h6>This is Heading 6</h6>
+</body>
+</html>
+  </textarea>
+  <button onclick="runCode('code17', 'output17')">Run Code</button>
+  <iframe id="output17"></iframe>
+
+</div>
+<div class="section">
+  <h3>VII. List Tags</h3>
+
+  <p><strong>Explanation:</strong> 
+    Lists ka use hum items ko sequence me ya points ke form me dikhane ke liye karte hain.  
+    HTML me 3 major types ke list tags hote hain:
+    <br><br>
+    <ul>
+      <li><b>Unordered List ( <code>&lt;ul&gt;</code> ):</b> Bullets ke saath items aate hain.</li>
+      <li><b>Ordered List ( <code>&lt;ol&gt;</code> ):</b> Numbers ya letters ke sequence me items aate hain.</li>
+      <li><b>Description List ( <code>&lt;dl&gt;</code> ):</b> Term aur uske description ke pair me items aate hain.</li>
+    </ul>
+  </p>
+
+  <!-- Unordered List Example -->
+  <h4>Unordered List Example</h4>
+  <textarea id="code18">
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>Unordered List Example</h2>
+  <ul>
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Orange</li>
+  </ul>
+</body>
+</html>
+  </textarea>
+  <button onclick="runCode('code18', 'output18')">Run Code</button>
+  <iframe id="output18"></iframe>
+
+  <!-- Ordered List Example -->
+  <h4>Ordered List Example</h4>
+  <textarea id="code19">
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>Ordered List Example</h2>
+  <ol>
+    <li>Wake up</li>
+    <li>Brush</li>
+    <li>Breakfast</li>
+  </ol>
+</body>
+</html>
+  </textarea>
+  <button onclick="runCode('code19', 'output19')">Run Code</button>
+  <iframe id="output19"></iframe>
+
+  <!-- Description List Example -->
+  <h4>Description List Example</h4>
+  <textarea id="code20">
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>Description List Example</h2>
+  <dl>
+    <dt>HTML</dt>
+    <dd>Hyper Text Markup Language</dd>
+
+    <dt>CSS</dt>
+    <dd>Cascading Style Sheets</dd>
+
+    <dt>JS</dt>
+    <dd>JavaScript</dd>
+  </dl>
+</body>
+</html>
+  </textarea>
+  <button onclick="runCode('code20', 'output20')">Run Code</button>
+  <iframe id="output20"></iframe>
+
+</div>
+<div class="section">
+  <h3>VIII. Table Tags</h3>
+
+  <p><strong>Explanation:</strong> 
+    Table ka use hum data ko rows aur columns ke form me present karne ke liye karte hain.<br><br>
+    Table ke main tags:
+    <ul>
+      <li><b>&lt;table&gt;:</b> Pura table structure.</li>
+      <li><b>&lt;tr&gt;:</b> Table row banata hai.</li>
+      <li><b>&lt;td&gt;:</b> Table cell/data hota hai (normal data).</li>
+      <li><b>&lt;th&gt;:</b> Table header cell hota hai (bold aur center aligned).</li>
+      <li><b>&lt;thead&gt;:</b> Table ka header group.</li>
+      <li><b>&lt;tbody&gt;:</b> Main table body (rows/data).</li>
+      <li><b>&lt;tfoot&gt;:</b> Table ka footer (last part).</li>
+    </ul>
+  </p>
+
+  <!-- Basic Table Example -->
+  <h4>Basic Table Example</h4>
+  <textarea id="code21">
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>Simple Table</h2>
+  <table border="1">
+    <tr>
+      <th>Sr. No.</th>
+      <th>Name</th>
+      <th>City</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Ritesh</td>
+      <td>Delhi</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Priya</td>
+      <td>Mumbai</td>
+    </tr>
+  </table>
+</body>
+</html>
+  </textarea>
+  <button onclick="runCode('code21', 'output21')">Run Code</button>
+  <iframe id="output21"></iframe>
+
+  <!-- Advanced Table Example (thead, tbody, tfoot) -->
+  <h4>Advanced Table Example with thead, tbody, tfoot</h4>
+  <textarea id="code22">
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>Detailed Table</h2>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Laptop</td>
+        <td>₹50,000</td>
+      </tr>
+      <tr>
+        <td>Mobile</td>
+        <td>₹20,000</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>Total</td>
+        <td>₹70,000</td>
+      </tr>
+    </tfoot>
+  </table>
+</body>
+</html>
+  </textarea>
+  <button onclick="runCode('code22', 'output22')">Run Code</button>
+  <iframe id="output22"></iframe>
+
+</div>
