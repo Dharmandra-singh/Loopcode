@@ -1,1 +1,205 @@
-h
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D0ENCWPZL9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D0ENCWPZL9');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>14. CSS Variables (Custom Properties)</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #1cc9be;
+      color: #222;
+    }
+    .section {
+      background: rgba(255, 255, 255, 0.3);
+      padding: 20px;
+      margin: 25px auto;
+      border-radius: 12px;
+      max-width: 1000px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    h2, h3 {
+      color: #333;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+    textarea {
+      width: 100%;
+      height: 170px;
+      font-family: 'Courier New', monospace;
+      font-size: 16px;
+      padding: 14px;
+      background-color: rgba(255, 255, 255, 0.95);
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      margin: 12px 0;
+      color: #222;
+      transition: all 0.3s ease;
+      resize: vertical;
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    }
+    textarea:focus {
+      outline: none;
+      border-color: #00c6ff;
+      box-shadow: 0 0 8px rgba(0, 198, 255, 0.5);
+    }
+    button {
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      color: white;
+      padding: 8px 18px;
+      font-size: 15px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+    }
+    iframe {
+      width: 100%;
+      height: 160px;
+      border: 2px solid white;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="section">
+    <h2>14. CSS Variables (Custom Properties)</h2>
+
+    <h3>I. Defining Variables</h3>
+    <p><strong>Explanation:</strong> CSS Variables ko <code>--</code> se define kiya jata hai. Ye variables kisi selector (mostly <code>:root</code>) ke andar declare kiye jaate hain.</p>
+
+    <textarea id="code1">
+<style>
+  :root {
+    --main-color: #ff5733;
+    --padding: 20px;
+  }
+
+  div {
+    background-color: var(--main-color);
+    padding: var(--padding);
+    color: white;
+  }
+</style>
+
+<div>This uses CSS Variables</div>
+    </textarea>
+    <button onclick="runCode('code1', 'output1')">Run Code</button>
+    <iframe id="output1"></iframe>
+
+    <h3>II. Using Variables in Styles</h3>
+    <p><strong>Explanation:</strong> Variable ka use <code>var(--name)</code> se kiya jata hai. Aap ise background, font-size, padding, kisi bhi property me use kar sakte hain.</p>
+
+    <textarea id="code2">
+<style>
+  :root {
+    --box-size: 100px;
+    --box-color: #28a745;
+  }
+
+  .box {
+    width: var(--box-size);
+    height: var(--box-size);
+    background-color: var(--box-color);
+  }
+</style>
+
+<div class="box"></div>
+    </textarea>
+    <button onclick="runCode('code2', 'output2')">Run Code</button>
+    <iframe id="output2"></iframe>
+
+    <h3>III. Global vs Local Scope</h3>
+    <p><strong>Explanation:</strong> Agar variable <code>:root</code> me define hai to wo global hota hai, matlab poore document me use ho sakta hai. Agar kisi selector ke andar define hai to wo local variable hai.</p>
+
+    <textarea id="code3">
+<style>
+  :root {
+    --color: teal;
+  }
+
+  .global {
+    color: var(--color);
+  }
+
+  .local {
+    --color: red;
+    color: var(--color);
+  }
+</style>
+
+<p class="global">This is using global variable</p>
+<p class="local">This is using local variable</p>
+    </textarea>
+    <button onclick="runCode('code3', 'output3')">Run Code</button>
+    <iframe id="output3"></iframe>
+
+    <h3>IV. Theming with Variables</h3>
+    <p><strong>Explanation:</strong> CSS Variables ka use themes banane ke liye hota hai. Aap dark mode aur light mode easily toggle kar sakte hain sirf variable values badalkar.</p>
+
+    <textarea id="code4">
+<style>
+  :root {
+    --bg: white;
+    --text: black;
+  }
+
+  body.dark {
+    --bg: #222;
+    --text: white;
+  }
+
+  .theme-box {
+    background: var(--bg);
+    color: var(--text);
+    padding: 20px;
+    border-radius: 10px;
+  }
+</style>
+
+<div class="theme-box">Theme Example</div>
+<script>
+  document.body.classList.add("dark");
+</script>
+    </textarea>
+    <button onclick="runCode('code4', 'output4')">Run Code</button>
+    <iframe id="output4"></iframe>
+  </div>
+
+  <script>
+    function runCode(textareaId, iframeId) {
+      const code = document.getElementById(textareaId).value;
+      const iframe = document.getElementById(iframeId);
+      const doc = iframe.contentDocument || iframe.contentWindow.document;
+      doc.open();
+      doc.write(code);
+      doc.close();
+    }
+  </script>
+</body>
+</html>
