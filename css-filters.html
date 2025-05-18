@@ -1,1 +1,229 @@
-h
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D0ENCWPZL9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D0ENCWPZL9');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>15. CSS Filters</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #1cc9be;
+      color: #222;
+    }
+    .section {
+      background: rgba(255, 255, 255, 0.3);
+      padding: 20px;
+      margin: 25px auto;
+      border-radius: 12px;
+      max-width: 1000px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    h2, h3 {
+      color: #333;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+    textarea {
+      width: 100%;
+      height: 170px;
+      font-family: 'Courier New', monospace;
+      font-size: 16px;
+      padding: 14px;
+      background-color: rgba(255, 255, 255, 0.95);
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      margin: 12px 0;
+      color: #222;
+      transition: all 0.3s ease;
+      resize: vertical;
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    }
+    textarea:focus {
+      outline: none;
+      border-color: #00c6ff;
+      box-shadow: 0 0 8px rgba(0, 198, 255, 0.5);
+    }
+    button {
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      color: white;
+      padding: 8px 18px;
+      font-size: 15px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+    }
+    iframe {
+      width: 100%;
+      height: 160px;
+      border: 2px solid white;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="section">
+    <h2>15. CSS Filters</h2>
+
+    <h3>I. Blur</h3>
+    <p><strong>Explanation:</strong> <code>blur()</code> filter image ya element ko dhundla banane ke liye use hota hai.
+    <br>
+      <br>
+    Note:  use image link to see exact effect
+    </p>
+
+    <textarea id="code1">
+<style>
+  .blur {
+    filter: blur(5px);
+  }
+</style>
+
+<img class="blur" src="image.jpg" alt="Blurred Image">
+    </textarea>
+    <button onclick="runCode('code1', 'output1')">Run Code</button>
+    <iframe id="output1"></iframe>
+
+    <h3>II. Brightness</h3>
+    <p><strong>Explanation:</strong> <code>brightness()</code> filter element ki brightness ko adjust karta hai. Value 0 se 1.5 tak hoti hai.</p>
+
+    <textarea id="code2">
+<style>
+  .brightness {
+    filter: brightness(1.5);
+  }
+</style>
+
+<img class="brightness" src="image.jpg" alt="Bright Image">
+    </textarea>
+    <button onclick="runCode('code2', 'output2')">Run Code</button>
+    <iframe id="output2"></iframe>
+
+    <h3>III. Contrast</h3>
+    <p><strong>Explanation:</strong> <code>contrast()</code> filter element ki contrast ko badhane ya kam karne ke liye use hota hai.</p>
+
+    <textarea id="code3">
+<style>
+  .contrast {
+    filter: contrast(2);
+  }
+</style>
+
+<img class="contrast" src="image.jpg" alt="High Contrast Image">
+    </textarea>
+    <button onclick="runCode('code3', 'output3')">Run Code</button>
+    <iframe id="output3"></iframe>
+
+    <h3>IV. Grayscale</h3>
+    <p><strong>Explanation:</strong> <code>grayscale()</code> filter element ko black-and-white banata hai.</p>
+
+    <textarea id="code4">
+<style>
+  .grayscale {
+    filter: grayscale(100%);
+  }
+</style>
+
+<img class="grayscale" src="image.jpg" alt="Grayscale Image">
+    </textarea>
+    <button onclick="runCode('code4', 'output4')">Run Code</button>
+    <iframe id="output4"></iframe>
+
+    <h3>V. Sepia</h3>
+    <p><strong>Explanation:</strong> <code>sepia()</code> filter element ko purani ya vintage look dene ke liye use hota hai.</p>
+
+    <textarea id="code5">
+<style>
+  .sepia {
+    filter: sepia(100%);
+  }
+</style>
+
+<img class="sepia" src="image.jpg" alt="Sepia Image">
+    </textarea>
+    <button onclick="runCode('code5', 'output5')">Run Code</button>
+    <iframe id="output5"></iframe>
+
+    <h3>VI. Hue-rotate</h3>
+    <p><strong>Explanation:</strong> <code>hue-rotate()</code> filter element ke colors ko rotate (shift) karta hai.</p>
+
+    <textarea id="code6">
+<style>
+  .hue-rotate {
+    filter: hue-rotate(90deg);
+  }
+</style>
+
+<img class="hue-rotate" src="image.jpg" alt="Hue-Rotated Image">
+    </textarea>
+    <button onclick="runCode('code6', 'output6')">Run Code</button>
+    <iframe id="output6"></iframe>
+
+    <h3>VII. Invert</h3>
+    <p><strong>Explanation:</strong> <code>invert()</code> filter element ke colors ko reverse (invert) karta hai.</p>
+
+    <textarea id="code7">
+<style>
+  .invert {
+    filter: invert(100%);
+  }
+</style>
+
+<img class="invert" src="image.jpg" alt="Inverted Image">
+    </textarea>
+    <button onclick="runCode('code7', 'output7')">Run Code</button>
+    <iframe id="output7"></iframe>
+
+    <h3>VIII. Drop-shadow</h3>
+    <p><strong>Explanation:</strong> <code>drop-shadow()</code> filter element ke neeche shadow add karta hai.</p>
+
+    <textarea id="code8">
+<style>
+  .drop-shadow {
+    filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.3));
+  }
+</style>
+
+<img class="drop-shadow" src="image.jpg" alt="Image with Drop Shadow">
+    </textarea>
+    <button onclick="runCode('code8', 'output8')">Run Code</button>
+    <iframe id="output8"></iframe>
+  </div>
+
+  <script>
+    function runCode(textareaId, iframeId) {
+      const code = document.getElementById(textareaId).value;
+      const iframe = document.getElementById(iframeId);
+      const doc = iframe.contentDocument || iframe.contentWindow.document;
+      doc.open();
+      doc.write(code);
+      doc.close();
+    }
+  </script>
+</body>
+</html>
