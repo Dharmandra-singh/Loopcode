@@ -1,1 +1,175 @@
-j
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D0ENCWPZL9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D0ENCWPZL9');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>12. HTML APIs Introduction</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #1cc9be;
+      padding: 30px;
+    }
+    .container {
+      background: rgba(255,255,255,0.3);
+      padding: 25px;
+      border-radius: 15px;
+      max-width: 1000px;
+      margin: auto;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    h2, h3 {
+      color: #180;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 17px;
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+    ul {
+      margin: 10px 0 20px 20px;
+    }
+    textarea, iframe {
+      width: 100%;
+      height: 200px;
+      font-size: 16px;
+      padding: 10px;
+      margin: 10px 0 20px;
+      border-radius: 10px;
+      border: 2px solid white;
+      background: rgba(255,248,240,0.4);
+      font-family: monospace;
+    }
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 15px;
+      font-weight: 500;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-bottom: 25px;
+      transition: all 0.3s ease-in-out;
+    }
+    button:hover {
+      box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>12. HTML APIs Introduction</h2>
+
+    <!-- Geolocation API -->
+    <h3>I. Geolocation API</h3>
+    <p>Geolocation API se hum user ka location (latitude & longitude) browser se access kar sakte hain.</p>
+
+    <textarea id="code1">
+<button onclick="getLocation()">Get My Location</button>
+<p id="geo"></p>
+
+<script>
+  function getLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+      document.getElementById("geo").innerText = "Geolocation not supported.";
+    }
+  }
+  function showPosition(position) {
+    document.getElementById("geo").innerText =
+      "Latitude: " + position.coords.latitude +
+      ", Longitude: " + position.coords.longitude;
+  }
+</script>
+    </textarea>
+    <button onclick="runCode('code1', 'output1')">Run Code</button>
+    <iframe id="output1"></iframe>
+
+    <!-- Drag and Drop API -->
+    <h3>II. Drag and Drop</h3>
+    <p>Drag and Drop API se hum kisi element ko mouse se uthakar dusri jagah le ja sakte hain.</p>
+
+    <textarea id="code2">
+<div id="drag1" draggable="true" ondragstart="drag(event)"
+     style="width:100px;height:100px;background:#f90;border-radius:8px;text-align:center;line-height:100px;">
+  Drag me
+</div>
+
+<div id="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"
+     style="width:200px;height:100px;border:2px dashed #007bff;margin-top:20px;text-align:center;line-height:100px;">
+  Drop here
+</div>
+
+<script>
+  function allowDrop(ev) {
+    ev.preventDefault();
+  }
+  function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+  }
+  function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+  }
+</script>
+    </textarea>
+    <button onclick="runCode('code2', 'output2')">Run Code</button>
+    <iframe id="output2"></iframe>
+
+    <!-- Web Storage -->
+    <h3>III. Web Storage (localStorage)</h3>
+    <p>Web Storage API se hum browser mein data store kar sakte hain without server interaction. <code>localStorage</code> data ko save rakhta hai browser close hone ke baad bhi.</p>
+
+    <textarea id="code3">
+<input type="text" id="nameInput" placeholder="Enter your name">
+<button onclick="saveName()">Save</button>
+<p id="savedName"></p>
+
+<script>
+  function saveName() {
+    const name = document.getElementById("nameInput").value;
+    localStorage.setItem("userName", name);
+    showName();
+  }
+
+  function showName() {
+    const name = localStorage.getItem("userName");
+    if (name) {
+      document.getElementById("savedName").innerText = "Saved Name: " + name;
+    }
+  }
+
+  showName();
+</script>
+    </textarea>
+    <button onclick="runCode('code3', 'output3')">Run Code</button>
+    <iframe id="output3"></iframe>
+  </div>
+
+  <script>
+    function runCode(textareaId, iframeId) {
+      const code = document.getElementById(textareaId).value;
+      const iframe = document.getElementById(iframeId);
+      const doc = iframe.contentDocument || iframe.contentWindow.document;
+      doc.open();
+      doc.write(code);
+      doc.close();
+    }
+  </script>
+</body>
+</html>
