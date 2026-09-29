@@ -1,245 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D0ENCWPZL9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-D0ENCWPZL9');
-</script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>2. CSS Selectors</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body, html {
-      height: 100%;
-      font-family: 'Poppins', sans-serif;
-      overflow-x: hidden;
-      background-color: #1cc9be;
-    }
-    .section {
-      background-color: rgba(255, 255, 255, 0.3);
-      margin: 20px auto;
-      padding: 20px;
-      border-radius: 12px;
-      width: 90%;
-      max-width: 1000px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-    }
-    h2, h3 {
-      color: #333;
-      margin-bottom: 15px;
-    }
-    p {
-      font-size: 18px;
-      margin-bottom: 20px;
-      line-height: 1.7;
-    }
-    textarea {
-      width: 100%;
-      height: 150px;
-      font-family: monospace;
-      font-size: 16px;
-      padding: 10px;
-      border: 2px solid white;
-      border-radius: 8px;
-      margin-top: 10px;
-      margin-bottom: 10px;
-      background: rgba(255,248,240,0.4);
-    }
-    button {
-      background-color: #28a745;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      border-radius: 8px;
-      cursor: pointer;
-      margin-bottom: 20px;
-    }
-    iframe {
-      width: 100%;
-      height: 150px;
-      background: rgba(255,248,240,0.4);
-      border: 2px solid white;
-      border-radius: 8px;
-      margin-top: 15px;
-    }
-  </style>
-</head>
-<body>
-
-<div class="section">
-  <h2>2. CSS Selectors</h2>
-
-  <h3>1. Element Selector (Tag Selector)</h3>
-  <p><strong>Explanation:</strong> Ye specific tag (jaise <code>h1</code>, <code>p</code>) ko target karta hai aur unke upar style lagata hai.</p>
-  <textarea id="sel1">
-<!DOCTYPE html>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="CSS Selectors - Learn CSS with English and Hindi explanations, examples and live practice on LoOPCode."><title>2. CSS Selectors - LoOPCode</title><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Mono&display=swap" rel="stylesheet"><style>*{box-sizing:border-box}body{margin:0;font-family:Poppins,sans-serif;background:#f5f7fa;color:#222;line-height:1.7}header{background:#111827;color:white;padding:28px 18px;text-align:center;position:sticky;top:0;z-index:5;box-shadow:0 4px 14px #0002}header h1{margin:0;font-size:clamp(1.5rem,4vw,2.4rem)}header p{margin:6px 0 0;color:#cbd5e1}.container{max-width:1050px;margin:auto;padding:18px}.topic{background:white;margin:22px 0;padding:24px;border-radius:16px;border:1px solid #e5e7eb;box-shadow:0 8px 24px #0000000d}.topic h2{margin-top:0;color:#2563eb}.topic p{margin:10px 0}.syntax{background:#f8fafc;border-left:4px solid #2563eb;padding:12px 16px;border-radius:8px}.syntax pre{white-space:pre-wrap;font-family:"Roboto Mono",monospace;font-size:14px}.syntax b{color:#475569}textarea{width:100%;min-height:190px;margin-top:15px;padding:14px;border:1px solid #cbd5e1;border-radius:10px;background:#0f172a;color:#e2e8f0;font-family:"Roboto Mono",monospace;font-size:14px;resize:vertical}button{margin:10px 0 8px;background:#2563eb;color:white;border:0;border-radius:9px;padding:11px 18px;font-weight:600;cursor:pointer}button:hover{background:#1d4ed8}iframe{width:100%;height:190px;border:1px solid #cbd5e1;border-radius:10px;background:white}.tip{margin-top:14px;padding:12px 15px;background:#eff6ff;border-radius:9px;color:#1e3a8a}footer{text-align:center;padding:28px;background:#111827;color:#cbd5e1;margin-top:35px}@media(max-width:650px){.container{padding:10px}.topic{padding:17px}.topic p{font-size:15px}textarea,iframe{min-height:160px;height:160px}}</style></head><body><header><h1>2. CSS Selectors</h1><p>LoOPCode • Learn CSS with Explanation + Practice</p></header><main class="container"><section class="topic"><h2>1. Element Selector</h2><p><b>English:</b> Targets all elements of a particular HTML tag.</p><p><b>Hindi:</b> Tag selector se same type ke sabhi elements ko ek saath style kar sakte ho.</p><div class="syntax"><b>Concept / Example:</b><pre><h2>Heading</h2>
+<p>Paragraph</p></pre></div><textarea id="code0"><!DOCTYPE html>
 <html>
-<head>
-  <style>
-    h1 {
-      color: blue;
-    }
-  </style>
-</head>
+<head><style>
+h2{color:#2563eb} p{color:#444}
+</style></head>
 <body>
-  <h1>This is a heading</h1>
-</body>
-</html>
-  </textarea>
-  <button onclick="runCode('sel1', 'out1')">Run Code</button>
-  <iframe id="out1"></iframe>
-
-  <h3>2. Class Selector (.)</h3>
-  <p><strong>Explanation:</strong> Kisi bhi element me class attribute ke through styling lagayi ja sakti hai. Class ke liye <code>.</code> use hota hai.</p>
-  <textarea id="sel2">
-<!DOCTYPE html>
+<h2>Heading</h2>
+<p>Paragraph</p>
+</body></html></textarea><button onclick="runCode('code0','out0')">▶ Run Code</button><iframe id="out0"></iframe><div class="tip"><b>💡 Common Tip:</b> Property names aur values ko carefully check karo; semicolon aur braces miss na karo.</div></section><section class="topic"><h2>2. Class Selector</h2><p><b>English:</b> A class selector starts with a dot and can style many elements sharing the same class.</p><p><b>Hindi:</b> Reusable styling ke liye class selector sabse common hai.</p><div class="syntax"><b>Concept / Example:</b><pre><p class="note">Important</p></pre></div><textarea id="code1"><!DOCTYPE html>
 <html>
-<head>
-  <style>
-    .highlight {
-      background-color: yellow;
-    }
-  </style>
-</head>
+<head><style>
+ .note{background:#fef3c7;padding:10px}
+</style></head>
 <body>
-  <p class="highlight">This is highlighted text.</p>
-</body>
-</html>
-  </textarea>
-  <button onclick="runCode('sel2', 'out2')">Run Code</button>
-  <iframe id="out2"></iframe>
-
-  <h3>3. ID Selector (#)</h3>
-  <p><strong>Explanation:</strong> ID selector kisi specific element ko style karta hai jiska unique ID hota hai. Use karte hain <code>#</code>.</p>
-  <textarea id="sel3">
-<!DOCTYPE html>
+<p class="note">Important</p>
+</body></html></textarea><button onclick="runCode('code1','out1')">▶ Run Code</button><iframe id="out1"></iframe><div class="tip"><b>💡 Common Tip:</b> Property names aur values ko carefully check karo; semicolon aur braces miss na karo.</div></section><section class="topic"><h2>3. ID Selector</h2><p><b>English:</b> An ID selector starts with # and targets an element with a matching id.</p><p><b>Hindi:</b> ID generally unique element ke liye use hoti hai.</p><div class="syntax"><b>Concept / Example:</b><pre><div id="hero">Hero</div></pre></div><textarea id="code2"><!DOCTYPE html>
 <html>
-<head>
-  <style>
-    #unique {
-      color: red;
-      font-weight: bold;
-    }
-  </style>
-</head>
+<head><style>
+#hero{padding:20px;background:#dbeafe}
+</style></head>
 <body>
-  <p id="unique">This is a unique paragraph.</p>
-</body>
-</html>
-  </textarea>
-  <button onclick="runCode('sel3', 'out3')">Run Code</button>
-  <iframe id="out3"></iframe>
-
-  <h3>4. Universal Selector (*)</h3>
-  <p><strong>Explanation:</strong> Sabhi elements ko ek sath target karne ke liye <code>*</code> use hota hai.</p>
-  <textarea id="sel4">
-<!DOCTYPE html>
+<div id="hero">Hero</div>
+</body></html></textarea><button onclick="runCode('code2','out2')">▶ Run Code</button><iframe id="out2"></iframe><div class="tip"><b>💡 Common Tip:</b> Property names aur values ko carefully check karo; semicolon aur braces miss na karo.</div></section><section class="topic"><h2>4. Universal and Group Selectors</h2><p><b>English:</b> * targets all elements; commas allow multiple selectors to share a rule.</p><p><b>Hindi:</b> Reset ya common styling ke liye * aur combined rules ke liye comma useful hai.</p><div class="syntax"><b>Concept / Example:</b><pre><h1>Title</h1><p>Text</p></pre></div><textarea id="code3"><!DOCTYPE html>
 <html>
-<head>
-  <style>
-    * {
-      font-family: Arial;
-      color: darkgreen;
-    }
-  </style>
-</head>
+<head><style>
+*{box-sizing:border-box} h1,p{font-family:Arial}
+</style></head>
 <body>
-  <h1>Hello</h1>
-  <p>Every element is styled</p>
-</body>
-</html>
-  </textarea>
-  <button onclick="runCode('sel4', 'out4')">Run Code</button>
-  <iframe id="out4"></iframe>
-
-  <h3>5. Group Selector</h3>
-  <p><strong>Explanation:</strong> Ek sath multiple selectors ko group me style karne ke liye comma use karte hain.</p>
-  <textarea id="sel5">
-<!DOCTYPE html>
+<h1>Title</h1><p>Text</p>
+</body></html></textarea><button onclick="runCode('code3','out3')">▶ Run Code</button><iframe id="out3"></iframe><div class="tip"><b>💡 Common Tip:</b> Property names aur values ko carefully check karo; semicolon aur braces miss na karo.</div></section><section class="topic"><h2>5. Attribute Selector</h2><p><b>English:</b> Attribute selectors target elements based on attributes such as type, href or target.</p><p><b>Hindi:</b> Forms me input type ke basis par styling karna easy hota hai.</p><div class="syntax"><b>Concept / Example:</b><pre><input type="text"><input type="email"></pre></div><textarea id="code4"><!DOCTYPE html>
 <html>
-<head>
-  <style>
-    h1, p {
-      text-align: center;
-      color: teal;
-    }
-  </style>
-</head>
+<head><style>
+input[type="text"]{border:2px solid #2563eb}
+</style></head>
 <body>
-  <h1>This is Heading</h1>
-  <p>This is Paragraph</p>
-</body>
-</html>
-  </textarea>
-  <button onclick="runCode('sel5', 'out5')">Run Code</button>
-  <iframe id="out5"></iframe>
-
-  <h3>6. Attribute Selector</h3>
-  <p><strong>Explanation:</strong> Jo elements kisi specific attribute (jaise type, href) ko hold karte hain unhe target karta hai.</p>
-  <textarea id="sel6">
-<!DOCTYPE html>
+<input type="text"><input type="email">
+</body></html></textarea><button onclick="runCode('code4','out4')">▶ Run Code</button><iframe id="out4"></iframe><div class="tip"><b>💡 Common Tip:</b> Property names aur values ko carefully check karo; semicolon aur braces miss na karo.</div></section><section class="topic"><h2>6. Pseudo-classes and Pseudo-elements</h2><p><b>English:</b> Pseudo-classes style states such as :hover; pseudo-elements style parts such as ::before or ::first-letter.</p><p><b>Hindi:</b> Interaction aur decorative effects ke liye ye bahut important hain.</p><div class="syntax"><b>Concept / Example:</b><pre><button>Hover me</button></pre></div><textarea id="code5"><!DOCTYPE html>
 <html>
-<head>
-  <style>
-    input[type="text"] {
-      background-color: lightyellow;
-    }
-  </style>
-</head>
+<head><style>
+button:hover{transform:translateY(-2px)} button::first-letter{font-weight:bold}
+</style></head>
 <body>
-  <input type="text" value="Text Field">
-  <input type="submit" value="Submit">
-</body>
-</html>
-  </textarea>
-  <button onclick="runCode('sel6', 'out6')">Run Code</button>
-  <iframe id="out6"></iframe>
-
-  <h3>7. Pseudo-classes & Pseudo-elements</h3>
-  <p><strong>Explanation:</strong> Ye special states ya parts of elements ko style karne ke liye hote hain. Jaise hover, first-line etc.</p>
-  <textarea id="sel7">
-<!DOCTYPE html>
-<html>
-<head>
-  <style>
-    a:hover {
-      color: red;
-    }
-    p::first-line {
-      font-weight: bold;
-    }
-  </style>
-</head>
-<body>
-  <a href="#">Hover me</a>
-  <p>This paragraph will show bold first line only.</p>
-</body>
-</html>
-  </textarea>
-  <button onclick="runCode('sel7', 'out7')">Run Code</button>
-  <iframe id="out7"></iframe>
-</div>
-
-<script>
-function runCode(textareaId, iframeId) {
-  const code = document.getElementById(textareaId).value;
-  const iframe = document.getElementById(iframeId);
-  iframe.contentDocument.open();
-  iframe.contentDocument.write(code);
-  iframe.contentDocument.close();
-}
-</script>
-
-</body>
-</html>
+<button>Hover me</button>
+</body></html></textarea><button onclick="runCode('code5','out5')">▶ Run Code</button><iframe id="out5"></iframe><div class="tip"><b>💡 Common Tip:</b> Property names aur values ko carefully check karo; semicolon aur braces miss na karo.</div></section></main><footer>Created by:- Dharmandra Singh</footer><script>function runCode(a,b){const code=document.getElementById(a).value;const frame=document.getElementById(b);const doc=frame.contentDocument||frame.contentWindow.document;doc.open();doc.write(code);doc.close()}</script></body></html>
