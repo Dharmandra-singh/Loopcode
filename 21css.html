@@ -1,94 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D0ENCWPZL9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-D0ENCWPZL9');
-</script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>21. PostCSS</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #1cc9be;
-      color: #222;
-    }
-    .section {
-      background: rgba(255, 255, 255, 0.3);
-      padding: 20px;
-      margin: 25px auto;
-      border-radius: 12px;
-      max-width: 1000px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    }
-    h2, h3 { color: #333; margin-bottom: 15px; }
-    p {
-      font-size: 18px;
-      margin-bottom: 20px;
-      line-height: 1.7;
-    }
-    code {
-      background: #eee;
-      padding: 2px 5px;
-      border-radius: 5px;
-    }
-    pre {
-      background: #fefefe;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      padding: 12px;
-      font-size: 16px;
-      margin-bottom: 20px;
-      overflow-x: auto;
-    }
-    a {
-      color: #0033cc;
-    }
-  </style>
-</head>
-<body>
-  <div class="section">
-    <h2>21. PostCSS</h2>
-
-    <h3>I. What is PostCSS?</h3>
-    <p><strong>Explanation:</strong> PostCSS ek tool hai jo CSS ko JavaScript ke plugins ke through process karta hai. Ye ek preprocessor nahi hai, balki ek transformer hai jo raw CSS ko enhance karta hai optimization aur future CSS features ke support ke liye.</p>
-
-    <h3>II. Plugins for Optimization</h3>
-    <p><strong>Explanation:</strong> PostCSS ka main power uske plugins me hota hai. Ye plugins aapke CSS ko analyze, modify, aur optimize karte hain automatically. Kuch popular plugins niche diye gaye hain.</p>
-
-    <h3>III. Autoprefixer</h3>
-    <p><strong>Explanation:</strong> Ye plugin aapke CSS me automatically vendor prefixes (like <code>-webkit-</code>, <code>-moz-</code>) add karta hai taaki different browsers me compatibility bani rahe.</p>
-    <pre><code>/* Input CSS */
-.box {
-  display: flex;
-}
-
-/* Output CSS with Autoprefixer */
-.box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}</code></pre>
-
-    <h3>IV. CSS Minification</h3>
-    <p><strong>Explanation:</strong> PostCSS plugins ka use karke aap apne final CSS ko minify bhi kar sakte ho (spaces, comments hata kar), taaki file size kam ho aur loading fast ho.</p>
-    <pre><code>/* Original CSS */
-.box {
-  padding: 10px;
-  margin: 10px;
-}
-
-/* Minified CSS */
-.box{padding:10px;margin:10px}</code></pre>
-
-    <p><strong>Tools:</strong> PostCSS ko use karne ke liye Node.js aur bundlers (Webpack, Vite, etc.) ka use hota hai. Aap <a href="https://postcss.org/" target="_blank">postcss.org</a> se official docs check kar sakte ho.</p>
-  </div>
-</body>
-</html>
+<!doctype html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="PostCSS CSS tutorial with Hindi and English explanation, examples and practice - LoOPCode"><title>21. PostCSS - LoOPCode</title><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Mono&display=swap" rel="stylesheet"><style>*{box-sizing:border-box}body{margin:0;background:#f5f7fa;color:#1f2937;font-family:Poppins,sans-serif;line-height:1.7}header{background:#111827;color:#fff;text-align:center;padding:28px 15px;position:sticky;top:0;z-index:5}header h1{margin:0}.container{max-width:1050px;margin:auto;padding:18px}.topic{background:#fff;margin:22px 0;padding:24px;border-radius:16px;border:1px solid #e5e7eb;box-shadow:0 8px 24px #0001}.topic h2{color:#2563eb}.example{background:#f8fafc;border-left:4px solid #2563eb;padding:12px;border-radius:8px}.example pre{white-space:pre-wrap;font-family:monospace}textarea{width:100%;min-height:200px;margin-top:15px;padding:14px;background:#0f172a;color:#e2e8f0;border-radius:10px;font-family:monospace;font-size:14px}button{padding:11px 18px;margin:10px 0;background:#2563eb;color:#fff;border:0;border-radius:9px;font-weight:bold;cursor:pointer}iframe{width:100%;height:190px;border:1px solid #cbd5e1;border-radius:10px}.tip{margin-top:12px;padding:12px;background:#eff6ff;color:#1e3a8a;border-radius:9px}footer{text-align:center;background:#111827;color:#cbd5e1;padding:25px}@media(max-width:650px){.container{padding:10px}.topic{padding:17px}textarea,iframe{height:170px;min-height:170px}}</style></head><body><header><h1>21. PostCSS</h1><p>LoOPCode • Learn CSS with Explanation + Live Practice</p></header><main class="container"><section class="topic"><h2>1. what PostCSS is</h2><p><b>English:</b> what PostCSS is is an important concept for building production-ready websites with CSS.</p><p><b>Hindi:</b> what PostCSS is ko samajhne se code clean, accessible, responsive aur maintainable banane me help milti hai. Practice example ko modify karke concept verify karo.</p><div class="example"><b>Example:</b><pre>&lt;div class="demo"&gt;what PostCSS is&lt;/div&gt;</pre></div><textarea id="c0">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo{padding:25px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;border-radius:12px;text-align:center;font-family:Arial,sans-serif;max-width:500px;margin:auto}
+.demo:focus{outline:3px solid #93c5fd}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class="demo"&gt;what PostCSS is Practice&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c0','o0')">▶ Run Code</button><iframe id="o0"></iframe><div class="tip"><b>💡 Practice:</b> Example ko edit karo, Run Code dabao aur result observe karo.</div></section><section class="topic"><h2>2. plugins</h2><p><b>English:</b> plugins is an important concept for building production-ready websites with CSS.</p><p><b>Hindi:</b> plugins ko samajhne se code clean, accessible, responsive aur maintainable banane me help milti hai. Practice example ko modify karke concept verify karo.</p><div class="example"><b>Example:</b><pre>&lt;div class="demo"&gt;plugins&lt;/div&gt;</pre></div><textarea id="c1">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo{padding:25px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;border-radius:12px;text-align:center;font-family:Arial,sans-serif;max-width:500px;margin:auto}
+.demo:focus{outline:3px solid #93c5fd}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class="demo"&gt;plugins Practice&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c1','o1')">▶ Run Code</button><iframe id="o1"></iframe><div class="tip"><b>💡 Practice:</b> Example ko edit karo, Run Code dabao aur result observe karo.</div></section><section class="topic"><h2>3. autoprefixing</h2><p><b>English:</b> autoprefixing is an important concept for building production-ready websites with CSS.</p><p><b>Hindi:</b> autoprefixing ko samajhne se code clean, accessible, responsive aur maintainable banane me help milti hai. Practice example ko modify karke concept verify karo.</p><div class="example"><b>Example:</b><pre>&lt;div class="demo"&gt;autoprefixing&lt;/div&gt;</pre></div><textarea id="c2">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo{padding:25px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;border-radius:12px;text-align:center;font-family:Arial,sans-serif;max-width:500px;margin:auto}
+.demo:focus{outline:3px solid #93c5fd}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class="demo"&gt;autoprefixing Practice&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c2','o2')">▶ Run Code</button><iframe id="o2"></iframe><div class="tip"><b>💡 Practice:</b> Example ko edit karo, Run Code dabao aur result observe karo.</div></section><section class="topic"><h2>4. processing workflow</h2><p><b>English:</b> processing workflow is an important concept for building production-ready websites with CSS.</p><p><b>Hindi:</b> processing workflow ko samajhne se code clean, accessible, responsive aur maintainable banane me help milti hai. Practice example ko modify karke concept verify karo.</p><div class="example"><b>Example:</b><pre>&lt;div class="demo"&gt;processing workflow&lt;/div&gt;</pre></div><textarea id="c3">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo{padding:25px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;border-radius:12px;text-align:center;font-family:Arial,sans-serif;max-width:500px;margin:auto}
+.demo:focus{outline:3px solid #93c5fd}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class="demo"&gt;processing workflow Practice&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c3','o3')">▶ Run Code</button><iframe id="o3"></iframe><div class="tip"><b>💡 Practice:</b> Example ko edit karo, Run Code dabao aur result observe karo.</div></section><section class="topic"><h2>5. modern CSS transformations</h2><p><b>English:</b> modern CSS transformations is an important concept for building production-ready websites with CSS.</p><p><b>Hindi:</b> modern CSS transformations ko samajhne se code clean, accessible, responsive aur maintainable banane me help milti hai. Practice example ko modify karke concept verify karo.</p><div class="example"><b>Example:</b><pre>&lt;div class="demo"&gt;modern CSS transformations&lt;/div&gt;</pre></div><textarea id="c4">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo{padding:25px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;border-radius:12px;text-align:center;font-family:Arial,sans-serif;max-width:500px;margin:auto}
+.demo:focus{outline:3px solid #93c5fd}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class="demo"&gt;modern CSS transformations Practice&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c4','o4')">▶ Run Code</button><iframe id="o4"></iframe><div class="tip"><b>💡 Practice:</b> Example ko edit karo, Run Code dabao aur result observe karo.</div></section></main><footer>Created by:- Dharmandra Singh</footer><script>function runCode(a,b){const c=document.getElementById(a).value,f=document.getElementById(b),d=f.contentDocument;d.open();d.write(c);d.close()}</script></body></html>
