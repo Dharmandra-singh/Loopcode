@@ -1,43 +1,109 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="CSS Units - Learn CSS with English and Hindi explanations, examples and live practice on LoOPCode."><title>4. CSS Units - LoOPCode</title><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Mono&display=swap" rel="stylesheet"><style>*{box-sizing:border-box}body{margin:0;font-family:Poppins,sans-serif;background:#f5f7fa;color:#222;line-height:1.7}header{background:#111827;color:white;padding:28px 18px;text-align:center;position:sticky;top:0;z-index:5;box-shadow:0 4px 14px #0002}header h1{margin:0;font-size:clamp(1.5rem,4vw,2.4rem)}header p{margin:6px 0 0;color:#cbd5e1}.container{max-width:1050px;margin:auto;padding:18px}.topic{background:white;margin:22px 0;padding:24px;border-radius:16px;border:1px solid #e5e7eb;box-shadow:0 8px 24px #0000000d}.topic h2{margin-top:0;color:#2563eb}.topic p{margin:10px 0}.syntax{background:#f8fafc;border-left:4px solid #2563eb;padding:12px 16px;border-radius:8px}.syntax pre{white-space:pre-wrap;font-family:"Roboto Mono",monospace;font-size:14px}.syntax b{color:#475569}textarea{width:100%;min-height:190px;margin-top:15px;padding:14px;border:1px solid #cbd5e1;border-radius:10px;background:#0f172a;color:#e2e8f0;font-family:"Roboto Mono",monospace;font-size:14px;resize:vertical}button{margin:10px 0 8px;background:#2563eb;color:white;border:0;border-radius:9px;padding:11px 18px;font-weight:600;cursor:pointer}button:hover{background:#1d4ed8}iframe{width:100%;height:190px;border:1px solid #cbd5e1;border-radius:10px;background:white}.tip{margin-top:14px;padding:12px 15px;background:#eff6ff;border-radius:9px;color:#1e3a8a}footer{text-align:center;padding:28px;background:#111827;color:#cbd5e1;margin-top:35px}@media(max-width:650px){.container{padding:10px}.topic{padding:17px}.topic p{font-size:15px}textarea,iframe{min-height:160px;height:160px}}</style></head><body><header><h1>4. CSS Units</h1><p>LoOPCode • Learn CSS with Explanation + Practice</p></header><main class="container"><section class="topic"><h2>1. Why units are needed</h2><p><b>English:</b> CSS values use units to describe lengths and sizes.</p><p><b>Hindi:</b> px, %, em, rem, vw aur vh ka correct selection responsive design ke liye important hai.</p><div class="syntax"><b>Concept / Example:</b><pre><div class="box">100px</div></pre></div><textarea id="code0"><!DOCTYPE html>
-<html>
-<head><style>
- .box{width:100px;height:60px;background:#2563eb}
-</style></head>
-<body>
-<div class="box">100px</div>
-</body></html></textarea><button onclick="runCode('code0','out0')">▶ Run Code</button><iframe id="out0"></iframe><div class="tip"><b>💡 Common Tip:</b> Property names aur values ko carefully check karo; semicolon aur braces miss na karo.</div></section><section class="topic"><h2>2. Absolute Units</h2><p><b>English:</b> px is the most common screen-oriented absolute unit; cm, mm and in are mainly useful for print.</p><p><b>Hindi:</b> Fixed visual details jaise border thickness ke liye px useful hai.</p><div class="syntax"><b>Concept / Example:</b><pre><div class="box">200px</div></pre></div><textarea id="code1"><!DOCTYPE html>
-<html>
-<head><style>
- .box{width:200px;height:80px;background:#bfdbfe}
-</style></head>
-<body>
-<div class="box">200px</div>
-</body></html></textarea><button onclick="runCode('code1','out1')">▶ Run Code</button><iframe id="out1"></iframe><div class="tip"><b>💡 Common Tip:</b> Property names aur values ko carefully check karo; semicolon aur braces miss na karo.</div></section><section class="topic"><h2>3. Percentage</h2><p><b>English:</b> % is relative to an appropriate containing dimension.</p><p><b>Hindi:</b> Parent ke size ke according width/height adjust karne ke liye percentage useful hai.</p><div class="syntax"><b>Concept / Example:</b><pre><div class="parent"><div class="child">50%</div></div></pre></div><textarea id="code2"><!DOCTYPE html>
-<html>
-<head><style>
- .parent{width:300px;background:#eee}.child{width:50%;background:#22c55e;padding:20px}
-</style></head>
-<body>
-<div class="parent"><div class="child">50%</div></div>
-</body></html></textarea><button onclick="runCode('code2','out2')">▶ Run Code</button><iframe id="out2"></iframe><div class="tip"><b>💡 Common Tip:</b> Property names aur values ko carefully check karo; semicolon aur braces miss na karo.</div></section><section class="topic"><h2>4. em and rem</h2><p><b>English:</b> em depends on the element's font context; rem is based on the root html font size.</p><p><b>Hindi:</b> rem consistent typography ke liye aur em component-relative sizing ke liye useful hai.</p><div class="syntax"><b>Concept / Example:</b><pre><p class="text">Responsive text</p></pre></div><textarea id="code3"><!DOCTYPE html>
-<html>
-<head><style>
-html{font-size:16px}.text{font-size:1.5rem;padding:1em}
-</style></head>
-<body>
-<p class="text">Responsive text</p>
-</body></html></textarea><button onclick="runCode('code3','out3')">▶ Run Code</button><iframe id="out3"></iframe><div class="tip"><b>💡 Common Tip:</b> Property names aur values ko carefully check karo; semicolon aur braces miss na karo.</div></section><section class="topic"><h2>5. Viewport Units</h2><p><b>English:</b> vw and vh represent percentages of the viewport width and height.</p><p><b>Hindi:</b> Full-screen hero sections aur responsive sizing me vw/vh ka use hota hai.</p><div class="syntax"><b>Concept / Example:</b><pre><section class="hero">Hero</section></pre></div><textarea id="code4"><!DOCTYPE html>
-<html>
-<head><style>
- .hero{height:30vh;width:80vw;background:#7c3aed;color:white;padding:20px}
-</style></head>
-<body>
-<section class="hero">Hero</section>
-</body></html></textarea><button onclick="runCode('code4','out4')">▶ Run Code</button><iframe id="out4"></iframe><div class="tip"><b>💡 Common Tip:</b> Property names aur values ko carefully check karo; semicolon aur braces miss na karo.</div></section><section class="topic"><h2>6. Modern responsive units</h2><p><b>English:</b> vmin, vmax, ch and ex can help with specialized responsive sizing.</p><p><b>Hindi:</b> ch text line length ke liye useful hai; vmin/vmax viewport dimensions ke relative responsive sizing dete hain.</p><div class="syntax"><b>Concept / Example:</b><pre><p class="reading">Readable text width</p></pre></div><textarea id="code5"><!DOCTYPE html>
-<html>
-<head><style>
- .reading{max-width:60ch;line-height:1.7}
-</style></head>
-<body>
-<p class="reading">Readable text width</p>
-</body></html></textarea><button onclick="runCode('code5','out5')">▶ Run Code</button><iframe id="out5"></iframe><div class="tip"><b>💡 Common Tip:</b> Property names aur values ko carefully check karo; semicolon aur braces miss na karo.</div></section></main><footer>Created by:- Dharmandra Singh</footer><script>function runCode(a,b){const code=document.getElementById(a).value;const frame=document.getElementById(b);const doc=frame.contentDocument||frame.contentWindow.document;doc.open();doc.write(code);doc.close()}</script></body></html>
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="CSS Units CSS tutorial with detailed English-Hindi explanation, examples, mistakes and live practice - LoOPCode"><title>4. CSS Units - LoOPCode</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-D0ENCWPZL9"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-D0ENCWPZL9');</script><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Mono&display=swap" rel="stylesheet"><style>*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f5f7fa;color:#1f2937;font-family:Poppins,sans-serif;line-height:1.7}header{background:#111827;color:#fff;padding:30px 15px;text-align:center;position:sticky;top:0;z-index:20;box-shadow:0 4px 16px #0002}header h1{margin:0;font-size:clamp(1.5rem,4vw,2.4rem)}header p{margin:6px 0;color:#cbd5e1}.progress{max-width:1050px;margin:15px auto 0;padding:0 18px}.progressbar{height:8px;background:#e5e7eb;border-radius:20px;overflow:hidden}.progressbar span{display:block;width:16%;height:100%;background:#2563eb}.container{max-width:1050px;margin:auto;padding:18px}.topic{background:#fff;margin:24px 0;padding:25px;border-radius:16px;border:1px solid #e5e7eb;box-shadow:0 8px 25px #0000000d}.badge{display:inline-block;padding:4px 9px;border-radius:20px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700}.topic h2{color:#2563eb;margin:9px 0}.topic h3{font-size:16px;color:#374151;margin-bottom:6px}.codeview{background:#0f172a;color:#e2e8f0;padding:15px;border-radius:10px;overflow:auto;font-family:"Roboto Mono",monospace;font-size:13px}textarea{width:100%;min-height:220px;padding:15px;background:#0b1220;color:#e2e8f0;border:1px solid #334155;border-radius:10px;font-family:"Roboto Mono",monospace;font-size:13px;resize:vertical}button{border:0;background:#2563eb;color:#fff;padding:11px 19px;border-radius:9px;font-weight:700;cursor:pointer;margin:10px 0}button:hover{background:#1d4ed8;transform:translateY(-1px)}iframe{display:block;width:100%;height:200px;border:1px solid #cbd5e1;border-radius:10px;background:#fff}.challenge{margin-top:14px;padding:14px;background:#ecfdf5;border-left:4px solid #10b981;border-radius:9px;color:#065f46}ul{padding-left:22px}footer{text-align:center;padding:30px;background:#111827;color:#cbd5e1;margin-top:30px}@media(max-width:650px){.container{padding:9px}.topic{padding:18px}.topic p{font-size:15px}textarea,iframe{height:175px;min-height:175px}}</style></head><body><header><h1>4. CSS Units</h1><p>LoOPCode • CSS Complete Learning Chapter</p></header><div class="progress"><div class="progressbar"><span></span></div></div><main class="container"><section class="topic"><div class="badge">CONCEPT 1</div><h2>1. px</h2><p><b>English:</b> px fixed screen-oriented length hai.</p><p><b>Hindi:</b> px fixed screen-oriented length hai. Is concept ko practical website me use karte waqt syntax, browser behavior aur responsive effect ko samajhna important hai.</p><h3>Syntax / Example</h3><pre class="codeview">/* px */
+.demo {
+  padding: 20px;
+  margin: 10px;
+  color: #2563eb;
+}</pre><h3>Correct Example</h3><p>Use the property/value according to the design requirement and keep the rule readable and reusable.</p><h3>Common Mistakes</h3><ul><li>Property name ya value ki spelling galat karna.</li><li>Selector ko unnecessarily complex banana.</li><li>Responsive screens par output test na karna.</li></ul><textarea id="c0">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo {
+  padding: 25px;
+  background: linear-gradient(135deg,#2563eb,#7c3aed);
+  color: white;
+  border-radius: 12px;
+  text-align: center;
+  transition: .3s;
+}
+.demo:hover { transform: translateY(-3px); }
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div class="demo"&gt;px — Practice Me&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c0','o0')">▶ Run Code</button><iframe id="o0"></iframe><div class="challenge"><b>🎯 Mini Challenge:</b> Code me kam se kam 2 values change karo, output compare karo aur phir apna version banao.</div></section><section class="topic"><div class="badge">CONCEPT 2</div><h2>2. %</h2><p><b>English:</b> % containing context ke relative hota hai.</p><p><b>Hindi:</b> % containing context ke relative hota hai. Is concept ko practical website me use karte waqt syntax, browser behavior aur responsive effect ko samajhna important hai.</p><h3>Syntax / Example</h3><pre class="codeview">/* % */
+.demo {
+  padding: 20px;
+  margin: 10px;
+  background: #dbeafe;
+}</pre><h3>Correct Example</h3><p>Use the property/value according to the design requirement and keep the rule readable and reusable.</p><h3>Common Mistakes</h3><ul><li>Property name ya value ki spelling galat karna.</li><li>Selector ko unnecessarily complex banana.</li><li>Responsive screens par output test na karna.</li></ul><textarea id="c1">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo {
+  padding: 25px;
+  background: linear-gradient(135deg,#2563eb,#7c3aed);
+  color: white;
+  border-radius: 12px;
+  text-align: center;
+  transition: .3s;
+}
+.demo:hover { transform: translateY(-3px); }
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div class="demo"&gt;% — Practice Me&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c1','o1')">▶ Run Code</button><iframe id="o1"></iframe><div class="challenge"><b>🎯 Mini Challenge:</b> Code me kam se kam 2 values change karo, output compare karo aur phir apna version banao.</div></section><section class="topic"><div class="badge">CONCEPT 3</div><h2>3. em</h2><p><b>English:</b> em current font context se relative hota hai.</p><p><b>Hindi:</b> em current font context se relative hota hai. Is concept ko practical website me use karte waqt syntax, browser behavior aur responsive effect ko samajhna important hai.</p><h3>Syntax / Example</h3><pre class="codeview">/* em */
+.demo {
+  padding: 20px;
+  margin: 10px;
+  border: 2px solid #2563eb;
+}</pre><h3>Correct Example</h3><p>Use the property/value according to the design requirement and keep the rule readable and reusable.</p><h3>Common Mistakes</h3><ul><li>Property name ya value ki spelling galat karna.</li><li>Selector ko unnecessarily complex banana.</li><li>Responsive screens par output test na karna.</li></ul><textarea id="c2">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo {
+  padding: 25px;
+  background: linear-gradient(135deg,#2563eb,#7c3aed);
+  color: white;
+  border-radius: 12px;
+  text-align: center;
+  transition: .3s;
+}
+.demo:hover { transform: translateY(-3px); }
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div class="demo"&gt;em — Practice Me&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c2','o2')">▶ Run Code</button><iframe id="o2"></iframe><div class="challenge"><b>🎯 Mini Challenge:</b> Code me kam se kam 2 values change karo, output compare karo aur phir apna version banao.</div></section><section class="topic"><div class="badge">CONCEPT 4</div><h2>4. rem</h2><p><b>English:</b> rem root font-size se relative hota hai.</p><p><b>Hindi:</b> rem root font-size se relative hota hai. Is concept ko practical website me use karte waqt syntax, browser behavior aur responsive effect ko samajhna important hai.</p><h3>Syntax / Example</h3><pre class="codeview">/* rem */
+.demo {
+  padding: 20px;
+  margin: 10px;
+  color: #2563eb;
+}</pre><h3>Correct Example</h3><p>Use the property/value according to the design requirement and keep the rule readable and reusable.</p><h3>Common Mistakes</h3><ul><li>Property name ya value ki spelling galat karna.</li><li>Selector ko unnecessarily complex banana.</li><li>Responsive screens par output test na karna.</li></ul><textarea id="c3">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo {
+  padding: 25px;
+  background: linear-gradient(135deg,#2563eb,#7c3aed);
+  color: white;
+  border-radius: 12px;
+  text-align: center;
+  transition: .3s;
+}
+.demo:hover { transform: translateY(-3px); }
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div class="demo"&gt;rem — Practice Me&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c3','o3')">▶ Run Code</button><iframe id="o3"></iframe><div class="challenge"><b>🎯 Mini Challenge:</b> Code me kam se kam 2 values change karo, output compare karo aur phir apna version banao.</div></section><section class="topic"><div class="badge">CONCEPT 5</div><h2>5. vw and vh</h2><p><b>English:</b> vw/vh viewport dimensions ke relative hote hain.</p><p><b>Hindi:</b> vw/vh viewport dimensions ke relative hote hain. Is concept ko practical website me use karte waqt syntax, browser behavior aur responsive effect ko samajhna important hai.</p><h3>Syntax / Example</h3><pre class="codeview">/* vw and vh */
+.demo {
+  padding: 20px;
+  margin: 10px;
+  background: #dbeafe;
+}</pre><h3>Correct Example</h3><p>Use the property/value according to the design requirement and keep the rule readable and reusable.</p><h3>Common Mistakes</h3><ul><li>Property name ya value ki spelling galat karna.</li><li>Selector ko unnecessarily complex banana.</li><li>Responsive screens par output test na karna.</li></ul><textarea id="c4">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo {
+  padding: 25px;
+  background: linear-gradient(135deg,#2563eb,#7c3aed);
+  color: white;
+  border-radius: 12px;
+  text-align: center;
+  transition: .3s;
+}
+.demo:hover { transform: translateY(-3px); }
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div class="demo"&gt;vw and vh — Practice Me&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c4','o4')">▶ Run Code</button><iframe id="o4"></iframe><div class="challenge"><b>🎯 Mini Challenge:</b> Code me kam se kam 2 values change karo, output compare karo aur phir apna version banao.</div></section><section class="topic"><div class="badge">CONCEPT 6</div><h2>6. vmin, vmax and ch</h2><p><b>English:</b> Special responsive sizing ke liye useful units hain.</p><p><b>Hindi:</b> Special responsive sizing ke liye useful units hain. Is concept ko practical website me use karte waqt syntax, browser behavior aur responsive effect ko samajhna important hai.</p><h3>Syntax / Example</h3><pre class="codeview">/* vmin, vmax and ch */
+.demo {
+  padding: 20px;
+  margin: 10px;
+  border: 2px solid #2563eb;
+}</pre><h3>Correct Example</h3><p>Use the property/value according to the design requirement and keep the rule readable and reusable.</p><h3>Common Mistakes</h3><ul><li>Property name ya value ki spelling galat karna.</li><li>Selector ko unnecessarily complex banana.</li><li>Responsive screens par output test na karna.</li></ul><textarea id="c5">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo {
+  padding: 25px;
+  background: linear-gradient(135deg,#2563eb,#7c3aed);
+  color: white;
+  border-radius: 12px;
+  text-align: center;
+  transition: .3s;
+}
+.demo:hover { transform: translateY(-3px); }
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div class="demo"&gt;vmin, vmax and ch — Practice Me&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c5','o5')">▶ Run Code</button><iframe id="o5"></iframe><div class="challenge"><b>🎯 Mini Challenge:</b> Code me kam se kam 2 values change karo, output compare karo aur phir apna version banao.</div></section></main><footer>Created by:- Dharmandra Singh</footer><script>function runCode(a,b){const c=document.getElementById(a).value,f=document.getElementById(b),d=f.contentDocument||f.contentWindow.document;d.open();d.write(c);d.close()}</script></body></html>
