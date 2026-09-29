@@ -1,147 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D0ENCWPZL9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-D0ENCWPZL9');
-</script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>19. CSS Frameworks</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #1cc9be;
-      color: #222;
-    }
-    .section {
-      background: rgba(255, 255, 255, 0.3);
-      padding: 20px;
-      margin: 25px auto;
-      border-radius: 12px;
-      max-width: 1000px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    }
-    h2, h3 { color: #333; margin-bottom: 15px; }
-    p {
-      font-size: 18px;
-      margin-bottom: 20px;
-      line-height: 1.7;
-    }
-    textarea {
-      width: 100%;
-      height: 170px;
-      font-family: 'Courier New', monospace;
-      font-size: 16px;
-      padding: 14px;
-      background-color: rgba(255, 255, 255, 0.95);
-      border: 2px solid #ccc;
-      border-radius: 10px;
-      margin: 12px 0;
-      color: #222;
-      transition: all 0.3s ease;
-      resize: vertical;
-      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
-    }
-    textarea:focus {
-      outline: none;
-      border-color: #00c6ff;
-      box-shadow: 0 0 8px rgba(0, 198, 255, 0.5);
-    }
-    button {
-      background: linear-gradient(135deg, #00c6ff, #0072ff);
-      color: white;
-      padding: 8px 18px;
-      font-size: 15px;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
-    button:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
-    }
-    iframe {
-      width: 100%;
-      height: 160px;
-      border: 2px solid white;
-      background: rgba(255, 255, 255, 0.9);
-      border-radius: 10px;
-      margin-top: 10px;
-    }
-  </style>
-</head>
-<body>
-  <div class="section">
-    <h2>19. CSS Frameworks</h2>
-    <p><strong>Explanation:</strong> CSS Frameworks pre-written CSS code hote hain jo responsive aur fast development ke liye use hote hain. Popular frameworks: Bootstrap, Foundation, Tailwind CSS, Bulma.</p>
-
-    <h3>I. Bootstrap Example</h3>
-    <p><strong>Explanation:</strong> Bootstrap ek popular framework hai jisme classes ka use karke responsive layout aur components banaye jaate hain.</p>
-    <textarea id="code1">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-<div class="container text-center mt-4">
-  <h2 class="text-primary">Hello Bootstrap</h2>
-  <button class="btn btn-success mt-2">Click Me</button>
-</div>
-    </textarea>
-    <button onclick="runCode('code1', 'output1')">Run Code</button>
-    <iframe id="output1"></iframe>
-
-    <h3>II. Tailwind CSS Example</h3>
-    <p><strong>Explanation:</strong> Tailwind utility-first framework hai jisme aap directly class names se styling karte ho.</p>
-    <textarea id="code2">
-<script src="https://cdn.tailwindcss.com"></script>
-<div class="text-center mt-5">
-  <h2 class="text-3xl text-blue-600 font-bold">Hello Tailwind</h2>
-  <button class="bg-green-500 text-white px-4 py-2 mt-3 rounded-lg hover:bg-green-600">Click Me</button>
-</div>
-    </textarea>
-    <button onclick="runCode('code2', 'output2')">Run Code</button>
-    <iframe id="output2"></iframe>
-
-    <h3>III. Bulma Example</h3>
-    <p><strong>Explanation:</strong> Bulma ek modern CSS framework hai jo Flexbox based hota hai.</p>
-    <textarea id="code3">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-<div class="section has-text-centered">
-  <h2 class="title is-3 has-text-info">Hello Bulma</h2>
-  <button class="button is-success is-medium">Click Me</button>
-</div>
-    </textarea>
-    <button onclick="runCode('code3', 'output3')">Run Code</button>
-    <iframe id="output3"></iframe>
-
-    <h3>IV. Foundation (Basic)</h3>
-    <p><strong>Explanation:</strong> Foundation framework responsive design ke liye powerful hai, lekin ab utna popular nahi raha.</p>
-    <textarea id="code4">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css">
-<div class="grid-container text-center">
-  <h2 class="primary">Hello Foundation</h2>
-  <button class="button success">Click Me</button>
-</div>
-    </textarea>
-    <button onclick="runCode('code4', 'output4')">Run Code</button>
-    <iframe id="output4"></iframe>
-  </div>
-
-  <script>
-    function runCode(textareaId, iframeId) {
-      const code = document.getElementById(textareaId).value;
-      const iframe = document.getElementById(iframeId);
-      const doc = iframe.contentDocument || iframe.contentWindow.document;
-      doc.open();
-      doc.write(code);
-      doc.close();
-    }
-  </script>
-</body>
-</html>
+<!doctype html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>19. CSS Frameworks - LoOPCode</title><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Mono&display=swap" rel="stylesheet"><style>*{box-sizing:border-box}body{margin:0;background:#f5f7fa;color:#1f2937;font-family:Poppins,sans-serif;line-height:1.7}header{background:#111827;color:#fff;text-align:center;padding:28px 15px;position:sticky;top:0;z-index:5}header h1{margin:0}.container{max-width:1050px;margin:auto;padding:18px}.topic{background:#fff;margin:22px 0;padding:24px;border-radius:16px;border:1px solid #e5e7eb;box-shadow:0 8px 24px #0001}.topic h2{color:#2563eb}.example{background:#f8fafc;border-left:4px solid #2563eb;padding:12px;border-radius:8px}.example pre{white-space:pre-wrap;font-family:monospace}textarea{width:100%;min-height:200px;margin-top:15px;padding:14px;background:#0f172a;color:#e2e8f0;border-radius:10px;font-family:monospace;font-size:14px}button{padding:11px 18px;margin:10px 0;background:#2563eb;color:#fff;border:0;border-radius:9px;font-weight:bold;cursor:pointer}iframe{width:100%;height:190px;border:1px solid #cbd5e1;border-radius:10px}.tip{margin-top:12px;padding:12px;background:#eff6ff;color:#1e3a8a;border-radius:9px}footer{text-align:center;background:#111827;color:#cbd5e1;padding:25px}@media(max-width:650px){.container{padding:10px}.topic{padding:17px}textarea,iframe{height:170px;min-height:170px}}</style></head><body><header><h1>19. CSS Frameworks</h1><p>LoOPCode • Learn CSS with Explanation + Live Practice</p></header><main class="container"><section class="topic"><h2>1. Bootstrap</h2><p><b>English:</b> Bootstrap is a practical CSS concept used to build modern, reusable and responsive interfaces.</p><p><b>Hindi:</b> Bootstrap ko projects me apply karke layout aur styling ko professional bana sakte ho. Example ko edit karke different values test karo.</p><div class="example"><b>Example:</b><pre>&lt;div class="demo"&gt;Bootstrap&lt;/div&gt;</pre></div><textarea id="c0">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo{padding:25px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;border-radius:12px;text-align:center;font-family:Arial,sans-serif}
+.demo:hover{transform:translateY(-4px)}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class="demo"&gt;Bootstrap Practice&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c0','o0')">▶ Run Code</button><iframe id="o0"></iframe><div class="tip"><b>💡 Practice:</b> Property/value change karke output ka difference observe karo.</div></section><section class="topic"><h2>2. Tailwind CSS</h2><p><b>English:</b> Tailwind CSS is a practical CSS concept used to build modern, reusable and responsive interfaces.</p><p><b>Hindi:</b> Tailwind CSS ko projects me apply karke layout aur styling ko professional bana sakte ho. Example ko edit karke different values test karo.</p><div class="example"><b>Example:</b><pre>&lt;div class="demo"&gt;Tailwind CSS&lt;/div&gt;</pre></div><textarea id="c1">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo{padding:25px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;border-radius:12px;text-align:center;font-family:Arial,sans-serif}
+.demo:hover{transform:translateY(-4px)}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class="demo"&gt;Tailwind CSS Practice&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c1','o1')">▶ Run Code</button><iframe id="o1"></iframe><div class="tip"><b>💡 Practice:</b> Property/value change karke output ka difference observe karo.</div></section><section class="topic"><h2>3. utility classes</h2><p><b>English:</b> utility classes is a practical CSS concept used to build modern, reusable and responsive interfaces.</p><p><b>Hindi:</b> utility classes ko projects me apply karke layout aur styling ko professional bana sakte ho. Example ko edit karke different values test karo.</p><div class="example"><b>Example:</b><pre>&lt;div class="demo"&gt;utility classes&lt;/div&gt;</pre></div><textarea id="c2">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo{padding:25px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;border-radius:12px;text-align:center;font-family:Arial,sans-serif}
+.demo:hover{transform:translateY(-4px)}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class="demo"&gt;utility classes Practice&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c2','o2')">▶ Run Code</button><iframe id="o2"></iframe><div class="tip"><b>💡 Practice:</b> Property/value change karke output ka difference observe karo.</div></section><section class="topic"><h2>4. components</h2><p><b>English:</b> components is a practical CSS concept used to build modern, reusable and responsive interfaces.</p><p><b>Hindi:</b> components ko projects me apply karke layout aur styling ko professional bana sakte ho. Example ko edit karke different values test karo.</p><div class="example"><b>Example:</b><pre>&lt;div class="demo"&gt;components&lt;/div&gt;</pre></div><textarea id="c3">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo{padding:25px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;border-radius:12px;text-align:center;font-family:Arial,sans-serif}
+.demo:hover{transform:translateY(-4px)}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class="demo"&gt;components Practice&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c3','o3')">▶ Run Code</button><iframe id="o3"></iframe><div class="tip"><b>💡 Practice:</b> Property/value change karke output ka difference observe karo.</div></section><section class="topic"><h2>5. responsive utilities</h2><p><b>English:</b> responsive utilities is a practical CSS concept used to build modern, reusable and responsive interfaces.</p><p><b>Hindi:</b> responsive utilities ko projects me apply karke layout aur styling ko professional bana sakte ho. Example ko edit karke different values test karo.</p><div class="example"><b>Example:</b><pre>&lt;div class="demo"&gt;responsive utilities&lt;/div&gt;</pre></div><textarea id="c4">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo{padding:25px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;border-radius:12px;text-align:center;font-family:Arial,sans-serif}
+.demo:hover{transform:translateY(-4px)}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class="demo"&gt;responsive utilities Practice&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c4','o4')">▶ Run Code</button><iframe id="o4"></iframe><div class="tip"><b>💡 Practice:</b> Property/value change karke output ka difference observe karo.</div></section><section class="topic"><h2>6. when to use frameworks</h2><p><b>English:</b> when to use frameworks is a practical CSS concept used to build modern, reusable and responsive interfaces.</p><p><b>Hindi:</b> when to use frameworks ko projects me apply karke layout aur styling ko professional bana sakte ho. Example ko edit karke different values test karo.</p><div class="example"><b>Example:</b><pre>&lt;div class="demo"&gt;when to use frameworks&lt;/div&gt;</pre></div><textarea id="c5">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo{padding:25px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;border-radius:12px;text-align:center;font-family:Arial,sans-serif}
+.demo:hover{transform:translateY(-4px)}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class="demo"&gt;when to use frameworks Practice&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c5','o5')">▶ Run Code</button><iframe id="o5"></iframe><div class="tip"><b>💡 Practice:</b> Property/value change karke output ka difference observe karo.</div></section></main><footer>Created by:- Dharmandra Singh</footer><script>function runCode(a,b){const c=document.getElementById(a).value,f=document.getElementById(b),d=f.contentDocument;d.open();d.write(c);d.close()}</script></body></html>
