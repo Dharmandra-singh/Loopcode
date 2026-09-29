@@ -1,186 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D0ENCWPZL9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-D0ENCWPZL9');
-</script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>3. CSS Box Model</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body, html {
-      height: 100%;
-      font-family: 'Poppins', sans-serif;
-      overflow-x: hidden;
-      background-color: #1cc9be;
-    }
-    .section {
-      background-color: rgba(255, 255, 255, 0.3);
-      margin: 20px auto;
-      padding: 20px;
-      border-radius: 12px;
-      width: 90%;
-      max-width: 1000px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-    }
-    h2, h3 {
-      color: #333;
-      margin-bottom: 15px;
-    }
-    p {
-      font-size: 18px;
-      margin-bottom: 20px;
-      line-height: 1.7;
-    }
-    textarea {
-      width: 100%;
-      height: 150px;
-      font-family: monospace;
-      font-size: 16px;
-      padding: 10px;
-      border: 2px solid white;
-      border-radius: 8px;
-      margin-top: 10px;
-      margin-bottom: 10px;
-      background: rgba(255,248,240,0.4);
-    }
-    button {
-      background-color: #28a745;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      border-radius: 8px;
-      cursor: pointer;
-      margin-bottom: 20px;
-    }
-    iframe {
-      width: 100%;
-      height: 150px;
-      background: rgba(255,248,240,0.4);
-      border: 2px solid white;
-      border-radius: 8px;
-      margin-top: 15px;
-    }
-  </style>
-</head>
-<body>
-
-<div class="section">
-  <h2>3. CSS Box Model</h2>
-
-  <h3>1. Box Model Overview</h3>
-  <p><strong>Explanation:</strong> CSS Box Model ek element ke 4 main parts dikhata hai:
-    <ul>
-      <li><strong>Content:</strong> Actual text ya image</li>
-      <li><strong>Padding:</strong> Content ke around space</li>
-      <li><strong>Border:</strong> Padding ke baahar line</li>
-      <li><strong>Margin:</strong> Border ke baahar ki space</li>
-    </ul>
-  </p>
-
-  <textarea id="box1">
-<!DOCTYPE html>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="CSS Box Model - Learn CSS with English and Hindi explanations, examples and live practice on LoOPCode."><title>3. CSS Box Model - LoOPCode</title><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Mono&display=swap" rel="stylesheet"><style>*{box-sizing:border-box}body{margin:0;font-family:Poppins,sans-serif;background:#f5f7fa;color:#222;line-height:1.7}header{background:#111827;color:white;padding:28px 18px;text-align:center;position:sticky;top:0;z-index:5;box-shadow:0 4px 14px #0002}header h1{margin:0;font-size:clamp(1.5rem,4vw,2.4rem)}header p{margin:6px 0 0;color:#cbd5e1}.container{max-width:1050px;margin:auto;padding:18px}.topic{background:white;margin:22px 0;padding:24px;border-radius:16px;border:1px solid #e5e7eb;box-shadow:0 8px 24px #0000000d}.topic h2{margin-top:0;color:#2563eb}.topic p{margin:10px 0}.syntax{background:#f8fafc;border-left:4px solid #2563eb;padding:12px 16px;border-radius:8px}.syntax pre{white-space:pre-wrap;font-family:"Roboto Mono",monospace;font-size:14px}.syntax b{color:#475569}textarea{width:100%;min-height:190px;margin-top:15px;padding:14px;border:1px solid #cbd5e1;border-radius:10px;background:#0f172a;color:#e2e8f0;font-family:"Roboto Mono",monospace;font-size:14px;resize:vertical}button{margin:10px 0 8px;background:#2563eb;color:white;border:0;border-radius:9px;padding:11px 18px;font-weight:600;cursor:pointer}button:hover{background:#1d4ed8}iframe{width:100%;height:190px;border:1px solid #cbd5e1;border-radius:10px;background:white}.tip{margin-top:14px;padding:12px 15px;background:#eff6ff;border-radius:9px;color:#1e3a8a}footer{text-align:center;padding:28px;background:#111827;color:#cbd5e1;margin-top:35px}@media(max-width:650px){.container{padding:10px}.topic{padding:17px}.topic p{font-size:15px}textarea,iframe{min-height:160px;height:160px}}</style></head><body><header><h1>3. CSS Box Model</h1><p>LoOPCode • Learn CSS with Explanation + Practice</p></header><main class="container"><section class="topic"><h2>1. Box Model Overview</h2><p><b>English:</b> Every element is treated as a rectangular box containing content, padding, border and margin.</p><p><b>Hindi:</b> Content ke andar actual data, padding andar ki space, border boundary aur margin bahar ki space hoti hai.</p><div class="syntax"><b>Concept / Example:</b><pre><div class="box">Content</div></pre></div><textarea id="code0"><!DOCTYPE html>
 <html>
-<head>
-  <style>
-    .box {
-      background-color: lightblue;
-      padding: 20px;
-      border: 5px solid blue;
-      margin: 30px;
-    }
-  </style>
-</head>
+<head><style>
+ .box{padding:20px;border:4px solid #2563eb;margin:20px;background:#dbeafe}
+</style></head>
 <body>
-  <div class="box">Box Model Example</div>
-</body>
-</html>
-  </textarea>
-  <button onclick="runCode('box1', 'outbox1')">Run Code</button>
-  <iframe id="outbox1"></iframe>
-
-  <h3>2. Box Sizing</h3>
-  <p><strong>Explanation:</strong> By default, width sirf content ke liye hoti hai. Agar aap <code>box-sizing: border-box</code> lagao, to padding + border bhi width me include ho jaata hai.</p>
-
-  <textarea id="box2">
-<!DOCTYPE html>
+<div class="box">Content</div>
+</body></html></textarea><button onclick="runCode('code0','out0')">▶ Run Code</button><iframe id="out0"></iframe><div class="tip"><b>💡 Common Tip:</b> Property names aur values ko carefully check karo; semicolon aur braces miss na karo.</div></section><section class="topic"><h2>2. Content</h2><p><b>English:</b> The content area contains text, images or child elements.</p><p><b>Hindi:</b> Width/height ka meaning box-sizing ke saath samajhna important hai.</p><div class="syntax"><b>Concept / Example:</b><pre><div class="content">Hello</div></pre></div><textarea id="code1"><!DOCTYPE html>
 <html>
-<head>
-  <style>
-    .box1, .box2 {
-      width: 300px;
-      padding: 20px;
-      border: 5px solid black;
-      margin: 10px;
-    }
-    .box1 {
-      box-sizing: content-box;
-      background-color: lightcoral;
-    }
-    .box2 {
-      box-sizing: border-box;
-      background-color: lightgreen;
-    }
-  </style>
-</head>
+<head><style>
+ .content{width:220px;height:80px;background:#bfdbfe}
+</style></head>
 <body>
-  <div class="box1">Content-box (default)</div>
-  <div class="box2">Border-box</div>
-</body>
-</html>
-  </textarea>
-  <button onclick="runCode('box2', 'outbox2')">Run Code</button>
-  <iframe id="outbox2"></iframe>
-
-  <h3>3. Overflow Property</h3>
-  <p><strong>Explanation:</strong> Jab content box ke andar fit nahi hota, tab <code>overflow</code> property usse control karti hai. Values ho sakti hain: <code>visible</code>, <code>hidden</code>, <code>scroll</code>, <code>auto</code>.</p>
-
-  <textarea id="box3">
-<!DOCTYPE html>
+<div class="content">Hello</div>
+</body></html></textarea><button onclick="runCode('code1','out1')">▶ Run Code</button><iframe id="out1"></iframe><div class="tip"><b>💡 Common Tip:</b> Property names aur values ko carefully check karo; semicolon aur braces miss na karo.</div></section><section class="topic"><h2>3. Padding</h2><p><b>English:</b> Padding creates space between content and border.</p><p><b>Hindi:</b> Padding badhane se box ke andar breathing space badhti hai.</p><div class="syntax"><b>Concept / Example:</b><pre><div class="box">Padding</div></pre></div><textarea id="code2"><!DOCTYPE html>
 <html>
-<head>
-  <style>
-    .container {
-      width: 200px;
-      height: 100px;
-      border: 2px solid black;
-      overflow: scroll;
-      background-color: #fef4c4;
-    }
-  </style>
-</head>
+<head><style>
+ .box{padding:30px;background:#dcfce7}
+</style></head>
 <body>
-  <div class="container">
-    This is a long content that will overflow from the box. Scroll to see full content inside the box.
-  </div>
-</body>
-</html>
-  </textarea>
-  <button onclick="runCode('box3', 'outbox3')">Run Code</button>
-  <iframe id="outbox3"></iframe>
-</div>
-
-<script>
-function runCode(textareaId, iframeId) {
-  const code = document.getElementById(textareaId).value;
-  const iframe = document.getElementById(iframeId);
-  iframe.contentDocument.open();
-  iframe.contentDocument.write(code);
-  iframe.contentDocument.close();
-}
-</script>
-
-</body>
-</html>
+<div class="box">Padding</div>
+</body></html></textarea><button onclick="runCode('code2','out2')">▶ Run Code</button><iframe id="out2"></iframe><div class="tip"><b>💡 Common Tip:</b> Property names aur values ko carefully check karo; semicolon aur braces miss na karo.</div></section><section class="topic"><h2>4. Border</h2><p><b>English:</b> Border surrounds the padding and content areas.</p><p><b>Hindi:</b> Border width, style aur color se define hota hai.</p><div class="syntax"><b>Concept / Example:</b><pre><div class="box">Border</div></pre></div><textarea id="code3"><!DOCTYPE html>
+<html>
+<head><style>
+ .box{border:5px dashed #7c3aed;padding:20px}
+</style></head>
+<body>
+<div class="box">Border</div>
+</body></html></textarea><button onclick="runCode('code3','out3')">▶ Run Code</button><iframe id="out3"></iframe><div class="tip"><b>💡 Common Tip:</b> Property names aur values ko carefully check karo; semicolon aur braces miss na karo.</div></section><section class="topic"><h2>5. Margin</h2><p><b>English:</b> Margin creates space outside an element.</p><p><b>Hindi:</b> Do boxes ke beech distance control karne ke liye margin use hota hai.</p><div class="syntax"><b>Concept / Example:</b><pre><div class="a">A</div><div class="b">B</div></pre></div><textarea id="code4"><!DOCTYPE html>
+<html>
+<head><style>
+div{padding:15px;background:#fef3c7}.a{margin-bottom:30px}
+</style></head>
+<body>
+<div class="a">A</div><div class="b">B</div>
+</body></html></textarea><button onclick="runCode('code4','out4')">▶ Run Code</button><iframe id="out4"></iframe><div class="tip"><b>💡 Common Tip:</b> Property names aur values ko carefully check karo; semicolon aur braces miss na karo.</div></section><section class="topic"><h2>6. box-sizing</h2><p><b>English:</b> content-box keeps padding and border outside declared width; border-box includes them.</p><p><b>Hindi:</b> Practical layouts me border-box predictable sizing deta hai.</p><div class="syntax"><b>Concept / Example:</b><pre><div class="box">300px total width</div></pre></div><textarea id="code5"><!DOCTYPE html>
+<html>
+<head><style>
+ .box{box-sizing:border-box;width:300px;padding:30px;border:5px solid #111}
+</style></head>
+<body>
+<div class="box">300px total width</div>
+</body></html></textarea><button onclick="runCode('code5','out5')">▶ Run Code</button><iframe id="out5"></iframe><div class="tip"><b>💡 Common Tip:</b> Property names aur values ko carefully check karo; semicolon aur braces miss na karo.</div></section></main><footer>Created by:- Dharmandra Singh</footer><script>function runCode(a,b){const code=document.getElementById(a).value;const frame=document.getElementById(b);const doc=frame.contentDocument||frame.contentWindow.document;doc.open();doc.write(code);doc.close()}</script></body></html>
