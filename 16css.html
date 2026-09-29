@@ -1,198 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D0ENCWPZL9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-D0ENCWPZL9');
-</script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>16. CSS Shapes - Clip-path</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #1cc9be;
-      color: #222;
-    }
-    .section {
-      background: rgba(255, 255, 255, 0.3);
-      padding: 20px;
-      margin: 25px auto;
-      border-radius: 12px;
-      max-width: 1000px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    }
-    h2, h3 {
-      color: #333;
-      margin-bottom: 15px;
-    }
-    p {
-      font-size: 18px;
-      margin-bottom: 20px;
-      line-height: 1.7;
-    }
-    textarea {
-      width: 100%;
-      height: 170px;
-      font-family: 'Courier New', monospace;
-      font-size: 16px;
-      padding: 14px;
-      background-color: rgba(255, 255, 255, 0.95);
-      border: 2px solid #ccc;
-      border-radius: 10px;
-      margin: 12px 0;
-      color: #222;
-      transition: all 0.3s ease;
-      resize: vertical;
-      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
-    }
-    textarea:focus {
-      outline: none;
-      border-color: #00c6ff;
-      box-shadow: 0 0 8px rgba(0, 198, 255, 0.5);
-    }
-    button {
-      background: linear-gradient(135deg, #00c6ff, #0072ff);
-      color: white;
-      padding: 8px 18px;
-      font-size: 15px;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
-    button:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
-    }
-    iframe {
-      width: 100%;
-      height: 160px;
-      border: 2px solid white;
-      background: rgba(255, 255, 255, 0.9);
-      border-radius: 10px;
-      margin-top: 10px;
-    }
-  </style>
-</head>
-<body>
-  <div class="section">
-    <h2>16. CSS Shapes using Clip-path</h2>
-
-    <h3>I. Clip-path Circle</h3>
-    <p><strong>Explanation:</strong> <code>clip-path</code> se aap element ko circular ya kisi specific shape me dikh sakte ho. Yahan hum <code>circle()</code> ka use kar rahe hain.</p>
-
-    <textarea id="code1">
-<style>
-  .circle {
-    width: 200px;
-    height: 200px;
-    background: orange;
-    clip-path: circle(50%);
-  }
-</style>
-
-<div class="circle"></div>
-    </textarea>
-    <button onclick="runCode('code1', 'output1')">Run Code</button>
-    <iframe id="output1"></iframe>
-
-    <h3>II. Ellipse Shape</h3>
-    <p><strong>Explanation:</strong> <code>ellipse()</code> shape se oval ya ellipse create kar sakte hain using clip-path.</p>
-
-    <textarea id="code2">
-<style>
-  .ellipse {
-    width: 250px;
-    height: 150px;
-    background: #28a745;
-    clip-path: ellipse(60% 40% at 50% 50%);
-  }
-</style>
-
-<div class="ellipse"></div>
-    </textarea>
-    <button onclick="runCode('code2', 'output2')">Run Code</button>
-    <iframe id="output2"></iframe>
-
-    <h3>III. Polygon Shape</h3>
-    <p><strong>Explanation:</strong> Polygon coordinates dekar custom triangle, star, ya any polygon shape banayi ja sakti hai.</p>
-
-    <textarea id="code3">
-<style>
-  .polygon {
-    width: 220px;
-    height: 200px;
-    background: #007bff;
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-  }
-</style>
-
-<div class="polygon"></div>
-    </textarea>
-    <button onclick="runCode('code3', 'output3')">Run Code</button>
-    <iframe id="output3"></iframe>
-
-    <h3>IV. Complex Shapes (Multiple Layers)</h3>
-    <p><strong>Explanation:</strong> Complex designs create karne ke liye aap multiple layered divs aur <code>clip-path</code> use kar sakte ho.</p>
-
-    <textarea id="code4">
-<style>
-  .layer1, .layer2 {
-    width: 200px;
-    height: 200px;
-    position: absolute;
-  }
-
-  .layer1 {
-    background: #ff6347;
-    clip-path: circle(50%);
-  }
-
-  .layer2 {
-    background: #6a5acd;
-    clip-path: polygon(0 0, 100% 0, 100% 100%);
-    top: 0;
-    left: 0;
-    mix-blend-mode: multiply;
-  }
-
-  .wrapper {
-    position: relative;
-    width: 200px;
-    height: 200px;
-  }
-</style>
-
-<div class="wrapper">
-  <div class="layer1"></div>
-  <div class="layer2"></div>
-</div>
-    </textarea>
-    <button onclick="runCode('code4', 'output4')">Run Code</button>
-    <iframe id="output4"></iframe>
-  </div>
-
-  <script>
-    function runCode(textareaId, iframeId) {
-      const code = document.getElementById(textareaId).value;
-      const iframe = document.getElementById(iframeId);
-      const doc = iframe.contentDocument || iframe.contentWindow.document;
-      doc.open();
-      doc.write(code);
-      doc.close();
-    }
-  </script>
-</body>
-</html>
+<!doctype html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>16. CSS Shapes - LoOPCode</title><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Mono&display=swap" rel="stylesheet"><style>*{box-sizing:border-box}body{margin:0;background:#f5f7fa;color:#1f2937;font-family:Poppins,sans-serif;line-height:1.7}header{background:#111827;color:#fff;text-align:center;padding:28px 15px;position:sticky;top:0;z-index:5}header h1{margin:0}.container{max-width:1050px;margin:auto;padding:18px}.topic{background:#fff;margin:22px 0;padding:24px;border-radius:16px;border:1px solid #e5e7eb;box-shadow:0 8px 24px #0001}.topic h2{color:#2563eb}.example{background:#f8fafc;border-left:4px solid #2563eb;padding:12px;border-radius:8px}.example pre{white-space:pre-wrap;font-family:monospace}textarea{width:100%;min-height:200px;margin-top:15px;padding:14px;background:#0f172a;color:#e2e8f0;border-radius:10px;font-family:monospace;font-size:14px}button{padding:11px 18px;margin:10px 0;background:#2563eb;color:#fff;border:0;border-radius:9px;font-weight:bold;cursor:pointer}iframe{width:100%;height:190px;border:1px solid #cbd5e1;border-radius:10px}.tip{margin-top:12px;padding:12px;background:#eff6ff;color:#1e3a8a;border-radius:9px}footer{text-align:center;background:#111827;color:#cbd5e1;padding:25px}@media(max-width:650px){.container{padding:10px}.topic{padding:17px}textarea,iframe{height:170px;min-height:170px}}</style></head><body><header><h1>16. CSS Shapes</h1><p>LoOPCode • Learn CSS with Explanation + Live Practice</p></header><main class="container"><section class="topic"><h2>1. border-radius shapes</h2><p><b>English:</b> border-radius shapes is a practical CSS concept used to build modern, reusable and responsive interfaces.</p><p><b>Hindi:</b> border-radius shapes ko projects me apply karke layout aur styling ko professional bana sakte ho. Example ko edit karke different values test karo.</p><div class="example"><b>Example:</b><pre>&lt;div class="demo"&gt;border-radius shapes&lt;/div&gt;</pre></div><textarea id="c0">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo{padding:25px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;border-radius:12px;text-align:center;font-family:Arial,sans-serif}
+.demo:hover{transform:translateY(-4px)}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class="demo"&gt;border-radius shapes Practice&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c0','o0')">▶ Run Code</button><iframe id="o0"></iframe><div class="tip"><b>💡 Practice:</b> Property/value change karke output ka difference observe karo.</div></section><section class="topic"><h2>2. clip-path</h2><p><b>English:</b> clip-path is a practical CSS concept used to build modern, reusable and responsive interfaces.</p><p><b>Hindi:</b> clip-path ko projects me apply karke layout aur styling ko professional bana sakte ho. Example ko edit karke different values test karo.</p><div class="example"><b>Example:</b><pre>&lt;div class="demo"&gt;clip-path&lt;/div&gt;</pre></div><textarea id="c1">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo{padding:25px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;border-radius:12px;text-align:center;font-family:Arial,sans-serif}
+.demo:hover{transform:translateY(-4px)}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class="demo"&gt;clip-path Practice&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c1','o1')">▶ Run Code</button><iframe id="o1"></iframe><div class="tip"><b>💡 Practice:</b> Property/value change karke output ka difference observe karo.</div></section><section class="topic"><h2>3. circle</h2><p><b>English:</b> circle is a practical CSS concept used to build modern, reusable and responsive interfaces.</p><p><b>Hindi:</b> circle ko projects me apply karke layout aur styling ko professional bana sakte ho. Example ko edit karke different values test karo.</p><div class="example"><b>Example:</b><pre>&lt;div class="demo"&gt;circle&lt;/div&gt;</pre></div><textarea id="c2">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo{padding:25px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;border-radius:12px;text-align:center;font-family:Arial,sans-serif}
+.demo:hover{transform:translateY(-4px)}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class="demo"&gt;circle Practice&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c2','o2')">▶ Run Code</button><iframe id="o2"></iframe><div class="tip"><b>💡 Practice:</b> Property/value change karke output ka difference observe karo.</div></section><section class="topic"><h2>4. polygon</h2><p><b>English:</b> polygon is a practical CSS concept used to build modern, reusable and responsive interfaces.</p><p><b>Hindi:</b> polygon ko projects me apply karke layout aur styling ko professional bana sakte ho. Example ko edit karke different values test karo.</p><div class="example"><b>Example:</b><pre>&lt;div class="demo"&gt;polygon&lt;/div&gt;</pre></div><textarea id="c3">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo{padding:25px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;border-radius:12px;text-align:center;font-family:Arial,sans-serif}
+.demo:hover{transform:translateY(-4px)}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class="demo"&gt;polygon Practice&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c3','o3')">▶ Run Code</button><iframe id="o3"></iframe><div class="tip"><b>💡 Practice:</b> Property/value change karke output ka difference observe karo.</div></section><section class="topic"><h2>5. ellipse</h2><p><b>English:</b> ellipse is a practical CSS concept used to build modern, reusable and responsive interfaces.</p><p><b>Hindi:</b> ellipse ko projects me apply karke layout aur styling ko professional bana sakte ho. Example ko edit karke different values test karo.</p><div class="example"><b>Example:</b><pre>&lt;div class="demo"&gt;ellipse&lt;/div&gt;</pre></div><textarea id="c4">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo{padding:25px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;border-radius:12px;text-align:center;font-family:Arial,sans-serif}
+.demo:hover{transform:translateY(-4px)}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class="demo"&gt;ellipse Practice&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c4','o4')">▶ Run Code</button><iframe id="o4"></iframe><div class="tip"><b>💡 Practice:</b> Property/value change karke output ka difference observe karo.</div></section><section class="topic"><h2>6. shape-outside</h2><p><b>English:</b> shape-outside is a practical CSS concept used to build modern, reusable and responsive interfaces.</p><p><b>Hindi:</b> shape-outside ko projects me apply karke layout aur styling ko professional bana sakte ho. Example ko edit karke different values test karo.</p><div class="example"><b>Example:</b><pre>&lt;div class="demo"&gt;shape-outside&lt;/div&gt;</pre></div><textarea id="c5">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo{padding:25px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;border-radius:12px;text-align:center;font-family:Arial,sans-serif}
+.demo:hover{transform:translateY(-4px)}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class="demo"&gt;shape-outside Practice&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c5','o5')">▶ Run Code</button><iframe id="o5"></iframe><div class="tip"><b>💡 Practice:</b> Property/value change karke output ka difference observe karo.</div></section></main><footer>Created by:- Dharmandra Singh</footer><script>function runCode(a,b){const c=document.getElementById(a).value,f=document.getElementById(b),d=f.contentDocument;d.open();d.write(c);d.close()}</script></body></html>
