@@ -1,170 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D0ENCWPZL9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-D0ENCWPZL9');
-</script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>1. Introduction to CSS</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body, html {
-      height: 100%;
-      font-family: 'Poppins', sans-serif;
-      overflow-x: hidden;
-      background-color: #1cc9be;
-    }
-    .section {
-      background-color: rgba(255, 255, 255, 0.3);
-      margin: 20px auto;
-      padding: 20px;
-      border-radius: 12px;
-      width: 90%;
-      max-width: 1000px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-    }
-    h2, h3 {
-      color: #333;
-      margin-bottom: 15px;
-    }
-    p {
-      font-size: 18px;
-      margin-bottom: 20px;
-      line-height: 1.7;
-    }
-    textarea {
-      width: 100%;
-      height: 150px;
-      font-family: monospace;
-      font-size: 16px;
-      padding: 10px;
-      border: 2px solid white;
-      border-radius: 8px;
-      margin-top: 10px;
-      margin-bottom: 10px;
-      background: rgba(255,248,240,0.4);
-    }
-    button {
-      background-color: #28a745;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      border-radius: 8px;
-      cursor: pointer;
-      margin-bottom: 20px;
-    }
-    iframe {
-      width: 100%;
-      height: 150px;
-      background: rgba(255,248,240,0.4);
-      border: 2px solid white;
-      border-radius: 8px;
-      margin-top: 15px;
-    }
-  </style>
-</head>
-<body>
-
-<div class="section">
-  <h2>1. Introduction to CSS</h2>
-
-  <h3>I. What is CSS?</h3>
-  <p><strong>Explanation:</strong> CSS ka full form hai <em>Cascading Style Sheets</em>. Ye HTML elements ko style dene ke liye use hota hai — jaise colors, layout, spacing, fonts wagairah.</p>
-
-  <textarea id="css1">
-<!DOCTYPE html>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Introduction to CSS - Learn CSS with English and Hindi explanations, examples and live practice on LoOPCode."><title>1. Introduction to CSS - LoOPCode</title><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Mono&display=swap" rel="stylesheet"><style>*{box-sizing:border-box}body{margin:0;font-family:Poppins,sans-serif;background:#f5f7fa;color:#222;line-height:1.7}header{background:#111827;color:white;padding:28px 18px;text-align:center;position:sticky;top:0;z-index:5;box-shadow:0 4px 14px #0002}header h1{margin:0;font-size:clamp(1.5rem,4vw,2.4rem)}header p{margin:6px 0 0;color:#cbd5e1}.container{max-width:1050px;margin:auto;padding:18px}.topic{background:white;margin:22px 0;padding:24px;border-radius:16px;border:1px solid #e5e7eb;box-shadow:0 8px 24px #0000000d}.topic h2{margin-top:0;color:#2563eb}.topic p{margin:10px 0}.syntax{background:#f8fafc;border-left:4px solid #2563eb;padding:12px 16px;border-radius:8px}.syntax pre{white-space:pre-wrap;font-family:"Roboto Mono",monospace;font-size:14px}.syntax b{color:#475569}textarea{width:100%;min-height:190px;margin-top:15px;padding:14px;border:1px solid #cbd5e1;border-radius:10px;background:#0f172a;color:#e2e8f0;font-family:"Roboto Mono",monospace;font-size:14px;resize:vertical}button{margin:10px 0 8px;background:#2563eb;color:white;border:0;border-radius:9px;padding:11px 18px;font-weight:600;cursor:pointer}button:hover{background:#1d4ed8}iframe{width:100%;height:190px;border:1px solid #cbd5e1;border-radius:10px;background:white}.tip{margin-top:14px;padding:12px 15px;background:#eff6ff;border-radius:9px;color:#1e3a8a}footer{text-align:center;padding:28px;background:#111827;color:#cbd5e1;margin-top:35px}@media(max-width:650px){.container{padding:10px}.topic{padding:17px}.topic p{font-size:15px}textarea,iframe{min-height:160px;height:160px}}</style></head><body><header><h1>1. Introduction to CSS</h1><p>LoOPCode • Learn CSS with Explanation + Practice</p></header><main class="container"><section class="topic"><h2>1. What is CSS?</h2><p><b>English:</b> CSS (Cascading Style Sheets) controls the presentation of HTML elements — colors, spacing, fonts, layout and visual effects.</p><p><b>Hindi:</b> CSS HTML ka structure change nahi karta; ye us structure ko attractive aur usable banata hai.</p><div class="syntax"><b>Concept / Example:</b><pre><h1>Hello CSS</h1>
+<p>Styled content</p></pre></div><textarea id="code0"><!DOCTYPE html>
 <html>
-<head>
-  <style>
-    h1 {
-      color: darkblue;
-      font-size: 40px;
-    }
-    p {
-      color: #555;
-    }
-  </style>
-</head>
+<head><style>
+h1{color:#2563eb} p{font-size:18px;line-height:1.6}
+</style></head>
 <body>
-  <h1>Hello CSS</h1>
-  <p>This is styled with CSS.</p>
-</body>
-</html>
-  </textarea>
-  <button onclick="runCode('css1', 'output1')">Run Code</button>
-  <iframe id="output1"></iframe>
-
-
-  <h3>II. CSS Syntax</h3>
-  <p><strong>Explanation:</strong> CSS syntax me 2 main parts hote hain — <code>selector</code> aur <code>declaration block</code>. Dekho:</p>
-
-  <textarea id="css2">
-/* Syntax */
-selector {
-  property: value;
-}
-
-/* Example */
-p {
-  color: red;
-  font-size: 18px;
-}
-  </textarea>
-  <button onclick="runCode('css2', 'output2')">Run Code</button>
-  <iframe id="output2"></iframe>
-
-
-  <h3>III. Types of CSS</h3>
-  <p><strong>Explanation:</strong>
-    <ul>
-      <li><strong>Inline CSS:</strong> Direct element ke andar style dena.</li>
-      <li><strong>Internal CSS:</strong> <code>&lt;style&gt;</code> tag ke andar likhna (head ke andar).</li>
-      <li><strong>External CSS:</strong> Alag file me likhkar link karna.</li>
-    </ul>
-  </p>
-
-  <textarea id="css3">
-<!-- Internal CSS Example -->
-<!DOCTYPE html>
+<h1>Hello CSS</h1>
+<p>Styled content</p>
+</body></html></textarea><button onclick="runCode('code0','out0')">▶ Run Code</button><iframe id="out0"></iframe><div class="tip"><b>💡 Common Tip:</b> Property names aur values ko carefully check karo; semicolon aur braces miss na karo.</div></section><section class="topic"><h2>2. CSS Syntax</h2><p><b>English:</b> A CSS rule contains a selector followed by a declaration block. Each declaration has a property and a value.</p><p><b>Hindi:</b> Selector batata hai kis element ko target karna hai, property batati hai kya change karna hai aur value batati hai kaise.</p><div class="syntax"><b>Concept / Example:</b><pre><p>Hello</p></pre></div><textarea id="code1"><!DOCTYPE html>
 <html>
-<head>
-  <style>
-    h2 {
-      color: green;
-    }
-  </style>
-</head>
+<head><style>
+p { color: crimson; font-size: 22px; }
+</style></head>
 <body>
-  <h2>Internal CSS Example</h2>
-</body>
-</html>
-  </textarea>
-  <button onclick="runCode('css3', 'output3')">Run Code</button>
-  <iframe id="output3"></iframe>
-
-</div>
-
-<script>
-function runCode(textareaId, iframeId) {
-  const code = document.getElementById(textareaId).value;
-  const iframe = document.getElementById(iframeId);
-  iframe.contentDocument.open();
-  iframe.contentDocument.write(code);
-  iframe.contentDocument.close();
-}
-</script>
-
-</body>
-</html>
+<p>Hello</p>
+</body></html></textarea><button onclick="runCode('code1','out1')">▶ Run Code</button><iframe id="out1"></iframe><div class="tip"><b>💡 Common Tip:</b> Property names aur values ko carefully check karo; semicolon aur braces miss na karo.</div></section><section class="topic"><h2>3. Inline CSS</h2><p><b>English:</b> Inline CSS is written directly in an HTML element using the style attribute.</p><p><b>Hindi:</b> Chhote one-off changes ke liye useful hai, lekin bade project me maintain karna difficult ho sakta hai.</p><div class="syntax"><b>Concept / Example:</b><pre><h2 style="color:green">Inline CSS</h2></pre></div><div class="tip"><b>💡 Common Tip:</b> Property names aur values ko carefully check karo; semicolon aur braces miss na karo.</div></section><section class="topic"><h2>4. Internal CSS</h2><p><b>English:</b> Internal CSS is placed inside a style element in the HTML head.</p><p><b>Hindi:</b> Ek single page ke liye useful hota hai.</p><div class="syntax"><b>Concept / Example:</b><pre><style>h2{color:purple}</style>
+<h2>Internal CSS</h2></pre></div><div class="tip"><b>💡 Common Tip:</b> Property names aur values ko carefully check karo; semicolon aur braces miss na karo.</div></section><section class="topic"><h2>5. External CSS</h2><p><b>English:</b> External CSS is stored in a separate .css file and connected using link.</p><p><b>Hindi:</b> Multiple pages ke liye external CSS sabse maintainable approach hai.</p><div class="syntax"><b>Concept / Example:</b><pre><link rel="stylesheet" href="style.css">
+<h2>External CSS</h2></pre></div><div class="tip"><b>💡 Common Tip:</b> Property names aur values ko carefully check karo; semicolon aur braces miss na karo.</div></section><section class="topic"><h2>6. Why CSS matters</h2><p><b>English:</b> CSS makes interfaces readable, responsive, consistent and visually engaging.</p><p><b>Hindi:</b> HTML + CSS + JavaScript milkar modern web UI ka basic foundation banate hain.</p><div class="syntax"><b>Concept / Example:</b><pre><button>Learn CSS</button></pre></div><textarea id="code5"><!DOCTYPE html>
+<html>
+<head><style>
+button{padding:12px 20px;border-radius:8px;background:#2563eb;color:white;border:0}
+</style></head>
+<body>
+<button>Learn CSS</button>
+</body></html></textarea><button onclick="runCode('code5','out5')">▶ Run Code</button><iframe id="out5"></iframe><div class="tip"><b>💡 Common Tip:</b> Property names aur values ko carefully check karo; semicolon aur braces miss na karo.</div></section></main><footer>Created by:- Dharmandra Singh</footer><script>function runCode(a,b){const code=document.getElementById(a).value;const frame=document.getElementById(b);const doc=frame.contentDocument||frame.contentWindow.document;doc.open();doc.write(code);doc.close()}</script></body></html>
