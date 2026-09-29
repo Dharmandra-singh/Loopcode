@@ -1,113 +1,145 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Typography CSS tutorial in English and Hindi with examples and live practice - LoOPCode"><title>6. Typography - LoOPCode</title><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Mono&display=swap" rel="stylesheet"><style>*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Poppins,sans-serif;background:#f5f7fa;color:#1f2937;line-height:1.7}header{background:#111827;color:#fff;text-align:center;padding:28px 15px;position:sticky;top:0;z-index:10;box-shadow:0 4px 16px #0002}header h1{margin:0;font-size:clamp(1.5rem,4vw,2.3rem)}header p{color:#cbd5e1;margin:6px 0}.container{max-width:1050px;margin:auto;padding:18px}.topic{background:#fff;margin:22px 0;padding:24px;border-radius:16px;border:1px solid #e5e7eb;box-shadow:0 8px 24px #0000000d}.topic h2{color:#2563eb;margin-top:0}.example{background:#f8fafc;border-left:4px solid #2563eb;padding:12px 15px;border-radius:8px}.example pre{white-space:pre-wrap;font-family:"Roboto Mono",monospace;font-size:14px}textarea{width:100%;min-height:210px;margin-top:15px;padding:14px;border:1px solid #334155;border-radius:10px;background:#0f172a;color:#e2e8f0;font-family:"Roboto Mono",monospace;font-size:14px;resize:vertical}button{display:inline-block;margin:10px 0;background:#2563eb;color:#fff;border:0;border-radius:9px;padding:11px 18px;font-weight:700;cursor:pointer}button:hover{background:#1d4ed8}iframe{display:block;width:100%;height:200px;border:1px solid #cbd5e1;border-radius:10px;background:#fff}.tip{margin-top:13px;padding:12px 15px;background:#eff6ff;border-radius:9px;color:#1e3a8a}footer{text-align:center;padding:28px;background:#111827;color:#cbd5e1;margin-top:35px}@media(max-width:650px){.container{padding:10px}.topic{padding:17px}.topic p{font-size:15px}textarea,iframe{height:170px;min-height:170px}}</style></head><body><header><h1>6. Typography</h1><p>LoOPCode • Learn CSS with Explanation + Live Practice</p></header><main class="container"><section class="topic"><h2>1. font-family</h2><p><b>English:</b> font-family is an important part of CSS used to control presentation, layout or maintainability in real websites.</p><p><b>Hindi:</b> font-family ko practical projects me use karke page ko better styled, responsive aur maintainable banaya ja sakta hai. Is concept ko example change karke practice karo.</p><div class="example"><b>Basic Example:</b><pre>&lt;div class="demo"&gt;CSS Practice&lt;/div&gt;</pre></div><textarea id="c0">&lt;!DOCTYPE html&gt;
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Typography in CSS CSS tutorial with detailed English-Hindi explanation, examples, mistakes and live practice - LoOPCode"><title>6. Typography in CSS - LoOPCode</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-D0ENCWPZL9"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-D0ENCWPZL9');</script><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Mono&display=swap" rel="stylesheet"><style>*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f5f7fa;color:#1f2937;font-family:Poppins,sans-serif;line-height:1.7}header{background:#111827;color:#fff;padding:30px 15px;text-align:center;position:sticky;top:0;z-index:20;box-shadow:0 4px 16px #0002}header h1{margin:0;font-size:clamp(1.5rem,4vw,2.4rem)}header p{margin:6px 0;color:#cbd5e1}.progress{max-width:1050px;margin:15px auto 0;padding:0 18px}.progressbar{height:8px;background:#e5e7eb;border-radius:20px;overflow:hidden}.progressbar span{display:block;width:24%;height:100%;background:#2563eb}.container{max-width:1050px;margin:auto;padding:18px}.topic{background:#fff;margin:24px 0;padding:25px;border-radius:16px;border:1px solid #e5e7eb;box-shadow:0 8px 25px #0000000d}.badge{display:inline-block;padding:4px 9px;border-radius:20px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700}.topic h2{color:#2563eb;margin:9px 0}.topic h3{font-size:16px;color:#374151;margin-bottom:6px}.codeview{background:#0f172a;color:#e2e8f0;padding:15px;border-radius:10px;overflow:auto;font-family:"Roboto Mono",monospace;font-size:13px}textarea{width:100%;min-height:220px;padding:15px;background:#0b1220;color:#e2e8f0;border:1px solid #334155;border-radius:10px;font-family:"Roboto Mono",monospace;font-size:13px;resize:vertical}button{border:0;background:#2563eb;color:#fff;padding:11px 19px;border-radius:9px;font-weight:700;cursor:pointer;margin:10px 0}button:hover{background:#1d4ed8;transform:translateY(-1px)}iframe{display:block;width:100%;height:200px;border:1px solid #cbd5e1;border-radius:10px;background:#fff}.challenge{margin-top:14px;padding:14px;background:#ecfdf5;border-left:4px solid #10b981;border-radius:9px;color:#065f46}ul{padding-left:22px}footer{text-align:center;padding:30px;background:#111827;color:#cbd5e1;margin-top:30px}@media(max-width:650px){.container{padding:9px}.topic{padding:18px}.topic p{font-size:15px}textarea,iframe{height:175px;min-height:175px}}</style></head><body><header><h1>6. Typography in CSS</h1><p>LoOPCode • CSS Complete Learning Chapter</p></header><div class="progress"><div class="progressbar"><span></span></div></div><main class="container"><section class="topic"><div class="badge">CONCEPT 1</div><h2>1. font-family</h2><p><b>English:</b> Font family typeface choose karta hai.</p><p><b>Hindi:</b> Font family typeface choose karta hai. Is concept ko practical website me use karte waqt syntax, browser behavior aur responsive effect ko samajhna important hai.</p><h3>Syntax / Example</h3><pre class="codeview">/* font-family */
+.demo {
+  padding: 20px;
+  margin: 10px;
+  color: #2563eb;
+}</pre><h3>Correct Example</h3><p>Use the property/value according to the design requirement and keep the rule readable and reusable.</p><h3>Common Mistakes</h3><ul><li>Property name ya value ki spelling galat karna.</li><li>Selector ko unnecessarily complex banana.</li><li>Responsive screens par output test na karna.</li></ul><textarea id="c0">&lt;!DOCTYPE html&gt;
 &lt;html&gt;&lt;head&gt;&lt;style&gt;
 .demo {
-  padding: 24px;
-  margin: 10px;
-  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  padding: 25px;
+  background: linear-gradient(135deg,#2563eb,#7c3aed);
   color: white;
   border-radius: 12px;
-  font-family: Arial, sans-serif;
   text-align: center;
+  transition: .3s;
 }
 .demo:hover { transform: translateY(-3px); }
 &lt;/style&gt;&lt;/head&gt;&lt;body&gt;
-&lt;div class="demo"&gt;CSS Practice: font-family&lt;/div&gt;
-&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c0','o0')">▶ Run Code</button><iframe id="o0"></iframe><div class="tip"><b>💡 Practice:</b> CSS property ki value change karke output dekho. Ye learning ka sabse important part hai.</div></section><section class="topic"><h2>2. font-size</h2><p><b>English:</b> font-size is an important part of CSS used to control presentation, layout or maintainability in real websites.</p><p><b>Hindi:</b> font-size ko practical projects me use karke page ko better styled, responsive aur maintainable banaya ja sakta hai. Is concept ko example change karke practice karo.</p><div class="example"><b>Basic Example:</b><pre>&lt;div class="demo"&gt;CSS Practice&lt;/div&gt;</pre></div><textarea id="c1">&lt;!DOCTYPE html&gt;
+&lt;div class="demo"&gt;font-family — Practice Me&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c0','o0')">▶ Run Code</button><iframe id="o0"></iframe><div class="challenge"><b>🎯 Mini Challenge:</b> Code me kam se kam 2 values change karo, output compare karo aur phir apna version banao.</div></section><section class="topic"><div class="badge">CONCEPT 2</div><h2>2. font-size</h2><p><b>English:</b> Font size text ka scale control karta hai.</p><p><b>Hindi:</b> Font size text ka scale control karta hai. Is concept ko practical website me use karte waqt syntax, browser behavior aur responsive effect ko samajhna important hai.</p><h3>Syntax / Example</h3><pre class="codeview">/* font-size */
+.demo {
+  padding: 20px;
+  margin: 10px;
+  background: #dbeafe;
+}</pre><h3>Correct Example</h3><p>Use the property/value according to the design requirement and keep the rule readable and reusable.</p><h3>Common Mistakes</h3><ul><li>Property name ya value ki spelling galat karna.</li><li>Selector ko unnecessarily complex banana.</li><li>Responsive screens par output test na karna.</li></ul><textarea id="c1">&lt;!DOCTYPE html&gt;
 &lt;html&gt;&lt;head&gt;&lt;style&gt;
 .demo {
-  padding: 24px;
-  margin: 10px;
-  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  padding: 25px;
+  background: linear-gradient(135deg,#2563eb,#7c3aed);
   color: white;
   border-radius: 12px;
-  font-family: Arial, sans-serif;
   text-align: center;
+  transition: .3s;
 }
 .demo:hover { transform: translateY(-3px); }
 &lt;/style&gt;&lt;/head&gt;&lt;body&gt;
-&lt;div class="demo"&gt;CSS Practice: font-size&lt;/div&gt;
-&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c1','o1')">▶ Run Code</button><iframe id="o1"></iframe><div class="tip"><b>💡 Practice:</b> CSS property ki value change karke output dekho. Ye learning ka sabse important part hai.</div></section><section class="topic"><h2>3. font-weight</h2><p><b>English:</b> font-weight is an important part of CSS used to control presentation, layout or maintainability in real websites.</p><p><b>Hindi:</b> font-weight ko practical projects me use karke page ko better styled, responsive aur maintainable banaya ja sakta hai. Is concept ko example change karke practice karo.</p><div class="example"><b>Basic Example:</b><pre>&lt;div class="demo"&gt;CSS Practice&lt;/div&gt;</pre></div><textarea id="c2">&lt;!DOCTYPE html&gt;
+&lt;div class="demo"&gt;font-size — Practice Me&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c1','o1')">▶ Run Code</button><iframe id="o1"></iframe><div class="challenge"><b>🎯 Mini Challenge:</b> Code me kam se kam 2 values change karo, output compare karo aur phir apna version banao.</div></section><section class="topic"><div class="badge">CONCEPT 3</div><h2>3. font-weight</h2><p><b>English:</b> Weight text ki thickness control karta hai.</p><p><b>Hindi:</b> Weight text ki thickness control karta hai. Is concept ko practical website me use karte waqt syntax, browser behavior aur responsive effect ko samajhna important hai.</p><h3>Syntax / Example</h3><pre class="codeview">/* font-weight */
+.demo {
+  padding: 20px;
+  margin: 10px;
+  border: 2px solid #2563eb;
+}</pre><h3>Correct Example</h3><p>Use the property/value according to the design requirement and keep the rule readable and reusable.</p><h3>Common Mistakes</h3><ul><li>Property name ya value ki spelling galat karna.</li><li>Selector ko unnecessarily complex banana.</li><li>Responsive screens par output test na karna.</li></ul><textarea id="c2">&lt;!DOCTYPE html&gt;
 &lt;html&gt;&lt;head&gt;&lt;style&gt;
 .demo {
-  padding: 24px;
-  margin: 10px;
-  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  padding: 25px;
+  background: linear-gradient(135deg,#2563eb,#7c3aed);
   color: white;
   border-radius: 12px;
-  font-family: Arial, sans-serif;
   text-align: center;
+  transition: .3s;
 }
 .demo:hover { transform: translateY(-3px); }
 &lt;/style&gt;&lt;/head&gt;&lt;body&gt;
-&lt;div class="demo"&gt;CSS Practice: font-weight&lt;/div&gt;
-&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c2','o2')">▶ Run Code</button><iframe id="o2"></iframe><div class="tip"><b>💡 Practice:</b> CSS property ki value change karke output dekho. Ye learning ka sabse important part hai.</div></section><section class="topic"><h2>4. line-height</h2><p><b>English:</b> line-height is an important part of CSS used to control presentation, layout or maintainability in real websites.</p><p><b>Hindi:</b> line-height ko practical projects me use karke page ko better styled, responsive aur maintainable banaya ja sakta hai. Is concept ko example change karke practice karo.</p><div class="example"><b>Basic Example:</b><pre>&lt;div class="demo"&gt;CSS Practice&lt;/div&gt;</pre></div><textarea id="c3">&lt;!DOCTYPE html&gt;
+&lt;div class="demo"&gt;font-weight — Practice Me&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c2','o2')">▶ Run Code</button><iframe id="o2"></iframe><div class="challenge"><b>🎯 Mini Challenge:</b> Code me kam se kam 2 values change karo, output compare karo aur phir apna version banao.</div></section><section class="topic"><div class="badge">CONCEPT 4</div><h2>4. line-height</h2><p><b>English:</b> Line height lines ke beech vertical spacing control karta hai.</p><p><b>Hindi:</b> Line height lines ke beech vertical spacing control karta hai. Is concept ko practical website me use karte waqt syntax, browser behavior aur responsive effect ko samajhna important hai.</p><h3>Syntax / Example</h3><pre class="codeview">/* line-height */
+.demo {
+  padding: 20px;
+  margin: 10px;
+  color: #2563eb;
+}</pre><h3>Correct Example</h3><p>Use the property/value according to the design requirement and keep the rule readable and reusable.</p><h3>Common Mistakes</h3><ul><li>Property name ya value ki spelling galat karna.</li><li>Selector ko unnecessarily complex banana.</li><li>Responsive screens par output test na karna.</li></ul><textarea id="c3">&lt;!DOCTYPE html&gt;
 &lt;html&gt;&lt;head&gt;&lt;style&gt;
 .demo {
-  padding: 24px;
-  margin: 10px;
-  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  padding: 25px;
+  background: linear-gradient(135deg,#2563eb,#7c3aed);
   color: white;
   border-radius: 12px;
-  font-family: Arial, sans-serif;
   text-align: center;
+  transition: .3s;
 }
 .demo:hover { transform: translateY(-3px); }
 &lt;/style&gt;&lt;/head&gt;&lt;body&gt;
-&lt;div class="demo"&gt;CSS Practice: line-height&lt;/div&gt;
-&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c3','o3')">▶ Run Code</button><iframe id="o3"></iframe><div class="tip"><b>💡 Practice:</b> CSS property ki value change karke output dekho. Ye learning ka sabse important part hai.</div></section><section class="topic"><h2>5. letter-spacing</h2><p><b>English:</b> letter-spacing is an important part of CSS used to control presentation, layout or maintainability in real websites.</p><p><b>Hindi:</b> letter-spacing ko practical projects me use karke page ko better styled, responsive aur maintainable banaya ja sakta hai. Is concept ko example change karke practice karo.</p><div class="example"><b>Basic Example:</b><pre>&lt;div class="demo"&gt;CSS Practice&lt;/div&gt;</pre></div><textarea id="c4">&lt;!DOCTYPE html&gt;
+&lt;div class="demo"&gt;line-height — Practice Me&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c3','o3')">▶ Run Code</button><iframe id="o3"></iframe><div class="challenge"><b>🎯 Mini Challenge:</b> Code me kam se kam 2 values change karo, output compare karo aur phir apna version banao.</div></section><section class="topic"><div class="badge">CONCEPT 5</div><h2>5. letter-spacing and word-spacing</h2><p><b>English:</b> Letters aur words ke beech spacing control hoti hai.</p><p><b>Hindi:</b> Letters aur words ke beech spacing control hoti hai. Is concept ko practical website me use karte waqt syntax, browser behavior aur responsive effect ko samajhna important hai.</p><h3>Syntax / Example</h3><pre class="codeview">/* letter-spacing and word-spacing */
+.demo {
+  padding: 20px;
+  margin: 10px;
+  background: #dbeafe;
+}</pre><h3>Correct Example</h3><p>Use the property/value according to the design requirement and keep the rule readable and reusable.</p><h3>Common Mistakes</h3><ul><li>Property name ya value ki spelling galat karna.</li><li>Selector ko unnecessarily complex banana.</li><li>Responsive screens par output test na karna.</li></ul><textarea id="c4">&lt;!DOCTYPE html&gt;
 &lt;html&gt;&lt;head&gt;&lt;style&gt;
 .demo {
-  padding: 24px;
-  margin: 10px;
-  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  padding: 25px;
+  background: linear-gradient(135deg,#2563eb,#7c3aed);
   color: white;
   border-radius: 12px;
-  font-family: Arial, sans-serif;
   text-align: center;
+  transition: .3s;
 }
 .demo:hover { transform: translateY(-3px); }
 &lt;/style&gt;&lt;/head&gt;&lt;body&gt;
-&lt;div class="demo"&gt;CSS Practice: letter-spacing&lt;/div&gt;
-&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c4','o4')">▶ Run Code</button><iframe id="o4"></iframe><div class="tip"><b>💡 Practice:</b> CSS property ki value change karke output dekho. Ye learning ka sabse important part hai.</div></section><section class="topic"><h2>6. text-align</h2><p><b>English:</b> text-align is an important part of CSS used to control presentation, layout or maintainability in real websites.</p><p><b>Hindi:</b> text-align ko practical projects me use karke page ko better styled, responsive aur maintainable banaya ja sakta hai. Is concept ko example change karke practice karo.</p><div class="example"><b>Basic Example:</b><pre>&lt;div class="demo"&gt;CSS Practice&lt;/div&gt;</pre></div><textarea id="c5">&lt;!DOCTYPE html&gt;
+&lt;div class="demo"&gt;letter-spacing and word-spacing — Practice Me&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c4','o4')">▶ Run Code</button><iframe id="o4"></iframe><div class="challenge"><b>🎯 Mini Challenge:</b> Code me kam se kam 2 values change karo, output compare karo aur phir apna version banao.</div></section><section class="topic"><div class="badge">CONCEPT 6</div><h2>6. text-align</h2><p><b>English:</b> Text ki horizontal alignment set hoti hai.</p><p><b>Hindi:</b> Text ki horizontal alignment set hoti hai. Is concept ko practical website me use karte waqt syntax, browser behavior aur responsive effect ko samajhna important hai.</p><h3>Syntax / Example</h3><pre class="codeview">/* text-align */
+.demo {
+  padding: 20px;
+  margin: 10px;
+  border: 2px solid #2563eb;
+}</pre><h3>Correct Example</h3><p>Use the property/value according to the design requirement and keep the rule readable and reusable.</p><h3>Common Mistakes</h3><ul><li>Property name ya value ki spelling galat karna.</li><li>Selector ko unnecessarily complex banana.</li><li>Responsive screens par output test na karna.</li></ul><textarea id="c5">&lt;!DOCTYPE html&gt;
 &lt;html&gt;&lt;head&gt;&lt;style&gt;
 .demo {
-  padding: 24px;
-  margin: 10px;
-  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  padding: 25px;
+  background: linear-gradient(135deg,#2563eb,#7c3aed);
   color: white;
   border-radius: 12px;
-  font-family: Arial, sans-serif;
   text-align: center;
+  transition: .3s;
 }
 .demo:hover { transform: translateY(-3px); }
 &lt;/style&gt;&lt;/head&gt;&lt;body&gt;
-&lt;div class="demo"&gt;CSS Practice: text-align&lt;/div&gt;
-&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c5','o5')">▶ Run Code</button><iframe id="o5"></iframe><div class="tip"><b>💡 Practice:</b> CSS property ki value change karke output dekho. Ye learning ka sabse important part hai.</div></section><section class="topic"><h2>7. text-transform</h2><p><b>English:</b> text-transform is an important part of CSS used to control presentation, layout or maintainability in real websites.</p><p><b>Hindi:</b> text-transform ko practical projects me use karke page ko better styled, responsive aur maintainable banaya ja sakta hai. Is concept ko example change karke practice karo.</p><div class="example"><b>Basic Example:</b><pre>&lt;div class="demo"&gt;CSS Practice&lt;/div&gt;</pre></div><textarea id="c6">&lt;!DOCTYPE html&gt;
+&lt;div class="demo"&gt;text-align — Practice Me&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c5','o5')">▶ Run Code</button><iframe id="o5"></iframe><div class="challenge"><b>🎯 Mini Challenge:</b> Code me kam se kam 2 values change karo, output compare karo aur phir apna version banao.</div></section><section class="topic"><div class="badge">CONCEPT 7</div><h2>7. text-transform and decoration</h2><p><b>English:</b> Case aur decoration modify ki ja sakti hai.</p><p><b>Hindi:</b> Case aur decoration modify ki ja sakti hai. Is concept ko practical website me use karte waqt syntax, browser behavior aur responsive effect ko samajhna important hai.</p><h3>Syntax / Example</h3><pre class="codeview">/* text-transform and decoration */
+.demo {
+  padding: 20px;
+  margin: 10px;
+  color: #2563eb;
+}</pre><h3>Correct Example</h3><p>Use the property/value according to the design requirement and keep the rule readable and reusable.</p><h3>Common Mistakes</h3><ul><li>Property name ya value ki spelling galat karna.</li><li>Selector ko unnecessarily complex banana.</li><li>Responsive screens par output test na karna.</li></ul><textarea id="c6">&lt;!DOCTYPE html&gt;
 &lt;html&gt;&lt;head&gt;&lt;style&gt;
 .demo {
-  padding: 24px;
-  margin: 10px;
-  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  padding: 25px;
+  background: linear-gradient(135deg,#2563eb,#7c3aed);
   color: white;
   border-radius: 12px;
-  font-family: Arial, sans-serif;
   text-align: center;
+  transition: .3s;
 }
 .demo:hover { transform: translateY(-3px); }
 &lt;/style&gt;&lt;/head&gt;&lt;body&gt;
-&lt;div class="demo"&gt;CSS Practice: text-transform&lt;/div&gt;
-&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c6','o6')">▶ Run Code</button><iframe id="o6"></iframe><div class="tip"><b>💡 Practice:</b> CSS property ki value change karke output dekho. Ye learning ka sabse important part hai.</div></section><section class="topic"><h2>8. Web Fonts</h2><p><b>English:</b> Web Fonts is an important part of CSS used to control presentation, layout or maintainability in real websites.</p><p><b>Hindi:</b> Web Fonts ko practical projects me use karke page ko better styled, responsive aur maintainable banaya ja sakta hai. Is concept ko example change karke practice karo.</p><div class="example"><b>Basic Example:</b><pre>&lt;div class="demo"&gt;CSS Practice&lt;/div&gt;</pre></div><textarea id="c7">&lt;!DOCTYPE html&gt;
+&lt;div class="demo"&gt;text-transform and decoration — Practice Me&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c6','o6')">▶ Run Code</button><iframe id="o6"></iframe><div class="challenge"><b>🎯 Mini Challenge:</b> Code me kam se kam 2 values change karo, output compare karo aur phir apna version banao.</div></section><section class="topic"><div class="badge">CONCEPT 8</div><h2>8. Web Fonts</h2><p><b>English:</b> External web fonts se custom typography use kar sakte hain.</p><p><b>Hindi:</b> External web fonts se custom typography use kar sakte hain. Is concept ko practical website me use karte waqt syntax, browser behavior aur responsive effect ko samajhna important hai.</p><h3>Syntax / Example</h3><pre class="codeview">/* Web Fonts */
+.demo {
+  padding: 20px;
+  margin: 10px;
+  background: #dbeafe;
+}</pre><h3>Correct Example</h3><p>Use the property/value according to the design requirement and keep the rule readable and reusable.</p><h3>Common Mistakes</h3><ul><li>Property name ya value ki spelling galat karna.</li><li>Selector ko unnecessarily complex banana.</li><li>Responsive screens par output test na karna.</li></ul><textarea id="c7">&lt;!DOCTYPE html&gt;
 &lt;html&gt;&lt;head&gt;&lt;style&gt;
 .demo {
-  padding: 24px;
-  margin: 10px;
-  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  padding: 25px;
+  background: linear-gradient(135deg,#2563eb,#7c3aed);
   color: white;
   border-radius: 12px;
-  font-family: Arial, sans-serif;
   text-align: center;
+  transition: .3s;
 }
 .demo:hover { transform: translateY(-3px); }
 &lt;/style&gt;&lt;/head&gt;&lt;body&gt;
-&lt;div class="demo"&gt;CSS Practice: Web Fonts&lt;/div&gt;
-&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c7','o7')">▶ Run Code</button><iframe id="o7"></iframe><div class="tip"><b>💡 Practice:</b> CSS property ki value change karke output dekho. Ye learning ka sabse important part hai.</div></section></main><footer>Created by:- Dharmandra Singh</footer><script>function runCode(a,b){const c=document.getElementById(a).value,f=document.getElementById(b),d=f.contentDocument||f.contentWindow.document;d.open();d.write(c);d.close()}</script></body></html>
+&lt;div class="demo"&gt;Web Fonts — Practice Me&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c7','o7')">▶ Run Code</button><iframe id="o7"></iframe><div class="challenge"><b>🎯 Mini Challenge:</b> Code me kam se kam 2 values change karo, output compare karo aur phir apna version banao.</div></section></main><footer>Created by:- Dharmandra Singh</footer><script>function runCode(a,b){const c=document.getElementById(a).value,f=document.getElementById(b),d=f.contentDocument||f.contentWindow.document;d.open();d.write(c);d.close()}</script></body></html>
