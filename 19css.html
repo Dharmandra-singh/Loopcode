@@ -1,25 +1,79 @@
-<!doctype html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>19. CSS Frameworks - LoOPCode</title><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Mono&display=swap" rel="stylesheet"><style>*{box-sizing:border-box}body{margin:0;background:#f5f7fa;color:#1f2937;font-family:Poppins,sans-serif;line-height:1.7}header{background:#111827;color:#fff;text-align:center;padding:28px 15px;position:sticky;top:0;z-index:5}header h1{margin:0}.container{max-width:1050px;margin:auto;padding:18px}.topic{background:#fff;margin:22px 0;padding:24px;border-radius:16px;border:1px solid #e5e7eb;box-shadow:0 8px 24px #0001}.topic h2{color:#2563eb}.example{background:#f8fafc;border-left:4px solid #2563eb;padding:12px;border-radius:8px}.example pre{white-space:pre-wrap;font-family:monospace}textarea{width:100%;min-height:200px;margin-top:15px;padding:14px;background:#0f172a;color:#e2e8f0;border-radius:10px;font-family:monospace;font-size:14px}button{padding:11px 18px;margin:10px 0;background:#2563eb;color:#fff;border:0;border-radius:9px;font-weight:bold;cursor:pointer}iframe{width:100%;height:190px;border:1px solid #cbd5e1;border-radius:10px}.tip{margin-top:12px;padding:12px;background:#eff6ff;color:#1e3a8a;border-radius:9px}footer{text-align:center;background:#111827;color:#cbd5e1;padding:25px}@media(max-width:650px){.container{padding:10px}.topic{padding:17px}textarea,iframe{height:170px;min-height:170px}}</style></head><body><header><h1>19. CSS Frameworks</h1><p>LoOPCode • Learn CSS with Explanation + Live Practice</p></header><main class="container"><section class="topic"><h2>1. Bootstrap</h2><p><b>English:</b> Bootstrap is a practical CSS concept used to build modern, reusable and responsive interfaces.</p><p><b>Hindi:</b> Bootstrap ko projects me apply karke layout aur styling ko professional bana sakte ho. Example ko edit karke different values test karo.</p><div class="example"><b>Example:</b><pre>&lt;div class="demo"&gt;Bootstrap&lt;/div&gt;</pre></div><textarea id="c0">&lt;!DOCTYPE html&gt;
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="CSS Frameworks CSS tutorial with English-Hindi explanation, common mistakes and live practice - LoOPCode"><title>19. CSS Frameworks - LoOPCode</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-D0ENCWPZL9"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-D0ENCWPZL9');</script><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Mono&display=swap" rel="stylesheet"><style>*{box-sizing:border-box}body{margin:0;background:#f5f7fa;color:#1f2937;font-family:Poppins,sans-serif;line-height:1.7}header{background:#111827;color:#fff;text-align:center;padding:30px 15px;position:sticky;top:0;z-index:10}header h1{margin:0;font-size:clamp(1.5rem,4vw,2.4rem)}header p{color:#cbd5e1}.progress{max-width:1050px;margin:14px auto;padding:0 18px}.bar{height:8px;background:#e5e7eb;border-radius:20px}.bar span{display:block;height:100%;width:76%;background:#2563eb}.container{max-width:1050px;margin:auto;padding:18px}.topic{background:#fff;margin:24px 0;padding:25px;border-radius:16px;border:1px solid #e5e7eb;box-shadow:0 8px 25px #0000000d}.badge{display:inline-block;background:#dbeafe;color:#1d4ed8;padding:4px 9px;border-radius:20px;font-size:12px;font-weight:700}.topic h2{color:#2563eb}.topic h3{font-size:16px;color:#374151}.topic pre{background:#0f172a;color:#e2e8f0;padding:15px;border-radius:10px;overflow:auto;font-family:monospace}textarea{width:100%;min-height:220px;padding:15px;background:#0b1220;color:#e2e8f0;border:1px solid #334155;border-radius:10px;font-family:monospace;resize:vertical}button{background:#2563eb;color:white;border:0;border-radius:9px;padding:11px 19px;font-weight:700;margin:10px 0;cursor:pointer}iframe{display:block;width:100%;height:200px;border:1px solid #cbd5e1;border-radius:10px;background:white}.challenge{padding:14px;margin-top:14px;background:#ecfdf5;border-left:4px solid #10b981;border-radius:9px;color:#065f46}footer{text-align:center;background:#111827;color:#cbd5e1;padding:30px;margin-top:30px}@media(max-width:650px){.container{padding:9px}.topic{padding:18px}textarea,iframe{height:175px;min-height:175px}}</style></head><body><header><h1>19. CSS Frameworks</h1><p>LoOPCode • CSS Complete Learning Chapter</p></header><div class="progress"><div class="bar"><span></span></div></div><main class="container"><section class="topic"><span class="badge">CONCEPT 1</span><h2>1. Bootstrap</h2><p><b>English:</b> Bootstrap is an important CSS concept used in modern, responsive and maintainable web development.</p><p><b>Hindi:</b> Bootstrap ko practical website me use karke design ko responsive, interactive aur professional banaya ja sakta hai. Is concept ko values change karke practice karo.</p><h3>Example</h3><pre>/* Bootstrap */
+.demo {
+  padding: 24px;
+  background: #dbeafe;
+  color: #1e3a8a;
+  border: 2px solid #2563eb;
+  border-radius: 12px;
+}</pre><h3>Common Mistakes</h3><ul><li>Property/value spelling ya syntax mistake.</li><li>Unnecessarily complex selectors or rules.</li><li>Mobile screen par output test na karna.</li></ul><textarea id="c0">&lt;!DOCTYPE html&gt;
 &lt;html&gt;&lt;head&gt;&lt;style&gt;
-.demo{padding:25px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;border-radius:12px;text-align:center;font-family:Arial,sans-serif}
-.demo:hover{transform:translateY(-4px)}
-&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class="demo"&gt;Bootstrap Practice&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c0','o0')">▶ Run Code</button><iframe id="o0"></iframe><div class="tip"><b>💡 Practice:</b> Property/value change karke output ka difference observe karo.</div></section><section class="topic"><h2>2. Tailwind CSS</h2><p><b>English:</b> Tailwind CSS is a practical CSS concept used to build modern, reusable and responsive interfaces.</p><p><b>Hindi:</b> Tailwind CSS ko projects me apply karke layout aur styling ko professional bana sakte ho. Example ko edit karke different values test karo.</p><div class="example"><b>Example:</b><pre>&lt;div class="demo"&gt;Tailwind CSS&lt;/div&gt;</pre></div><textarea id="c1">&lt;!DOCTYPE html&gt;
+.demo{padding:25px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;border-radius:12px;text-align:center;transition:.3s}
+.demo:hover{transform:translateY(-3px)}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div class="demo"&gt;Bootstrap — Practice&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c0','o0')">▶ Run Code</button><iframe id="o0"></iframe><div class="challenge"><b>🎯 Mini Challenge:</b> Do CSS values change karo, output compare karo, phir apna version banao.</div></section><section class="topic"><span class="badge">CONCEPT 2</span><h2>2. Tailwind CSS</h2><p><b>English:</b> Tailwind CSS is an important CSS concept used in modern, responsive and maintainable web development.</p><p><b>Hindi:</b> Tailwind CSS ko practical website me use karke design ko responsive, interactive aur professional banaya ja sakta hai. Is concept ko values change karke practice karo.</p><h3>Example</h3><pre>/* Tailwind CSS */
+.demo {
+  padding: 24px;
+  background: #dbeafe;
+  color: #1e3a8a;
+  border: 2px solid #2563eb;
+  border-radius: 12px;
+}</pre><h3>Common Mistakes</h3><ul><li>Property/value spelling ya syntax mistake.</li><li>Unnecessarily complex selectors or rules.</li><li>Mobile screen par output test na karna.</li></ul><textarea id="c1">&lt;!DOCTYPE html&gt;
 &lt;html&gt;&lt;head&gt;&lt;style&gt;
-.demo{padding:25px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;border-radius:12px;text-align:center;font-family:Arial,sans-serif}
-.demo:hover{transform:translateY(-4px)}
-&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class="demo"&gt;Tailwind CSS Practice&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c1','o1')">▶ Run Code</button><iframe id="o1"></iframe><div class="tip"><b>💡 Practice:</b> Property/value change karke output ka difference observe karo.</div></section><section class="topic"><h2>3. utility classes</h2><p><b>English:</b> utility classes is a practical CSS concept used to build modern, reusable and responsive interfaces.</p><p><b>Hindi:</b> utility classes ko projects me apply karke layout aur styling ko professional bana sakte ho. Example ko edit karke different values test karo.</p><div class="example"><b>Example:</b><pre>&lt;div class="demo"&gt;utility classes&lt;/div&gt;</pre></div><textarea id="c2">&lt;!DOCTYPE html&gt;
+.demo{padding:25px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;border-radius:12px;text-align:center;transition:.3s}
+.demo:hover{transform:translateY(-3px)}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div class="demo"&gt;Tailwind CSS — Practice&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c1','o1')">▶ Run Code</button><iframe id="o1"></iframe><div class="challenge"><b>🎯 Mini Challenge:</b> Do CSS values change karo, output compare karo, phir apna version banao.</div></section><section class="topic"><span class="badge">CONCEPT 3</span><h2>3. utility classes</h2><p><b>English:</b> utility classes is an important CSS concept used in modern, responsive and maintainable web development.</p><p><b>Hindi:</b> utility classes ko practical website me use karke design ko responsive, interactive aur professional banaya ja sakta hai. Is concept ko values change karke practice karo.</p><h3>Example</h3><pre>/* utility classes */
+.demo {
+  padding: 24px;
+  background: #dbeafe;
+  color: #1e3a8a;
+  border: 2px solid #2563eb;
+  border-radius: 12px;
+}</pre><h3>Common Mistakes</h3><ul><li>Property/value spelling ya syntax mistake.</li><li>Unnecessarily complex selectors or rules.</li><li>Mobile screen par output test na karna.</li></ul><textarea id="c2">&lt;!DOCTYPE html&gt;
 &lt;html&gt;&lt;head&gt;&lt;style&gt;
-.demo{padding:25px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;border-radius:12px;text-align:center;font-family:Arial,sans-serif}
-.demo:hover{transform:translateY(-4px)}
-&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class="demo"&gt;utility classes Practice&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c2','o2')">▶ Run Code</button><iframe id="o2"></iframe><div class="tip"><b>💡 Practice:</b> Property/value change karke output ka difference observe karo.</div></section><section class="topic"><h2>4. components</h2><p><b>English:</b> components is a practical CSS concept used to build modern, reusable and responsive interfaces.</p><p><b>Hindi:</b> components ko projects me apply karke layout aur styling ko professional bana sakte ho. Example ko edit karke different values test karo.</p><div class="example"><b>Example:</b><pre>&lt;div class="demo"&gt;components&lt;/div&gt;</pre></div><textarea id="c3">&lt;!DOCTYPE html&gt;
+.demo{padding:25px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;border-radius:12px;text-align:center;transition:.3s}
+.demo:hover{transform:translateY(-3px)}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div class="demo"&gt;utility classes — Practice&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c2','o2')">▶ Run Code</button><iframe id="o2"></iframe><div class="challenge"><b>🎯 Mini Challenge:</b> Do CSS values change karo, output compare karo, phir apna version banao.</div></section><section class="topic"><span class="badge">CONCEPT 4</span><h2>4. components</h2><p><b>English:</b> components is an important CSS concept used in modern, responsive and maintainable web development.</p><p><b>Hindi:</b> components ko practical website me use karke design ko responsive, interactive aur professional banaya ja sakta hai. Is concept ko values change karke practice karo.</p><h3>Example</h3><pre>/* components */
+.demo {
+  padding: 24px;
+  background: #dbeafe;
+  color: #1e3a8a;
+  border: 2px solid #2563eb;
+  border-radius: 12px;
+}</pre><h3>Common Mistakes</h3><ul><li>Property/value spelling ya syntax mistake.</li><li>Unnecessarily complex selectors or rules.</li><li>Mobile screen par output test na karna.</li></ul><textarea id="c3">&lt;!DOCTYPE html&gt;
 &lt;html&gt;&lt;head&gt;&lt;style&gt;
-.demo{padding:25px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;border-radius:12px;text-align:center;font-family:Arial,sans-serif}
-.demo:hover{transform:translateY(-4px)}
-&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class="demo"&gt;components Practice&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c3','o3')">▶ Run Code</button><iframe id="o3"></iframe><div class="tip"><b>💡 Practice:</b> Property/value change karke output ka difference observe karo.</div></section><section class="topic"><h2>5. responsive utilities</h2><p><b>English:</b> responsive utilities is a practical CSS concept used to build modern, reusable and responsive interfaces.</p><p><b>Hindi:</b> responsive utilities ko projects me apply karke layout aur styling ko professional bana sakte ho. Example ko edit karke different values test karo.</p><div class="example"><b>Example:</b><pre>&lt;div class="demo"&gt;responsive utilities&lt;/div&gt;</pre></div><textarea id="c4">&lt;!DOCTYPE html&gt;
+.demo{padding:25px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;border-radius:12px;text-align:center;transition:.3s}
+.demo:hover{transform:translateY(-3px)}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div class="demo"&gt;components — Practice&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c3','o3')">▶ Run Code</button><iframe id="o3"></iframe><div class="challenge"><b>🎯 Mini Challenge:</b> Do CSS values change karo, output compare karo, phir apna version banao.</div></section><section class="topic"><span class="badge">CONCEPT 5</span><h2>5. responsive utilities</h2><p><b>English:</b> responsive utilities is an important CSS concept used in modern, responsive and maintainable web development.</p><p><b>Hindi:</b> responsive utilities ko practical website me use karke design ko responsive, interactive aur professional banaya ja sakta hai. Is concept ko values change karke practice karo.</p><h3>Example</h3><pre>/* responsive utilities */
+.demo {
+  padding: 24px;
+  background: #dbeafe;
+  color: #1e3a8a;
+  border: 2px solid #2563eb;
+  border-radius: 12px;
+}</pre><h3>Common Mistakes</h3><ul><li>Property/value spelling ya syntax mistake.</li><li>Unnecessarily complex selectors or rules.</li><li>Mobile screen par output test na karna.</li></ul><textarea id="c4">&lt;!DOCTYPE html&gt;
 &lt;html&gt;&lt;head&gt;&lt;style&gt;
-.demo{padding:25px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;border-radius:12px;text-align:center;font-family:Arial,sans-serif}
-.demo:hover{transform:translateY(-4px)}
-&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class="demo"&gt;responsive utilities Practice&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c4','o4')">▶ Run Code</button><iframe id="o4"></iframe><div class="tip"><b>💡 Practice:</b> Property/value change karke output ka difference observe karo.</div></section><section class="topic"><h2>6. when to use frameworks</h2><p><b>English:</b> when to use frameworks is a practical CSS concept used to build modern, reusable and responsive interfaces.</p><p><b>Hindi:</b> when to use frameworks ko projects me apply karke layout aur styling ko professional bana sakte ho. Example ko edit karke different values test karo.</p><div class="example"><b>Example:</b><pre>&lt;div class="demo"&gt;when to use frameworks&lt;/div&gt;</pre></div><textarea id="c5">&lt;!DOCTYPE html&gt;
+.demo{padding:25px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;border-radius:12px;text-align:center;transition:.3s}
+.demo:hover{transform:translateY(-3px)}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div class="demo"&gt;responsive utilities — Practice&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c4','o4')">▶ Run Code</button><iframe id="o4"></iframe><div class="challenge"><b>🎯 Mini Challenge:</b> Do CSS values change karo, output compare karo, phir apna version banao.</div></section><section class="topic"><span class="badge">CONCEPT 6</span><h2>6. choosing a framework</h2><p><b>English:</b> choosing a framework is an important CSS concept used in modern, responsive and maintainable web development.</p><p><b>Hindi:</b> choosing a framework ko practical website me use karke design ko responsive, interactive aur professional banaya ja sakta hai. Is concept ko values change karke practice karo.</p><h3>Example</h3><pre>/* choosing a framework */
+.demo {
+  padding: 24px;
+  background: #dbeafe;
+  color: #1e3a8a;
+  border: 2px solid #2563eb;
+  border-radius: 12px;
+}</pre><h3>Common Mistakes</h3><ul><li>Property/value spelling ya syntax mistake.</li><li>Unnecessarily complex selectors or rules.</li><li>Mobile screen par output test na karna.</li></ul><textarea id="c5">&lt;!DOCTYPE html&gt;
 &lt;html&gt;&lt;head&gt;&lt;style&gt;
-.demo{padding:25px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;border-radius:12px;text-align:center;font-family:Arial,sans-serif}
-.demo:hover{transform:translateY(-4px)}
-&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class="demo"&gt;when to use frameworks Practice&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c5','o5')">▶ Run Code</button><iframe id="o5"></iframe><div class="tip"><b>💡 Practice:</b> Property/value change karke output ka difference observe karo.</div></section></main><footer>Created by:- Dharmandra Singh</footer><script>function runCode(a,b){const c=document.getElementById(a).value,f=document.getElementById(b),d=f.contentDocument;d.open();d.write(c);d.close()}</script></body></html>
+.demo{padding:25px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;border-radius:12px;text-align:center;transition:.3s}
+.demo:hover{transform:translateY(-3px)}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div class="demo"&gt;choosing a framework — Practice&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c5','o5')">▶ Run Code</button><iframe id="o5"></iframe><div class="challenge"><b>🎯 Mini Challenge:</b> Do CSS values change karo, output compare karo, phir apna version banao.</div></section></main><footer>Created by:- Dharmandra Singh</footer><script>function runCode(a,b){const c=document.getElementById(a).value,f=document.getElementById(b),d=f.contentDocument;d.open();d.write(c);d.close()}</script></body></html>
