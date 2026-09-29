@@ -1,227 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D0ENCWPZL9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-D0ENCWPZL9');
-</script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>17. CSS Flexbox: Advanced Concepts</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #1cc9be;
-      color: #222;
-    }
-    .section {
-      background: rgba(255, 255, 255, 0.3);
-      padding: 20px;
-      margin: 25px auto;
-      border-radius: 12px;
-      max-width: 1000px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    }
-    h2, h3 {
-      color: #333;
-      margin-bottom: 15px;
-    }
-    p {
-      font-size: 18px;
-      margin-bottom: 20px;
-      line-height: 1.7;
-    }
-    textarea {
-      width: 100%;
-      height: 170px;
-      font-family: 'Courier New', monospace;
-      font-size: 16px;
-      padding: 14px;
-      background-color: rgba(255, 255, 255, 0.95);
-      border: 2px solid #ccc;
-      border-radius: 10px;
-      margin: 12px 0;
-      color: #222;
-      transition: all 0.3s ease;
-      resize: vertical;
-      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
-    }
-    textarea:focus {
-      outline: none;
-      border-color: #00c6ff;
-      box-shadow: 0 0 8px rgba(0, 198, 255, 0.5);
-    }
-    button {
-      background: linear-gradient(135deg, #00c6ff, #0072ff);
-      color: white;
-      padding: 8px 18px;
-      font-size: 15px;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
-    button:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
-    }
-    iframe {
-      width: 100%;
-      height: 160px;
-      border: 2px solid white;
-      background: rgba(255, 255, 255, 0.9);
-      border-radius: 10px;
-      margin-top: 10px;
-    }
-  </style>
-</head>
-<body>
-  <div class="section">
-    <h2>17. CSS Flexbox: Advanced Concepts</h2>
-
-    <h3>I. Align-items & Align-self</h3>
-    <p><strong>Explanation:</strong> <code>align-items</code> container ke andar sabhi items ko vertically align karta hai. <code>align-self</code> se ek individual item ko override kiya ja sakta hai.</p>
-
-    <textarea id="code1">
-<style>
-  .flexbox {
-    display: flex;
-    align-items: center;
-    height: 150px;
-    background: #e0f7fa;
-  }
-  .box {
-    width: 60px;
-    height: 60px;
-    background: #ff6f61;
-    margin: 10px;
-  }
-  .box.self {
-    align-self: flex-end;
-    background: #4caf50;
-  }
-</style>
-
-<div class="flexbox">
-  <div class="box"></div>
-  <div class="box self"></div>
-  <div class="box"></div>
-</div>
-    </textarea>
-    <button onclick="runCode('code1', 'output1')">Run Code</button>
-    <iframe id="output1"></iframe>
-
-    <h3>II. Justify-content</h3>
-    <p><strong>Explanation:</strong> <code>justify-content</code> horizontal alignment control karta hai flex container me.</p>
-
-    <textarea id="code2">
-<style>
-  .flexbox {
-    display: flex;
-    justify-content: space-around;
-    background: #d1c4e9;
-    padding: 10px;
-  }
-  .box {
-    width: 50px;
-    height: 50px;
-    background: #673ab7;
-  }
-</style>
-
-<div class="flexbox">
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-</div>
-    </textarea>
-    <button onclick="runCode('code2', 'output2')">Run Code</button>
-    <iframe id="output2"></iframe>
-
-    <h3>III. Flex-grow & Flex-shrink</h3>
-    <p><strong>Explanation:</strong> <code>flex-grow</code> space expand karne ke liye hota hai, jabki <code>flex-shrink</code> space kam karne ke liye hota hai.</p>
-
-    <textarea id="code3">
-<style>
-  .flexbox {
-    display: flex;
-    background: #fbe9e7;
-  }
-  .box {
-    height: 60px;
-    margin: 5px;
-    background: #ff5722;
-  }
-  .grow1 {
-    flex-grow: 1;
-  }
-  .grow2 {
-    flex-grow: 2;
-    background: #ff9800;
-  }
-</style>
-
-<div class="flexbox">
-  <div class="box grow1">1x</div>
-  <div class="box grow2">2x</div>
-</div>
-    </textarea>
-    <button onclick="runCode('code3', 'output3')">Run Code</button>
-    <iframe id="output3"></iframe>
-
-    <h3>IV. Flex Wrap</h3>
-    <p><strong>Explanation:</strong> <code>flex-wrap</code> allow karta hai items ko wrap hone ka jab width kam ho.</p>
-
-    <textarea id="code4">
-<style>
-  .flexbox {
-    display: flex;
-    flex-wrap: wrap;
-    background: #b2ebf2;
-  }
-  .box {
-    width: 200px;
-    height: 100px;
-    margin: 10px;
-    background: #009688;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-</style>
-
-<div class="flexbox">
-  <div class="box">Box 1</div>
-  <div class="box">Box 2</div>
-  <div class="box">Box 3</div>
-  <div class="box">Box 4</div>
-</div>
-    </textarea>
-    <button onclick="runCode('code4', 'output4')">Run Code</button>
-    <iframe id="output4"></iframe>
-  </div>
-
-  <script>
-    function runCode(textareaId, iframeId) {
-      const code = document.getElementById(textareaId).value;
-      const iframe = document.getElementById(iframeId);
-      const doc = iframe.contentDocument || iframe.contentWindow.document;
-      doc.open();
-      doc.write(code);
-      doc.close();
-    }
-  </script>
-</body>
-</html>
+<!doctype html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>17. Advanced Flexbox - LoOPCode</title><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Mono&display=swap" rel="stylesheet"><style>*{box-sizing:border-box}body{margin:0;background:#f5f7fa;color:#1f2937;font-family:Poppins,sans-serif;line-height:1.7}header{background:#111827;color:#fff;text-align:center;padding:28px 15px;position:sticky;top:0;z-index:5}header h1{margin:0}.container{max-width:1050px;margin:auto;padding:18px}.topic{background:#fff;margin:22px 0;padding:24px;border-radius:16px;border:1px solid #e5e7eb;box-shadow:0 8px 24px #0001}.topic h2{color:#2563eb}.example{background:#f8fafc;border-left:4px solid #2563eb;padding:12px;border-radius:8px}.example pre{white-space:pre-wrap;font-family:monospace}textarea{width:100%;min-height:200px;margin-top:15px;padding:14px;background:#0f172a;color:#e2e8f0;border-radius:10px;font-family:monospace;font-size:14px}button{padding:11px 18px;margin:10px 0;background:#2563eb;color:#fff;border:0;border-radius:9px;font-weight:bold;cursor:pointer}iframe{width:100%;height:190px;border:1px solid #cbd5e1;border-radius:10px}.tip{margin-top:12px;padding:12px;background:#eff6ff;color:#1e3a8a;border-radius:9px}footer{text-align:center;background:#111827;color:#cbd5e1;padding:25px}@media(max-width:650px){.container{padding:10px}.topic{padding:17px}textarea,iframe{height:170px;min-height:170px}}</style></head><body><header><h1>17. Advanced Flexbox</h1><p>LoOPCode • Learn CSS with Explanation + Live Practice</p></header><main class="container"><section class="topic"><h2>1. flex-basis</h2><p><b>English:</b> flex-basis is a practical CSS concept used to build modern, reusable and responsive interfaces.</p><p><b>Hindi:</b> flex-basis ko projects me apply karke layout aur styling ko professional bana sakte ho. Example ko edit karke different values test karo.</p><div class="example"><b>Example:</b><pre>&lt;div class="demo"&gt;flex-basis&lt;/div&gt;</pre></div><textarea id="c0">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo{padding:25px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;border-radius:12px;text-align:center;font-family:Arial,sans-serif}
+.demo:hover{transform:translateY(-4px)}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class="demo"&gt;flex-basis Practice&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c0','o0')">▶ Run Code</button><iframe id="o0"></iframe><div class="tip"><b>💡 Practice:</b> Property/value change karke output ka difference observe karo.</div></section><section class="topic"><h2>2. flex-grow & flex-shrink</h2><p><b>English:</b> flex-grow & flex-shrink is a practical CSS concept used to build modern, reusable and responsive interfaces.</p><p><b>Hindi:</b> flex-grow & flex-shrink ko projects me apply karke layout aur styling ko professional bana sakte ho. Example ko edit karke different values test karo.</p><div class="example"><b>Example:</b><pre>&lt;div class="demo"&gt;flex-grow & flex-shrink&lt;/div&gt;</pre></div><textarea id="c1">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo{padding:25px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;border-radius:12px;text-align:center;font-family:Arial,sans-serif}
+.demo:hover{transform:translateY(-4px)}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class="demo"&gt;flex-grow & flex-shrink Practice&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c1','o1')">▶ Run Code</button><iframe id="o1"></iframe><div class="tip"><b>💡 Practice:</b> Property/value change karke output ka difference observe karo.</div></section><section class="topic"><h2>3. align-self</h2><p><b>English:</b> align-self is a practical CSS concept used to build modern, reusable and responsive interfaces.</p><p><b>Hindi:</b> align-self ko projects me apply karke layout aur styling ko professional bana sakte ho. Example ko edit karke different values test karo.</p><div class="example"><b>Example:</b><pre>&lt;div class="demo"&gt;align-self&lt;/div&gt;</pre></div><textarea id="c2">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo{padding:25px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;border-radius:12px;text-align:center;font-family:Arial,sans-serif}
+.demo:hover{transform:translateY(-4px)}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class="demo"&gt;align-self Practice&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c2','o2')">▶ Run Code</button><iframe id="o2"></iframe><div class="tip"><b>💡 Practice:</b> Property/value change karke output ka difference observe karo.</div></section><section class="topic"><h2>4. order</h2><p><b>English:</b> order is a practical CSS concept used to build modern, reusable and responsive interfaces.</p><p><b>Hindi:</b> order ko projects me apply karke layout aur styling ko professional bana sakte ho. Example ko edit karke different values test karo.</p><div class="example"><b>Example:</b><pre>&lt;div class="demo"&gt;order&lt;/div&gt;</pre></div><textarea id="c3">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo{padding:25px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;border-radius:12px;text-align:center;font-family:Arial,sans-serif}
+.demo:hover{transform:translateY(-4px)}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class="demo"&gt;order Practice&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c3','o3')">▶ Run Code</button><iframe id="o3"></iframe><div class="tip"><b>💡 Practice:</b> Property/value change karke output ka difference observe karo.</div></section><section class="topic"><h2>5. nested flex</h2><p><b>English:</b> nested flex is a practical CSS concept used to build modern, reusable and responsive interfaces.</p><p><b>Hindi:</b> nested flex ko projects me apply karke layout aur styling ko professional bana sakte ho. Example ko edit karke different values test karo.</p><div class="example"><b>Example:</b><pre>&lt;div class="demo"&gt;nested flex&lt;/div&gt;</pre></div><textarea id="c4">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo{padding:25px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;border-radius:12px;text-align:center;font-family:Arial,sans-serif}
+.demo:hover{transform:translateY(-4px)}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class="demo"&gt;nested flex Practice&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c4','o4')">▶ Run Code</button><iframe id="o4"></iframe><div class="tip"><b>💡 Practice:</b> Property/value change karke output ka difference observe karo.</div></section><section class="topic"><h2>6. common patterns</h2><p><b>English:</b> common patterns is a practical CSS concept used to build modern, reusable and responsive interfaces.</p><p><b>Hindi:</b> common patterns ko projects me apply karke layout aur styling ko professional bana sakte ho. Example ko edit karke different values test karo.</p><div class="example"><b>Example:</b><pre>&lt;div class="demo"&gt;common patterns&lt;/div&gt;</pre></div><textarea id="c5">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo{padding:25px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;border-radius:12px;text-align:center;font-family:Arial,sans-serif}
+.demo:hover{transform:translateY(-4px)}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class="demo"&gt;common patterns Practice&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c5','o5')">▶ Run Code</button><iframe id="o5"></iframe><div class="tip"><b>💡 Practice:</b> Property/value change karke output ka difference observe karo.</div></section></main><footer>Created by:- Dharmandra Singh</footer><script>function runCode(a,b){const c=document.getElementById(a).value,f=document.getElementById(b),d=f.contentDocument;d.open();d.write(c);d.close()}</script></body></html>
