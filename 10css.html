@@ -1,262 +1,99 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D0ENCWPZL9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-D0ENCWPZL9');
-</script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>10. Grid Layout</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #1cc9be;
-      padding: 20px;
-    }
-    .section {
-      background: rgba(255, 255, 255, 0.3);
-      padding: 20px;
-      border-radius: 15px;
-      max-width: 1000px;
-      margin: auto;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    }
-    h2, h3 {
-      color: #349;
-      margin-bottom: 15px;
-    }
-    p {
-      font-size: 18px;
-      margin-bottom: 15px;
-      line-height: 1.6;
-    }
-    textarea, iframe {
-      width: 100%;
-      height: 180px;
-      font-size: 16px;
-      padding: 10px;
-      margin: 10px 0 20px;
-      border-radius: 10px;
-      border: 2px solid white;
-      background: rgba(255,248,240,0.4);
-      font-family: monospace;
-    }
-    iframe {
-      margin-top: 10px;
-    }
-    button {
-      background: #007bff;
-      color: #fff;
-      border: none;
-      padding: 8px 20px;
-      font-size: 15px;
-      font-weight: 500;
-      border-radius: 8px;
-      cursor: pointer;
-      margin-bottom: 20px;
-      transition: all 0.3s ease-in-out;
-      position: relative;
-      overflow: hidden;
-    }
-    button::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(120deg, #00bcd4, #2196f3);
-      transition: all 0.4s ease;
-      z-index: -1;
-    }
-    button:hover::before {
-      left: 0;
-    }
-    button:hover {
-      color: #fff;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      transform: translateY(-1px);
-    }
-    button:active {
-      transform: scale(0.95);
-      box-shadow: none;
-    }
-  </style>
-</head>
-<body>
-  <div class="section">
-    <h2>10. Grid Layout</h2>
-
-    <h3>I. Grid Container & Items</h3>
-    <p><strong>Explanation:</strong> Grid layout ek 2-dimensional layout system hai jisme rows aur columns dono ka control hota hai. Parent ko <code>display: grid</code> dene par wo container ban jata hai.</p>
-
-    <textarea id="code1">
-<style>
-.grid {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 10px;
-  background: lightgray;
-  padding: 10px;
-}
-.box {
-  background: #007bff;
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Grid Layout CSS tutorial in English and Hindi with examples and live practice - LoOPCode"><title>10. Grid Layout - LoOPCode</title><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Mono&display=swap" rel="stylesheet"><style>*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Poppins,sans-serif;background:#f5f7fa;color:#1f2937;line-height:1.7}header{background:#111827;color:#fff;text-align:center;padding:28px 15px;position:sticky;top:0;z-index:10;box-shadow:0 4px 16px #0002}header h1{margin:0;font-size:clamp(1.5rem,4vw,2.3rem)}header p{color:#cbd5e1;margin:6px 0}.container{max-width:1050px;margin:auto;padding:18px}.topic{background:#fff;margin:22px 0;padding:24px;border-radius:16px;border:1px solid #e5e7eb;box-shadow:0 8px 24px #0000000d}.topic h2{color:#2563eb;margin-top:0}.example{background:#f8fafc;border-left:4px solid #2563eb;padding:12px 15px;border-radius:8px}.example pre{white-space:pre-wrap;font-family:"Roboto Mono",monospace;font-size:14px}textarea{width:100%;min-height:210px;margin-top:15px;padding:14px;border:1px solid #334155;border-radius:10px;background:#0f172a;color:#e2e8f0;font-family:"Roboto Mono",monospace;font-size:14px;resize:vertical}button{display:inline-block;margin:10px 0;background:#2563eb;color:#fff;border:0;border-radius:9px;padding:11px 18px;font-weight:700;cursor:pointer}button:hover{background:#1d4ed8}iframe{display:block;width:100%;height:200px;border:1px solid #cbd5e1;border-radius:10px;background:#fff}.tip{margin-top:13px;padding:12px 15px;background:#eff6ff;border-radius:9px;color:#1e3a8a}footer{text-align:center;padding:28px;background:#111827;color:#cbd5e1;margin-top:35px}@media(max-width:650px){.container{padding:10px}.topic{padding:17px}.topic p{font-size:15px}textarea,iframe{height:170px;min-height:170px}}</style></head><body><header><h1>10. Grid Layout</h1><p>LoOPCode • Learn CSS with Explanation + Live Practice</p></header><main class="container"><section class="topic"><h2>1. grid container</h2><p><b>English:</b> grid container is an important part of CSS used to control presentation, layout or maintainability in real websites.</p><p><b>Hindi:</b> grid container ko practical projects me use karke page ko better styled, responsive aur maintainable banaya ja sakta hai. Is concept ko example change karke practice karo.</p><div class="example"><b>Basic Example:</b><pre>&lt;div class="demo"&gt;CSS Practice&lt;/div&gt;</pre></div><textarea id="c0">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo {
+  padding: 24px;
+  margin: 10px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
   color: white;
-  padding: 20px;
-  text-align: center;
-  border-radius: 8px;
-}
-</style>
-<div class="grid">
-  <div class="box">1</div>
-  <div class="box">2</div>
-  <div class="box">3</div>
-  <div class="box">4</div>
-  <div class="box">5</div>
-  <div class="box">6</div>
-</div>
-    </textarea>
-    <button onclick="runCode('code1', 'output1')">Run Code</button>
-    <iframe id="output1"></iframe>
-
-    <h3>II. Template Rows & Columns</h3>
-    <p><strong>Explanation:</strong> <code>grid-template-columns</code> aur <code>grid-template-rows</code> se hum define karte hain kitni columns ya rows honi chahiye aur unka size kya hoga.</p>
-
-    <textarea id="code2">
-<style>
-.grid {
-  display: grid;
-  grid-template-columns: 100px 200px 100px;
-  grid-template-rows: 60px 60px;
-  gap: 10px;
-  background: #fce4ec;
-  padding: 10px;
-}
-.box {
-  background: #ec407a;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  border-radius: 8px;
-}
-</style>
-<div class="grid">
-  <div class="box">A</div>
-  <div class="box">B</div>
-  <div class="box">C</div>
-  <div class="box">D</div>
-  <div class="box">E</div>
-  <div class="box">F</div>
-</div>
-    </textarea>
-    <button onclick="runCode('code2', 'output2')">Run Code</button>
-    <iframe id="output2"></iframe>
-
-    <h3>III. Item Placement & Spanning</h3>
-    <p><strong>Explanation:</strong> Grid items ko specific row ya column me rakhne ke liye hum <code>grid-column</code> aur <code>grid-row</code> use karte hain. <br> Spanning ka matlab hai ek item multiple rows/columns tak faila ho.</p>
-
-    <textarea id="code3">
-<style>
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  background: #e0f7fa;
-  padding: 10px;
-}
-.item {
-  background: #00acc1;
-  color: white;
-  padding: 20px;
-  border-radius: 8px;
+  border-radius: 12px;
+  font-family: Arial, sans-serif;
   text-align: center;
 }
-.span2 {
-  grid-column: span 2;
-}
-</style>
-<div class="grid">
-  <div class="item">1</div>
-  <div class="item span2">2 (spans 2 columns)</div>
-  <div class="item">3</div>
-  <div class="item">4</div>
-</div>
-    </textarea>
-    <button onclick="runCode('code3', 'output3')">Run Code</button>
-    <iframe id="output3"></iframe>
-
-    <h3>IV. Auto-placement & Grid Areas</h3>
-    <p><strong>Explanation:</strong> CSS Grid automatically items ko place karta hai agar aap manually jagah define na karo.<br>
-    Grid Areas ka use karke hum naam se jagah define karke items ko uss area me daal sakte hain (like template design).</p>
-
-    <textarea id="code4">
-<style>
-.grid {
-  display: grid;
-  grid-template-areas: 
-    "header header"
-    "sidebar main"
-    "footer footer";
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 60px 200px 60px;
-  gap: 10px;
-  background: #e8f5e9;
-  padding: 10px;
-}
-.header {
-  grid-area: header;
-  background: #43a047;
-}
-.sidebar {
-  grid-area: sidebar;
-  background: #66bb6a;
-}
-.main {
-  grid-area: main;
-  background: #81c784;
-}
-.footer {
-  grid-area: footer;
-  background: #388e3c;
-}
-.box {
+.demo:hover { transform: translateY(-3px); }
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div class="demo"&gt;CSS Practice: grid container&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c0','o0')">▶ Run Code</button><iframe id="o0"></iframe><div class="tip"><b>💡 Practice:</b> CSS property ki value change karke output dekho. Ye learning ka sabse important part hai.</div></section><section class="topic"><h2>2. grid-template-columns</h2><p><b>English:</b> grid-template-columns is an important part of CSS used to control presentation, layout or maintainability in real websites.</p><p><b>Hindi:</b> grid-template-columns ko practical projects me use karke page ko better styled, responsive aur maintainable banaya ja sakta hai. Is concept ko example change karke practice karo.</p><div class="example"><b>Basic Example:</b><pre>&lt;div class="demo"&gt;CSS Practice&lt;/div&gt;</pre></div><textarea id="c1">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo {
+  padding: 24px;
+  margin: 10px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
   color: white;
-  padding: 15px;
+  border-radius: 12px;
+  font-family: Arial, sans-serif;
   text-align: center;
-  border-radius: 8px;
 }
-</style>
-<div class="grid">
-  <div class="box header">Header</div>
-  <div class="box sidebar">Sidebar</div>
-  <div class="box main">Main</div>
-  <div class="box footer">Footer</div>
-</div>
-    </textarea>
-    <button onclick="runCode('code4', 'output4')">Run Code</button>
-    <iframe id="output4"></iframe>
-  </div>
-
-  <script>
-    function runCode(textareaId, iframeId) {
-      const code = document.getElementById(textareaId).value;
-      const iframe = document.getElementById(iframeId);
-      const doc = iframe.contentDocument || iframe.contentWindow.document;
-      doc.open();
-      doc.write(code);
-      doc.close();
-    }
-  </script>
-</body>
-</html>
+.demo:hover { transform: translateY(-3px); }
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div class="demo"&gt;CSS Practice: grid-template-columns&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c1','o1')">▶ Run Code</button><iframe id="o1"></iframe><div class="tip"><b>💡 Practice:</b> CSS property ki value change karke output dekho. Ye learning ka sabse important part hai.</div></section><section class="topic"><h2>3. grid-template-rows</h2><p><b>English:</b> grid-template-rows is an important part of CSS used to control presentation, layout or maintainability in real websites.</p><p><b>Hindi:</b> grid-template-rows ko practical projects me use karke page ko better styled, responsive aur maintainable banaya ja sakta hai. Is concept ko example change karke practice karo.</p><div class="example"><b>Basic Example:</b><pre>&lt;div class="demo"&gt;CSS Practice&lt;/div&gt;</pre></div><textarea id="c2">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo {
+  padding: 24px;
+  margin: 10px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: white;
+  border-radius: 12px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+.demo:hover { transform: translateY(-3px); }
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div class="demo"&gt;CSS Practice: grid-template-rows&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c2','o2')">▶ Run Code</button><iframe id="o2"></iframe><div class="tip"><b>💡 Practice:</b> CSS property ki value change karke output dekho. Ye learning ka sabse important part hai.</div></section><section class="topic"><h2>4. gap</h2><p><b>English:</b> gap is an important part of CSS used to control presentation, layout or maintainability in real websites.</p><p><b>Hindi:</b> gap ko practical projects me use karke page ko better styled, responsive aur maintainable banaya ja sakta hai. Is concept ko example change karke practice karo.</p><div class="example"><b>Basic Example:</b><pre>&lt;div class="demo"&gt;CSS Practice&lt;/div&gt;</pre></div><textarea id="c3">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo {
+  padding: 24px;
+  margin: 10px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: white;
+  border-radius: 12px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+.demo:hover { transform: translateY(-3px); }
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div class="demo"&gt;CSS Practice: gap&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c3','o3')">▶ Run Code</button><iframe id="o3"></iframe><div class="tip"><b>💡 Practice:</b> CSS property ki value change karke output dekho. Ye learning ka sabse important part hai.</div></section><section class="topic"><h2>5. grid-column/row</h2><p><b>English:</b> grid-column/row is an important part of CSS used to control presentation, layout or maintainability in real websites.</p><p><b>Hindi:</b> grid-column/row ko practical projects me use karke page ko better styled, responsive aur maintainable banaya ja sakta hai. Is concept ko example change karke practice karo.</p><div class="example"><b>Basic Example:</b><pre>&lt;div class="demo"&gt;CSS Practice&lt;/div&gt;</pre></div><textarea id="c4">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo {
+  padding: 24px;
+  margin: 10px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: white;
+  border-radius: 12px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+.demo:hover { transform: translateY(-3px); }
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div class="demo"&gt;CSS Practice: grid-column/row&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c4','o4')">▶ Run Code</button><iframe id="o4"></iframe><div class="tip"><b>💡 Practice:</b> CSS property ki value change karke output dekho. Ye learning ka sabse important part hai.</div></section><section class="topic"><h2>6. fr unit</h2><p><b>English:</b> fr unit is an important part of CSS used to control presentation, layout or maintainability in real websites.</p><p><b>Hindi:</b> fr unit ko practical projects me use karke page ko better styled, responsive aur maintainable banaya ja sakta hai. Is concept ko example change karke practice karo.</p><div class="example"><b>Basic Example:</b><pre>&lt;div class="demo"&gt;CSS Practice&lt;/div&gt;</pre></div><textarea id="c5">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo {
+  padding: 24px;
+  margin: 10px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: white;
+  border-radius: 12px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+.demo:hover { transform: translateY(-3px); }
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div class="demo"&gt;CSS Practice: fr unit&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c5','o5')">▶ Run Code</button><iframe id="o5"></iframe><div class="tip"><b>💡 Practice:</b> CSS property ki value change karke output dekho. Ye learning ka sabse important part hai.</div></section><section class="topic"><h2>7. repeat/minmax</h2><p><b>English:</b> repeat/minmax is an important part of CSS used to control presentation, layout or maintainability in real websites.</p><p><b>Hindi:</b> repeat/minmax ko practical projects me use karke page ko better styled, responsive aur maintainable banaya ja sakta hai. Is concept ko example change karke practice karo.</p><div class="example"><b>Basic Example:</b><pre>&lt;div class="demo"&gt;CSS Practice&lt;/div&gt;</pre></div><textarea id="c6">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo {
+  padding: 24px;
+  margin: 10px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: white;
+  border-radius: 12px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+.demo:hover { transform: translateY(-3px); }
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div class="demo"&gt;CSS Practice: repeat/minmax&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c6','o6')">▶ Run Code</button><iframe id="o6"></iframe><div class="tip"><b>💡 Practice:</b> CSS property ki value change karke output dekho. Ye learning ka sabse important part hai.</div></section></main><footer>Created by:- Dharmandra Singh</footer><script>function runCode(a,b){const c=document.getElementById(a).value,f=document.getElementById(b),d=f.contentDocument||f.contentWindow.document;d.open();d.write(c);d.close()}</script></body></html>
