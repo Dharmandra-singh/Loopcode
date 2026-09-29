@@ -1,274 +1,113 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D0ENCWPZL9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-D0ENCWPZL9');
-</script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>6. Typography in CSS</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body, html {
-      height: 100%;
-      font-family: 'Poppins', sans-serif;
-      background-color: #1cc9be;
-      overflow-x: hidden;
-    }
-    .section {
-      background-color: rgba(255, 255, 255, 0.3);
-      margin: 20px auto;
-      padding: 20px;
-      border-radius: 12px;
-      width: 90%;
-      max-width: 1000px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-    }
-    h2, h3 { color: #333; margin-bottom: 15px; }
-    p {
-      font-size: 18px;
-      margin-bottom: 20px;
-      line-height: 1.7;
-    }
-    textarea {
-      width: 100%;
-      height: 160px;
-      font-family: monospace;
-      font-size: 16px;
-      padding: 10px;
-      border: 2px solid white;
-      border-radius: 8px;
-      margin-top: 10px;
-      margin-bottom: 10px;
-      background: rgba(255,248,240,0.4);
-    }
-    button {
-      background-color: #28a745;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      border-radius: 10px;
-      cursor: pointer;
-      margin-bottom: 20px;
-      transition: all 0.3s ease;
-      font-weight: bold;
-    }
-    button:hover {
-      background-color: #218838;
-      transform: scale(1.05);
-    }
-    iframe {
-      width: 100%;
-      height: 160px;
-      background: rgba(255,248,240,0.4);
-      border: 2px solid white;
-      border-radius: 8px;
-      margin-top: 15px;
-    }
-  </style>
-</head>
-<body>
-<div class="section">
-  <h2>6. Typography in CSS</h2>
-
-  <h3>I. Font-Family</h3>
-  <p><strong>Explanation:</strong><br>
-    <code>font-family</code> se hum decide karte hain ki text kis type ka font dikhaye. Agar ek font available na ho, to dusra fallback use hota hai.<br>
-    Example: Arial, 'Times New Roman', sans-serif
-  </p>
-  <textarea id="code1">
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-p {
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Typography CSS tutorial in English and Hindi with examples and live practice - LoOPCode"><title>6. Typography - LoOPCode</title><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Mono&display=swap" rel="stylesheet"><style>*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Poppins,sans-serif;background:#f5f7fa;color:#1f2937;line-height:1.7}header{background:#111827;color:#fff;text-align:center;padding:28px 15px;position:sticky;top:0;z-index:10;box-shadow:0 4px 16px #0002}header h1{margin:0;font-size:clamp(1.5rem,4vw,2.3rem)}header p{color:#cbd5e1;margin:6px 0}.container{max-width:1050px;margin:auto;padding:18px}.topic{background:#fff;margin:22px 0;padding:24px;border-radius:16px;border:1px solid #e5e7eb;box-shadow:0 8px 24px #0000000d}.topic h2{color:#2563eb;margin-top:0}.example{background:#f8fafc;border-left:4px solid #2563eb;padding:12px 15px;border-radius:8px}.example pre{white-space:pre-wrap;font-family:"Roboto Mono",monospace;font-size:14px}textarea{width:100%;min-height:210px;margin-top:15px;padding:14px;border:1px solid #334155;border-radius:10px;background:#0f172a;color:#e2e8f0;font-family:"Roboto Mono",monospace;font-size:14px;resize:vertical}button{display:inline-block;margin:10px 0;background:#2563eb;color:#fff;border:0;border-radius:9px;padding:11px 18px;font-weight:700;cursor:pointer}button:hover{background:#1d4ed8}iframe{display:block;width:100%;height:200px;border:1px solid #cbd5e1;border-radius:10px;background:#fff}.tip{margin-top:13px;padding:12px 15px;background:#eff6ff;border-radius:9px;color:#1e3a8a}footer{text-align:center;padding:28px;background:#111827;color:#cbd5e1;margin-top:35px}@media(max-width:650px){.container{padding:10px}.topic{padding:17px}.topic p{font-size:15px}textarea,iframe{height:170px;min-height:170px}}</style></head><body><header><h1>6. Typography</h1><p>LoOPCode • Learn CSS with Explanation + Live Practice</p></header><main class="container"><section class="topic"><h2>1. font-family</h2><p><b>English:</b> font-family is an important part of CSS used to control presentation, layout or maintainability in real websites.</p><p><b>Hindi:</b> font-family ko practical projects me use karke page ko better styled, responsive aur maintainable banaya ja sakta hai. Is concept ko example change karke practice karo.</p><div class="example"><b>Basic Example:</b><pre>&lt;div class="demo"&gt;CSS Practice&lt;/div&gt;</pre></div><textarea id="c0">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo {
+  padding: 24px;
+  margin: 10px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: white;
+  border-radius: 12px;
   font-family: Arial, sans-serif;
-}
-</style>
-</head>
-<body>
-  <p>This text is in Arial font.</p>
-</body>
-</html>
-  </textarea>
-  <button onclick="runCode('code1', 'output1')">Run Code</button>
-  <iframe id="output1"></iframe>
-
-  <h3>II. Font-Size</h3>
-  <p><strong>Explanation:</strong><br>
-    <code>font-size</code> se text ki size set hoti hai. Isme px, em, rem ya % ka use hota hai.<br>
-    Example: 16px, 1.2em, 120%
-  </p>
-  <textarea id="code2">
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-p {
-  font-size: 24px;
-}
-</style>
-</head>
-<body>
-  <p>This is 24px text size.</p>
-</body>
-</html>
-  </textarea>
-  <button onclick="runCode('code2', 'output2')">Run Code</button>
-  <iframe id="output2"></iframe>
-
-  <h3>III. Font-Weight</h3>
-  <p><strong>Explanation:</strong><br>
-    <code>font-weight</code> se text bold ya light dikhaya ja sakta hai. Values: normal, bold, 100–900.<br>
-    Example: bold, 700
-  </p>
-  <textarea id="code3">
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-p {
-  font-weight: bold;
-}
-</style>
-</head>
-<body>
-  <p>This text is bold.</p>
-</body>
-</html>
-  </textarea>
-  <button onclick="runCode('code3', 'output3')">Run Code</button>
-  <iframe id="output3"></iframe>
-
-  <h3>IV. Line-Height</h3>
-  <p><strong>Explanation:</strong><br>
-    <code>line-height</code> se lines ke beech vertical spacing control hoti hai. Isse readability improve hoti hai.
-  </p>
-  <textarea id="code4">
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-p {
-  line-height: 2;
-}
-</style>
-</head>
-<body>
-  <p>This paragraph has more space between lines. Line-height makes the content easier to read.</p>
-</body>
-</html>
-  </textarea>
-  <button onclick="runCode('code4', 'output4')">Run Code</button>
-  <iframe id="output4"></iframe>
-
-  <h3>V. Letter-Spacing</h3>
-  <p><strong>Explanation:</strong><br>
-    <code>letter-spacing</code> se letters ke beech ka horizontal space badhaya ya kam kiya ja sakta hai.
-  </p>
-  <textarea id="code5">
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-p {
-  letter-spacing: 2px;
-}
-</style>
-</head>
-<body>
-  <p>This text has extra space between letters.</p>
-</body>
-</html>
-  </textarea>
-  <button onclick="runCode('code5', 'output5')">Run Code</button>
-  <iframe id="output5"></iframe>
-
-  <h3>VI. Text-Align</h3>
-  <p><strong>Explanation:</strong><br>
-    <code>text-align</code> se text ko left, right, center ya justify align kiya jata hai.
-  </p>
-  <textarea id="code6">
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-p {
   text-align: center;
 }
-</style>
-</head>
-<body>
-  <p>This text is center aligned.</p>
-</body>
-</html>
-  </textarea>
-  <button onclick="runCode('code6', 'output6')">Run Code</button>
-  <iframe id="output6"></iframe>
-
-  <h3>VII. Text-Transform</h3>
-  <p><strong>Explanation:</strong><br>
-    <code>text-transform</code> se hum text ko uppercase, lowercase ya capitalize kar sakte hain.
-  </p>
-  <textarea id="code7">
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-p {
-  text-transform: uppercase;
+.demo:hover { transform: translateY(-3px); }
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div class="demo"&gt;CSS Practice: font-family&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c0','o0')">▶ Run Code</button><iframe id="o0"></iframe><div class="tip"><b>💡 Practice:</b> CSS property ki value change karke output dekho. Ye learning ka sabse important part hai.</div></section><section class="topic"><h2>2. font-size</h2><p><b>English:</b> font-size is an important part of CSS used to control presentation, layout or maintainability in real websites.</p><p><b>Hindi:</b> font-size ko practical projects me use karke page ko better styled, responsive aur maintainable banaya ja sakta hai. Is concept ko example change karke practice karo.</p><div class="example"><b>Basic Example:</b><pre>&lt;div class="demo"&gt;CSS Practice&lt;/div&gt;</pre></div><textarea id="c1">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo {
+  padding: 24px;
+  margin: 10px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: white;
+  border-radius: 12px;
+  font-family: Arial, sans-serif;
+  text-align: center;
 }
-</style>
-</head>
-<body>
-  <p>This will appear in uppercase.</p>
-</body>
-</html>
-  </textarea>
-  <button onclick="runCode('code7', 'output7')">Run Code</button>
-  <iframe id="output7"></iframe>
-
-  <h3>VIII. Web Fonts (Google Fonts)</h3>
-  <p><strong>Explanation:</strong><br>
-    Web fonts jaise Google Fonts ko use karne ke liye <code>&lt;link&gt;</code> tag se font import karte hain.<br>
-    Example: Poppins, Roboto, Montserrat, etc.
-  </p>
-  <textarea id="code8">
-<!DOCTYPE html>
-<html>
-<head>
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-<style>
-p {
-  font-family: 'Roboto', sans-serif;
+.demo:hover { transform: translateY(-3px); }
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div class="demo"&gt;CSS Practice: font-size&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c1','o1')">▶ Run Code</button><iframe id="o1"></iframe><div class="tip"><b>💡 Practice:</b> CSS property ki value change karke output dekho. Ye learning ka sabse important part hai.</div></section><section class="topic"><h2>3. font-weight</h2><p><b>English:</b> font-weight is an important part of CSS used to control presentation, layout or maintainability in real websites.</p><p><b>Hindi:</b> font-weight ko practical projects me use karke page ko better styled, responsive aur maintainable banaya ja sakta hai. Is concept ko example change karke practice karo.</p><div class="example"><b>Basic Example:</b><pre>&lt;div class="demo"&gt;CSS Practice&lt;/div&gt;</pre></div><textarea id="c2">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo {
+  padding: 24px;
+  margin: 10px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: white;
+  border-radius: 12px;
+  font-family: Arial, sans-serif;
+  text-align: center;
 }
-</style>
-</head>
-<body>
-  <p>This text uses Roboto font from Google Fonts.</p>
-</body>
-</html>
-  </textarea>
-  <button onclick="runCode('code8', 'output8')">Run Code</button>
-  <iframe id="output8"></iframe>
-
-</div>
-
-<script>
-function runCode(textareaId, iframeId) {
-  var code = document.getElementById(textareaId).value;
-  var iframe = document.getElementById(iframeId);
-  iframe.contentDocument.open();
-  iframe.contentDocument.write(code);
-  iframe.contentDocument.close();
+.demo:hover { transform: translateY(-3px); }
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div class="demo"&gt;CSS Practice: font-weight&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c2','o2')">▶ Run Code</button><iframe id="o2"></iframe><div class="tip"><b>💡 Practice:</b> CSS property ki value change karke output dekho. Ye learning ka sabse important part hai.</div></section><section class="topic"><h2>4. line-height</h2><p><b>English:</b> line-height is an important part of CSS used to control presentation, layout or maintainability in real websites.</p><p><b>Hindi:</b> line-height ko practical projects me use karke page ko better styled, responsive aur maintainable banaya ja sakta hai. Is concept ko example change karke practice karo.</p><div class="example"><b>Basic Example:</b><pre>&lt;div class="demo"&gt;CSS Practice&lt;/div&gt;</pre></div><textarea id="c3">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo {
+  padding: 24px;
+  margin: 10px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: white;
+  border-radius: 12px;
+  font-family: Arial, sans-serif;
+  text-align: center;
 }
-</script>
-</body>
-</html>
+.demo:hover { transform: translateY(-3px); }
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div class="demo"&gt;CSS Practice: line-height&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c3','o3')">▶ Run Code</button><iframe id="o3"></iframe><div class="tip"><b>💡 Practice:</b> CSS property ki value change karke output dekho. Ye learning ka sabse important part hai.</div></section><section class="topic"><h2>5. letter-spacing</h2><p><b>English:</b> letter-spacing is an important part of CSS used to control presentation, layout or maintainability in real websites.</p><p><b>Hindi:</b> letter-spacing ko practical projects me use karke page ko better styled, responsive aur maintainable banaya ja sakta hai. Is concept ko example change karke practice karo.</p><div class="example"><b>Basic Example:</b><pre>&lt;div class="demo"&gt;CSS Practice&lt;/div&gt;</pre></div><textarea id="c4">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo {
+  padding: 24px;
+  margin: 10px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: white;
+  border-radius: 12px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+.demo:hover { transform: translateY(-3px); }
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div class="demo"&gt;CSS Practice: letter-spacing&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c4','o4')">▶ Run Code</button><iframe id="o4"></iframe><div class="tip"><b>💡 Practice:</b> CSS property ki value change karke output dekho. Ye learning ka sabse important part hai.</div></section><section class="topic"><h2>6. text-align</h2><p><b>English:</b> text-align is an important part of CSS used to control presentation, layout or maintainability in real websites.</p><p><b>Hindi:</b> text-align ko practical projects me use karke page ko better styled, responsive aur maintainable banaya ja sakta hai. Is concept ko example change karke practice karo.</p><div class="example"><b>Basic Example:</b><pre>&lt;div class="demo"&gt;CSS Practice&lt;/div&gt;</pre></div><textarea id="c5">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo {
+  padding: 24px;
+  margin: 10px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: white;
+  border-radius: 12px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+.demo:hover { transform: translateY(-3px); }
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div class="demo"&gt;CSS Practice: text-align&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c5','o5')">▶ Run Code</button><iframe id="o5"></iframe><div class="tip"><b>💡 Practice:</b> CSS property ki value change karke output dekho. Ye learning ka sabse important part hai.</div></section><section class="topic"><h2>7. text-transform</h2><p><b>English:</b> text-transform is an important part of CSS used to control presentation, layout or maintainability in real websites.</p><p><b>Hindi:</b> text-transform ko practical projects me use karke page ko better styled, responsive aur maintainable banaya ja sakta hai. Is concept ko example change karke practice karo.</p><div class="example"><b>Basic Example:</b><pre>&lt;div class="demo"&gt;CSS Practice&lt;/div&gt;</pre></div><textarea id="c6">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo {
+  padding: 24px;
+  margin: 10px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: white;
+  border-radius: 12px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+.demo:hover { transform: translateY(-3px); }
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div class="demo"&gt;CSS Practice: text-transform&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c6','o6')">▶ Run Code</button><iframe id="o6"></iframe><div class="tip"><b>💡 Practice:</b> CSS property ki value change karke output dekho. Ye learning ka sabse important part hai.</div></section><section class="topic"><h2>8. Web Fonts</h2><p><b>English:</b> Web Fonts is an important part of CSS used to control presentation, layout or maintainability in real websites.</p><p><b>Hindi:</b> Web Fonts ko practical projects me use karke page ko better styled, responsive aur maintainable banaya ja sakta hai. Is concept ko example change karke practice karo.</p><div class="example"><b>Basic Example:</b><pre>&lt;div class="demo"&gt;CSS Practice&lt;/div&gt;</pre></div><textarea id="c7">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo {
+  padding: 24px;
+  margin: 10px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: white;
+  border-radius: 12px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+.demo:hover { transform: translateY(-3px); }
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div class="demo"&gt;CSS Practice: Web Fonts&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c7','o7')">▶ Run Code</button><iframe id="o7"></iframe><div class="tip"><b>💡 Practice:</b> CSS property ki value change karke output dekho. Ye learning ka sabse important part hai.</div></section></main><footer>Created by:- Dharmandra Singh</footer><script>function runCode(a,b){const c=document.getElementById(a).value,f=document.getElementById(b),d=f.contentDocument||f.contentWindow.document;d.open();d.write(c);d.close()}</script></body></html>
