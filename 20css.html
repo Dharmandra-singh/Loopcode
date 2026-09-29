@@ -1,113 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D0ENCWPZL9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-D0ENCWPZL9');
-</script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>20. CSS Preprocessors - SASS & SCSS</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #1cc9be;
-      color: #222;
-    }
-    .section {
-      background: rgba(255, 255, 255, 0.3);
-      padding: 20px;
-      margin: 25px auto;
-      border-radius: 12px;
-      max-width: 1000px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    }
-    h2, h3 { color: #333; margin-bottom: 15px; }
-    p {
-      font-size: 18px;
-      margin-bottom: 20px;
-      line-height: 1.7;
-    }
-    code {
-      background: #eee;
-      padding: 2px 5px;
-      border-radius: 5px;
-    }
-    pre {
-      background: #fefefe;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      padding: 12px;
-      font-size: 16px;
-      margin-bottom: 20px;
-      overflow-x: auto;
-    }
-  </style>
-</head>
-<body>
-  <div class="section">
-    <h2>20. CSS Preprocessors - SASS & SCSS</h2>
-
-    <h3>I. What is SASS?</h3>
-    <p><strong>Explanation:</strong> SASS (Syntactically Awesome Stylesheets) ek CSS preprocessor hai jo CSS ko zyada powerful aur maintainable banata hai. Isme variables, nesting, functions, aur reusability jaise features hote hain. Final output hamesha normal CSS me convert hota hai using a compiler.</p>
-
-    <h3>II. Variables & Mixins</h3>
-    <p><strong>Explanation:</strong> SASS me <code>$</code> ka use karke variables banaye jaate hain. <code>@mixin</code> reusable code block hota hai jise <code>@include</code> karke use kar sakte ho.</p>
-    <pre><code>$primary-color: #3498db;
-
-@mixin rounded {
-  border-radius: 12px;
-  padding: 10px;
-}
-
-.button {
-  background: $primary-color;
-  color: white;
-  @include rounded;
-}</code></pre>
-
-    <h3>III. Nesting in SASS</h3>
-    <p><strong>Explanation:</strong> SASS me selectors ko nesting ke through clearly structure kiya ja sakta hai, jaise HTML hierarchy hoti hai.</p>
-    <pre><code>nav {
-  ul {
-    list-style: none;
-    li {
-      display: inline-block;
-      a {
-        text-decoration: none;
-        color: black;
-      }
-    }
-  }
-}</code></pre>
-
-    <h3>IV. SCSS vs SASS</h3>
-    <p><strong>Explanation:</strong> Dono hi same features dete hain, par syntax alag hoti hai:</p>
-    <ul style="margin-left: 20px; line-height: 1.6;">
-      <li><strong>SCSS:</strong> CSS jaisa syntax (curly braces aur semicolons)</li>
-      <li><strong>SASS:</strong> Indentation-based syntax (no braces, no semicolons)</li>
-    </ul>
-
-    <h4>Example (SCSS):</h4>
-    <pre><code>$color: red;
-
-.box {
-  color: $color;
-}</code></pre>
-
-    <h4>Example (SASS):</h4>
-    <pre><code>$color: red
-
-.box
-  color: $color</code></pre>
-
-    <p><strong>Note:</strong> In examples ko browser me directly run nahi kiya ja sakta, kyunki SASS/SCSS ko pehle compile karke CSS me convert karna padta hai. Use <a href="https://sassmeister.com" target="_blank">SassMeister</a> ya <a href="https://www.sass-lang.com" target="_blank">official SASS site</a>.</p>
-  </div>
-</body>
-</html>
+<!doctype html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>20. CSS Preprocessors - LoOPCode</title><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Mono&display=swap" rel="stylesheet"><style>*{box-sizing:border-box}body{margin:0;background:#f5f7fa;color:#1f2937;font-family:Poppins,sans-serif;line-height:1.7}header{background:#111827;color:#fff;text-align:center;padding:28px 15px;position:sticky;top:0;z-index:5}header h1{margin:0}.container{max-width:1050px;margin:auto;padding:18px}.topic{background:#fff;margin:22px 0;padding:24px;border-radius:16px;border:1px solid #e5e7eb;box-shadow:0 8px 24px #0001}.topic h2{color:#2563eb}.example{background:#f8fafc;border-left:4px solid #2563eb;padding:12px;border-radius:8px}.example pre{white-space:pre-wrap;font-family:monospace}textarea{width:100%;min-height:200px;margin-top:15px;padding:14px;background:#0f172a;color:#e2e8f0;border-radius:10px;font-family:monospace;font-size:14px}button{padding:11px 18px;margin:10px 0;background:#2563eb;color:#fff;border:0;border-radius:9px;font-weight:bold;cursor:pointer}iframe{width:100%;height:190px;border:1px solid #cbd5e1;border-radius:10px}.tip{margin-top:12px;padding:12px;background:#eff6ff;color:#1e3a8a;border-radius:9px}footer{text-align:center;background:#111827;color:#cbd5e1;padding:25px}@media(max-width:650px){.container{padding:10px}.topic{padding:17px}textarea,iframe{height:170px;min-height:170px}}</style></head><body><header><h1>20. CSS Preprocessors</h1><p>LoOPCode • Learn CSS with Explanation + Live Practice</p></header><main class="container"><section class="topic"><h2>1. Sass variables</h2><p><b>English:</b> Sass variables is a practical CSS concept used to build modern, reusable and responsive interfaces.</p><p><b>Hindi:</b> Sass variables ko projects me apply karke layout aur styling ko professional bana sakte ho. Example ko edit karke different values test karo.</p><div class="example"><b>Example:</b><pre>&lt;div class="demo"&gt;Sass variables&lt;/div&gt;</pre></div><textarea id="c0">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo{padding:25px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;border-radius:12px;text-align:center;font-family:Arial,sans-serif}
+.demo:hover{transform:translateY(-4px)}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class="demo"&gt;Sass variables Practice&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c0','o0')">▶ Run Code</button><iframe id="o0"></iframe><div class="tip"><b>💡 Practice:</b> Property/value change karke output ka difference observe karo.</div></section><section class="topic"><h2>2. nesting</h2><p><b>English:</b> nesting is a practical CSS concept used to build modern, reusable and responsive interfaces.</p><p><b>Hindi:</b> nesting ko projects me apply karke layout aur styling ko professional bana sakte ho. Example ko edit karke different values test karo.</p><div class="example"><b>Example:</b><pre>&lt;div class="demo"&gt;nesting&lt;/div&gt;</pre></div><textarea id="c1">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo{padding:25px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;border-radius:12px;text-align:center;font-family:Arial,sans-serif}
+.demo:hover{transform:translateY(-4px)}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class="demo"&gt;nesting Practice&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c1','o1')">▶ Run Code</button><iframe id="o1"></iframe><div class="tip"><b>💡 Practice:</b> Property/value change karke output ka difference observe karo.</div></section><section class="topic"><h2>3. mixins</h2><p><b>English:</b> mixins is a practical CSS concept used to build modern, reusable and responsive interfaces.</p><p><b>Hindi:</b> mixins ko projects me apply karke layout aur styling ko professional bana sakte ho. Example ko edit karke different values test karo.</p><div class="example"><b>Example:</b><pre>&lt;div class="demo"&gt;mixins&lt;/div&gt;</pre></div><textarea id="c2">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo{padding:25px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;border-radius:12px;text-align:center;font-family:Arial,sans-serif}
+.demo:hover{transform:translateY(-4px)}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class="demo"&gt;mixins Practice&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c2','o2')">▶ Run Code</button><iframe id="o2"></iframe><div class="tip"><b>💡 Practice:</b> Property/value change karke output ka difference observe karo.</div></section><section class="topic"><h2>4. partials</h2><p><b>English:</b> partials is a practical CSS concept used to build modern, reusable and responsive interfaces.</p><p><b>Hindi:</b> partials ko projects me apply karke layout aur styling ko professional bana sakte ho. Example ko edit karke different values test karo.</p><div class="example"><b>Example:</b><pre>&lt;div class="demo"&gt;partials&lt;/div&gt;</pre></div><textarea id="c3">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo{padding:25px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;border-radius:12px;text-align:center;font-family:Arial,sans-serif}
+.demo:hover{transform:translateY(-4px)}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class="demo"&gt;partials Practice&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c3','o3')">▶ Run Code</button><iframe id="o3"></iframe><div class="tip"><b>💡 Practice:</b> Property/value change karke output ka difference observe karo.</div></section><section class="topic"><h2>5. Less overview</h2><p><b>English:</b> Less overview is a practical CSS concept used to build modern, reusable and responsive interfaces.</p><p><b>Hindi:</b> Less overview ko projects me apply karke layout aur styling ko professional bana sakte ho. Example ko edit karke different values test karo.</p><div class="example"><b>Example:</b><pre>&lt;div class="demo"&gt;Less overview&lt;/div&gt;</pre></div><textarea id="c4">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo{padding:25px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;border-radius:12px;text-align:center;font-family:Arial,sans-serif}
+.demo:hover{transform:translateY(-4px)}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class="demo"&gt;Less overview Practice&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c4','o4')">▶ Run Code</button><iframe id="o4"></iframe><div class="tip"><b>💡 Practice:</b> Property/value change karke output ka difference observe karo.</div></section><section class="topic"><h2>6. preprocessor workflow</h2><p><b>English:</b> preprocessor workflow is a practical CSS concept used to build modern, reusable and responsive interfaces.</p><p><b>Hindi:</b> preprocessor workflow ko projects me apply karke layout aur styling ko professional bana sakte ho. Example ko edit karke different values test karo.</p><div class="example"><b>Example:</b><pre>&lt;div class="demo"&gt;preprocessor workflow&lt;/div&gt;</pre></div><textarea id="c5">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+.demo{padding:25px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;border-radius:12px;text-align:center;font-family:Arial,sans-serif}
+.demo:hover{transform:translateY(-4px)}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class="demo"&gt;preprocessor workflow Practice&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</textarea><button onclick="runCode('c5','o5')">▶ Run Code</button><iframe id="o5"></iframe><div class="tip"><b>💡 Practice:</b> Property/value change karke output ka difference observe karo.</div></section></main><footer>Created by:- Dharmandra Singh</footer><script>function runCode(a,b){const c=document.getElementById(a).value,f=document.getElementById(b),d=f.contentDocument;d.open();d.write(c);d.close()}</script></body></html>
