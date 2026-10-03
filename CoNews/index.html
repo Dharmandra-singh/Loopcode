@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#050505">
+<meta name="description" content="CoNews — Connected News. Clean, factual and connected journalism.">
+<title>CoNews — Connected News</title>
+<style>
+:root{
+  --bg:#050505; --panel:#0b0b0c; --panel2:#111112; --text:#f5f5f5;
+  --muted:#8f8f94; --line:#242426; --red:#ff1f35; --red2:#ff4052;
+  --green:#63e6a5; --max:1280px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--text);
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  line-height:1.5;overflow-x:hidden;
+}
+button,input{font:inherit}
+button{cursor:pointer}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--red);color:#fff}
+
+.topbar{
+  height:34px;border-bottom:1px solid var(--line);display:flex;align-items:center;
+  color:#888;font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+}
+.topbar .inner,.nav .inner,.ticker .inner,.container{max-width:var(--max);margin:auto;width:calc(100% - 36px)}
+.topbar .inner{display:flex;justify-content:space-between}
+
+.nav{
+  position:sticky;top:0;z-index:50;background:rgba(5,5,5,.86);
+  backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.07);
+}
+.nav .inner{height:74px;display:flex;align-items:center;gap:28px}
+.logo{display:flex;align-items:center;gap:10px;min-width:max-content}
+.logo-mark{
+  width:32px;height:32px;border:2px solid var(--text);border-radius:9px;
+  display:grid;place-items:center;font-size:15px;font-weight:900;position:relative;
+}
+.logo-mark:after{content:"";position:absolute;width:7px;height:7px;background:var(--red);border-radius:50%;right:-4px;top:-4px;box-shadow:0 0 14px var(--red)}
+.logo strong{font-size:24px;letter-spacing:-1.3px}.logo span{color:var(--red);font-size:11px;font-weight:800;display:block;line-height:1}
+.navlinks{display:flex;gap:20px;align-items:center;flex:1}
+.navlinks button{
+  color:#a7a7aa;background:none;border:0;font-size:13px;font-weight:650;transition:color .2s ease;
+}
+.navlinks button:hover,.navlinks button.active{color:#fff}
+.live{display:flex;align-items:center;gap:7px;color:#ddd;font-size:11px;font-weight:800}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--red);box-shadow:0 0 13px var(--red);animation:pulse 1.5s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.45;transform:scale(.75)}}
+.icon-btn{
+  width:40px;height:40px;border:1px solid var(--line);border-radius:50%;background:#0b0b0c;color:#fff;
+  display:grid;place-items:center;transition:transform .2s ease,border-color .2s ease;
+}
+.icon-btn:hover{transform:translateY(-2px);border-color:#444}
+.search-box{display:none;position:absolute;right:18px;top:64px;width:min(420px,calc(100vw - 36px));padding:10px;background:#0b0b0c;border:1px solid #29292c;border-radius:14px;box-shadow:0 20px 60px #000}
+.search-box.open{display:flex}.search-box input{width:100%;background:none;border:0;outline:0;color:#fff;padding:10px}
+.menu{display:none}
+
+.ticker{border-bottom:1px solid var(--line);background:#090909}
+.ticker .inner{height:38px;display:flex;align-items:center;gap:12px;overflow:hidden}
+.breaking{color:var(--red);font-size:10px;font-weight:900;letter-spacing:.12em;display:flex;gap:7px;align-items:center;white-space:nowrap}
+.ticker-text{font-size:12px;color:#c9c9cb;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+.container{padding:34px 0 70px}
+.section-head{display:flex;justify-content:space-between;align-items:end;margin:32px 0 16px}
+.kicker{font-size:11px;color:var(--red);font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+h1{font-size:clamp(38px,5.2vw,70px);line-height:.98;letter-spacing:-.055em;margin-top:8px;max-width:760px}
+.sub{color:#888;margin-top:14px;max-width:650px;font-size:14px}
+.time{font-size:11px;color:#777}
+
+.hero{display:grid;grid-template-columns:1.65fr .9fr;gap:14px;margin-top:26px}
+.hero-main,.story{
+  border:1px solid var(--line);background:var(--panel);border-radius:20px;overflow:hidden;
+  position:relative;isolation:isolate;
+}
+.hero-main{min-height:455px;display:flex;align-items:flex-end;padding:30px}
+.hero-main:before{
+  content:"";position:absolute;inset:0;z-index:-2;
+  background:
+    radial-gradient(circle at 80% 15%,rgba(255,31,53,.26),transparent 35%),
+    linear-gradient(135deg,#171719,#080808 62%);
+}
+.hero-main:after{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(0deg,rgba(0,0,0,.92),transparent 70%);
+}
+.hero-content{max-width:720px}
+.badge{display:inline-flex;align-items:center;gap:7px;padding:6px 9px;border:1px solid #3a171c;background:#170a0c;color:#ff6b77;border-radius:7px;font-size:10px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+.hero h2{font-size:clamp(30px,4vw,54px);line-height:1.03;letter-spacing:-.04em;margin:14px 0 10px}
+.hero p{color:#aaa;font-size:14px;max-width:640px}
+.meta{display:flex;gap:12px;align-items:center;margin-top:18px;color:#777;font-size:10px;text-transform:uppercase;letter-spacing:.08em}
+.meta b{color:#ddd}.meta .verified{color:var(--green)}
+
+.side{display:grid;grid-template-rows:1fr 1fr;gap:14px}
+.story{padding:22px;display:flex;flex-direction:column;justify-content:flex-end;min-height:220px}
+.story:before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(circle at 80% 20%,rgba(255,31,53,.13),transparent 45%),linear-gradient(145deg,#121214,#080808)}
+.story h3{font-size:21px;line-height:1.12;letter-spacing:-.025em;margin-top:9px}
+.story p{font-size:12px;color:#888;margin-top:8px}
+
+.category-nav{display:flex;gap:8px;overflow:auto;padding:3px 0 10px;scrollbar-width:none}
+.category-nav::-webkit-scrollbar{display:none}
+.cat{
+  flex:none;background:#0b0b0c;color:#999;border:1px solid #252527;border-radius:999px;padding:9px 14px;
+  font-size:11px;font-weight:750;transition:.2s ease;
+}
+.cat:hover,.cat.active{color:#fff;border-color:#555;background:#151517}
+.cat.active{box-shadow:0 0 20px rgba(255,31,53,.1);border-color:rgba(255,31,53,.65)}
+
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{
+  border:1px solid var(--line);border-radius:16px;background:#0a0a0b;padding:18px;min-height:245px;
+  transition:transform .25s cubic-bezier(.2,.8,.2,1),border-color .25s ease,box-shadow .25s ease;
+  will-change:transform;
+}
+.card:hover{transform:translateY(-5px);border-color:#3a3a3e;box-shadow:0 18px 45px rgba(0,0,0,.35)}
+.card .tag{color:#999;font-size:9px;text-transform:uppercase;letter-spacing:.13em;font-weight:900}
+.card h3{font-size:20px;line-height:1.14;letter-spacing:-.025em;margin:12px 0 8px}
+.card p{color:#858589;font-size:12px}
+.card .meta{margin-top:20px}
+.card.feature{grid-column:span 2;min-height:280px;background:linear-gradient(135deg,#121214,#080808)}
+.card.feature h3{font-size:29px;max-width:720px}
+
+.split{display:grid;grid-template-columns:1.4fr .6fr;gap:14px}
+.list{border:1px solid var(--line);border-radius:16px;background:#0a0a0b;overflow:hidden}
+.list-item{padding:17px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:15px}
+.list-item:last-child{border:0}.list-item h3{font-size:15px;line-height:1.25}.list-item p{font-size:11px;color:#777;margin-top:5px}.num{font-size:26px;color:#29292c;font-weight:900}
+
+.truth{
+  border:1px solid #2b1b1e;border-radius:16px;background:linear-gradient(145deg,#10090b,#090909);padding:24px;
+}
+.truth h3{font-size:21px}.truth p{font-size:12px;color:#888;margin:8px 0 20px}
+.truth-row{display:flex;gap:9px;align-items:flex-start;margin:13px 0;font-size:12px;color:#b8b8ba}
+.truth-row b{color:#fff;display:block}.check{color:var(--green);font-weight:900}
+
+.footer{border-top:1px solid var(--line);padding:28px 0;color:#666;font-size:11px}
+.footer .inner{max-width:var(--max);width:calc(100% - 36px);margin:auto;display:flex;justify-content:space-between;gap:20px}
+
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.78);backdrop-filter:blur(12px);z-index:100;display:none;place-items:center;padding:20px}
+.modal.open{display:grid}
+.modal-box{width:min(760px,100%);max-height:88vh;overflow:auto;background:#0b0b0c;border:1px solid #303034;border-radius:20px;padding:28px;box-shadow:0 30px 100px #000}
+.close{float:right}.modal h2{font-size:clamp(28px,4vw,44px);line-height:1.05;letter-spacing:-.04em;margin:30px 0 12px}.modal p{color:#a0a0a4;font-size:14px;margin:12px 0}.source{margin-top:22px;padding:13px;border:1px solid var(--line);border-radius:10px;font-size:11px;color:#888}.source b{color:#fff}
+
+
+.region-panel{border:1px solid var(--line);border-radius:18px;background:#09090a;padding:14px}
+.region-top{display:flex;gap:8px;margin-bottom:12px}
+.region-select{background:#101012;border:1px solid #29292c;color:#999;border-radius:10px;padding:10px 14px;font-size:11px;font-weight:800}
+.region-select.active{color:#fff;border-color:rgba(255,31,53,.7);box-shadow:0 0 22px rgba(255,31,53,.09)}
+.region-search{display:flex;align-items:center;gap:8px;border:1px solid #252527;border-radius:11px;background:#0d0d0f;padding:0 12px;margin-bottom:12px}
+.region-search span{color:#777;font-size:17px}.region-search input{width:100%;height:42px;background:none;border:0;outline:0;color:#fff;font-size:12px}
+.region-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:7px;max-height:250px;overflow:auto;padding-right:2px}
+.region-chip{border:1px solid #242426;background:#0d0d0e;color:#aaa;border-radius:9px;padding:10px 9px;text-align:left;font-size:10px;font-weight:700;transition:.2s ease}
+.region-chip:hover,.region-chip.active{color:#fff;border-color:#555;background:#161618;transform:translateY(-1px)}
+.region-chip small{display:block;color:#666;font-size:8px;margin-top:2px;font-weight:600}
+.source-strip{display:flex;gap:7px;flex-wrap:wrap;margin-top:14px}
+.source-pill{border:1px solid #27272a;border-radius:999px;padding:6px 9px;color:#777;font-size:9px}
+
+@media(max-width:900px){
+  .navlinks{display:none}.menu{display:grid}.nav .inner{gap:10px}.nav .logo{margin-right:auto}
+  .hero{grid-template-columns:1fr}.side{grid-template-columns:1fr 1fr;grid-template-rows:none}
+  .news-grid{grid-template-columns:repeat(2,1fr)}.card.feature{grid-column:span 2}
+  .split{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .topbar .inner,.nav .inner,.ticker .inner,.container,.footer .inner{width:calc(100% - 24px)}
+  .topbar{font-size:9px}.topbar .inner span:last-child{display:none}
+  .nav .inner{height:62px}.logo strong{font-size:21px}
+  .hero-main{min-height:420px;padding:22px}.hero h2{font-size:34px}
+  .side{grid-template-columns:1fr}.story{min-height:180px}
+  .news-grid{grid-template-columns:1fr}.card.feature{grid-column:auto}.card.feature h3{font-size:24px}.region-grid{grid-template-columns:repeat(2,1fr)}.region-top{flex-direction:column}
+  .section-head{align-items:start}.time{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="inner"><span>Connected News Network</span><span id="date"></span></div></div>
+
+<header class="nav">
+  <div class="inner">
+    <a class="logo" href="#"><div class="logo-mark">C</div><div><strong>CoNews</strong><span>CONNECTED NEWS</span></div></a>
+    <nav class="navlinks">
+      <button class="active" data-filter="All">Home</button>
+      <button data-filter="India">India</button><button data-filter="World">World</button>
+      <button data-filter="Business">Business</button><button data-filter="Technology">Tech</button>
+      <button data-filter="Sports">Sports</button><button data-filter="Science">Science</button>
+    </nav>
+    <div class="live"><i class="dot"></i> LIVE</div>
+    <button class="icon-btn" id="searchBtn" aria-label="Search">⌕</button>
+    <button class="icon-btn menu" id="menuBtn" aria-label="Menu">☰</button>
+    <div class="search-box" id="searchBox"><input id="searchInput" placeholder="Search news..."></div>
+  </div>
+</header>
+
+<div class="ticker"><div class="inner"><div class="breaking"><i class="dot"></i> BREAKING</div><div class="ticker-text" id="tickerText">LIVE FEED • News cards below are sourced from current publisher pages and clearly attributed.</div></div></div>
+
+<main class="container">
+  <section>
+    <div class="section-head">
+      <div><div class="kicker">The newsroom</div><h1>News, connected.</h1><p class="sub">A clean editorial feed built around context, source transparency and clear separation between facts and analysis.</p></div>
+      <div class="time">UPDATED <span id="clock"></span></div>
+    </div>
+
+    <div class="hero" id="hero">
+      <article class="hero-main clickable" data-id="1">
+        <div class="hero-content">
+          <span class="badge">● Top story</span>
+          <h2>Today’s verified news, connected to the source.</h2>
+          <p>Fresh headlines are grouped by region and category, with the original publisher linked for verification.</p>
+          <div class="meta"><b>CoNews Desk</b><span>•</span><span class="verified">✓ SOURCE CHECKED</span><span>•</span><span>6 MIN READ</span></div>
+        </div>
+      </article>
+      <div class="side">
+        <article class="story clickable" data-id="2"><span class="kicker">India</span><h3>Policy, public life and developments — presented with context.</h3><p>Latest • 12 min ago</p></article>
+        <article class="story clickable" data-id="3"><span class="kicker">Technology</span><h3>The technology stories shaping how people work and connect.</h3><p>Technology • 28 min ago</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><div><div class="kicker">Explore</div><h2>Sections</h2></div></div>
+    <div class="category-nav" id="categories">
+      <button class="cat active" data-filter="All">All</button><button class="cat" data-filter="Latest">Latest</button>
+      <button class="cat" data-filter="India">India</button><button class="cat" data-filter="World">World</button>
+      <button class="cat" data-filter="Politics">Politics</button><button class="cat" data-filter="Business">Business</button>
+      <button class="cat" data-filter="Technology">Technology</button><button class="cat" data-filter="Sports">Sports</button>
+      <button class="cat" data-filter="Science">Science</button><button class="cat" data-filter="Education">Education</button>
+    </div>
+  </section>
+
+  <section id="regions">
+    <div class="section-head">
+      <div><div class="kicker">Global + Local</div><h2>Choose your region</h2></div>
+      <div class="time" id="regionStatus">Global</div>
+    </div>
+    <div class="region-panel">
+      <div class="region-top">
+        <button class="region-select active" id="globalBtn">🌐 Global countries</button>
+        <button class="region-select" id="indiaBtn">🇮🇳 India — States & UTs</button>
+      </div>
+      <div class="region-search">
+        <span>⌕</span><input id="regionSearch" placeholder="Search a country, state or union territory…">
+      </div>
+      <div class="region-grid" id="regionGrid"></div>
+    </div>
+  </section>
+
+  <section id="news">
+    <div class="section-head"><div><div class="kicker">Latest</div><h2 id="newsHeading">What’s happening</h2></div><div class="time" id="resultCount"></div></div>
+    <div class="news-grid" id="newsGrid"></div>
+  </section>
+
+  <section>
+    <div class="section-head"><div><div class="kicker">Context</div><h2>Beyond the headline</h2></div></div>
+    <div class="split">
+      <div class="list">
+        <article class="list-item"><div><h3>Why source transparency matters in a fast news cycle</h3><p>Explainer • 7 min read</p></div><span class="num">01</span></article>
+        <article class="list-item"><div><h3>How CoNews labels developing information</h3><p>Editorial guide • 4 min read</p></div><span class="num">02</span></article>
+        <article class="list-item"><div><h3>Facts, analysis and opinion: knowing the difference</h3><p>Guide • 5 min read</p></div><span class="num">03</span></article>
+      </div>
+      <aside class="truth">
+        <div class="kicker">Trust layer</div><h3>Know what you’re reading.</h3>
+        <p>Every story can carry a clear status so readers can distinguish verified reporting from developing information and commentary.</p>
+        <div class="truth-row"><span class="check">✓</span><div><b>Verified</b>Source and core facts checked.</div></div>
+        <div class="truth-row"><span class="check">◷</span><div><b>Developing</b>New information may change the story.</div></div>
+        <div class="truth-row"><span>—</span><div><b>Opinion</b>Clearly separated from reported facts.</div></div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="footer"><div class="inner"><span>© 2026 CoNews — Connected News</span><span>Facts • Context • Transparency</span></div></footer>
+
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <button class="icon-btn close" id="closeModal">×</button>
+    <div class="kicker" id="modalTag">NEWS</div><h2 id="modalTitle"></h2><p id="modalBody"></p>
+    <div class="source"><b id="modalSourceLabel">Source:</b> <a id="modalSource" href="#" target="_blank" rel="noopener noreferrer" style="color:#fff;text-decoration:underline">Open original coverage</a><br><span id="modalTime"></span></div>
+  </div>
+</div>
+
+<script>
+const countries=[
+["United States","US"],["United Kingdom","UK"],["Canada","CA"],["Australia","AU"],["New Zealand","NZ"],
+["Germany","DE"],["France","FR"],["Italy","IT"],["Spain","ES"],["Portugal","PT"],["Netherlands","NL"],
+["Switzerland","CH"],["Sweden","SE"],["Norway","NO"],["Denmark","DK"],["Finland","FI"],["Ireland","IE"],
+["Poland","PL"],["Ukraine","UA"],["Russia","RU"],["Türkiye","TR"],["Saudi Arabia","SA"],["UAE","AE"],
+["Israel","IL"],["Iran","IR"],["Iraq","IQ"],["Qatar","QA"],["Egypt","EG"],["South Africa","ZA"],
+["Nigeria","NG"],["Kenya","KE"],["Ethiopia","ET"],["China","CN"],["Japan","JP"],["South Korea","KR"],
+["Singapore","SG"],["Indonesia","ID"],["Malaysia","MY"],["Thailand","TH"],["Vietnam","VN"],
+["Philippines","PH"],["Bangladesh","BD"],["Pakistan","PK"],["Nepal","NP"],["Sri Lanka","LK"],
+["Brazil","BR"],["Mexico","MX"],["Argentina","AR"],["Chile","CL"]
+];
+
+const indiaRegions=[
+["Andhra Pradesh","AP"],["Arunachal Pradesh","AR"],["Assam","AS"],["Bihar","BR"],["Chhattisgarh","CG"],
+["Goa","GA"],["Gujarat","GJ"],["Haryana","HR"],["Himachal Pradesh","HP"],["Jharkhand","JH"],
+["Karnataka","KA"],["Kerala","KL"],["Madhya Pradesh","MP"],["Maharashtra","MH"],["Manipur","MN"],
+["Meghalaya","ML"],["Mizoram","MZ"],["Nagaland","NL"],["Odisha","OD"],["Punjab","PB"],
+["Rajasthan","RJ"],["Sikkim","SK"],["Tamil Nadu","TN"],["Telangana","TG"],["Tripura","TR"],
+["Uttar Pradesh","UP"],["Uttarakhand","UK"],["West Bengal","WB"],
+["Andaman & Nicobar Islands","AN","UT"],["Chandigarh","CH","UT"],["Dadra & Nagar Haveli and Daman & Diu","DN","UT"],
+["Delhi","DL","UT"],["Jammu & Kashmir","JK","UT"],["Ladakh","LA","UT"],["Lakshadweep","LD","UT"],["Puducherry","PY","UT"]
+];
+
+let stories=[];
+let currentRegion="Global", currentFilter="All";
+
+const grid=document.getElementById("newsGrid"), count=document.getElementById("resultCount");
+const regionGrid=document.getElementById("regionGrid"), regionSearch=document.getElementById("regionSearch");
+
+function renderRegions(mode="global", q=""){
+  const data=mode==="global"?countries:indiaRegions;
+  const query=q.trim().toLowerCase();
+  const filtered=data.filter(x=>x[0].toLowerCase().includes(query));
+  regionGrid.innerHTML=filtered.map(x=>`
+    <button class="region-chip ${currentRegion===x[0]?'active':''}" data-region="${x[0]}">
+      ${mode==="global"?"🌐":"🇮🇳"} ${x[0]}<small>${mode==="global"?"International":"Indian "+(x[2]||"State")}</small>
+    </button>`).join("");
+}
+renderRegions();
+
+regionGrid.addEventListener("click",e=>{
+ const b=e.target.closest(".region-chip"); if(!b)return;
+ currentRegion=b.dataset.region;
+ document.getElementById("regionStatus").textContent=currentRegion;
+ document.getElementById("newsHeading").textContent=currentRegion==="Global"?"What’s happening":currentRegion+" news";
+ loadNews();
+ renderRegions(document.getElementById("indiaBtn").classList.contains("active")?"india":"global",regionSearch.value);
+ document.getElementById("news").scrollIntoView({behavior:"smooth",block:"start"});
+});
+
+document.getElementById("globalBtn").onclick=()=>{
+ document.getElementById("globalBtn").classList.add("active");
+ document.getElementById("indiaBtn").classList.remove("active");
+ currentRegion="Global";document.getElementById("regionStatus").textContent="Global";
+ document.getElementById("newsHeading").textContent="What’s happening";
+ renderRegions("global",regionSearch.value);loadNews();
+};
+document.getElementById("indiaBtn").onclick=()=>{
+ document.getElementById("indiaBtn").classList.add("active");
+ document.getElementById("globalBtn").classList.remove("active");
+ currentRegion="India";document.getElementById("regionStatus").textContent="India";
+ document.getElementById("newsHeading").textContent="India news";
+ renderRegions("india",regionSearch.value);loadNews();
+};
+regionSearch.addEventListener("input",()=>{
+ renderRegions(document.getElementById("indiaBtn").classList.contains("active")?"india":"global",regionSearch.value);
+});
+
+function render(filter="All",query=""){
+ const q=query.trim().toLowerCase();
+ let arr=stories.filter(s=>
+   (filter==="All"||filter==="Latest"||s.cat===filter||s.tag===filter) &&
+   (!q||(s.title+" "+s.tag+" "+s.region).toLowerCase().includes(q)) &&
+   (currentRegion==="Global" || s.region===currentRegion || (currentRegion==="India"&&s.region==="India"))
+ );
+ grid.innerHTML=arr.length ? arr.map((s,i)=>`
+ <article class="card ${i===0&&filter==="All"?"feature":""} clickable" data-id="${s.id}">
+   ${s.image?`<div style="height:130px;margin:-18px -18px 14px;overflow:hidden"><img src="${escapeAttr(s.image)}" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>`:""}
+   <div class="tag">${escapeHtml(s.tag||s.cat)} • ${escapeHtml(s.status||"Reported")}</div>
+   <h3>${escapeHtml(s.title)}</h3><p>${escapeHtml(s.body||"")}</p>
+   <div class="meta"><span>${escapeHtml(s.source||"Source")}</span><span>•</span><span>${escapeHtml(s.time||"Latest")}</span></div>
+ </article>`).join(""):`<div class="card"><h3>No live stories found.</h3><p>Try another region or category. The feed refreshes automatically.</p></div>`;
+ count.textContent=`${arr.length} STORIES`;
+}
+
+function escapeHtml(v){return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function escapeAttr(v){return escapeHtml(v)}
+
+async function loadNews(){
+ const region=currentRegion==="Global"?"global":encodeURIComponent(currentRegion);
+ try{
+   const res=await fetch(`/.netlify/functions/news?region=${region}&category=${encodeURIComponent(currentFilter)}`,{cache:"no-store"});
+   if(!res.ok) throw new Error("Feed unavailable");
+   const data=await res.json();
+   stories=(data.articles||[]).map((x,i)=>({...x,id:x.id||("live-"+i)}));
+   document.getElementById("tickerText").textContent=`LIVE FEED • ${data.updated||"Fresh source update"} • ${stories.length} stories`;
+   render(currentFilter,document.getElementById("searchInput").value);
+ }catch(err){
+   stories=[];
+   grid.innerHTML=`<div class="card feature"><div class="tag">LIVE FEED</div><h3>Live news feed is temporarily unavailable.</h3><p>The CoNews interface is ready; check your Netlify Function configuration and source connectivity.</p></div>`;
+   count.textContent="FEED OFFLINE";
+ }
+}
+function setFilter(f){
+ currentFilter=f;
+ document.querySelectorAll("[data-filter]").forEach(b=>b.classList.toggle("active",b.dataset.filter===f));
+ loadNews();
+ document.getElementById("news").scrollIntoView({behavior:"smooth",block:"start"});
+}
+document.querySelectorAll("[data-filter]").forEach(b=>b.addEventListener("click",()=>setFilter(b.dataset.filter)));
+
+const modal=document.getElementById("modal");
+function openStory(id){
+ const s=stories.find(x=>x.id==id); if(!s)return;
+ document.getElementById("modalTag").textContent=s.tag+" • "+s.status;
+ document.getElementById("modalTitle").textContent=s.title;
+ document.getElementById("modalBody").textContent=s.body||"";
+ const ms=document.getElementById("modalSource"); ms.href=s.url||"#";
+ document.getElementById("modalSourceLabel").textContent="Source: "+(s.source||"CoNews");
+ document.getElementById("modalTime").textContent=s.time?("Published/updated: "+s.time):"";
+ modal.classList.add("open");
+}
+document.addEventListener("click",e=>{const c=e.target.closest(".clickable");if(c)openStory(c.dataset.id)});
+document.getElementById("closeModal").onclick=()=>modal.classList.remove("open");
+modal.addEventListener("click",e=>{if(e.target===modal)modal.classList.remove("open")});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")modal.classList.remove("open")});
+
+const sb=document.getElementById("searchBox");
+document.getElementById("searchBtn").onclick=()=>{sb.classList.toggle("open");if(sb.classList.contains("open"))document.getElementById("searchInput").focus()};
+document.getElementById("searchInput").addEventListener("input",e=>render(currentFilter,e.target.value));
+
+const tick=[
+"LIVE FEED • News cards below are sourced from current publisher pages and clearly attributed.",
+"Choose a country for international coverage or an Indian state/UT for local coverage.",
+"Real-time publishing should use licensed/approved APIs or publisher feeds — not uncontrolled scraping."
+];
+let ti=0;setInterval(()=>{ti=(ti+1)%tick.length;document.getElementById("tickerText").textContent=tick[ti]},4500);
+
+function updateTime(){
+ const d=new Date();
+ document.getElementById("clock").textContent=d.toLocaleTimeString("en-IN",{hour:"2-digit",minute:"2-digit",second:"2-digit"});
+ document.getElementById("date").textContent=d.toLocaleDateString("en-IN",{weekday:"short",day:"2-digit",month:"short",year:"numeric"});
+}
+updateTime();setInterval(updateTime,1000);
+setInterval(loadNews,5*60*1000);
+
+document.getElementById("menuBtn").onclick=()=>{
+ const n=document.querySelector(".navlinks"),open=n.style.display==="flex";n.style.display=open?"none":"flex";
+ n.style.position="absolute";n.style.left="12px";n.style.right="12px";n.style.top="62px";n.style.padding="14px";
+ n.style.background="#0b0b0c";n.style.border="1px solid #29292c";n.style.borderRadius="14px";n.style.flexDirection="column";n.style.alignItems="flex-start";
+};
+</script>
+</body>
+</html>
