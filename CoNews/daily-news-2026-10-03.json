@@ -1,0 +1,250 @@
+{
+  "date": "2026-10-03",
+  "generatedAt": "2026-10-03",
+  "verified": [
+    {
+      "id": "in-001",
+      "region": "India",
+      "cat": "Sports",
+      "tag": "India",
+      "title": "India beat Pakistan by 19 runs to retain Asian Games men’s cricket gold",
+      "body": "India defended its Asian Games T20 cricket title, beating Pakistan in the men’s final in Nagoya.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/sports/tennis/india-beat-pakistan-final-complete-cricket-double-2026-10-03/",
+      "timeLabel": "Published today"
+    },
+    {
+      "id": "in-002",
+      "region": "India",
+      "cat": "Sports",
+      "tag": "India",
+      "title": "Brazil beat India 4-0 in Kolkata friendly",
+      "body": "Brazil defeated India 4-0 in an international friendly in Kolkata, with Samuel Lino scoring twice.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/sports/soccer/brazil-tame-india-4-0-friendly-win-2026-10-03/",
+      "timeLabel": "Published today"
+    },
+    {
+      "id": "in-003",
+      "region": "India",
+      "cat": "Politics",
+      "tag": "India",
+      "title": "India-Pakistan summon each other’s top envoys after Punjab border incident",
+      "body": "India and Pakistan summoned each other’s diplomatic representatives after the BSF said it had killed two suspected infiltrators in Punjab; both sides issued competing accounts.",
+      "source": "The Indian Express",
+      "url": "https://indianexpress.com/article/india/india-pakistan-ferozepur-infiltration-pakistan-envoy-protest-10905583/",
+      "timeLabel": "Published today"
+    },
+    {
+      "id": "in-004",
+      "region": "India",
+      "cat": "Politics",
+      "tag": "India",
+      "title": "Delhi protests over voter-roll changes continue for a second day",
+      "body": "Police detained several people during protests in New Delhi over recent voter-roll changes. The Election Commission has defended the revision exercise.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/india/indian-police-detain-several-people-gen-z-led-protests-against-voter-roll-2026-10-03/",
+      "timeLabel": "Published today"
+    },
+    {
+      "id": "in-005",
+      "region": "India",
+      "cat": "Business",
+      "tag": "Economy",
+      "title": "India weighs lower pulse import duties to contain food prices",
+      "body": "Reuters reported that India is considering reducing import tariffs on some pulses to improve supply and help curb food inflation.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/americas/india-considers-cutting-import-duties-pulses-cool-prices-sources-say-2026-10-01/",
+      "timeLabel": "Published Oct 1"
+    },
+    {
+      "id": "in-006",
+      "region": "India",
+      "cat": "Business",
+      "tag": "Markets",
+      "title": "Indian shares record an eighth straight weekly fall",
+      "body": "Indian benchmark indexes posted their longest weekly losing streak in 25 years, according to Reuters, amid foreign outflows and pressure from oil and global yields.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/india/india-shares-head-negative-open-foreign-outflows-offset-oil-relief-2026-10-01/",
+      "timeLabel": "Published Oct 1"
+    },
+    {
+      "id": "in-007",
+      "region": "Rajasthan",
+      "cat": "Politics",
+      "tag": "Rajasthan",
+      "title": "Rajasthan Congress to probe cross-voting in local body polls",
+      "body": "The Rajasthan Pradesh Congress Committee formed a nine-member panel led by former Assembly Speaker C.P. Joshi to examine alleged cross-voting and related complaints.",
+      "source": "The Indian Express",
+      "url": "https://indianexpress.com/article/india/rajasthan-congress-cp-joshi-committee-cross-voting-municipal-elections-10905496/",
+      "timeLabel": "Published today"
+    },
+    {
+      "id": "in-008",
+      "region": "Rajasthan",
+      "cat": "Environment",
+      "tag": "Rajasthan",
+      "title": "Captive-bred Great Indian Bustards set for first release into the wild",
+      "body": "Two captive-bred male Great Indian Bustard chicks are expected to be released in existing enclosures in Desert National Park, Jaisalmer.",
+      "source": "The Indian Express",
+      "url": "https://indianexpress.com/article/india/for-the-first-time-captive-bred-great-indian-bustard-will-set-foot-in-the-wild-10904531/",
+      "timeLabel": "Published Oct 2"
+    },
+    {
+      "id": "in-009",
+      "region": "Gujarat",
+      "cat": "Politics",
+      "tag": "Gujarat",
+      "title": "Gujarat UCC Bill receives President’s assent",
+      "body": "The Gujarat Uniform Civil Code Bill 2026 received President Droupadi Murmu’s assent; the state government will determine its implementation date.",
+      "source": "The Indian Express",
+      "url": "https://indianexpress.com/article/cities/ahmedabad/code-for-marriage-live-in-and-divorce-gujarat-ucc-bill-gets-presidents-nod-10904534/",
+      "timeLabel": "Published Oct 2"
+    },
+    {
+      "id": "in-010",
+      "region": "West Bengal",
+      "cat": "Education",
+      "tag": "West Bengal",
+      "title": "West Bengal tops Viksit Bharat youth quiz participation target",
+      "body": "The state recorded more than 311,000 participants in the Viksit Bharat Young Leaders Dialogue 2027 quiz, according to Times of India.",
+      "source": "Times of India",
+      "url": "https://timesofindia.indiatimes.com/city/kolkata/bengal-tops-viksit-bharat-youth-quiz-with-285-of-target-participation/articleshow/134660800.cms",
+      "timeLabel": "Published today"
+    },
+    {
+      "id": "in-011",
+      "region": "India",
+      "cat": "Weather",
+      "tag": "Weather",
+      "title": "IMD forecasts rain across several states; wet spell likely in south and northeast",
+      "body": "The India Meteorological Department forecast rainfall in multiple regions, including Kerala, Karnataka, parts of northeast India, Odisha, West Bengal and Maharashtra.",
+      "source": "Times of India",
+      "url": "https://timesofindia.indiatimes.com/city/delhi/weather-tomorrow-imd-forecasts-rain-in-over-15-states-kerala-karnataka-to-see-wet-spell/articleshow/134631510.cms",
+      "timeLabel": "Published Oct 1"
+    },
+    {
+      "id": "world-001",
+      "region": "Global",
+      "cat": "World",
+      "tag": "Ukraine",
+      "title": "Russia says it will continue strikes on Kyiv and other Ukrainian cities",
+      "body": "Russia said it would continue targeted retaliatory strikes on Kyiv and other Ukrainian cities as fighting continues.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/russia-pledges-continue-massive-strikes-kyiv-urges-foreign-diplomats-leave-city-2026-10-03/",
+      "timeLabel": "Published today"
+    },
+    {
+      "id": "world-002",
+      "region": "Global",
+      "cat": "World",
+      "tag": "Ethiopia",
+      "title": "Ethiopian federal forces retake airport in Tigray capital, sources say",
+      "body": "Federal forces recaptured Alula Aba Nega Airport in Mekelle amid renewed fighting in northern Ethiopia. The situation remains volatile.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/africa/pro-government-forces-say-they-retake-airport-ethiopias-tigray-region-2026-10-03/",
+      "timeLabel": "Published today"
+    },
+    {
+      "id": "world-003",
+      "region": "United States",
+      "cat": "Politics",
+      "tag": "United States",
+      "title": "US Supreme Court begins new term with major constitutional disputes ahead",
+      "body": "The new Supreme Court term is set to address major disputes involving gun rights, religion in public schools and voting restrictions.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/legal/government/new-term-gives-us-supreme-courts-thomas-alito-more-chances-wield-power-2026-10-03/",
+      "timeLabel": "Published today"
+    },
+    {
+      "id": "world-004",
+      "region": "China",
+      "cat": "World",
+      "tag": "China",
+      "title": "Chinese construction work on Antelope Reef accelerates, satellite images show",
+      "body": "Reuters reported that work on a runway at Antelope Reef in the disputed Paracel Islands is progressing, according to analysis of satellite imagery.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/china/chinese-work-gathering-pace-antelope-reef-south-china-sea-latest-satellite-2026-10-02/",
+      "timeLabel": "Published Oct 2"
+    },
+    {
+      "id": "world-005",
+      "region": "Japan",
+      "cat": "Sports",
+      "tag": "Japan",
+      "title": "Asian Games organisers face scrutiny over operational problems",
+      "body": "Japan’s Olympic chief said organisers of the Asian Games need to reflect on preparations after transport and other operational problems.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/sports/japan-olympics-chief-says-asian-games-organisers-must-reflect-after-operational-2026-10-03/",
+      "timeLabel": "Published today"
+    },
+    {
+      "id": "world-006",
+      "region": "United Kingdom",
+      "cat": "Politics",
+      "tag": "United Kingdom",
+      "title": "UK government drops plans to curb jury trials after backlash",
+      "body": "The government abandoned controversial proposals to limit jury trials in less serious criminal cases following criticism from legal professionals and politicians.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/uk/britain-scraps-heavily-criticised-plans-curb-jury-trials-after-backlash-2026-10-03/",
+      "timeLabel": "Published today"
+    },
+    {
+      "id": "world-007",
+      "region": "Iran",
+      "cat": "Business",
+      "tag": "Iran",
+      "title": "Iranian rial hits new low as central bank moves to support currency",
+      "body": "Iran’s central bank announced an injection of up to $2 billion as the rial continued to weaken amid sanctions and regional tensions.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/middle-east/iranian-rial-new-low-cenbank-sells-dollars-support-currency-2026-10-03/",
+      "timeLabel": "Published today"
+    },
+    {
+      "id": "world-008",
+      "region": "Brazil",
+      "cat": "Politics",
+      "tag": "Brazil",
+      "title": "Lula holds lead in polls ahead of Brazil’s first-round vote",
+      "body": "A series of polls showed President Luiz Inacio Lula da Silva slightly ahead of Senator Flavio Bolsonaro, with a runoff still likely.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/americas/lulas-lead-over-bolsonaro-narrows-ahead-brazil-vote-cntmda-poll-shows-2026-10-03/",
+      "timeLabel": "Published today"
+    }
+  ],
+  "developing": [
+    {
+      "id": "dev-001",
+      "region": "India",
+      "cat": "Security",
+      "tag": "Developing",
+      "title": "Punjab border incident draws competing claims from India and Pakistan",
+      "body": "The two governments have issued different accounts of the incident and diplomatic protests have followed. Further official statements may change the picture.",
+      "source": "Reuters / The Indian Express",
+      "url": "https://indianexpress.com/article/india/india-pakistan-ferozepur-infiltration-pakistan-envoy-protest-10905583/",
+      "timeLabel": "Developing — Oct 3"
+    },
+    {
+      "id": "dev-002",
+      "region": "Global",
+      "cat": "World",
+      "tag": "Developing",
+      "title": "Fighting intensifies around Mekelle in Ethiopia’s Tigray region",
+      "body": "Federal forces say they have retaken the airport while reports indicate continuing clashes and instability around the city.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/africa/pro-government-forces-say-they-retake-airport-ethiopias-tigray-region-2026-10-03/",
+      "timeLabel": "Developing — Oct 3"
+    },
+    {
+      "id": "dev-003",
+      "region": "Global",
+      "cat": "World",
+      "tag": "Developing",
+      "title": "Russia-Ukraine strikes remain active as Kyiv signals further action against Russian refineries",
+      "body": "Ukraine said it would continue targeting Russian refineries in response to Moscow’s airstrike policy; the situation remains fluid.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/business/aerospace-defense/ukraine-will-hit-russian-refineries-response-moscows-new-doctrine-airstrikes-2026-10-03/",
+      "timeLabel": "Developing — Oct 3"
+    }
+  ]
+}
