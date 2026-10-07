@@ -1,0 +1,195 @@
+{
+  "date": "2026-10-06",
+  "updated_utc": "2026-10-06T22:45:00Z",
+  "editorial_note": "Verified-first daily newsroom update. Developing items are explicitly labelled. No headline is included where current reliable reporting was insufficient.",
+  "verified": [
+    {
+      "region": "India",
+      "category": "National",
+      "headline": "India and US trade talks remain stalled as both sides struggle to bridge differences",
+      "summary": "Finance Minister Nirmala Sitharaman said the long-running India-US trade negotiations have reached a difficult stage, with further give-and-take becoming harder.",
+      "source": "Reuters",
+      "published": "2026-10-06",
+      "status": "Verified",
+      "url": "https://www.reuters.com/world/india/why-have-india-us-trade-talks-stalled-again-whats-next-2026-10-06/"
+    },
+    {
+      "region": "India",
+      "category": "Economy",
+      "headline": "India's September fuel consumption rises 3.9% from August",
+      "summary": "Government data reported by Reuters showed a month-on-month rise in India's fuel consumption in September; windfall taxes on diesel and aviation turbine fuel exports were cut effective October 1.",
+      "source": "Reuters",
+      "published": "2026-10-06",
+      "status": "Verified",
+      "url": "https://www.reuters.com/business/energy/indias-september-fuel-consumption-rises-39-previous-month-2026-10-06/"
+    },
+    {
+      "region": "India",
+      "category": "Business",
+      "headline": "Titan reports 25% growth in quarterly consumer business sales",
+      "summary": "Indian jeweller Titan reported 25% growth in consumer business sales in the second quarter.",
+      "source": "Reuters",
+      "published": "2026-10-06",
+      "status": "Verified",
+      "url": "https://www.reuters.com/world/india/indian-jeweller-titan-reports-25-growth-quarterly-consumer-business-sales-2026-10-06/"
+    },
+    {
+      "region": "India",
+      "category": "Sports",
+      "headline": "Smriti Mandhana named India's women's cricket captain after Harmanpreet Kaur steps down",
+      "summary": "Mandhana takes over the captaincy after Harmanpreet Kaur resigned from the role while confirming she will continue playing.",
+      "source": "Reuters",
+      "published": "2026-10-06",
+      "status": "Verified",
+      "url": "https://www.reuters.com/sports/cricket/kaur-steps-down-india-womens-team-captain-2026-10-06/"
+    },
+    {
+      "region": "India",
+      "category": "Sports",
+      "headline": "India beat West Indies by eight wickets in first T20",
+      "summary": "India took a 1-0 lead in the five-match series after chasing 172 with 32 balls remaining; Shreyas Iyer scored an unbeaten 102.",
+      "source": "Reuters",
+      "published": "2026-10-06",
+      "status": "Verified",
+      "url": "https://www.reuters.com/sports/cricket/india-beat-west-indies-by-eight-wickets-first-t20-2026-10-06/"
+    },
+    {
+      "region": "India",
+      "category": "Olympics",
+      "headline": "India among seven countries in preliminary talks to host 2036 Olympics",
+      "summary": "The IOC said India, Germany, Qatar, Hungary, Turkey, South Africa and South Korea are in preliminary discussions; a shortlist is expected in March 2027.",
+      "source": "Reuters / IOC",
+      "published": "2026-10-06",
+      "status": "Verified",
+      "url": "https://www.reuters.com/sports/india-among-seven-countries-vying-2036-olympics-ioc-says-2026-10-06/"
+    },
+    {
+      "region": "Uttarakhand",
+      "category": "State",
+      "headline": "Magnitude 5.1 earthquake strikes Uttarakhand",
+      "summary": "EMSC reported a magnitude 5.1 earthquake in Uttarakhand at a depth of about 10 km.",
+      "source": "Reuters",
+      "published": "2026-10-06 17:20 UTC",
+      "status": "Verified",
+      "url": "https://www.reuters.com/business/environment/earthquake-magnitude-51-strikes-state-uttarakhand-india-emsc-says-2026-10-06/"
+    },
+    {
+      "region": "Andhra Pradesh",
+      "category": "State",
+      "headline": "Andhra Pradesh declares drought in 388 mandals across 21 districts",
+      "summary": "The state government declared 388 mandals drought-affected for the 2026 Kharif season, with 283 classified as severely affected.",
+      "source": "The Indian Express",
+      "published": "2026-10-06",
+      "status": "Verified",
+      "url": "https://indianexpress.com/article/india/andhra-government-declares-drought-in-21-districts-10909939/"
+    },
+    {
+      "region": "Rajasthan",
+      "category": "State",
+      "headline": "Great Indian Bustard rewilding programme marks major milestone in Rajasthan",
+      "summary": "Two captive-bred Great Indian Bustards were released into Rajasthan's Desert National Park on October 4 as part of Project GIB.",
+      "source": "The Indian Express",
+      "published": "2026-10-06",
+      "status": "Verified",
+      "url": "https://indianexpress.com/article/explained/great-indian-bustard-rewilding-rajasthan-project-gib-explained-10909007/"
+    },
+    {
+      "region": "Maharashtra",
+      "category": "State",
+      "headline": "Maharashtra monsoon withdraws early after uneven rainfall",
+      "summary": "IMD announced an early southwest monsoon withdrawal; 21 districts recorded rainfall deficits although the statewide season remained within the normal category.",
+      "source": "The Indian Express",
+      "published": "2026-10-03",
+      "status": "Verified",
+      "url": "https://indianexpress.com/article/cities/mumbai/maharashtra-monsoon-withdrawal-21-districts-rainfall-deficit-10905395/"
+    },
+    {
+      "region": "France",
+      "category": "World",
+      "headline": "Large school protests spread across France amid education grievances",
+      "summary": "Reuters reported more than 250,000 people took part in demonstrations across France, with disputes focused on staffing, school conditions and funding.",
+      "source": "Reuters",
+      "published": "2026-10-06 07:35 UTC",
+      "status": "Verified",
+      "url": "https://www.reuters.com/world/europe/france-braces-day-school-blockades-street-protests-2026-10-06/"
+    },
+    {
+      "region": "North Korea",
+      "category": "World",
+      "headline": "North Korea rejects South Korean accusations over DMZ landmine blast",
+      "summary": "Pyongyang rejected Seoul's claim that North Korea planted the mine that seriously injured two South Korean soldiers and warned of counteraction.",
+      "source": "Reuters",
+      "published": "2026-10-06 11:09 UTC",
+      "status": "Verified",
+      "url": "https://www.reuters.com/world/asia-pacific/north-korea-warns-stronger-action-toward-south-korea-over-mine-blast-accusations-2026-10-06/"
+    },
+    {
+      "region": "Europe",
+      "category": "World",
+      "headline": "EU condemns attacks on civilian shipping in Black Sea",
+      "summary": "European Commission President Ursula von der Leyen said attacks on civilian shipping in the Black Sea are unacceptable.",
+      "source": "Reuters",
+      "published": "2026-10-06",
+      "status": "Verified",
+      "url": "https://www.reuters.com/world/attacks-civilian-shipping-black-sea-are-unacceptable-eus-von-der-leyen-says-2026-10-06/"
+    },
+    {
+      "region": "United Kingdom",
+      "category": "World",
+      "headline": "UK considers diplomatic response if Israel closes East Jerusalem consulate",
+      "summary": "Reuters reported that Britain is considering possible expulsion of Israeli diplomats if Israel proceeds with closing the British consulate in East Jerusalem; the report is based on sources and officials did not comment.",
+      "source": "Reuters",
+      "published": "2026-10-06 07:31 UTC",
+      "status": "Source-based",
+      "url": "https://www.reuters.com/world/uk/britain-likely-expel-israeli-diplomats-if-jerusalem-consulate-closes-sources-say-2026-10-06/"
+    },
+    {
+      "region": "United States",
+      "category": "World",
+      "headline": "US removes B-1 bombers from UK base amid suspected Iran-linked drone plot concerns",
+      "summary": "Two US officials told Reuters that suspected Iran-linked drone plot concerns prompted the removal; Iran denies involvement and US officials have not publicly confirmed the intelligence details.",
+      "source": "Reuters",
+      "published": "2026-10-06 14:48 UTC",
+      "status": "Source-based",
+      "url": "https://www.reuters.com/world/uk/iran-drone-plot-fears-led-us-remove-bombers-uk-base-us-officials-say-2026-10-06/"
+    },
+    {
+      "region": "China",
+      "category": "World",
+      "headline": "US and China reportedly discuss reciprocal visits to nuclear facilities",
+      "summary": "CNN reported that the countries have discussed reciprocal nuclear-site visits; Reuters said it could not independently verify the report and officials did not immediately comment.",
+      "source": "Reuters citing CNN",
+      "published": "2026-10-06 10:55 UTC",
+      "status": "Developing",
+      "url": "https://www.reuters.com/world/china/us-china-discuss-reciprocal-visits-nuclear-sites-cnn-reports-2026-10-06/"
+    },
+    {
+      "region": "Lithuania",
+      "category": "World",
+      "headline": "Kremlin warns Lithuania over proposed nuclear-arms policy change",
+      "summary": "Russia warned that Lithuania's preliminary move to lift its constitutional ban on hosting nuclear weapons could increase regional tensions.",
+      "source": "Reuters",
+      "published": "2026-10-06",
+      "status": "Verified",
+      "url": "https://www.reuters.com/world/europe/kremlin-warns-lithuania-that-its-move-lift-nuclear-arms-ban-risks-further-2026-10-06/"
+    }
+  ],
+  "developing": [
+    {
+      "headline": "Ukraine conflict: major drone strikes reported around Moscow region",
+      "summary": "Russian authorities and Russian military bloggers reported a large Ukrainian drone attack and damage around the Moscow region. Individual battlefield and damage claims require continued independent verification.",
+      "source": "Reuters",
+      "published": "2026-10-06",
+      "status": "Developing",
+      "url": "https://www.reuters.com/world/europe/ukrainian-drones-kill-two-moscow-region-injure-nine-more-2026-10-06/"
+    },
+    {
+      "headline": "US-Israel-Iran conflict: leadership and escalation claims remain fluid",
+      "summary": "US statements about Iran's leadership and military developments are changing rapidly; CoNews should use attribution on all claims and avoid presenting disputed statements as established fact.",
+      "source": "Reuters",
+      "published": "2026-10-06",
+      "status": "Developing",
+      "url": "https://www.reuters.com/world/middle-east/trump-says-nobody-knows-who-is-running-iran-2026-10-06/"
+    }
+  ]
+}
