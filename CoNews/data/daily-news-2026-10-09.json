@@ -1,0 +1,175 @@
+{
+  "date": "2026-10-09",
+  "updated_utc": "2026-10-09T04:05:00Z",
+  "editorial_note": "Verified-first newsroom snapshot. Publication times are included only where the publisher supplied them. Election counting and source-based reports are labelled developing; do not present leads as final results.",
+  "verified": [
+    {
+      "region": "India",
+      "category": "Technology / Environment",
+      "headline": "India's AI data-centre boom faces growing pushback from nearby communities",
+      "summary": "Reuters reports protests and resident concerns about noise, water and electricity use near data-centre projects around Mumbai. Environmentalists have also opposed a Google project in Andhra Pradesh; Google and the state deny wrongdoing.",
+      "source": "Reuters",
+      "published": "2026-10-09",
+      "status": "Verified",
+      "url": "https://www.reuters.com/world/india/modi-wants-india-power-ai-age-residents-are-pushing-back-2026-10-09/"
+    },
+    {
+      "region": "India",
+      "category": "Economy",
+      "headline": "Rupee remains near record low as RBI intervention slows its decline",
+      "summary": "The rupee closed at 96.78 per US dollar on Thursday, close to its lifetime low of 96.96 recorded in May. Reuters cited traders who said RBI intervention helped prevent a breach of that level.",
+      "source": "Reuters",
+      "published": "2026-10-09 02:58 UTC",
+      "status": "Verified",
+      "url": "https://www.reuters.com/world/india/dip-us-yields-dollar-lend-rbi-hand-slowing-rupees-slide-all-time-low-2026-10-09/"
+    },
+    {
+      "region": "India",
+      "category": "Business / Technology",
+      "headline": "TCS says US green-card programme suspension will not materially affect its workforce strategy",
+      "summary": "TCS said it does not expect the suspension of the US Permanent Labor Certification (PERM) programme for several IT companies to materially affect its workforce strategy or client engagements. The company said its PERM applications were in single digits over the past two years.",
+      "source": "Reuters",
+      "published": "2026-10-09 02:51 UTC",
+      "status": "Verified",
+      "url": "https://www.reuters.com/world/india/tcs-sees-no-impact-us-green-card-programme-suspension-workforce-strategy-2026-10-09/"
+    },
+    {
+      "region": "India",
+      "category": "Energy",
+      "headline": "India's power supply tightens as hydropower falls and coal stocks remain low",
+      "summary": "Financial Express, citing Reuters and government data, reported September power shortages of 560 million kilowatt-hours—the highest since August 2023. It reported that about 47% of coal plants had critically low stocks and that several states sought extra allocations.",
+      "source": "The Financial Express (reporting Reuters and government data)",
+      "published": "2026-10-08 21:13 IST",
+      "status": "Verified",
+      "url": "https://www.financialexpress.com/business/news/power-supply-tightens-as-hydro-generation-plunges-coal-plants-struggle-with-low-stocks/4356669/"
+    },
+    {
+      "region": "India",
+      "category": "Telecom",
+      "headline": "India says satellite-internet approvals are being handled on a non-discriminatory basis",
+      "summary": "India's telecom ministry said Starlink, Jio and Airtel were at broadly the same regulatory stage, with security assessments underway, after Elon Musk alleged unnamed interests were blocking Starlink's launch.",
+      "source": "Reuters",
+      "published": "2026-10-08 05:09 UTC",
+      "status": "Verified",
+      "url": "https://www.reuters.com/business/media-telecom/india-denies-bias-satellite-internet-approvals-after-musks-oligarchs-jab-2026-10-08/"
+    },
+    {
+      "region": "United States",
+      "category": "Technology / Immigration",
+      "headline": "US suspends several companies from a green-card labour-certification programme",
+      "summary": "The Trump administration announced a suspension affecting Microsoft and several other technology firms, alleging programme abuse. Microsoft disputed the administration's characterization and said most of its recent H-1B filings were for existing employees; allegations should remain attributed, not stated as proven fraud.",
+      "source": "Associated Press",
+      "published": "2026-10-08",
+      "status": "Verified",
+      "url": "https://apnews.com/article/h1b-visa-program-vance-microsoft-e7b3a407f822702b269ee277d21343ea"
+    },
+    {
+      "region": "Chile",
+      "category": "Weather / Disaster",
+      "headline": "Heavy rain triggers flooding and mudslides around Santiago",
+      "summary": "Authorities reported flooding, evacuations and at least six injuries after heavy rain in and around Chile's capital. More than 1,000 people were rescued or evacuated; no deaths had been reported as of Thursday's account.",
+      "source": "Associated Press",
+      "published": "2026-10-09",
+      "status": "Verified",
+      "url": "https://apnews.com/article/chile-el-nino-weather-landslide-santiago-7f44b0f7271741c686c5a918a6581997"
+    },
+    {
+      "region": "NATO / Europe",
+      "category": "Defence",
+      "headline": "NATO to hold annual Steadfast Noon nuclear-readiness exercise in Italy",
+      "summary": "NATO officials said the 10-day exercise starts Tuesday and may involve aircraft from 17 member countries. The alliance described it as a routine exercise; AP reported that no live nuclear warheads or ammunition will be used.",
+      "source": "Associated Press",
+      "published": "2026-10-09",
+      "status": "Verified",
+      "url": "https://apnews.com/article/nato-nuclear-exercise-steadfast-russia-kaliningrad-9aaf7c85684000be5cefac3e32ece5cc"
+    },
+    {
+      "region": "Global Markets",
+      "category": "Energy",
+      "headline": "Oil prices ease after Trump signals no Iran strike before US elections",
+      "summary": "Brent and WTI prices fell in early Friday trading after US President Donald Trump said Washington was having productive discussions with Iran and would not attack before the November elections. Oil markets remain volatile amid shipping threats and Gulf of Mexico storm disruptions.",
+      "source": "Reuters",
+      "published": "2026-10-09",
+      "status": "Verified",
+      "url": "https://www.reuters.com/business/energy/oil-falls-trump-comments-iran-talks-ease-supply-concerns-2026-10-09/"
+    }
+  ],
+  "developing": [
+    {
+      "region": "India",
+      "category": "Digital Payments",
+      "headline": "UPI merchant-fee rollout may be deferred to January 1, 2027",
+      "summary": "The Indian Express reported, citing a Financial Express report and people familiar with the matter, that the planned MDR rollout may move from October 15 to January 1, 2027. A final NPCI decision was not confirmed in the Reuters report; publish as a source-based report, not an official postponement.",
+      "source": "The Indian Express / Financial Express; Reuters reported deliberations",
+      "published": "2026-10-09",
+      "status": "Developing",
+      "url": "https://indianexpress.com/article/business/upi-mdr-framework-rollout-deferred-january-2027-festive-season-rbi-10912304/"
+    },
+    {
+      "region": "China",
+      "category": "Energy",
+      "headline": "China may resume October refined-fuel exports after a brief pause",
+      "summary": "Four trade sources told Reuters that China had approved about 3.7 million metric tons of diesel, gasoline and jet-fuel exports for October. China's relevant ministries had not commented at publication time, so retain source-based attribution.",
+      "source": "Reuters, citing four trade sources",
+      "published": "2026-10-09",
+      "status": "Developing",
+      "url": "https://www.reuters.com/business/energy/china-resume-october-fuel-exports-after-brief-halt-four-trade-sources-say-2026-10-09/"
+    },
+    {
+      "region": "West Bengal",
+      "category": "Elections",
+      "headline": "Counting underway in Nandigram and Rejinagar assembly bypolls",
+      "summary": "Counting began at 8:00 AM IST on October 9. Nandigram recorded 80.89% turnout and Rejinagar 80.08%, according to Financial Express. As of its 9:13 AM IST update, counting was ongoing; do not publish a winner until confirmed by the Election Commission.",
+      "source": "The Financial Express live updates",
+      "published": "2026-10-09 09:13 IST",
+      "status": "Developing",
+      "url": "https://www.financialexpress.com/india-news/by-election-results-2026-west-bengal-assam-tamil-nadu-live-updates-eci-bypoll-results-nandigram-rejinagar-madurantakam-dharapuram-nagaon/4357094/"
+    },
+    {
+      "region": "Tamil Nadu",
+      "category": "Elections",
+      "headline": "Counting underway for Madurantakam and Dharapuram bypolls",
+      "summary": "Vote counting began at 8:00 AM IST. Reported turnout was 86.26% in Madurantakam and 80.30% in Dharapuram. Results remain provisional until officially declared.",
+      "source": "The Financial Express live updates",
+      "published": "2026-10-09 09:13 IST",
+      "status": "Developing",
+      "url": "https://www.financialexpress.com/india-news/by-election-results-2026-west-bengal-assam-tamil-nadu-live-updates-eci-bypoll-results-nandigram-rejinagar-madurantakam-dharapuram-nagaon/4357094/"
+    },
+    {
+      "region": "Puducherry",
+      "category": "Elections",
+      "headline": "Counting underway for Thattanchavady assembly bypoll",
+      "summary": "Counting began on October 9; the constituency recorded 80.81% turnout. No winner should be stated until the Election Commission confirms the result.",
+      "source": "The Financial Express live updates",
+      "published": "2026-10-09 09:13 IST",
+      "status": "Developing",
+      "url": "https://www.financialexpress.com/india-news/by-election-results-2026-west-bengal-assam-tamil-nadu-live-updates-eci-bypoll-results-nandigram-rejinagar-madurantakam-dharapuram-nagaon/4357094/"
+    },
+    {
+      "region": "Assam",
+      "category": "Elections",
+      "headline": "Counting underway for Nagaon Lok Sabha bypoll",
+      "summary": "Counting began on October 9. The constituency recorded 76.19% turnout among about 19.05 lakh electors. Live leads can change; await the Election Commission's final declaration.",
+      "source": "The Financial Express live updates",
+      "published": "2026-10-09 09:13 IST",
+      "status": "Developing",
+      "url": "https://www.financialexpress.com/india-news/by-election-results-2026-west-bengal-assam-tamil-nadu-live-updates-eci-bypoll-results-nandigram-rejinagar-madurantakam-dharapuram-nagaon/4357094/"
+    },
+    {
+      "region": "Saudi Arabia / India",
+      "category": "Aviation / Security",
+      "headline": "Airlines suspend Riyadh services amid renewed Houthi threats",
+      "summary": "Reuters reported that Lufthansa Group suspended Riyadh flights through October 16, while IndiGo cancellations were listed through October 9 and Air India and Akasa Air through October 10. Houthis claimed a missile attack on Riyadh airport, but Saudi authorities had not immediately confirmed that specific claim.",
+      "source": "Reuters",
+      "published": "2026-10-08",
+      "status": "Developing",
+      "url": "https://www.reuters.com/world/middle-east/lufthansa-air-india-suspend-flights-riyadh-after-houthi-attacks-2026-10-08/"
+    }
+  ],
+  "editorial_checks": [
+    "Do not treat UPI MDR postponement as official until NPCI or the government confirms it.",
+    "Do not display any bypoll winner or final margin until the Election Commission confirms the result.",
+    "For contested security claims, attribute the claim to the party or outlet that reported it.",
+    "No artificial headlines were added for states or UTs without sufficiently fresh, reliable reporting."
+  ]
+}
