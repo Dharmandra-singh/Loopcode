@@ -33,7 +33,10 @@ function safeUrl(value) {
 }
 function regionQuery(region, category, language) {
   const cat = CATEGORY_TERMS[category] || "news";
-  if (!region || region === "global" || region === "Global") return language === "hi" ? "दुनिया की ताज़ा खबरें" : "world latest news";
+  if (!region || region === "global" || region === "Global") {
+    if (category !== "All" && category !== "Latest") return language === "hi" ? (cat + " ताज़ा खबरें") : cat;
+    return language === "hi" ? "दुनिया की ताज़ा खबरें" : "world latest news";
+  }
   if (region === "India") return language === "hi" ? "भारत की ताज़ा खबरें" : "India latest news";
   if (REGION_CODES[region]) return region + " " + cat;
   // Indian states/UTs: include India so same-named regions are not confused with overseas results.
