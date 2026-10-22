@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://readnx.netlify.app/sitemap.xml
