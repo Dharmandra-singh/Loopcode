@@ -39,7 +39,7 @@ function regionQuery(region, category, language) {
   // Indian states/UTs: include India so same-named regions are not confused with overseas results.
   return region + " India " + (language === "hi" ? "ताज़ा खबरें" : cat);
 }
-async function getFeed(query, language, region) {
+async function getFeed(query, language, region, category) {
   const indian = !region || region === "global" || region === "Global" || region === "India" ||
     (!REGION_CODES[region]);
   const gl = REGION_CODES[region] || (indian ? "IN" : "US");
@@ -79,7 +79,7 @@ exports.handler = async event => {
   const language = params.language === "hi" ? "hi" : "en";
   const query = regionQuery(region, category, language);
   try {
-    const articles = await getFeed(query, language, region);
+    const articles = await getFeed(query, language, region, category);
     const unique = [...new Map(articles.map(a => [a.url,a])).values()].slice(0,30);
     return {
       statusCode: 200,
