@@ -4,8 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#050505">
-<meta name="description" content="CoNews — Connected News. Clean, factual and connected journalism.">
-<title>CoNews — Connected News</title>
+<meta name="description" content="ReadNX — News X. Connecting you to the world with source-linked news from India, its states and union territories, and around the globe.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="color-scheme" content="dark">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ReadNX — News X | Connecting You to the World">
+<meta property="og:description" content="Source-linked news from India and around the world.">
+<meta property="og:url" content="https://readnx.netlify.app/">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://readnx.netlify.app/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsMediaOrganization","name":"ReadNX","url":"https://readnx.netlify.app/","description":"Source-linked news from India and around the world."}</script>
+<title>ReadNX — News X | Connecting You to the World</title>
 <style>
 :root{
   --bg:#050505; --panel:#0b0b0c; --panel2:#111112; --text:#f5f5f5;
@@ -56,6 +65,11 @@ a{color:inherit;text-decoration:none}
   display:grid;place-items:center;transition:transform .2s ease,border-color .2s ease;
 }
 .icon-btn:hover{transform:translateY(-2px);border-color:#444}
+#languageBtn{width:44px;border-radius:12px;font-size:12px;font-weight:850;color:#ff6876;border-color:#492027}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid #ff4052;outline-offset:3px}
+[aria-busy="true"]{opacity:.7}
+.news-grid .card{content-visibility:auto;contain-intrinsic-size:280px}
+@media(max-width:600px){.hero-main{min-height:360px}.section-head h2{font-size:28px}.modal-box{padding:20px}.navlinks button{padding:8px 0}}
 .search-box{display:none;position:absolute;right:18px;top:64px;width:min(420px,calc(100vw - 36px));padding:10px;background:#0b0b0c;border:1px solid #29292c;border-radius:14px;box-shadow:0 20px 60px #000}
 .search-box.open{display:flex}.search-box input{width:100%;background:none;border:0;outline:0;color:#fff;padding:10px}
 .menu{display:none}
@@ -184,7 +198,7 @@ h1{font-size:clamp(38px,5.2vw,70px);line-height:.98;letter-spacing:-.055em;margi
 
 <header class="nav">
   <div class="inner">
-    <a class="logo" href="#"><div class="logo-mark">C</div><div><strong>CoNews</strong><span>CONNECTED NEWS</span></div></a>
+    <a class="logo" href="#"><div class="logo-mark">X</div><div><strong>ReadNX</strong><span>CONNECTING YOU TO THE WORLD</span></div></a>
     <nav class="navlinks">
       <button class="active" data-filter="All">Home</button>
       <button data-filter="India">India</button><button data-filter="World">World</button>
@@ -192,6 +206,7 @@ h1{font-size:clamp(38px,5.2vw,70px);line-height:.98;letter-spacing:-.055em;margi
       <button data-filter="Sports">Sports</button><button data-filter="Science">Science</button>
     </nav>
     <div class="live"><i class="dot"></i> LIVE</div>
+    <button class="icon-btn" id="languageBtn" aria-label="Switch language" title="Switch English / Hindi">हिं</button>
     <button class="icon-btn" id="searchBtn" aria-label="Search">⌕</button>
     <button class="icon-btn menu" id="menuBtn" aria-label="Menu">☰</button>
     <div class="search-box" id="searchBox"><input id="searchInput" placeholder="Search news..."></div>
@@ -213,7 +228,7 @@ h1{font-size:clamp(38px,5.2vw,70px);line-height:.98;letter-spacing:-.055em;margi
           <span class="badge">● Top story</span>
           <h2>Today’s verified news, connected to the source.</h2>
           <p>Fresh headlines are grouped by region and category, with the original publisher linked for verification.</p>
-          <div class="meta"><b>CoNews Desk</b><span>•</span><span class="verified">✓ SOURCE CHECKED</span><span>•</span><span>6 MIN READ</span></div>
+          <div class="meta"><b>ReadNX Desk</b><span>•</span><span class="verified">✓ SOURCE CHECKED</span><span>•</span><span>6 MIN READ</span></div>
         </div>
       </article>
       <div class="side">
@@ -261,7 +276,7 @@ h1{font-size:clamp(38px,5.2vw,70px);line-height:.98;letter-spacing:-.055em;margi
     <div class="split">
       <div class="list">
         <article class="list-item"><div><h3>Why source transparency matters in a fast news cycle</h3><p>Explainer • 7 min read</p></div><span class="num">01</span></article>
-        <article class="list-item"><div><h3>How CoNews labels developing information</h3><p>Editorial guide • 4 min read</p></div><span class="num">02</span></article>
+        <article class="list-item"><div><h3>How ReadNX labels developing information</h3><p>Editorial guide • 4 min read</p></div><span class="num">02</span></article>
         <article class="list-item"><div><h3>Facts, analysis and opinion: knowing the difference</h3><p>Guide • 5 min read</p></div><span class="num">03</span></article>
       </div>
       <aside class="truth">
@@ -275,7 +290,7 @@ h1{font-size:clamp(38px,5.2vw,70px);line-height:.98;letter-spacing:-.055em;margi
   </section>
 </main>
 
-<footer class="footer"><div class="inner"><span>© 2026 CoNews — Connected News</span><span>Facts • Context • Transparency</span></div></footer>
+<footer class="footer"><div class="inner"><span>© 2026 ReadNX — Connected News</span><span>Facts • Context • Transparency</span></div></footer>
 
 <div class="modal" id="modal">
   <div class="modal-box">
@@ -286,6 +301,7 @@ h1{font-size:clamp(38px,5.2vw,70px);line-height:.98;letter-spacing:-.055em;margi
 </div>
 
 <script>
+let currentLanguage="en";
 const countries=[
 ["United States","US"],["United Kingdom","UK"],["Canada","CA"],["Australia","AU"],["New Zealand","NZ"],
 ["Germany","DE"],["France","FR"],["Italy","IT"],["Spain","ES"],["Portugal","PT"],["Netherlands","NL"],
@@ -357,7 +373,7 @@ regionSearch.addEventListener("input",()=>{
 function render(filter="All",query=""){
  const q=query.trim().toLowerCase();
  let arr=stories.filter(s=>
-   (filter==="All"||filter==="Latest"||s.cat===filter||s.tag===filter) &&
+   (filter==="All"||filter==="Latest"||String(s.cat||"").toLowerCase().includes(filter.toLowerCase())||String(s.tag||"").toLowerCase().includes(filter.toLowerCase())) &&
    (!q||(s.title+" "+s.tag+" "+s.region).toLowerCase().includes(q)) &&
    (currentRegion==="Global" || s.region===currentRegion || (currentRegion==="India"&&s.region==="India"))
  );
@@ -377,7 +393,7 @@ function escapeAttr(v){return escapeHtml(v)}
 async function loadNews(){
  const region=currentRegion==="Global"?"global":encodeURIComponent(currentRegion);
  try{
-   const res=await fetch(`/.netlify/functions/news?region=${region}&category=${encodeURIComponent(currentFilter)}`,{cache:"no-store"});
+   const res=await fetch(`/.netlify/functions/news?region=${region}&category=${encodeURIComponent(currentFilter)}&language=${currentLanguage}`,{cache:"no-store"});
    if(!res.ok) throw new Error("Feed unavailable");
    const data=await res.json();
    stories=(data.articles||[]).map((x,i)=>({...x,id:x.id||("live-"+i)}));
@@ -385,7 +401,7 @@ async function loadNews(){
    render(currentFilter,document.getElementById("searchInput").value);
  }catch(err){
    stories=[];
-   grid.innerHTML=`<div class="card feature"><div class="tag">LIVE FEED</div><h3>Live news feed is temporarily unavailable.</h3><p>The CoNews interface is ready; check your Netlify Function configuration and source connectivity.</p></div>`;
+   grid.innerHTML=`<div class="card feature"><div class="tag">LIVE FEED</div><h3>Live news feed is temporarily unavailable.</h3><p>The ReadNX interface is ready; check your Netlify Function configuration and source connectivity.</p></div>`;
    count.textContent="FEED OFFLINE";
  }
 }
@@ -404,7 +420,7 @@ function openStory(id){
  document.getElementById("modalTitle").textContent=s.title;
  document.getElementById("modalBody").textContent=s.body||"";
  const ms=document.getElementById("modalSource"); ms.href=s.url||"#";
- document.getElementById("modalSourceLabel").textContent="Source: "+(s.source||"CoNews");
+ document.getElementById("modalSourceLabel").textContent="Source: "+(s.source||"ReadNX");
  document.getElementById("modalTime").textContent=s.time?("Published/updated: "+s.time):"";
  modal.classList.add("open");
 }
@@ -422,7 +438,10 @@ const tick=[
 "Choose a country for international coverage or an Indian state/UT for local coverage.",
 "Real-time publishing should use licensed/approved APIs or publisher feeds — not uncontrolled scraping."
 ];
-let ti=0;setInterval(()=>{ti=(ti+1)%tick.length;document.getElementById("tickerText").textContent=tick[ti]},4500);
+let ti=0;
+const tickerRotation=setInterval(()=>{
+  if(!stories.length){ti=(ti+1)%tick.length;document.getElementById("tickerText").textContent=tick[ti]}
+},6500);
 
 function updateTime(){
  const d=new Date();
@@ -430,8 +449,75 @@ function updateTime(){
  document.getElementById("date").textContent=d.toLocaleDateString("en-IN",{weekday:"short",day:"2-digit",month:"short",year:"numeric"});
 }
 updateTime();setInterval(updateTime,1000);
+loadNews();
 setInterval(loadNews,5*60*1000);
 
+const translations={
+  "Connected News Network":"समाचार नेटवर्क",
+  "The newsroom":"न्यूज़रूम",
+  "News, connected.":"दुनिया की खबरें, एक जगह।",
+  "A clean editorial feed built around context, source transparency and clear separation between facts and analysis.":"संदर्भ, स्रोतों की पारदर्शिता और तथ्य व विश्लेषण के स्पष्ट अंतर के साथ समाचार।",
+  "Explore":"खोजें",
+  "Sections":"श्रेणियाँ",
+  "Global + Local":"वैश्विक + स्थानीय",
+  "Choose your region":"अपना क्षेत्र चुनें",
+  "Latest":"ताज़ा",
+  "What’s happening":"क्या हो रहा है",
+  "Beyond the headline":"खबर से आगे",
+  "Trust layer":"विश्वसनीयता",
+  "Know what you’re reading.":"जानें, आप क्या पढ़ रहे हैं।",
+  "Home":"होम","India":"भारत","World":"दुनिया","Business":"बिज़नेस","Tech":"टेक","Sports":"खेल","Science":"विज्ञान",
+  "All":"सभी","Politics":"राजनीति","Technology":"टेक्नोलॉजी","Education":"शिक्षा",
+  "LIVE":"लाइव","BREAKING":"ब्रेकिंग",
+  "Global countries":"दुनिया के देश","India — States & UTs":"भारत — राज्य और केंद्रशासित प्रदेश",
+  "Search news...":"खबर खोजें...","Search a country, state or union territory…":"देश, राज्य या केंद्रशासित प्रदेश खोजें…",
+  "Facts • Context • Transparency":"तथ्य • संदर्भ • पारदर्शिता"
+};
+const originalText=new Map();
+function applyLanguage(){
+  document.documentElement.lang=currentLanguage==="hi"?"hi":"en";
+  document.getElementById("languageBtn").textContent=currentLanguage==="en"?"हिं":"EN";
+  document.getElementById("languageBtn").title=currentLanguage==="en"?"हिंदी में देखें":"View in English";
+  document.getElementById("searchInput").placeholder=currentLanguage==="hi"?"खबर खोजें...":"Search news...";
+  document.getElementById("regionSearch").placeholder=currentLanguage==="hi"?"देश, राज्य या केंद्रशासित प्रदेश खोजें…":"Search a country, state or union territory…";
+  document.querySelectorAll(".navlinks button,.category-nav button").forEach(el=>{
+    if(!originalText.has(el))originalText.set(el,el.textContent.trim());
+    const original=originalText.get(el);
+    el.textContent=currentLanguage==="hi"?(translations[original]||original):original;
+  });
+  document.querySelectorAll(".kicker").forEach(el=>{
+    if(!originalText.has(el))originalText.set(el,el.textContent.trim());
+    const original=originalText.get(el);
+    if(currentLanguage==="hi")el.textContent=translations[original]||original;
+    else el.textContent=original;
+  });
+  const h1=document.querySelector("h1");
+  if(h1)h1.textContent=currentLanguage==="hi"?"दुनिया की खबरें, एक जगह।":"News, connected.";
+  document.querySelector(".sub").textContent=currentLanguage==="hi"?translations["A clean editorial feed built around context, source transparency and clear separation between facts and analysis."]:"A clean editorial feed built around context, source transparency and clear separation between facts and analysis.";
+  document.querySelectorAll(".region-select").forEach(el=>{
+    if(!originalText.has(el))originalText.set(el,el.textContent.trim());
+    const original=originalText.get(el);
+    el.textContent=currentLanguage==="hi"?(original.includes("Global")?"🌐 दुनिया के देश":"🇮🇳 भारत — राज्य और केंद्रशासित प्रदेश"):original;
+  });
+}
+document.getElementById("languageBtn").addEventListener("click",()=>{
+  currentLanguage=currentLanguage==="en"?"hi":"en";
+  applyLanguage();
+  loadNews();
+});
+
+
+document.addEventListener("click",e=>{
+  const nav=document.querySelector(".navlinks");
+  const menu=document.getElementById("menuBtn");
+  if(window.innerWidth<=900 && nav.style.display==="flex" && !nav.contains(e.target) && !menu.contains(e.target)){
+    nav.style.display="none";
+  }
+});
+window.addEventListener("resize",()=>{
+  const nav=document.querySelector(".navlinks");
+  if(window.innerWidth>900){nav.style.display="";nav.style.position="";nav.style.left="";nav.style.right="";nav.style.top="";nav.style.padding="";nav.style.background="";nav.style.border="";nav.style.borderRadius="";nav.style.flexDirection="";nav.style.alignItems="";}
+});
 document.getElementById("menuBtn").onclick=()=>{
  const n=document.querySelector(".navlinks"),open=n.style.display==="flex";n.style.display=open?"none":"flex";
  n.style.position="absolute";n.style.left="12px";n.style.right="12px";n.style.top="62px";n.style.padding="14px";
