@@ -416,8 +416,8 @@ async function loadNews(){
      stories=feed.items.slice(0,30).map((x,i)=>{
        const d=document.createElement("div");d.innerHTML=x.description||"";
        const title=String(x.title||"").replace(/<[^>]*>/g,"").trim();
-       const body=(d.textContent||"").replace(/\\s+/g," ").trim().slice(0,500);
-       const m=title.match(/\\s[-|–]\\s([^\\-|–]+)$/);
+       const body=(d.textContent||"").replace(/\s+/g," ").trim().slice(0,500);
+       const m=title.match(/\s[-|–]\s([^\-|–]+)$/);
        return {id:"rss-"+i,title,body,source:m?m[1].trim():"Publisher",url:x.link||"",time:x.pubDate?new Date(x.pubDate).toLocaleString(currentLanguage==="hi"?"hi-IN":"en-IN",{dateStyle:"medium",timeStyle:"short"}):"Latest",tag:currentFilter==="All"?"Latest":currentFilter,cat:currentFilter==="All"?"Latest":currentFilter,region:currentRegion==="Global"?"World":currentRegion,status:"Publisher feed",image:x.thumbnail||""};
      }).filter(x=>x.title&&x.url);
      document.getElementById("tickerText").textContent="LIVE FEED • "+new Date().toLocaleTimeString()+" • "+stories.length+" stories";
